@@ -10,7 +10,7 @@ import Navigation from './components/Navigation.vue'
 // instalacion vuetify
 window.Vue = Vue
 window.Vuetify = Vuetify
-
+window.Vue.use(Vuetify)
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
