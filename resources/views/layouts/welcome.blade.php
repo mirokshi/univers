@@ -40,7 +40,7 @@
                         <h1 class="white--text text--ligthen-2 mb-2 display-4 text-xs-center font-weight-bold"
                             style="text-shadow: 0 0 50px hsla(0, 0%, 0%, .4);font-family: 'Montserrat', sans-serif !important; z-index: 10;"
                         >Univers alumnat</h1>
-                        <div class="display-1 mb-3 text-xs-center" style="text-shadow: rgba(0, 0, 0, 0.6) 0px 0px 50px;">Ajuntament <Tortosa></Tortosa></div>
+                        <div class="display-1 mb-3 text-xs-center" style="text-shadow: rgba(0, 0, 0, 0.6) 0px 0px 50px;">Ajuntament Tortosa</div>
                         <v-btn
                             class="blue lighten-2 mt-5"
                             dark

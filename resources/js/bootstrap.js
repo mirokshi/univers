@@ -1,5 +1,6 @@
 
 window._ = require('lodash');
+window.Popper = require('popper.js').default
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -8,7 +9,6 @@ window._ = require('lodash');
  */
 
 try {
-    window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
@@ -38,6 +38,13 @@ if (token) {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
+let user = document.head.querySelector('meta[name="user"]')
+
+if (user) {
+    window.laravel_user = JSON.parse(user.content)
+} else {
+    console.error('CAUTION: user not found in HTML meta')
+}
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

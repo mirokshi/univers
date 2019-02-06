@@ -11,10 +11,23 @@
 |
 */
 
+use App\Http\Controllers\AlumnesController;
+
 Route::get('/', function () {
     return view('layouts.welcome');
 });
 
-Route::get('/alumnes', function (){
-    return view('alumnes');
+Route::get('/alumnes', '\\'.AlumnesController::class.'@index');
+
+
+Route::get('/prueva', function () {
+    $rows = array_map('str_getcsv', file('/home/mirokshi/code/mirokshi/univers/files/csvcopia.csv'));
+    $header = array_shift($rows);
+    $csv = array();
+    foreach ($rows as $row) {
+        $csv[] = array_combine($header, $row);
+    }
+    return $csv;
+
+
 });
