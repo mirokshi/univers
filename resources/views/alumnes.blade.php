@@ -4,5 +4,5 @@
     Alumnes
     @endsection
 @section('content')
-    <h1>todo</h1>
+<h1>TODO</h1>
      @endsection
