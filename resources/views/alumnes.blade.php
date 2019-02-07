@@ -4,7 +4,11 @@
     Alumnes
     @endsection
 @section('content')
-<alumnes>
-
-</alumnes>
+    <v-container>
+        <v-layout>
+            <v-flex>
+                <alumnes :alumnes="{{$alumnes}}" uri="{{$uri}}"></alumnes>
+            </v-flex>
+        </v-layout>
+    </v-container>
      @endsection
