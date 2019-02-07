@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('title')
-    Alumnes
+    Entitats
     @endsection
 @section('content')
-<alumnes>
-
-</alumnes>
+    <entitats></entitats>
      @endsection

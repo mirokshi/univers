@@ -10,13 +10,11 @@
                     {
                         icon: 'keyboard_arrow_up',
                         'icon-alt': 'keyboard_arrow_down',
-                        text: 'Tasks',
+                        text: 'Univers',
                         model: true,
                         children: [
-                            { icon: 'build', text: 'Tasks  PHP', url: '/tasks' },
-                            { icon: 'build', text: 'Tasks TailWind ', url: '/tasks_vue' },
-                            { icon: 'build', text: 'Tasques ', url: '/tasques' },
-                            { icon: 'build', text: 'Tags ', url: '/tags' }
+                            { icon: 'build', text: 'Alumnes', url: '/alumnes' },
+                            { icon: 'build', text: 'Entitats', url: '/entitats' },
                         ]
                     },
                     { icon: 'help', text: 'Contact', url: '/contact' },
@@ -26,12 +24,5 @@
             }
         }
     }
-    //   methods: {
-    //     impersonate(user) {
-    //       if (user) {
-    //         window.location.href = '/impersonate/take/' + user
-    //       }
-    //     }
-    //   }
-    // }
+
 </script>

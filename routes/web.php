@@ -12,12 +12,15 @@
 */
 
 use App\Http\Controllers\AlumnesController;
+use App\Http\Controllers\EntitatsController;
 
 Route::get('/', function () {
     return view('layouts.welcome');
 });
 
 Route::get('/alumnes', '\\'.AlumnesController::class.'@index');
+
+Route::get('/entitats', '\\'.EntitatsController::class.'@index');
 
 
 Route::get('/prueva', function () {

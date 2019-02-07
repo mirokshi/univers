@@ -80,13 +80,11 @@
                     {
                         icon: 'keyboard_arrow_up',
                         'icon-alt': 'keyboard_arrow_down',
-                        text: 'Tasques',
+                        text: 'Univers',
                         model: true,
                         children: [
-                            { icon: 'build', text: 'Tasques amb PHP', url: '/tasks' },
-                            { icon: 'build', text: 'Tasques tailwind', url: '/tasks_vue' },
-                            { icon: 'build', text: 'Tasques', url: '/tasques' },
-                            { icon: 'build', text: 'Tags', url: '/tags' }
+                            { icon: 'child_care', text: 'Alumnes', url: '/alumnes' },
+                            { icon: 'domain', text: 'Entitats', url: '/entitats' },
                         ]
                     },
                     { icon: 'help', text: 'Contact', url: '/contact' },

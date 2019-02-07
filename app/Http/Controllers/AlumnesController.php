@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Alumnes;
 use Illuminate\Http\Request;
 
 class AlumnesController extends Controller
 {
     public function index()
     {
-        return view('alumnes');
+        $alumnes = Alumnes::all();
+
+        return view('alumnes', compact($alumnes));
     }
 }
