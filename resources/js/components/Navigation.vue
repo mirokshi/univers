@@ -89,7 +89,7 @@
                     },
                     { icon: 'help', text: 'Contact', url: '/contact' },
                     { icon: 'public', text: 'About', url: '/about' },
-                    { icon: 'assessment', text: 'Changelog', url: '/changelog' }
+                    { icon: 'assessment', text: 'Sparklines', url: '/sparklines' }
                 ]
             }
         },

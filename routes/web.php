@@ -22,6 +22,9 @@ Route::get('/alumnes', '\\'.AlumnesController::class.'@index');
 
 Route::get('/entitats', '\\'.EntitatsController::class.'@index');
 
+Route::get('/sparklines', function (){
+    return view('sparklines');
+});
 
 Route::get('/prueva', function () {
     $rows = array_map('str_getcsv', file('/home/mirokshi/code/mirokshi/univers/files/csvcopia.csv'));

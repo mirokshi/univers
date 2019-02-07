@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Alumnes;
+use App\Alumne;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AlumnesController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $alumnes = Alumnes::all();
-
-        return view('alumnes', compact($alumnes));
+     return view('alumnes');
     }
 }
