@@ -1,5 +1,42 @@
 <template>
     <span>
+        <v-dialog v-model="createDialog" @keydown.esc="createDialog = false">
+            <v-toolbar color="red" class="white--text">
+                <v-btn color="white" flat icon @click="createDialog = false">
+                    <v-icon class="mr-1">
+                        close
+                    </v-icon>
+                </v-btn>
+                <v-spacer></v-spacer>
+                <v-btn color="white" flat @click="createDialog = false ">
+                    <v-icon>exit_to_app</v-icon>
+                    SALIR
+                </v-btn>
+                <v-btn color="white" flat @click="createDialog = false">
+                    <v-icon class="mr-1">save</v-icon>
+                    GUARDAR
+                </v-btn>
+            </v-toolbar>
+            <v-card>
+                <v-card-text>
+                    <v-form>
+                        <v-text-field v-model="alumneBeingCreated.name" label="Nom" hint="Nom del alumne"></v-text-field>
+                        <v-text-field v-model="alumneBeingCreated.surname" label="Cognon" hint="Cognom del alumne"></v-text-field>
+                        <v-text-field v-model="alumneBeingCreated.age" label="Edat" hint="Edat del alumne"></v-text-field>
+                        <v-text-field v-model="alumneBeingCreated.school" label="Escola" hint="Escola del alumne"></v-text-field>
+                        <v-combobox
+                            v-model="alumneBeingCreated.sex"
+                            :items="items"
+                            label="Sexe"
+                        ></v-combobox>
+                    <div>
+                        <v-btn color="grey" @click="createDialog = false"><v-icon class="mr-1">exit_to_app</v-icon>SALIR</v-btn>
+                        <v-btn color="success" @click="create"><v-icon class="mr-1">save</v-icon>GUARDAR</v-btn>
+                        </div>
+                    </v-form>
+                </v-card-text>
+            </v-card>
+        </v-dialog>
 
          <v-toolbar color="red accent-2">
       <v-toolbar-title class="white--text">Alumnes {{total}}</v-toolbar-title>
@@ -50,7 +87,6 @@
                         <td>{{alumne.sex}}</td>
                         <td><span :title="alumne.created_at_formatted">{{alumne.created_at_human}}</span></td>
                         <td><span :title="alumne.updated_at_formatted">{{alumne.updated_at_human}}</span></td>
-
                     </tr>
                 </template>
             </v-data-table>
@@ -62,6 +98,7 @@
             color="pink"
             fixed
             class="white--text"
+            @click="showCreate"
         >
             <v-icon>add</v-icon>
         </v-btn>
@@ -82,6 +119,13 @@
                 search:'',
                 loading: false,
                 dataAlumnes: this.alumnes,
+                createDialog: false,
+                alumneBeingCreated: {},
+                items:[
+                    'Home',
+                    'Dona',
+                    'Altres'
+                ],
                 headers :[
                     {text:'ID', value: 'id'},
                     {text:'NOM', value: 'name'},
@@ -118,7 +162,26 @@
                   console.log(error)
                   this.loading = false
               })
-          }
+          },
+            create(){
+              this.creating=true
+                window.axios.post(this.uri,this.alumneBeingCreated).then((response) => {
+                    this.createAlumne(response.data)
+                    this.refresh()
+                    this.creating= false
+                    this.createDialog= false
+                }).catch((error) =>{
+                    this.creating = false
+                    this.createDialog = false
+                })
+            },
+            showCreate(){
+              this.createDialog = true
+            },
+            createAlumne(alumne){
+              this.dataAlumnes.splice(0,0,alumne)
+            }
+
         },
         computed:{
             total(){

@@ -1833,6 +1833,43 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Alumnes',
   data: function data() {
@@ -1846,6 +1883,9 @@ __webpack_require__.r(__webpack_exports__);
       search: '',
       loading: false,
       dataAlumnes: this.alumnes,
+      createDialog: false,
+      alumneBeingCreated: {},
+      items: ['Home', 'Dona', 'Altres'],
       headers: [{
         text: 'ID',
         value: 'id'
@@ -1901,6 +1941,28 @@ __webpack_require__.r(__webpack_exports__);
         console.log(error);
         _this.loading = false;
       });
+    },
+    create: function create() {
+      var _this2 = this;
+
+      this.creating = true;
+      window.axios.post(this.uri, this.alumneBeingCreated).then(function (response) {
+        _this2.createAlumne(response.data);
+
+        _this2.refresh();
+
+        _this2.creating = false;
+        _this2.createDialog = false;
+      }).catch(function (error) {
+        _this2.creating = false;
+        _this2.createDialog = false;
+      });
+    },
+    showCreate: function showCreate() {
+      this.createDialog = true;
+    },
+    createAlumne: function createAlumne(alumne) {
+      this.dataAlumnes.splice(0, 0, alumne);
     }
   },
   computed: {
@@ -37887,6 +37949,206 @@ var render = function() {
     "span",
     [
       _c(
+        "v-dialog",
+        {
+          on: {
+            keydown: function($event) {
+              if (
+                "keyCode" in $event &&
+                _vm._k($event.keyCode, "esc", 27, $event.key, ["Esc", "Escape"])
+              ) {
+                return null
+              }
+              _vm.createDialog = false
+            }
+          },
+          model: {
+            value: _vm.createDialog,
+            callback: function($$v) {
+              _vm.createDialog = $$v
+            },
+            expression: "createDialog"
+          }
+        },
+        [
+          _c(
+            "v-toolbar",
+            { staticClass: "white--text", attrs: { color: "red" } },
+            [
+              _c(
+                "v-btn",
+                {
+                  attrs: { color: "white", flat: "", icon: "" },
+                  on: {
+                    click: function($event) {
+                      _vm.createDialog = false
+                    }
+                  }
+                },
+                [
+                  _c("v-icon", { staticClass: "mr-1" }, [
+                    _vm._v("\n                    close\n                ")
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("v-spacer"),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  attrs: { color: "white", flat: "" },
+                  on: {
+                    click: function($event) {
+                      _vm.createDialog = false
+                    }
+                  }
+                },
+                [
+                  _c("v-icon", [_vm._v("exit_to_app")]),
+                  _vm._v("\n                SALIR\n            ")
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  attrs: { color: "white", flat: "" },
+                  on: {
+                    click: function($event) {
+                      _vm.createDialog = false
+                    }
+                  }
+                },
+                [
+                  _c("v-icon", { staticClass: "mr-1" }, [_vm._v("save")]),
+                  _vm._v("\n                GUARDAR\n            ")
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-card",
+            [
+              _c(
+                "v-card-text",
+                [
+                  _c(
+                    "v-form",
+                    [
+                      _c("v-text-field", {
+                        attrs: { label: "Nom", hint: "Nom del alumne" },
+                        model: {
+                          value: _vm.alumneBeingCreated.name,
+                          callback: function($$v) {
+                            _vm.$set(_vm.alumneBeingCreated, "name", $$v)
+                          },
+                          expression: "alumneBeingCreated.name"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("v-text-field", {
+                        attrs: { label: "Cognon", hint: "Cognom del alumne" },
+                        model: {
+                          value: _vm.alumneBeingCreated.surname,
+                          callback: function($$v) {
+                            _vm.$set(_vm.alumneBeingCreated, "surname", $$v)
+                          },
+                          expression: "alumneBeingCreated.surname"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("v-text-field", {
+                        attrs: { label: "Edat", hint: "Edat del alumne" },
+                        model: {
+                          value: _vm.alumneBeingCreated.age,
+                          callback: function($$v) {
+                            _vm.$set(_vm.alumneBeingCreated, "age", $$v)
+                          },
+                          expression: "alumneBeingCreated.age"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("v-text-field", {
+                        attrs: { label: "Escola", hint: "Escola del alumne" },
+                        model: {
+                          value: _vm.alumneBeingCreated.school,
+                          callback: function($$v) {
+                            _vm.$set(_vm.alumneBeingCreated, "school", $$v)
+                          },
+                          expression: "alumneBeingCreated.school"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("v-combobox", {
+                        attrs: { items: _vm.items, label: "Sexe" },
+                        model: {
+                          value: _vm.alumneBeingCreated.sex,
+                          callback: function($$v) {
+                            _vm.$set(_vm.alumneBeingCreated, "sex", $$v)
+                          },
+                          expression: "alumneBeingCreated.sex"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        [
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: { color: "grey" },
+                              on: {
+                                click: function($event) {
+                                  _vm.createDialog = false
+                                }
+                              }
+                            },
+                            [
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("exit_to_app")
+                              ]),
+                              _vm._v("SALIR")
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: { color: "success" },
+                              on: { click: _vm.create }
+                            },
+                            [
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("save")
+                              ]),
+                              _vm._v("GUARDAR")
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
         "v-toolbar",
         { attrs: { color: "red accent-2" } },
         [
@@ -38047,7 +38309,8 @@ var render = function() {
         "v-btn",
         {
           staticClass: "white--text",
-          attrs: { fab: "", bottom: "", right: "", color: "pink", fixed: "" }
+          attrs: { fab: "", bottom: "", right: "", color: "pink", fixed: "" },
+          on: { click: _vm.showCreate }
         },
         [_c("v-icon", [_vm._v("add")])],
         1

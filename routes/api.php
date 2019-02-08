@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AlumnesController;
 use Illuminate\Http\Request;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/v1/alumnes','\\' . AlumnesController::class . '@index');
+Route::get('/v1/alumnes/{alumne}','\\' . AlumnesController::class . '@show');
+Route::post('/v1/alumnes','\\' . AlumnesController::class . '@store');
+Route::delete('/v1/alumnes/{alumne}','\\' . AlumnesController::class . '@destroy');
+Route::put('/v1/alumnes/{alumne}','\\' . AlumnesController::class . '@update');
