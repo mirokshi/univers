@@ -13,16 +13,16 @@ class Alumne extends Migration
      */
     public function up()
     {
-        Schema::create('alumne', function (Blueprint $table) {
+        Schema::create('alumnes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('surname');
-            $table->date('birthdate');
-            $table->integer('age');
-            $table->text('school');
-            $table->text('course');
-            $table->text('school_course');
-            $table->text('sex');
+            $table->string('surname')->nullable();
+            $table->string('birthdate')->nullable();
+            $table->integer('age')->nullable();
+            $table->text('school')->nullable();
+            $table->text('course')->nullable();
+            $table->text('school_course')->nullable();
+            $table->text('sex')->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ class Alumne extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('alumne');
+        Schema::dropIfExists('alumnes');
     }
 }

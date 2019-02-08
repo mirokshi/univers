@@ -1782,6 +1782,57 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Alumnes',
   data: function data() {
@@ -1792,6 +1843,8 @@ __webpack_require__.r(__webpack_exports__);
       school: '',
       school_course: '',
       sex: '',
+      search: '',
+      loading: false,
       dataAlumnes: this.alumnes,
       headers: [{
         text: 'ID',
@@ -1814,6 +1867,12 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         text: 'SEXE',
         value: 'sex'
+      }, {
+        text: 'CREAT',
+        value: 'created_at_timestamp'
+      }, {
+        text: 'MODIFICAT',
+        value: 'updated_at_timestamp'
       }],
       pagination: {
         rowsPerPage: 25
@@ -6511,7 +6570,7 @@ exports.push([module.i, "@font-face {\n  font-family: 'Material Icons';\n  font-
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css?bdb9":
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css":
 /*!***********************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vuetify/dist/vuetify.min.css ***!
   \***********************************************************************************************************************************/
@@ -37824,16 +37883,180 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "span",
+    [
+      _c(
+        "v-toolbar",
+        { attrs: { color: "red accent-2" } },
+        [
+          _c("v-toolbar-title", { staticClass: "white--text" }, [
+            _vm._v("Alumnes " + _vm._s(_vm.total))
+          ]),
+          _vm._v(" "),
+          _c("v-spacer"),
+          _vm._v(" "),
+          _c(
+            "v-btn",
+            { staticClass: "white--text", attrs: { icon: "", dark: "" } },
+            [_c("v-icon", [_vm._v("settings")])],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-btn",
+            {
+              staticClass: "white--text",
+              attrs: {
+                icon: "",
+                dark: "",
+                loading: _vm.loading,
+                disabled: _vm.loading
+              },
+              on: { click: _vm.refresh }
+            },
+            [_c("v-icon", [_vm._v("refresh")])],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-card",
+        [
+          _c(
+            "v-card-title",
+            [
+              _c(
+                "v-layout",
+                { attrs: { row: "", wrap: "" } },
+                [
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "" } },
+                    [
+                      _c("v-text-field", {
+                        attrs: {
+                          "append-icon": "search",
+                          label: "Búsqueda",
+                          "single-line": "",
+                          "hide-details": ""
+                        },
+                        model: {
+                          value: _vm.search,
+                          callback: function($$v) {
+                            _vm.search = $$v
+                          },
+                          expression: "search"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-data-table",
+            {
+              staticClass: "hidden-md-and-down",
+              attrs: {
+                headers: _vm.headers,
+                items: _vm.dataAlumnes,
+                search: _vm.search,
+                "no-result-text": "No hay nigun registro",
+                loading: _vm.loading,
+                "no-data-text": "",
+                "rows-per-page-text": "Alumnos per página",
+                "rows-per-page-items": [
+                  5,
+                  10,
+                  25,
+                  50,
+                  100,
+                  200,
+                  { text: "Tots", value: -1 }
+                ],
+                pagination: _vm.pagination
+              },
+              on: {
+                "update:pagination": function($event) {
+                  _vm.pagination = $event
+                }
+              },
+              scopedSlots: _vm._u([
+                {
+                  key: "items",
+                  fn: function(ref) {
+                    var alumne = ref.item
+                    return [
+                      _c("tr", [
+                        _c("td", [_vm._v(_vm._s(alumne.id))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(alumne.name))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(alumne.surname))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(alumne.age))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(alumne.school))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(alumne.school_course))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(alumne.sex))]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c(
+                            "span",
+                            { attrs: { title: alumne.created_at_formatted } },
+                            [_vm._v(_vm._s(alumne.created_at_human))]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c(
+                            "span",
+                            { attrs: { title: alumne.updated_at_formatted } },
+                            [_vm._v(_vm._s(alumne.updated_at_human))]
+                          )
+                        ])
+                      ])
+                    ]
+                  }
+                }
+              ])
+            },
+            [
+              _c("v-progress-linear", {
+                attrs: { slot: "progess", color: "blue", indeterminate: "" },
+                slot: "progess"
+              })
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-btn",
+        {
+          staticClass: "white--text",
+          attrs: { fab: "", bottom: "", right: "", color: "pink", fixed: "" }
+        },
+        [_c("v-icon", [_vm._v("add")])],
+        1
+      )
+    ],
+    1
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", [_c("h1", [_vm._v("TODO")])])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -75978,7 +76201,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./vuetify.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css?bdb9");
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./vuetify.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

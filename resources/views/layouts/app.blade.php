@@ -28,7 +28,7 @@
     <v-app id="inspire">
         <navigation v-model="drawer"></navigation>
         <v-toolbar
-            color="primary"
+            color="red accent-4"
             dark
             app
             clipped-left
@@ -42,7 +42,7 @@
         <v-content>
             @yield('content')
         </v-content>
-        <v-footer color="indigo" app>
+        <v-footer color="red accent-4" app>
             <span class="white--text">&copy; 2019 </span>
         </v-footer>
     </v-app>
