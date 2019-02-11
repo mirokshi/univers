@@ -1,6 +1,6 @@
 
 window._ = require('lodash');
-window.Popper = require('popper.js').default
+window.Popper = require('popper.js').default;
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -9,9 +9,9 @@ window.Popper = require('popper.js').default
  */
 
 try {
-    window.$ = window.jQuery = require('jquery');
+  window.$ = window.jQuery = require('jquery');
 
-    require('bootstrap');
+  require('bootstrap');
 } catch (e) {}
 
 /**
@@ -30,20 +30,20 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * a simple convenience so we don't have to attach every token manually.
  */
 
-let token = document.head.querySelector('meta[name="csrf-token"]');
+const token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
-    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 } else {
-    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
-let user = document.head.querySelector('meta[name="user"]')
+const user = document.head.querySelector('meta[name="user"]');
 
 if (user) {
-    window.laravel_user = JSON.parse(user.content)
+  window.laravel_user = JSON.parse(user.content);
 } else {
-    console.error('CAUTION: user not found in HTML meta')
+  console.error('CAUTION: user not found in HTML meta');
 }
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
