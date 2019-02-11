@@ -59,15 +59,31 @@
                 </v-card-text>
             </v-card>
         </v-dialog>
+         <v-btn
+             fab
+             bottom
+             right
+             color="pink"
+             fixed
+             class="white--text"
+             @click="showCreate"
+         >
+            <v-icon>add</v-icon>
+        </v-btn>
     </span>
 </template>
 
 <script>
     export default {
-        name: "CreateAlumne"
+        name: 'CreateAlumne',
+        data: () => ({
+            date: new Date().toISOString().substr(0, 10),
+            menu: false,
+            modal: false,
+            menu2: false
+        })
     }
 </script>
-
 <style scoped>
 
 </style>

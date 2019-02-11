@@ -5,18 +5,31 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import './bootstrap';
 import AppComponent from './components/App.vue';
 import Navigation from './components/Navigation.vue';
-import Alumnes from './components/alumnes/Alumnes.vue';
-import Entitats from './components/Entitats.vue';
-import Sparklines from './components/Sparklines';
+import Sparklines from './components/Sparklines.vue';
 
+/* ENTITATS */
+import Entitats from './components/Entitats.vue';
+
+/* ALUMNES */
+import Alumnes from './components/alumnes/Alumnes.vue';
+import CreateAlumne from './components/alumnes/CreateAlumne.vue';
+import ListAlumne from './components/alumnes/ListAlumne.vue';
+
+// PLUGINS
+import permissions from './plugins/permissions';
+import snackbar from './plugins/snackbar';
+import confirm from './plugins/confirm';
 
 // instalacion vuetify
 window.Vue = Vue;
 window.Vuetify = Vuetify;
 window.Vue.use(Vuetify);
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+window.Vue.use(permissions);
+window.Vue.use(snackbar);
+window.Vue.use(confirm);
+
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
@@ -24,5 +37,7 @@ window.Vue.component('navigation', Navigation);
 window.Vue.component('alumnes', Alumnes);
 window.Vue.component('entitats', Entitats);
 window.Vue.component('sparklines', Sparklines);
+window.Vue.component('create-alumne', CreateAlumne);
+window._vue.component('list-alumne', ListAlumne);
 // eslint-disable-next-line no-unused-vars
 const app = new Vue(AppComponent);
