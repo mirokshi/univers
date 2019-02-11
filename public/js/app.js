@@ -2192,6 +2192,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CreateFormAlumne__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CreateFormAlumne */ "./resources/js/components/alumnes/CreateFormAlumne.vue");
 //
 //
 //
@@ -2223,6 +2224,50 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'CreateAlumne',
+  components: {
+    'create-form-alumne': _CreateFormAlumne__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      dialog: false
+    };
+  },
+  props: {
+    uri: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    created: function created(alumne) {
+      this.$emit('created', alumne);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 //
 //
 //
@@ -2268,15 +2313,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'CreateAlumne',
-  data: function data() {
-    return {
-      date: new Date().toISOString().substr(0, 10),
-      menu: false,
-      modal: false,
-      menu2: false
-    };
-  }
+  name: "CreateFormAlumne"
 });
 
 /***/ }),
@@ -2409,10 +2446,12 @@ __webpack_require__.r(__webpack_exports__);
     refresh: function refresh() {
       var _this = this;
 
+      var message = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
       this.loading = true;
       window.axios.get(this.uri).then(function (response) {
         _this.dataAlumnes = response.data;
         _this.loading = false;
+        if (message) _this.$snackbar.showMessage('Alumnes actualizats correctament');
       }).catch(function (error) {
         console.log(error);
         _this.loading = false;
@@ -38699,15 +38738,15 @@ var render = function() {
               ) {
                 return null
               }
-              _vm.createDialog = false
+              _vm.dialog = false
             }
           },
           model: {
-            value: _vm.createDialog,
+            value: _vm.dialog,
             callback: function($$v) {
-              _vm.createDialog = $$v
+              _vm.dialog = $$v
             },
-            expression: "createDialog"
+            expression: "dialog"
           }
         },
         [
@@ -38721,7 +38760,7 @@ var render = function() {
                   attrs: { color: "white", flat: "", icon: "" },
                   on: {
                     click: function($event) {
-                      _vm.createDialog = false
+                      _vm.dialog = false
                     }
                   }
                 },
@@ -38733,6 +38772,10 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
+              _c("v-toolbar-title", { staticClass: "white--text" }, [
+                _vm._v("Crear Alumne")
+              ]),
+              _vm._v(" "),
               _c("v-spacer"),
               _vm._v(" "),
               _c(
@@ -38741,13 +38784,13 @@ var render = function() {
                   attrs: { color: "white", flat: "" },
                   on: {
                     click: function($event) {
-                      _vm.createDialog = false
+                      _vm.dialog = false
                     }
                   }
                 },
                 [
                   _c("v-icon", [_vm._v("exit_to_app")]),
-                  _vm._v("\n                SALIR\n            ")
+                  _vm._v("\n                SORTIR\n            ")
                 ],
                 1
               ),
@@ -38758,7 +38801,7 @@ var render = function() {
                   attrs: { color: "white", flat: "" },
                   on: {
                     click: function($event) {
-                      _vm.createDialog = false
+                      _vm.dialog = false
                     }
                   }
                 },
@@ -38778,198 +38821,15 @@ var render = function() {
               _c(
                 "v-card-text",
                 [
-                  _c(
-                    "v-form",
-                    [
-                      _c("v-text-field", {
-                        attrs: { label: "Nom", hint: "Nom del alumne" },
-                        model: {
-                          value: _vm.alumneBeingCreated.name,
-                          callback: function($$v) {
-                            _vm.$set(_vm.alumneBeingCreated, "name", $$v)
-                          },
-                          expression: "alumneBeingCreated.name"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("v-text-field", {
-                        attrs: { label: "Cognon", hint: "Cognom del alumne" },
-                        model: {
-                          value: _vm.alumneBeingCreated.surname,
-                          callback: function($$v) {
-                            _vm.$set(_vm.alumneBeingCreated, "surname", $$v)
-                          },
-                          expression: "alumneBeingCreated.surname"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "v-dialog",
-                        {
-                          ref: "dialog",
-                          attrs: {
-                            "return-value": _vm.date,
-                            persistent: "",
-                            lazy: "",
-                            "full-width": "",
-                            width: "290px"
-                          },
-                          on: {
-                            "update:returnValue": function($event) {
-                              _vm.date = $event
-                            },
-                            "update:return-value": function($event) {
-                              _vm.date = $event
-                            }
-                          },
-                          model: {
-                            value: _vm.modal,
-                            callback: function($$v) {
-                              _vm.modal = $$v
-                            },
-                            expression: "modal"
-                          }
-                        },
-                        [
-                          _c("v-text-field", {
-                            attrs: {
-                              slot: "activator",
-                              label: "Picker in dialog",
-                              "prepend-icon": "event",
-                              readonly: ""
-                            },
-                            slot: "activator",
-                            model: {
-                              value: _vm.date,
-                              callback: function($$v) {
-                                _vm.date = $$v
-                              },
-                              expression: "date"
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "v-date-picker",
-                            {
-                              attrs: { scrollable: "" },
-                              model: {
-                                value: _vm.date,
-                                callback: function($$v) {
-                                  _vm.date = $$v
-                                },
-                                expression: "date"
-                              }
-                            },
-                            [
-                              _c("v-spacer"),
-                              _vm._v(" "),
-                              _c(
-                                "v-btn",
-                                {
-                                  attrs: { flat: "", color: "primary" },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.modal = false
-                                    }
-                                  }
-                                },
-                                [_vm._v("Cancel")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-btn",
-                                {
-                                  attrs: { flat: "", color: "primary" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.$refs.dialog.save(_vm.date)
-                                    }
-                                  }
-                                },
-                                [_vm._v("OK")]
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("v-text-field", {
-                        attrs: { label: "Edat", hint: "Edat del alumne" },
-                        model: {
-                          value: _vm.alumneBeingCreated.age,
-                          callback: function($$v) {
-                            _vm.$set(_vm.alumneBeingCreated, "age", $$v)
-                          },
-                          expression: "alumneBeingCreated.age"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("v-text-field", {
-                        attrs: { label: "Escola", hint: "Escola del alumne" },
-                        model: {
-                          value: _vm.alumneBeingCreated.school,
-                          callback: function($$v) {
-                            _vm.$set(_vm.alumneBeingCreated, "school", $$v)
-                          },
-                          expression: "alumneBeingCreated.school"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("v-combobox", {
-                        attrs: { items: _vm.items, label: "Sexe" },
-                        model: {
-                          value: _vm.alumneBeingCreated.sex,
-                          callback: function($$v) {
-                            _vm.$set(_vm.alumneBeingCreated, "sex", $$v)
-                          },
-                          expression: "alumneBeingCreated.sex"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        [
-                          _c(
-                            "v-btn",
-                            {
-                              attrs: { color: "grey" },
-                              on: {
-                                click: function($event) {
-                                  _vm.createDialog = false
-                                }
-                              }
-                            },
-                            [
-                              _c("v-icon", { staticClass: "mr-1" }, [
-                                _vm._v("exit_to_app")
-                              ]),
-                              _vm._v("SALIR")
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-btn",
-                            {
-                              attrs: { color: "success" },
-                              on: { click: _vm.create }
-                            },
-                            [
-                              _c("v-icon", { staticClass: "mr-1" }, [
-                                _vm._v("save")
-                              ]),
-                              _vm._v("GUARDAR")
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
+                  _c("create-form-alumne", {
+                    attrs: { uri: _vm.uri },
+                    on: {
+                      close: function($event) {
+                        _vm.dialog = false
+                      },
+                      created: _vm.created
+                    }
+                  })
                 ],
                 1
               )
@@ -38985,9 +38845,176 @@ var render = function() {
         {
           staticClass: "white--text",
           attrs: { fab: "", bottom: "", right: "", color: "pink", fixed: "" },
-          on: { click: _vm.showCreate }
+          on: {
+            click: function($event) {
+              _vm.dialog = true
+            }
+          }
         },
         [_c("v-icon", [_vm._v("add")])],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=template&id=639f24fb&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=template&id=639f24fb&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "span",
+    [
+      _c(
+        "v-form",
+        [
+          _c("v-text-field", {
+            attrs: {
+              autofocus: "",
+              label: "Nom",
+              hint: "Nom del alumne",
+              placeholder: "Nom del alumne ",
+              "error-messages": _vm.nameErrors
+            },
+            on: {
+              input: function($event) {
+                return _vm.$v.name.$touch()
+              },
+              blur: function($event) {
+                return _vm.$v.name.$touch()
+              }
+            },
+            model: {
+              value: _vm.name,
+              callback: function($$v) {
+                _vm.name = $$v
+              },
+              expression: "name"
+            }
+          }),
+          _vm._v(" "),
+          _c("v-text-field", {
+            attrs: {
+              autofocus: "",
+              label: "Cognon",
+              hint: "Cognom del alumne",
+              "error-messages": _vm.nameErrors
+            },
+            on: {
+              input: function($event) {
+                return _vm.$v.surname.$touch()
+              },
+              blur: function($event) {
+                return _vm.$v.surname.$touch()
+              }
+            },
+            model: {
+              value: _vm.surname,
+              callback: function($$v) {
+                _vm.surname = $$v
+              },
+              expression: "surname"
+            }
+          }),
+          _vm._v(" "),
+          _c("v-text-field", {
+            attrs: {
+              label: "Edat",
+              hint: "Edat del alumne",
+              "error-messages": _vm.nameErrors
+            },
+            on: {
+              input: function($event) {
+                return _vm.$v.age.$touch()
+              },
+              blur: function($event) {
+                _vm.$v.age.$touch()
+              }
+            },
+            model: {
+              value: _vm.age,
+              callback: function($$v) {
+                _vm.age = $$v
+              },
+              expression: "age"
+            }
+          }),
+          _vm._v(" "),
+          _c("v-text-field", {
+            attrs: { label: "Escola", hint: "Escola del alumne" },
+            model: {
+              value: _vm.alumneBeingCreated.school,
+              callback: function($$v) {
+                _vm.$set(_vm.alumneBeingCreated, "school", $$v)
+              },
+              expression: "alumneBeingCreated.school"
+            }
+          }),
+          _vm._v(" "),
+          _c("v-combobox", {
+            attrs: { items: _vm.items, label: "Sexe" },
+            model: {
+              value: _vm.alumneBeingCreated.sex,
+              callback: function($$v) {
+                _vm.$set(_vm.alumneBeingCreated, "sex", $$v)
+              },
+              expression: "alumneBeingCreated.sex"
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            [
+              _c(
+                "v-btn",
+                {
+                  attrs: { color: "grey" },
+                  on: {
+                    click: function($event) {
+                      _vm.dialog = false
+                    }
+                  }
+                },
+                [
+                  _c("v-icon", { staticClass: "mr-1" }, [
+                    _vm._v("exit_to_app")
+                  ]),
+                  _vm._v("SALIR")
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                { attrs: { color: "success" }, on: { click: _vm.create } },
+                [
+                  _c("v-icon", { staticClass: "mr-1" }, [_vm._v("save")]),
+                  _vm._v("GUARDAR")
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
         1
       )
     ],
@@ -77075,12 +77102,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Navigation_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Navigation.vue */ "./resources/js/components/Navigation.vue");
 /* harmony import */ var _components_Sparklines_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Sparklines.vue */ "./resources/js/components/Sparklines.vue");
 /* harmony import */ var _components_Entitats_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/Entitats.vue */ "./resources/js/components/Entitats.vue");
-/* harmony import */ var _components_alumnes_Alumnes_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/alumnes/Alumnes.vue */ "./resources/js/components/alumnes/Alumnes.vue");
-/* harmony import */ var _components_alumnes_CreateAlumne_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/alumnes/CreateAlumne.vue */ "./resources/js/components/alumnes/CreateAlumne.vue");
-/* harmony import */ var _components_alumnes_ListAlumne_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/alumnes/ListAlumne.vue */ "./resources/js/components/alumnes/ListAlumne.vue");
+/* harmony import */ var _components_alumnes_ListAlumne_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/alumnes/ListAlumne.vue */ "./resources/js/components/alumnes/ListAlumne.vue");
+/* harmony import */ var _components_alumnes_Alumnes_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/alumnes/Alumnes.vue */ "./resources/js/components/alumnes/Alumnes.vue");
+/* harmony import */ var _components_alumnes_CreateAlumne_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/alumnes/CreateAlumne.vue */ "./resources/js/components/alumnes/CreateAlumne.vue");
 /* harmony import */ var _plugins_permissions__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./plugins/permissions */ "./resources/js/plugins/permissions.js");
 /* harmony import */ var _plugins_snackbar__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./plugins/snackbar */ "./resources/js/plugins/snackbar/index.js");
 /* harmony import */ var _plugins_confirm__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./plugins/confirm */ "./resources/js/plugins/confirm/index.js");
+/* harmony import */ var _components_alumnes_CreateFormAlumne_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/alumnes/CreateFormAlumne.vue */ "./resources/js/components/alumnes/CreateFormAlumne.vue");
 
 
 
@@ -77100,6 +77128,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
  // instalacion vuetify
 
 window.Vue = vue__WEBPACK_IMPORTED_MODULE_0___default.a;
@@ -77110,13 +77139,12 @@ window.Vue.use(_plugins_snackbar__WEBPACK_IMPORTED_MODULE_13__["default"]);
 window.Vue.use(_plugins_confirm__WEBPACK_IMPORTED_MODULE_14__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue").default);
 window.Vue.component('navigation', _components_Navigation_vue__WEBPACK_IMPORTED_MODULE_6__["default"]);
-window.Vue.component('alumnes', _components_alumnes_Alumnes_vue__WEBPACK_IMPORTED_MODULE_9__["default"]);
+window.Vue.component('alumnes', _components_alumnes_Alumnes_vue__WEBPACK_IMPORTED_MODULE_10__["default"]);
 window.Vue.component('entitats', _components_Entitats_vue__WEBPACK_IMPORTED_MODULE_8__["default"]);
 window.Vue.component('sparklines', _components_Sparklines_vue__WEBPACK_IMPORTED_MODULE_7__["default"]);
-window.Vue.component('create-alumne', _components_alumnes_CreateAlumne_vue__WEBPACK_IMPORTED_MODULE_10__["default"]);
-
-window._vue.component('list-alumne', _components_alumnes_ListAlumne_vue__WEBPACK_IMPORTED_MODULE_11__["default"]); // eslint-disable-next-line no-unused-vars
-
+window.Vue.component('create-alumne', _components_alumnes_CreateAlumne_vue__WEBPACK_IMPORTED_MODULE_11__["default"]);
+window.Vue.component('list-alumne', _components_alumnes_ListAlumne_vue__WEBPACK_IMPORTED_MODULE_9__["default"]);
+window.Vue.component('create-form-alumne', _components_alumnes_CreateFormAlumne_vue__WEBPACK_IMPORTED_MODULE_15__["default"]); // eslint-disable-next-line no-unused-vars
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a(_components_App_vue__WEBPACK_IMPORTED_MODULE_5__["default"]);
 
@@ -77647,6 +77675,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateAlumne_vue_vue_type_template_id_7bbd6b97_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateAlumne_vue_vue_type_template_id_7bbd6b97_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/alumnes/CreateFormAlumne.vue":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/alumnes/CreateFormAlumne.vue ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CreateFormAlumne_vue_vue_type_template_id_639f24fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CreateFormAlumne.vue?vue&type=template&id=639f24fb&scoped=true& */ "./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=template&id=639f24fb&scoped=true&");
+/* harmony import */ var _CreateFormAlumne_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateFormAlumne.vue?vue&type=script&lang=js& */ "./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CreateFormAlumne_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CreateFormAlumne_vue_vue_type_template_id_639f24fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CreateFormAlumne_vue_vue_type_template_id_639f24fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "639f24fb",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/alumnes/CreateFormAlumne.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateFormAlumne_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./CreateFormAlumne.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateFormAlumne_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=template&id=639f24fb&scoped=true&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=template&id=639f24fb&scoped=true& ***!
+  \*********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateFormAlumne_vue_vue_type_template_id_639f24fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./CreateFormAlumne.vue?vue&type=template&id=639f24fb&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=template&id=639f24fb&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateFormAlumne_vue_vue_type_template_id_639f24fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateFormAlumne_vue_vue_type_template_id_639f24fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

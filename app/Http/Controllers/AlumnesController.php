@@ -13,9 +13,8 @@ class AlumnesController extends Controller
     {
 
         $alumnes = map_collection(Alumne::orderBy('created_at','desc')->get());
-        //$alumnes = Alumne::orderBy('created_at','desc')->get();
         $uri= '/api/v1/alumnes';
-     return view('/alumnes',compact('alumnes', 'uri'));
+     return view('alumnes',compact('alumnes', 'uri'));
 
 
     }

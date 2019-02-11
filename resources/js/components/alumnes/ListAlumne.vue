@@ -104,11 +104,12 @@
         },
 
         methods:{
-            refresh(){
+            refresh(message = true){
                 this.loading = true
                 window.axios.get(this.uri).then(response => {
                     this.dataAlumnes = response.data
                     this.loading = false
+                    if (message) this.$snackbar.showMessage('Alumnes actualizats correctament')
                 }).catch(error => {
                     console.log(error)
                     this.loading = false
