@@ -22,6 +22,28 @@
                     <v-form>
                         <v-text-field v-model="alumneBeingCreated.name" label="Nom" hint="Nom del alumne"></v-text-field>
                         <v-text-field v-model="alumneBeingCreated.surname" label="Cognon" hint="Cognom del alumne"></v-text-field>
+                        <v-dialog
+                            ref="dialog"
+                            v-model="modal"
+                            :return-value.sync="date"
+                            persistent
+                            lazy
+                            full-width
+                            width="290px"
+                        >
+          <v-text-field
+              slot="activator"
+              v-model="date"
+              label="Picker in dialog"
+              prepend-icon="event"
+              readonly
+          ></v-text-field>
+          <v-date-picker v-model="date" scrollable>
+            <v-spacer></v-spacer>
+            <v-btn flat color="primary" @click="modal = false">Cancel</v-btn>
+            <v-btn flat color="primary" @click="$refs.dialog.save(date)">OK</v-btn>
+          </v-date-picker>
+        </v-dialog>
                         <v-text-field v-model="alumneBeingCreated.age" label="Edat" hint="Edat del alumne"></v-text-field>
                         <v-text-field v-model="alumneBeingCreated.school" label="Escola" hint="Escola del alumne"></v-text-field>
                         <v-combobox
@@ -81,6 +103,7 @@
                         <td>{{alumne.id}}</td>
                         <td>{{alumne.name}}</td>
                         <td>{{alumne.surname}}</td>
+                        <td>{{alumne.birthdate}}</td>
                         <td>{{alumne.age}}</td>
                         <td>{{alumne.school}}</td>
                         <td>{{alumne.school_course}}</td>
@@ -112,6 +135,7 @@
             return {
                 name:'',
                 surname:'',
+                birthdate:'',
                 age:'',
                 school:'',
                 school_course:'',
@@ -130,6 +154,7 @@
                     {text:'ID', value: 'id'},
                     {text:'NOM', value: 'name'},
                     {text:'COGNOM', value: 'surname'},
+                    {text: 'DATA DE NAIXIMENT', value:'birthdate'},
                     {text:'EDAT', value: 'age'},
                     {text:'COL.LEGI', value: 'school'},
                     {text:'CURS', value: 'school_course'},

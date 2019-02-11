@@ -1870,12 +1870,36 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Alumnes',
   data: function data() {
     return {
       name: '',
       surname: '',
+      birthdate: '',
       age: '',
       school: '',
       school_course: '',
@@ -1895,6 +1919,9 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         text: 'COGNOM',
         value: 'surname'
+      }, {
+        text: 'DATA DE NAIXIMENT',
+        value: 'birthdate'
       }, {
         text: 'EDAT',
         value: 'age'
@@ -6632,7 +6659,7 @@ exports.push([module.i, "@font-face {\n  font-family: 'Material Icons';\n  font-
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css?bdb9":
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css":
 /*!***********************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vuetify/dist/vuetify.min.css ***!
   \***********************************************************************************************************************************/
@@ -38063,6 +38090,98 @@ var render = function() {
                         }
                       }),
                       _vm._v(" "),
+                      _c(
+                        "v-dialog",
+                        {
+                          ref: "dialog",
+                          attrs: {
+                            "return-value": _vm.date,
+                            persistent: "",
+                            lazy: "",
+                            "full-width": "",
+                            width: "290px"
+                          },
+                          on: {
+                            "update:returnValue": function($event) {
+                              _vm.date = $event
+                            },
+                            "update:return-value": function($event) {
+                              _vm.date = $event
+                            }
+                          },
+                          model: {
+                            value: _vm.modal,
+                            callback: function($$v) {
+                              _vm.modal = $$v
+                            },
+                            expression: "modal"
+                          }
+                        },
+                        [
+                          _c("v-text-field", {
+                            attrs: {
+                              slot: "activator",
+                              label: "Picker in dialog",
+                              "prepend-icon": "event",
+                              readonly: ""
+                            },
+                            slot: "activator",
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "v-date-picker",
+                            {
+                              attrs: { scrollable: "" },
+                              model: {
+                                value: _vm.date,
+                                callback: function($$v) {
+                                  _vm.date = $$v
+                                },
+                                expression: "date"
+                              }
+                            },
+                            [
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c(
+                                "v-btn",
+                                {
+                                  attrs: { flat: "", color: "primary" },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.modal = false
+                                    }
+                                  }
+                                },
+                                [_vm._v("Cancel")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-btn",
+                                {
+                                  attrs: { flat: "", color: "primary" },
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.$refs.dialog.save(_vm.date)
+                                    }
+                                  }
+                                },
+                                [_vm._v("OK")]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
                       _c("v-text-field", {
                         attrs: { label: "Edat", hint: "Edat del alumne" },
                         model: {
@@ -38263,6 +38382,8 @@ var render = function() {
                         _c("td", [_vm._v(_vm._s(alumne.name))]),
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(alumne.surname))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(alumne.birthdate))]),
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(alumne.age))]),
                         _vm._v(" "),
@@ -76464,7 +76585,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./vuetify.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css?bdb9");
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./vuetify.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
