@@ -5,7 +5,7 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import './bootstrap'
 import AppComponent from './components/App.vue'
 import Navigation from './components/Navigation.vue'
-import Alumnes from "./components/Alumnes.vue";
+import Alumnes from "./components/alumnes/Alumnes.vue";
 import Entitats from "./components/Entitats.vue";
 import Sparklines from "./components/Sparklines";
 
