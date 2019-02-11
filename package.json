@@ -30,6 +30,7 @@
     "dependencies": {
         "material-design-icons-iconfont": "^4.0.4",
         "material-icons": "^0.3.0",
+        "vuelidate": "^0.7.4",
         "vuetify": "^1.5.0"
     }
 }
