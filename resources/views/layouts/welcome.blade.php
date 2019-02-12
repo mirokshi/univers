@@ -3,9 +3,14 @@
 <head>
     <title>Univers alumnat</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
     <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <style>
         [v-cloak] > * { display:none; }
         [v-cloak]::before {
@@ -26,6 +31,9 @@
         <v-toolbar class="red lighten-2">
             <v-toolbar-title v-text="title"></v-toolbar-title>
             <img src="img/logo1.png" alt="sisetze" height="50">
+            <v-spacer></v-spacer>
+                <v-btn href="login" class="red"> LOGIN  </v-btn>
+                <v-btn href="register" class="red"> REGISTER</v-btn>
         </v-toolbar>
         <v-content>
             <section>
