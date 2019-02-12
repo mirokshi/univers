@@ -2272,6 +2272,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuelidate__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2368,24 +2391,27 @@ __webpack_require__.r(__webpack_exports__);
     },
     surname: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
-    },
-    age: {
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
-    },
-    school: {
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
     }
   },
   name: "CreateFormAlumne",
   data: function data() {
     return {
+      date: new Date().toISOString().substr(0, 10),
+      dateFormatted: this.formatDate(new Date().toISOString().substr(0, 10)),
+      menu1: false,
       name: '',
       surname: '',
       age: '',
       school: '',
       sex: '',
       dataAlumnes: this.alumnes,
-      loading: false
+      loading: false,
+      selectSex: '',
+      itemSex: ['Home', 'Dona', 'Altres'],
+      selectSchool: '',
+      itemSchool: ['Bitem', 'Centre Educatiu', 'Centre Educatiu Girona', 'CFA', 'Cinta Curto', 'Consolació', 'Daniel Mangrané', 'Dertosa', 'Despuig', 'El Temple', 'Ferreries', 'IES Ebre IES Montsia', 'La Mercè', 'La Mercè/St Jordi', 'Marcel-lí Domingo', 'Montsià', 'no escolarizat', 'PTT', 'Remolins', 'Sagrada Familia', 'Sant Jordi', 'St. Llatzer', 'Temple', 'Teresianes', 'UEC', 'URV', 'Verge de la Cinta', 'Altres'],
+      selectSchoolCourse: '',
+      itemSchoolCourse: ['1', '2', '3']
     };
   },
   props: {
@@ -2410,7 +2436,8 @@ __webpack_require__.r(__webpack_exports__);
         'name': this.name,
         'surname': this.surname,
         'age': this.age,
-        'school': this.school
+        'school': this.school,
+        'sex': this.sex
       };
       window.axios.post(this.uri, alumne).then(function (response) {
         _this.$snackbar.showMessage('Alumne creat correctament');
@@ -2430,6 +2457,28 @@ __webpack_require__.r(__webpack_exports__);
     },
     created: function created() {
       this.selectLoggedUser();
+    },
+    formatDate: function formatDate(date) {
+      if (!date) return null;
+
+      var _date$split = date.split('-'),
+          _date$split2 = _slicedToArray(_date$split, 3),
+          year = _date$split2[0],
+          month = _date$split2[1],
+          day = _date$split2[2];
+
+      return "".concat(month, "/").concat(day, "/").concat(year);
+    },
+    parseDate: function parseDate(date) {
+      if (!date) return null;
+
+      var _date$split3 = date.split('/'),
+          _date$split4 = _slicedToArray(_date$split3, 3),
+          month = _date$split4[0],
+          day = _date$split4[1],
+          year = _date$split4[2];
+
+      return "".concat(year, "-").concat(month.padStart(2, '0'), "-").concat(day.padStart(2, '0'));
     }
   },
   computed: {
@@ -2455,27 +2504,13 @@ __webpack_require__.r(__webpack_exports__);
 
       return errors;
     },
-    ageErrors: function ageErrors() {
-      var errors = [];
-
-      if (!this.$v.name.$dirty) {
-        return errors;
-      } else {
-        !this.$v.name.required && errors.push('La edat del alumne  és obligatori.');
-      }
-
-      return errors;
-    },
-    schoolErrors: function schoolErrors() {
-      var errors = [];
-
-      if (!this.$v.name.$dirty) {
-        return errors;
-      } else {
-        !this.$v.name.required && errors.push('Aquest camp és obligatori.');
-      }
-
-      return errors;
+    computedDateFormatted: function computedDateFormatted() {
+      return this.formatDate(this.date);
+    }
+  },
+  watch: {
+    date: function date(val) {
+      this.dateFormatted = this.formatDate(this.date);
     }
   }
 });
@@ -2548,6 +2583,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'ListAlumne',
   data: function data() {
@@ -2555,9 +2600,7 @@ __webpack_require__.r(__webpack_exports__);
       search: '',
       loading: false,
       dataAlumnes: this.alumnes,
-      createDialog: false,
-      alumneBeingCreated: {},
-      items: ['Home', 'Dona', 'Altres'],
+      selected: '',
       headers: [{
         text: 'ID',
         value: 'id'
@@ -2587,7 +2630,8 @@ __webpack_require__.r(__webpack_exports__);
         value: 'created_at_timestamp'
       }],
       pagination: {
-        rowsPerPage: 25
+        rowsPerPage: 25,
+        sortBy: 'name'
       }
     };
   },
@@ -2599,6 +2643,10 @@ __webpack_require__.r(__webpack_exports__);
     uri: {
       type: String,
       required: true
+    },
+    value: {
+      type: String,
+      required: false
     }
   },
   watch: {
@@ -38937,7 +38985,7 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("v-toolbar-title", { staticClass: "white--text" }, [
-                _vm._v("Crear Alumne")
+                _vm._v("Crear Alumne ")
               ]),
               _vm._v(" "),
               _c("v-spacer"),
@@ -39054,6 +39102,12 @@ var render = function() {
             "v-container",
             [
               _c(
+                "div",
+                { staticClass: "headline font-weight-light grey--text" },
+                [_vm._v("DADES DEL ALUMNE")]
+              ),
+              _vm._v(" "),
+              _c(
                 "v-layout",
                 { attrs: { row: "", wrap: "" } },
                 [
@@ -39096,8 +39150,8 @@ var render = function() {
                       _c("v-text-field", {
                         attrs: {
                           autofocus: "",
-                          label: "Cognon",
-                          hint: "Cognom del alumne",
+                          label: "Cognoms",
+                          hint: "Cognoms del alumne",
                           "error-messages": _vm.surnameErrors
                         },
                         on: {
@@ -39122,108 +39176,145 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "v-flex",
-                    { attrs: { xs12: "", sm6: "" } },
-                    [
-                      _c("v-text-field", {
-                        attrs: {
-                          label: "Edat",
-                          hint: "Edat del alumne",
-                          "error-messages": _vm.ageErrors
-                        },
-                        on: {
-                          input: function($event) {
-                            return _vm.$v.age.$touch()
-                          },
-                          blur: function($event) {
-                            return _vm.$v.age.$touch()
-                          }
-                        },
-                        model: {
-                          value: _vm.age,
-                          callback: function($$v) {
-                            _vm.age = $$v
-                          },
-                          expression: "age"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-flex",
-                    { attrs: { xs12: "", sm6: "" } },
-                    [
-                      _c("v-text-field", {
-                        attrs: {
-                          label: "Escola",
-                          hint: "Escola del alumne",
-                          "error-messages": _vm.schoolErrors
-                        },
-                        on: {
-                          input: function($event) {
-                            return _vm.$v.school.$touch()
-                          },
-                          blur: function($event) {
-                            return _vm.$v.school.$touch()
-                          }
-                        },
-                        model: {
-                          value: _vm.school,
-                          callback: function($$v) {
-                            _vm.school = $$v
-                          },
-                          expression: "school"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("v-flex"),
-                  _vm._v(" "),
-                  _c(
-                    "v-flex",
-                    { attrs: { xs12: "", sm6: "" } },
+                    { attrs: { xs12: "", sm6: "", md3: "" } },
                     [
                       _c(
-                        "v-radio-group",
+                        "v-menu",
                         {
-                          attrs: { column: "" },
+                          ref: "menu1",
+                          attrs: {
+                            "close-on-content-click": false,
+                            "nudge-right": 40,
+                            lazy: "",
+                            transition: "scale-transition",
+                            "offset-y": "",
+                            "full-width": "",
+                            "max-width": "290px",
+                            "min-width": "290px"
+                          },
                           model: {
-                            value: _vm.sex,
+                            value: _vm.menu1,
                             callback: function($$v) {
-                              _vm.sex = $$v
+                              _vm.menu1 = $$v
                             },
-                            expression: "sex"
+                            expression: "menu1"
                           }
                         },
                         [
-                          _c(
-                            "v-radio",
-                            { attrs: { color: "red", value: "Home" } },
-                            [_c("v-icon", [_vm._v("save")])],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c("v-radio", {
+                          _c("v-text-field", {
                             attrs: {
-                              label: "Dona",
-                              color: "blue",
-                              value: "Dona"
+                              slot: "activator",
+                              label: "Data naixement",
+                              hint: "MM/DD/YYYY format",
+                              "persistent-hint": ""
+                            },
+                            on: {
+                              blur: function($event) {
+                                _vm.date = _vm.parseDate(_vm.dateFormatted)
+                              }
+                            },
+                            slot: "activator",
+                            model: {
+                              value: _vm.dateFormatted,
+                              callback: function($$v) {
+                                _vm.dateFormatted = $$v
+                              },
+                              expression: "dateFormatted"
                             }
                           }),
                           _vm._v(" "),
-                          _c("v-radio", {
-                            attrs: {
-                              label: "Altre",
-                              color: "green",
-                              value: "Altre"
+                          _c("v-date-picker", {
+                            attrs: { "no-title": "" },
+                            on: {
+                              input: function($event) {
+                                _vm.menu1 = false
+                              }
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
                             }
                           })
                         ],
                         1
                       )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", sm6: "", md3: "" } },
+                    [
+                      _c("v-combobox", {
+                        attrs: {
+                          items: _vm.itemSex,
+                          label: "Selecciona el gener"
+                        },
+                        model: {
+                          value: _vm.selectSex,
+                          callback: function($$v) {
+                            _vm.selectSex = $$v
+                          },
+                          expression: "selectSex"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "headline font-weight-light grey--text" },
+                [_vm._v("DADES DEL CENTRE")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-layout",
+                [
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", sm6: "" } },
+                    [
+                      _c("v-combobox", {
+                        attrs: {
+                          items: _vm.itemSchool,
+                          label: "Selecciona la escola"
+                        },
+                        model: {
+                          value: _vm.selectSchool,
+                          callback: function($$v) {
+                            _vm.selectSchool = $$v
+                          },
+                          expression: "selectSchool"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-flex",
+                    [
+                      _c("v-combobox", {
+                        attrs: {
+                          items: _vm.itemSchoolCourse,
+                          label: "Selcciona el nivell"
+                        },
+                        model: {
+                          value: _vm.selectSchoolCourse,
+                          callback: function($$v) {
+                            _vm.selectSchoolCourse = $$v
+                          },
+                          expression: "selectSchoolCourse"
+                        }
+                      })
                     ],
                     1
                   )
@@ -39404,7 +39495,9 @@ var render = function() {
                   200,
                   { text: "Tots", value: -1 }
                 ],
-                pagination: _vm.pagination
+                pagination: _vm.pagination,
+                "select-all": "",
+                "item-key": "id"
               },
               on: {
                 "update:pagination": function($event) {
@@ -39418,6 +39511,20 @@ var render = function() {
                     var alumne = ref.item
                     return [
                       _c("tr", [
+                        _c(
+                          "td",
+                          [
+                            _c("v-checkbox", {
+                              attrs: {
+                                "input-value": alumne.selected,
+                                primary: "",
+                                "hide-details": ""
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(alumne.id))]),
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(alumne.name))]),
@@ -39445,7 +39552,14 @@ var render = function() {
                     ]
                   }
                 }
-              ])
+              ]),
+              model: {
+                value: _vm.selected,
+                callback: function($$v) {
+                  _vm.selected = $$v
+                },
+                expression: "selected"
+              }
             },
             [
               _c("v-progress-linear", {
@@ -79871,15 +79985,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************************************************!*\
   !*** ./resources/js/components/alumnes/CreateFormAlumne.vue ***!
   \**************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CreateFormAlumne_vue_vue_type_template_id_639f24fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CreateFormAlumne.vue?vue&type=template&id=639f24fb&scoped=true& */ "./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=template&id=639f24fb&scoped=true&");
 /* harmony import */ var _CreateFormAlumne_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateFormAlumne.vue?vue&type=script&lang=js& */ "./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _CreateFormAlumne_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _CreateFormAlumne_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -79909,7 +80022,7 @@ component.options.__file = "resources/js/components/alumnes/CreateFormAlumne.vue
 /*!***************************************************************************************!*\
   !*** ./resources/js/components/alumnes/CreateFormAlumne.vue?vue&type=script&lang=js& ***!
   \***************************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

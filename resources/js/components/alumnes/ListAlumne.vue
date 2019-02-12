@@ -36,10 +36,20 @@
                 :rows-per-page-items="[5,10,25,50,100,200,{'text':'Tots','value':-1}]"
                 :pagination.sync="pagination"
                 class="hidden-md-and-down"
+                select-all
+                v-model="selected"
+                item-key="id"
             >
                 <v-progress-linear slot="progess" color="blue" indeterminate></v-progress-linear>
                 <template slot="items" slot-scope="{item: alumne}">
                     <tr>
+                        <td>
+                            <v-checkbox
+                                :input-value="alumne.selected"
+                                primary
+                                hide-details
+                            ></v-checkbox>
+                        </td>
                         <td>{{alumne.id}}</td>
                         <td>{{alumne.name}}</td>
                         <td>{{alumne.surname}}</td>
@@ -63,13 +73,7 @@
                 search:'',
                 loading: false,
                 dataAlumnes: this.alumnes,
-                createDialog: false,
-                alumneBeingCreated: {},
-                items:[
-                    'Home',
-                    'Dona',
-                    'Altres'
-                ],
+                selected:'',
                 headers :[
                     {text:'ID', value: 'id'},
                     {text:'NOM', value: 'name'},
@@ -82,7 +86,8 @@
                     {text:'CREAT', value:'created_at_timestamp'},
                 ],
                 pagination:{
-                    rowsPerPage:25
+                    rowsPerPage:25,
+                    sortBy:'name'
                 }
             }
         },
@@ -94,6 +99,10 @@
             uri:{
                 type: String,
                 required: true
+            },
+            value:{
+                type: String,
+                required: false
             }
         },
         watch:{

@@ -2,6 +2,7 @@
     <span>
         <v-form>
             <v-container>
+                <div class="headline font-weight-light grey--text">DADES DEL ALUMNE</div>
                 <v-layout row wrap>
                     <v-flex xs12 sm6 >
                         <v-text-field
@@ -19,55 +20,69 @@
                         <v-text-field
                             autofocus
                             v-model="surname"
-                            label="Cognon"
-                            hint="Cognom del alumne"
+                            label="Cognoms"
+                            hint="Cognoms del alumne"
                             :error-messages="surnameErrors"
                             @input="$v.surname.$touch()"
                             @blur="$v.surname.$touch()"
                         ></v-text-field>
                     </v-flex>
-                    <v-flex xs12 sm6 >
-                        <v-text-field
-                            v-model="age"
-                            label="Edat"
-                            hint="Edat del alumne"
-                            :error-messages="ageErrors"
-                            @input="$v.age.$touch()"
-                            @blur="$v.age.$touch()"
-                        ></v-text-field>
+                      <v-flex xs12 sm6 md3>
+                          <v-menu
+                              ref="menu1"
+                              v-model="menu1"
+                              :close-on-content-click="false"
+                              :nudge-right="40"
+                              lazy
+                              transition="scale-transition"
+                              offset-y
+                              full-width
+                              max-width="290px"
+                              min-width="290px"
+                          >
+                              <v-text-field
+                                  slot="activator"
+                                  v-model="dateFormatted"
+                                  label="Data naixement"
+                                  hint="MM/DD/YYYY format"
+                                  persistent-hint
+                                  @blur="date = parseDate(dateFormatted)"
+                              ></v-text-field>
+                              <v-date-picker v-model="date" no-title @input="menu1 = false"></v-date-picker>
+                          </v-menu>
+                      </v-flex>
+                    <v-flex xs12 sm6 md3>
+                            <v-combobox
+                                v-model="selectSex"
+                                :items="itemSex"
+                                label="Selecciona el gener"
+                            ></v-combobox>
                     </v-flex>
+                </v-layout>
+                <div class="headline font-weight-light grey--text">DADES DEL CENTRE</div>
+                <v-layout>
                     <v-flex xs12 sm6 >
-                        <v-text-field
-                            v-model="school"
-                            label="Escola"
-                            hint="Escola del alumne"
-                            :error-messages="schoolErrors"
-                            @input="$v.school.$touch()"
-                            @blur="$v.school.$touch()"
-                        ></v-text-field>
+                        <v-combobox
+                            v-model="selectSchool"
+                            :items="itemSchool"
+                            label="Selecciona la escola"
+                        >
+                        </v-combobox>
                     </v-flex>
+
                     <v-flex>
-                        <!--TODO ASIGNAR UNA ACTIVIDAD-->
-                        <!--<activat-select></activat-select>-->
+                        <v-combobox
+                            v-model="selectSchoolCourse"
+                            :items="itemSchoolCourse"
+                            label="Selcciona el nivell"
+                        >
+                        </v-combobox>
                     </v-flex>
-                    <v-flex xs12 sm6 >
-                        <v-radio-group v-model="sex" column>
-                            <v-radio
-                                color="red"
-                                value="Home"
-                            ><v-icon>save</v-icon></v-radio>
-                            <v-radio
-                                label="Dona"
-                                color="blue"
-                                value="Dona"
-                            ></v-radio>
-                            <v-radio
-                                label="Altre"
-                                color="green"
-                                value="Altre"
-                            ></v-radio>
-                        </v-radio-group>
-                    </v-flex>
+                    <!--<v-flex>-->
+                        <!--&lt;!&ndash;TODO ASIGNAR UNA ACTIVIDAD&ndash;&gt;-->
+                        <!--&lt;!&ndash;<activat-select></activat-select>&ndash;&gt;-->
+                    <!--</v-flex>-->
+
                 </v-layout>
             </v-container>
             <div class="text-xs-center">
@@ -93,22 +108,67 @@
         validations:{
           name:{required},
           surname:{required},
-          age:{required},
-          school:{required}
         },
         name: "CreateFormAlumne",
         data(){
-            return{
+            return  {
+                date: new Date().toISOString().substr(0, 10),
+                dateFormatted: this.formatDate(new Date().toISOString().substr(0, 10)),
+                menu1: false,
                 name:'',
-                surname:'',
+                surname: '',
                 age:'',
                 school:'',
                 sex:'',
                 dataAlumnes: this.alumnes,
                 loading:false,
-
+                selectSex:'',
+                itemSex:
+                    [
+                    'Home',
+                    'Dona',
+                    'Altres'
+                ],
+                selectSchool:'',
+                itemSchool:
+                    [
+                        'Bitem',
+                        'Centre Educatiu',
+                        'Centre Educatiu Girona',
+                        'CFA',
+                        'Cinta Curto',
+                        'Consolació',
+                        'Daniel Mangrané',
+                        'Dertosa',
+                        'Despuig',
+                        'El Temple',
+                        'Ferreries',
+                        'IES Ebre IES Montsia',
+                        'La Mercè',
+                        'La Mercè/St Jordi',
+                        'Marcel-lí Domingo',
+                        'Montsià',
+                        'no escolarizat',
+                        'PTT',
+                        'Remolins',
+                        'Sagrada Familia',
+                        'Sant Jordi',
+                        'St. Llatzer',
+                        'Temple',
+                        'Teresianes',
+                        'UEC',
+                        'URV',
+                        'Verge de la Cinta',
+                        'Altres'
+                    ],
+                selectSchoolCourse:'',
+                itemSchoolCourse:[
+                    '1',
+                    '2',
+                    '3',
+                ]
             }
-        },
+            },
         props:{
             uri:{
                 type:String,
@@ -129,7 +189,8 @@
                     'name': this.name,
                     'surname': this.surname,
                     'age': this.age,
-                    'school': this.school
+                    'school': this.school,
+                    'sex':this.sex
                 }
                 window.axios.post(this.uri,alumne).then(response => {
                     this.$snackbar.showMessage('Alumne creat correctament')
@@ -144,6 +205,16 @@
             },
             created(){
                 this.selectLoggedUser()
+            },
+            formatDate: function(date) {
+                if (!date) return null
+                const [year, month, day] = date.split('-')
+                return `${month}/${day}/${year}`
+            },
+            parseDate (date) {
+                if (!date) return null
+                const [month, day, year] = date.split('/')
+                return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
             }
         },
         computed:{
@@ -161,19 +232,13 @@
                 } else { !this.$v.name.required && errors.push('El cognom del alumne  és obligatori.') }
                 return errors
             },
-            ageErrors(){
-                const errors = []
-                if (!this.$v.name.$dirty) {
-                    return errors
-                } else { !this.$v.name.required && errors.push('La edat del alumne  és obligatori.') }
-                return errors
+            computedDateFormatted () {
+                return this.formatDate(this.date)
             },
-            schoolErrors(){
-                const errors = []
-                if (!this.$v.name.$dirty) {
-                    return errors
-                } else { !this.$v.name.required && errors.push('Aquest camp és obligatori.') }
-                return errors
+        },
+        watch:{
+            date (val) {
+                this.dateFormatted = this.formatDate(this.date)
             }
         }
     }

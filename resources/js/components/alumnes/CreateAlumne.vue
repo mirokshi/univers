@@ -7,7 +7,7 @@
                         close
                     </v-icon>
                 </v-btn>
-                <v-toolbar-title class="white--text">Crear Alumne</v-toolbar-title>
+                <v-toolbar-title class="white--text">Crear Alumne </v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-btn color="white" flat @click="dialog = false ">
                     <v-icon>exit_to_app</v-icon>
