@@ -52,14 +52,34 @@
                           </v-menu>
                       </v-flex>
                     <v-flex xs12 sm6 md3>
-                            <v-combobox
-                                v-model="selectSex"
-                                :items="itemSex"
-                                label="Selecciona el gener"
-                            ></v-combobox>
+                        <v-text-field
+                            autofocus
+                            v-model="phone"
+                            label="Telefon"
+                            hint="Telefon de contacte"
+                        ></v-text-field>
+                    </v-flex>
+                    <v-flex xs12 sm6 md3>
+                        <v-radio-group row v-model="sex">
+                            <v-radio
+                                label="Home"
+                                color="blue"
+                                value="home"
+                            ></v-radio>
+                            <v-radio
+                                label="Dona"
+                                color="pink"
+                                value="dona"
+                            ></v-radio>
+                            <v-radio
+                                label="Altre"
+                                color="green"
+                                value="altre"
+                            ></v-radio>
+                        </v-radio-group>
                     </v-flex>
                 </v-layout>
-                <div class="headline font-weight-light grey--text">DADES DEL CENTRE</div>
+                <div class="headline font-weight-light grey--text">CENTRE EDUCATIU</div>
                 <v-layout>
                     <v-flex xs12 sm6 >
                         <v-combobox
@@ -83,6 +103,12 @@
                         <!--&lt;!&ndash;<activat-select></activat-select>&ndash;&gt;-->
                     <!--</v-flex>-->
 
+                </v-layout>
+                <div class="headline font-weight-light grey--text">ACTIVITAT</div>
+                <v-layout>
+                    <v-flex>
+
+                    </v-flex>
                 </v-layout>
             </v-container>
             <div class="text-xs-center">
@@ -120,15 +146,9 @@
                 age:'',
                 school:'',
                 sex:'',
+                phone:'',
                 dataAlumnes: this.alumnes,
                 loading:false,
-                selectSex:'',
-                itemSex:
-                    [
-                    'Home',
-                    'Dona',
-                    'Altres'
-                ],
                 selectSchool:'',
                 itemSchool:
                     [
@@ -143,7 +163,8 @@
                         'Despuig',
                         'El Temple',
                         'Ferreries',
-                        'IES Ebre IES Montsia',
+                        'IES Ebre',
+                        'IES Montsia',
                         'La Mercè',
                         'La Mercè/St Jordi',
                         'Marcel-lí Domingo',
@@ -163,9 +184,24 @@
                     ],
                 selectSchoolCourse:'',
                 itemSchoolCourse:[
-                    '1',
-                    '2',
-                    '3',
+                    'P3',
+                    'P4',
+                    'P5',
+                    '1r',
+                    '2n',
+                    '3r',
+                    '5è',
+                    '6è',
+                    '1r ESO',
+                    '2n ESO',
+                    '1r BATX',
+                    '2n BATX',
+                    'CFGM',
+                    'CFGMS',
+                    'CEE',
+                    'CFA',
+                    'Universitat',
+                    'Altres',
                 ]
             }
             },

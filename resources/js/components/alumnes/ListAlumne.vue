@@ -53,12 +53,16 @@
                         <td>{{alumne.id}}</td>
                         <td>{{alumne.name}}</td>
                         <td>{{alumne.surname}}</td>
+                        <td>{{alumne.sex}}</td>
                         <td>{{alumne.birthdate}}</td>
                         <td>{{alumne.age}}</td>
                         <td>{{alumne.school}}</td>
+                        <td>{{alumne.course}}</td>
                         <td>{{alumne.school_course}}</td>
-                        <td>{{alumne.sex}}</td>
                         <td><span :title="alumne.created_at_formatted">{{alumne.created_at_human}}</span></td>
+                        <td>
+                            <show-alumne :alumne="alumne"></show-alumne>
+                        </td>
                     </tr>
                 </template>
             </v-data-table>
@@ -66,24 +70,32 @@
 </template>
 
 <script>
+    import ShowAlumne from "./ShowAlumne";
+
     export default {
         name:'ListAlumne',
+        components:{
+          'show-alumne' :ShowAlumne
+        },
         data(){
             return {
                 search:'',
+                course:'',
                 loading: false,
                 dataAlumnes: this.alumnes,
                 selected:'',
                 headers :[
                     {text:'ID', value: 'id'},
                     {text:'NOM', value: 'name'},
-                    {text:'COGNOM', value: 'surname'},
-                    {text: 'DATA DE NAIXIMENT', value:'birthdate'},
-                    {text:'EDAT', value: 'age'},
-                    {text:'COL.LEGI', value: 'school'},
-                    {text:'CURS', value: 'school_course'},
+                    {text:'COGNOMS', value: 'surname'},
                     {text:'SEXE', value: 'sex'},
+                    {text:'DATA DE NAIXIMENT', value:'birthdate'},
+                    {text:'EDAT', value: 'age'},
+                    {text:'CENTRE EDUCATIU', value: 'school'},
+                    {text:'CURS', value:'course'},
+                    {text:'NIVELL', value: 'school_course'},
                     {text:'CREAT', value:'created_at_timestamp'},
+                    {text:'ACCIONS',sorteable:false, value:'full_search'},
                 ],
                 pagination:{
                     rowsPerPage:25,

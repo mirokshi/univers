@@ -21,6 +21,9 @@ import permissions from './plugins/permissions';
 import snackbar from './plugins/snackbar';
 import confirm from './plugins/confirm';
 import CreateFormAlumne from './components/alumnes/CreateFormAlumne.vue';
+import ShowAlumne from './components/alumnes/ShowAlumne.vue';
+import ShowFormAlumne from './components/alumnes/ShowFormAlumne.vue';
+
 
 // instalacion vuetify
 window.Vue = Vue;
@@ -39,8 +42,11 @@ window.Vue.component('navigation', Navigation);
 window.Vue.component('alumnes', Alumnes);
 window.Vue.component('entitats', Entitats);
 window.Vue.component('sparklines', Sparklines);
+
 window.Vue.component('create-alumne', CreateAlumne);
 window.Vue.component('list-alumne', ListAlumne);
 window.Vue.component('create-form-alumne', CreateFormAlumne);
+window.Vue.component('show-alumne', ShowAlumne);
+window.Vue.component('show-form-alumne', ShowFormAlumne);
 // eslint-disable-next-line no-unused-vars
 const app = new Vue(AppComponent);

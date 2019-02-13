@@ -27,6 +27,7 @@ class Alumne extends Model
             'course' => $this->course,
             'school_course' => $this->school_course,
             'sex' => $this->sex,
+            'phone'=>$this->phone,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'created_at_formatted' => $this->created_at_formatted,

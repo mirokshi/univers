@@ -19,11 +19,12 @@ $factory->define(Alumne::class, function (Faker $faker) {
         'name' => $faker->name,
         'surname' => $faker->text,
         'birthdate' => $faker->date(),
-        'age'=>$faker->numerify(),
+        'age'=>$faker->randomNumber(),
         'school'=>$faker->text,
         'course'=> $faker->text,
         'school_course'=>$faker->text,
         'sex' => $faker->text,
+        'phone'=>$faker->phoneNumber
 
     ];
 });
