@@ -32,8 +32,16 @@
             <v-toolbar-title v-text="title"></v-toolbar-title>
             <img src="img/logo1.png" alt="sisetze" height="50">
             <v-spacer></v-spacer>
-                <v-btn href="login" class="red"> LOGIN  </v-btn>
+            @if(empty(Auth::user()->email))
+                <v-btn href="login" class="red "> LOGIN  </v-btn>
                 <v-btn href="register" class="red"> REGISTER</v-btn>
+
+            @else
+                <v-form action="/logout" method="POST">
+                    @csrf
+                    <v-btn class="red" type="submit">LOGOUT</v-btn>
+                </v-form>
+            @endif
         </v-toolbar>
         <v-content>
             <section>

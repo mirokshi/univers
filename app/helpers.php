@@ -1,6 +1,23 @@
 <?php
 
 use App\Alumne;
+use App\User;
+
+if (!function_exists('create_primary_user')){
+    function create_primary_user() {
+        $user = User::where('email','mirokshirojas@tortosa.cat')->first();
+        if (!$user) {
+
+            $user =User::firstOrCreate ([
+                'name' => 'Mirokshi Rojas',
+                'email' => 'mirokshirojas@tortosa.cat',
+                'password' => bcrypt(env('PRIMARY_USER_PASSWORD', 'secret'))
+            ]);
+            $user->admin = true;
+            $user->save();
+        }
+    }
+}
 
 if (!function_exists('map_collection')){
     function  map_collection($collection){

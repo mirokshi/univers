@@ -23,6 +23,8 @@ import DestroyAlumne from './components/alumnes/DestroyAlumne.vue';
 import permissions from './plugins/permissions';
 import snackbar from './plugins/snackbar';
 import confirm from './plugins/confirm';
+import LoginForm from './components/auth/LoginForm.vue';
+import RegisterForm from './components/auth/RegisterForm.vue';
 
 
 // instalacion vuetify
@@ -39,6 +41,8 @@ window.Vue.use(confirm);
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 window.Vue.component('navigation', Navigation);
+window.Vue.component('login-form', LoginForm);
+window.Vue.component('register-form', RegisterForm);
 window.Vue.component('alumnes', Alumnes);
 window.Vue.component('entitats', Entitats);
 window.Vue.component('sparklines', Sparklines);
@@ -49,6 +53,7 @@ window.Vue.component('create-form-alumne', CreateFormAlumne);
 window.Vue.component('show-alumne', ShowAlumne);
 window.Vue.component('show-form-alumne', ShowFormAlumne);
 window.Vue.component('destroy-alumne', DestroyAlumne);
+
 
 // eslint-disable-next-line no-unused-vars
 const app = new Vue(AppComponent);
