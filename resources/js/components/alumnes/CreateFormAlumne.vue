@@ -29,8 +29,8 @@
                     </v-flex>
                       <v-flex xs12 sm6 md3>
                           <v-menu
-                              ref="menu1"
-                              v-model="menu1"
+                              ref="birthdate"
+                              v-model="birthdate"
                               :close-on-content-click="false"
                               :nudge-right="40"
                               lazy
@@ -48,7 +48,7 @@
                                   persistent-hint
                                   @blur="date = parseDate(dateFormatted)"
                               ></v-text-field>
-                              <v-date-picker v-model="date" no-title @input="menu1 = false"></v-date-picker>
+                              <v-date-picker v-model="date" no-title @input="birthdate = false"></v-date-picker>
                           </v-menu>
                       </v-flex>
                     <v-flex xs12 sm6 md3>
@@ -140,11 +140,10 @@
             return  {
                 date: new Date().toISOString().substr(0, 10),
                 dateFormatted: this.formatDate(new Date().toISOString().substr(0, 10)),
-                menu1: false,
+                birthdate: false,
                 name:'',
                 surname: '',
                 age:'',
-                school:'',
                 sex:'',
                 phone:'',
                 dataAlumnes: this.alumnes,
@@ -219,14 +218,27 @@
                     })
                 }
             },
+            reset () {
+                this.name = '',
+                this.surname = '',
+                this.age = '',
+                this.selectSchool = '',
+                this.selectSchoolCourse='',
+                this.age='',
+                this.phone='',
+                this.sex=''
+            },
             add () {
                 this.loading = true
                 const alumne = {
                     'name': this.name,
                     'surname': this.surname,
+                    'birthdate':this.birthdate,
                     'age': this.age,
-                    'school': this.school,
-                    'sex':this.sex
+                    'school': this.selectSchool,
+                    'school_course':this.selectSchoolCourse,
+                    'sex':this.sex,
+                    'phone':this.phone
                 }
                 window.axios.post(this.uri,alumne).then(response => {
                     this.$snackbar.showMessage('Alumne creat correctament')
@@ -235,6 +247,8 @@
                     this.loading=false
                     this.$emit('close')
                 }).catch(error => {
+                    console.log(error);
+                    console.log(error.data);
                     this.$snackbar.showError(error.data)
                     this.loading=false
                 })

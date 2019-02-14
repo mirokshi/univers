@@ -24,7 +24,7 @@ if (!function_exists('create_example_simple_alumne')){
         Alumne::create([
             'name'=>'Juan',
             'surname' =>'Gutierrez Sanchez',
-            'birthdate' =>'2000-10-22',
+            'birthdate' =>'22/10/2000',
             'age' =>'19',
             'school' =>'IES EBRE',
             'course' => '2018-2019',
@@ -35,7 +35,7 @@ if (!function_exists('create_example_simple_alumne')){
         Alumne::create([
             'name'=>'Carla',
             'surname' =>'Garcia Gomez',
-            'birthdate' =>'2000-04-19',
+            'birthdate' =>'22/10/2000',
             'age' =>'19',
             'school' =>'IES EBRE',
             'course' => '2018-2019',
@@ -46,7 +46,7 @@ if (!function_exists('create_example_simple_alumne')){
         Alumne::create([
             'name'=>'Joan',
             'surname' =>'Tiscar',
-            'birthdate' =>'1998-05-28',
+            'birthdate' =>'22/10/2000',
             'age' =>'20',
             'school' =>'IES EBRE',
             'course' => '2017-2018',
@@ -57,7 +57,7 @@ if (!function_exists('create_example_simple_alumne')){
         Alumne::create([
             'name'=>'Jose Maria',
             'surname' => 'Lopez',
-            'birthdate' =>'1999-02-14',
+            'birthdate' =>'22/10/2000',
             'age' =>'20',
             'school' =>'IES EBRE',
             'course' => '2018-2019',
@@ -68,7 +68,7 @@ if (!function_exists('create_example_simple_alumne')){
         Alumne::create([
             'name'=>'Marc',
             'surname' =>'Mestre',
-            'birthdate' =>'1996-11-26',
+            'birthdate' =>'22/10/2000',
             'age' =>'23',
             'school' =>'IES EBRE',
             'course' => '2018-2019',
@@ -78,7 +78,7 @@ if (!function_exists('create_example_simple_alumne')){
         ]);
         Alumne::create([
             'name'=>'Martha',
-            'birthdate' =>'1999-02-14',
+            'birthdate' =>'22/10/2000',
             'age' =>'20',
             'school' =>'IES EBRE',
             'course' => '2018-2019',

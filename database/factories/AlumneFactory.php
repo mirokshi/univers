@@ -17,13 +17,13 @@ use Faker\Generator as Faker;
 $factory->define(Alumne::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
-        'surname' => $faker->text,
-        'birthdate' => $faker->date(),
-        'age'=>$faker->randomNumber(),
-        'school'=>$faker->text,
-        'course'=> $faker->text,
-        'school_course'=>$faker->text,
-        'sex' => $faker->text,
+        'surname' => $faker->word,
+        'birthdate' => $faker->date($format='d/m/Y'),
+        'age'=>$faker->numberBetween($min=1, $max=99),
+        'school'=>$faker->word,
+        'course'=> $faker->word,
+        'school_course'=>$faker->word,
+        'sex' => $faker->word,
         'phone'=>$faker->phoneNumber
 
     ];

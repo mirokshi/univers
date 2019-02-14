@@ -12,7 +12,17 @@
 */
 
 use App\Http\Controllers\AlumnesController;
+use App\Http\Controllers\Auth\LoginAltController;
+use App\Http\Controllers\Auth\RegisterAltController;
 use App\Http\Controllers\EntitatsController;
+
+
+Auth::routes();
+
+//Route::post('login_alt','\\', LoginAltController::class.'@login');
+//Route::post('register_alt','\\',RegisterAltController::class.'@register');
+//
+
 
 Route::get('/', function () {
     return view('layouts.welcome');

@@ -31,7 +31,7 @@
                 :search="search"
                 no-result-text="No hay nigun registro"
                 :loading="loading"
-                no-data-text=""
+                no-data-text="dcdcdcdcdcdcdc"
                 rows-per-page-text="Alumnos per página"
                 :rows-per-page-items="[5,10,25,50,100,200,{'text':'Tots','value':-1}]"
                 :pagination.sync="pagination"
@@ -62,6 +62,7 @@
                         <td><span :title="alumne.created_at_formatted">{{alumne.created_at_human}}</span></td>
                         <td>
                             <show-alumne :alumne="alumne"></show-alumne>
+                            <destroy-alumne :alumne="alumne" @removed="removeAlumne" :uri="uri"></destroy-alumne>
                         </td>
                     </tr>
                 </template>
@@ -71,11 +72,13 @@
 
 <script>
     import ShowAlumne from "./ShowAlumne";
+    import DestroyAlumne from "./DestroyAlumne";
 
     export default {
         name:'ListAlumne',
         components:{
-          'show-alumne' :ShowAlumne
+          'show-alumne' :ShowAlumne,
+          'destroy-alumne':DestroyAlumne
         },
         data(){
             return {
@@ -112,10 +115,6 @@
                 type: String,
                 required: true
             },
-            value:{
-                type: String,
-                required: false
-            }
         },
         watch:{
             alumnes(newAlumne)
@@ -136,6 +135,9 @@
                     this.loading = false
                 })
             },
+            removeAlumne(alumne){
+                this.dataAlumnes.splice(this.dataAlumnes.indexOf(alumne),1)
+            }
         },
         computed:{
             total(){

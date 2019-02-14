@@ -14,15 +14,15 @@ import Entitats from './components/Entitats.vue';
 import ListAlumne from './components/alumnes/ListAlumne.vue';
 import Alumnes from './components/alumnes/Alumnes.vue';
 import CreateAlumne from './components/alumnes/CreateAlumne.vue';
-
+import CreateFormAlumne from './components/alumnes/CreateFormAlumne.vue';
+import ShowAlumne from './components/alumnes/ShowAlumne.vue';
+import ShowFormAlumne from './components/alumnes/ShowFormAlumne.vue';
+import DestroyAlumne from './components/alumnes/DestroyAlumne.vue';
 
 // PLUGINS
 import permissions from './plugins/permissions';
 import snackbar from './plugins/snackbar';
 import confirm from './plugins/confirm';
-import CreateFormAlumne from './components/alumnes/CreateFormAlumne.vue';
-import ShowAlumne from './components/alumnes/ShowAlumne.vue';
-import ShowFormAlumne from './components/alumnes/ShowFormAlumne.vue';
 
 
 // instalacion vuetify
@@ -48,5 +48,7 @@ window.Vue.component('list-alumne', ListAlumne);
 window.Vue.component('create-form-alumne', CreateFormAlumne);
 window.Vue.component('show-alumne', ShowAlumne);
 window.Vue.component('show-form-alumne', ShowFormAlumne);
+window.Vue.component('destroy-alumne', DestroyAlumne);
+
 // eslint-disable-next-line no-unused-vars
 const app = new Vue(AppComponent);
