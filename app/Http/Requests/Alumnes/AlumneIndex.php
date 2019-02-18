@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Alumnes;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AlumneStore extends FormRequest
+class AlumneIndex extends FormRequest
 {
 
     public function authorize()

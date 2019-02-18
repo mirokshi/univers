@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Alumnes;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AlumneDestroy extends FormRequest
+class AlumneUpdate extends FormRequest
 {
 
     public function authorize()

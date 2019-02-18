@@ -85,6 +85,7 @@
                         children: [
                             { icon: 'child_care', text: 'Alumnes', url: '/alumnes' },
                             { icon: 'domain', text: 'Entitats', url: '/entitats' },
+                            { icon: 'domain', text: 'Activitat', url: '/activitats' },
                         ]
                     },
                     { icon: 'help', text: 'Contact', url: '/contact' },
@@ -121,8 +122,8 @@
             selectedStyle (item) {
                 if (this.isSelectedItem(item)) {
                     return {
-                        'border-right': '5px solid #F0B429',
-                        'background-color': '#c3f8ec',
+                        'border-right': '5px solid #E53935',
+                        'background-color': '#FFCDD2',
                         'font-size': '1em'
                     }
                 }

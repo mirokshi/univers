@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Alumne;
-use App\Http\Requests\AlumneIndex;
+
+use App\Http\Requests\Alumnes\AlumneIndex;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Api;
 
 use App\Alumne;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\AlumneDestroy;
-use App\Http\Requests\AlumneIndex;
-use App\Http\Requests\AlumneShow;
-use App\Http\Requests\AlumneStore;
-use App\Http\Requests\AlumneUpdate;
+use App\Http\Requests\Alumnes\AlumneDestroy;
+use App\Http\Requests\Alumnes\AlumneIndex;
+use App\Http\Requests\Alumnes\AlumneShow;
+use App\Http\Requests\Alumnes\AlumneStore;
+use App\Http\Requests\Alumnes\AlumneUpdate;
 
 class AlumnesController extends Controller
 {
