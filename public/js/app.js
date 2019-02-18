@@ -3095,11 +3095,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -41582,27 +41577,6 @@ var render = function() {
               attrs: { color: "grey darken-4", href: "/" }
             },
             [_vm._v("Cancel")]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            [
-              _c("p", { staticClass: "text-grey-darker" }, [
-                _vm._v("Iniciar sesión con :")
-              ]),
-              _vm._v(" "),
-              _c("v-btn", { attrs: { href: "/auth/facebook", icon: "" } }, [
-                _c("i", {
-                  staticClass: "fab fa-facebook fa-3x",
-                  staticStyle: { color: "#3b5998" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("v-btn", { attrs: { href: "/auth/github", icon: "" } }, [
-                _c("i", { staticClass: "fab fa-github-square fa-3x" })
-              ])
-            ],
-            1
           )
         ],
         1

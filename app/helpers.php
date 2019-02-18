@@ -3,6 +3,7 @@
 use App\Alumne;
 use App\User;
 
+
 if (!function_exists('create_primary_user')){
     function create_primary_user() {
         $user = User::where('email','mirokshirojas@tortosa.cat')->first();
@@ -102,6 +103,14 @@ if (!function_exists('create_example_simple_alumne')){
             'school_course'=>'CFGS',
             'sex'=>'dona',
             'phone'=>'6564445152'
+        ]);
+
+        Alumne::create([
+            'name' => 'Laura',
+            'surname' => 'Aarabou del Sol',
+            'age' => '6',
+            'school' => 'Temple',
+            'school_course' => '1r',
         ]);
     }
 }

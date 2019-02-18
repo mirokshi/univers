@@ -2,7 +2,7 @@
 $alumno = App\Alumno::create([
     "1r Cognom" => "Aarabou ",
 "2n Cognom" => "del Sol",
-"Nom" => "Laura",
+" => "Laura",
 "Data naixement" => "",
 "Edat " => "6",
 "Centre Educatiu" => "Temple",
@@ -37,7 +37,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Aarabou ",
 "2n Cognom": "",
-"Nom": "Raquel",
+": "Raquel",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -72,7 +72,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Aataoua",
 "2n Cognom": "Soukhmani",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "7/20/2004",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -107,7 +107,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Aatoua",
 "2n Cognom": "",
-"Nom": "Adelhadi",
+": "Adelhadi",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -142,7 +142,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Abaghad",
 "2n Cognom": "",
-"Nom": "M'barek ",
+": "M'barek ",
 "Data naixement": "6/10/2001",
 "Edat ": "17",
 "Centre Educatiu": "IES Ebre",
@@ -177,7 +177,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Abaghad",
 "2n Cognom": "",
-"Nom": "Said",
+": "Said",
 "Data naixement": "7/12/2011",
 "Edat ": "6",
 "Centre Educatiu": "La Mercè",
@@ -212,7 +212,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Abarghaz",
 "2n Cognom": "",
-"Nom": "Ikram ",
+": "Ikram ",
 "Data naixement": "",
 "Edat ": "17",
 "Centre Educatiu": "Despuig",
@@ -247,7 +247,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Abdeddaim ",
 "2n Cognom": "",
-"Nom": "Jouwairia ",
+": "Jouwairia ",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -282,7 +282,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Abdelghani ",
 "2n Cognom": "",
-"Nom": "Fatima Z.",
+": "Fatima Z.",
 "Data naixement": "",
 "Edat ": "18",
 "Centre Educatiu": "Despuig",
@@ -317,7 +317,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Abdelghani ",
 "2n Cognom": "",
-"Nom": "Noufail ",
+": "Noufail ",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -352,7 +352,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Abdelkader",
 "2n Cognom": "Smail",
-"Nom": "Jacob",
+": "Jacob",
 "Data naixement": "",
 "Edat ": "4",
 "Centre Educatiu": "Remolins",
@@ -387,7 +387,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Abdi",
 "2n Cognom": "",
-"Nom": "Aicha Maria",
+": "Aicha Maria",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -422,7 +422,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Afassi",
 "2n Cognom": "",
-"Nom": "Assma",
+": "Assma",
 "Data naixement": "10/12/2012",
 "Edat ": "6",
 "Centre Educatiu": "Temple",
@@ -457,7 +457,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Aghouri",
 "2n Cognom": "",
-"Nom": "Badr",
+": "Badr",
 "Data naixement": "9/30/2009",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -492,7 +492,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Aghouri",
 "2n Cognom": "",
-"Nom": "Reda",
+": "Reda",
 "Data naixement": "7/7/2011",
 "Edat ": "6",
 "Centre Educatiu": "Remolins",
@@ -527,7 +527,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Agudo",
 "2n Cognom": "Majhad",
-"Nom": "Eva",
+": "Eva",
 "Data naixement": "",
 "Edat ": "4",
 "Centre Educatiu": "Remolins",
@@ -562,7 +562,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Agusti",
 "2n Cognom": "Vallejo",
-"Nom": "Nerea",
+": "Nerea",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -597,7 +597,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ahaidar",
 "2n Cognom": "",
-"Nom": "Kholoud",
+": "Kholoud",
 "Data naixement": "12/11/2012",
 "Edat ": "6",
 "Centre Educatiu": "La Mercè",
@@ -632,7 +632,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ahaidar",
 "2n Cognom": "",
-"Nom": "Duae",
+": "Duae",
 "Data naixement": "3/31/2010",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -667,7 +667,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ahmed",
 "2n Cognom": "",
-"Nom": "Nabel",
+": "Nabel",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Ferreries",
@@ -702,7 +702,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ahmed",
 "2n Cognom": "Alhambra",
-"Nom": "Anas",
+": "Anas",
 "Data naixement": "12/24/2006",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -737,7 +737,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ahmed",
 "2n Cognom": "Alhambra",
-"Nom": "Ibrahim",
+": "Ibrahim",
 "Data naixement": "10/8/2010",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -772,7 +772,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ahmed",
 "2n Cognom": "Alhambra",
-"Nom": "Yassin",
+": "Yassin",
 "Data naixement": "3/3/2008",
 "Edat ": "10",
 "Centre Educatiu": "La Mercè",
@@ -807,7 +807,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ahmed",
 "2n Cognom": "",
-"Nom": "Embarka",
+": "Embarka",
 "Data naixement": "7/19/2013",
 "Edat ": "5",
 "Centre Educatiu": "La Mercè",
@@ -842,7 +842,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ahsan",
 "2n Cognom": "",
-"Nom": "Ali",
+": "Ali",
 "Data naixement": "8/22/2002",
 "Edat ": "16",
 "Centre Educatiu": "Sagrada Família",
@@ -877,7 +877,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ait",
 "2n Cognom": "Babaaziz",
-"Nom": "Nada",
+": "Nada",
 "Data naixement": "",
 "Edat ": "5",
 "Centre Educatiu": "Remolins",
@@ -912,7 +912,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ait mhamd",
 "2n Cognom": "",
-"Nom": "Ouassima",
+": "Ouassima",
 "Data naixement": "6/15/2000",
 "Edat ": "17",
 "Centre Educatiu": "Despuig",
@@ -947,7 +947,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ait mhamd",
 "2n Cognom": "",
-"Nom": "Youssra ",
+": "Youssra ",
 "Data naixement": "11/14/2010",
 "Edat ": "7",
 "Centre Educatiu": "Temple",
@@ -982,7 +982,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ait mhamd",
 "2n Cognom": "",
-"Nom": "Adam",
+": "Adam",
 "Data naixement": "8/31/2012",
 "Edat ": "5",
 "Centre Educatiu": "Temple",
@@ -1017,7 +1017,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Akeil",
 "2n Cognom": "",
-"Nom": "Maroua ",
+": "Maroua ",
 "Data naixement": "8/31/2009",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -1052,7 +1052,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Akeil",
 "2n Cognom": "",
-"Nom": "Mohamed A.",
+": "Mohamed A.",
 "Data naixement": "1/16/2014",
 "Edat ": "4",
 "Centre Educatiu": "",
@@ -1087,7 +1087,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alami",
 "2n Cognom": "Benaissa",
-"Nom": "Aymane ",
+": "Aymane ",
 "Data naixement": "4/27/2008",
 "Edat ": "10",
 "Centre Educatiu": "Temple",
@@ -1122,7 +1122,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alami",
 "2n Cognom": "Benaissa",
-"Nom": "Marwa ",
+": "Marwa ",
 "Data naixement": "2/20/2011",
 "Edat ": "7",
 "Centre Educatiu": "Temple",
@@ -1157,7 +1157,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alarcon",
 "2n Cognom": "Gonzalez",
-"Nom": "Kiara",
+": "Kiara",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -1192,7 +1192,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alegria ",
 "2n Cognom": "Pincay",
-"Nom": "Karely",
+": "Karely",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -1227,7 +1227,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alcahut",
 "2n Cognom": "Gallardo",
-"Nom": "Ramon",
+": "Ramon",
 "Data naixement": "3/5/2011",
 "Edat ": "7",
 "Centre Educatiu": "",
@@ -1262,7 +1262,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alfaro",
 "2n Cognom": "Bonilla",
-"Nom": "Mario Daniel",
+": "Mario Daniel",
 "Data naixement": "3/7/2009",
 "Edat ": "9",
 "Centre Educatiu": "Consolació",
@@ -1297,7 +1297,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alhambra",
 "2n Cognom": "",
-"Nom": "Javier",
+": "Javier",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "Verge de la Cinta",
@@ -1332,7 +1332,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ali",
 "2n Cognom": "",
-"Nom": "Mehak",
+": "Mehak",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Remolins",
@@ -1367,7 +1367,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ali",
 "2n Cognom": "",
-"Nom": "Haider",
+": "Haider",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Remolins",
@@ -1402,7 +1402,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ali",
 "2n Cognom": "Fazilat",
-"Nom": "Kashif",
+": "Kashif",
 "Data naixement": "3/20/2007",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -1437,7 +1437,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alkichouhi",
 "2n Cognom": "",
-"Nom": "Amin ",
+": "Amin ",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "La Mercè",
@@ -1472,7 +1472,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alkichouhi",
 "2n Cognom": "",
-"Nom": "Sohayb ",
+": "Sohayb ",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -1507,7 +1507,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alvarez ",
 "2n Cognom": "Franch",
-"Nom": "J.Manuel",
+": "J.Manuel",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Daniel Mangrané",
@@ -1542,7 +1542,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alvarez ",
 "2n Cognom": "Franch",
-"Nom": "Mariona",
+": "Mariona",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Daniel Mangrané",
@@ -1577,7 +1577,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alvarez ",
 "2n Cognom": "Castella ",
-"Nom": "Sergi",
+": "Sergi",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Despuig",
@@ -1612,7 +1612,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alvarez ",
 "2n Cognom": "Castella ",
-"Nom": "Patricia",
+": "Patricia",
 "Data naixement": "4/14/2005",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -1647,7 +1647,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Alvarez ",
 "2n Cognom": "Cortes",
-"Nom": "Desire",
+": "Desire",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "",
@@ -1682,7 +1682,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Amador ",
 "2n Cognom": "Pinar",
-"Nom": "Sheila",
+": "Sheila",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "La Mercè",
@@ -1717,7 +1717,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Amador ",
 "2n Cognom": "Navarro",
-"Nom": "Jose Luis",
+": "Jose Luis",
 "Data naixement": "9/20/2013",
 "Edat ": "4",
 "Centre Educatiu": "Remolins",
@@ -1752,7 +1752,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Amari",
 "2n Cognom": "",
-"Nom": "Fatima ",
+": "Fatima ",
 "Data naixement": "10/7/2006",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -1787,7 +1787,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Amari",
 "2n Cognom": "",
-"Nom": "Iman ",
+": "Iman ",
 "Data naixement": "1/6/2010",
 "Edat ": "8",
 "Centre Educatiu": "Temple",
@@ -1822,7 +1822,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Amat",
 "2n Cognom": "Farrerons",
-"Nom": "Judit",
+": "Judit",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Cinta Curto",
@@ -1857,7 +1857,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Amaya",
 "2n Cognom": "Gomez",
-"Nom": "Oscar",
+": "Oscar",
 "Data naixement": "12/19/2004",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -1892,7 +1892,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Amaya",
 "2n Cognom": "Gomez",
-"Nom": "Saray",
+": "Saray",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -1927,7 +1927,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Amaya",
 "2n Cognom": "Gómez",
-"Nom": "Yamiley",
+": "Yamiley",
 "Data naixement": "2/2/2011",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -1962,7 +1962,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Amaya",
 "2n Cognom": "Gómez",
-"Nom": "Juan Antonio",
+": "Juan Antonio",
 "Data naixement": "",
 "Edat ": "1",
 "Centre Educatiu": "",
@@ -1997,7 +1997,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Amaya ",
 "2n Cognom": "Gómez",
-"Nom": "Pamela",
+": "Pamela",
 "Data naixement": "6/19/2012",
 "Edat ": "5",
 "Centre Educatiu": "La Mercè",
@@ -2032,7 +2032,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Amaya ",
 "2n Cognom": "Gómez",
-"Nom": "Jose",
+": "Jose",
 "Data naixement": "5/2/2012",
 "Edat ": "5",
 "Centre Educatiu": "La Mercè",
@@ -2067,7 +2067,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ameur",
 "2n Cognom": "Navas",
-"Nom": "Angel Miguel",
+": "Angel Miguel",
 "Data naixement": "10/31/2007",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -2102,7 +2102,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Amine",
 "2n Cognom": "Brok",
-"Nom": "Mohamed ",
+": "Mohamed ",
 "Data naixement": "10/26/2012",
 "Edat ": "6",
 "Centre Educatiu": "Remolins",
@@ -2137,7 +2137,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Andrei",
 "2n Cognom": "",
-"Nom": "Radu",
+": "Radu",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Daniel Mangrané",
@@ -2172,7 +2172,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Anwar",
 "2n Cognom": "Irshad",
-"Nom": "Junaid",
+": "Junaid",
 "Data naixement": "6/26/2010",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -2207,7 +2207,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Aouadi",
 "2n Cognom": "",
-"Nom": "Ryan",
+": "Ryan",
 "Data naixement": "",
 "Edat ": "4",
 "Centre Educatiu": "Consolació",
@@ -2242,7 +2242,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Aouadi",
 "2n Cognom": "",
-"Nom": "Soufiane",
+": "Soufiane",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Consolació",
@@ -2277,7 +2277,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Aoufi",
 "2n Cognom": "",
-"Nom": "Llyass ",
+": "Llyass ",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "IES Ebre",
@@ -2312,7 +2312,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Aoufi",
 "2n Cognom": "",
-"Nom": "Zakaria ",
+": "Zakaria ",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -2347,7 +2347,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Arbab",
 "2n Cognom": "",
-"Nom": "Areesha",
+": "Areesha",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Ferreries",
@@ -2382,7 +2382,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Arevalo",
 "2n Cognom": "Chersi",
-"Nom": "Natalia E",
+": "Natalia E",
 "Data naixement": "5/8/2014",
 "Edat ": "4",
 "Centre Educatiu": "Sagrada Família",
@@ -2417,7 +2417,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Arevalo",
 "2n Cognom": "Chersi",
-"Nom": "Matias A",
+": "Matias A",
 "Data naixement": "11/14/2011",
 "Edat ": "7",
 "Centre Educatiu": "Sagrada Família",
@@ -2452,7 +2452,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ariani",
 "2n Cognom": "",
-"Nom": "Mounir",
+": "Mounir",
 "Data naixement": "5/24/2001",
 "Edat ": "17",
 "Centre Educatiu": "Dertosa",
@@ -2487,7 +2487,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ariani ",
 "2n Cognom": "",
-"Nom": "Hamza",
+": "Hamza",
 "Data naixement": "11/9/2009",
 "Edat ": "7",
 "Centre Educatiu": "Remolins",
@@ -2522,7 +2522,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Arnou",
 "2n Cognom": "El Ijbari",
-"Nom": "Amira",
+": "Amira",
 "Data naixement": "3/14/2010",
 "Edat ": "8",
 "Centre Educatiu": "Ferreries",
@@ -2557,7 +2557,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Arnou",
 "2n Cognom": "El Ijbari",
-"Nom": "Assia",
+": "Assia",
 "Data naixement": "1/16/2013",
 "Edat ": "5",
 "Centre Educatiu": "Ferreries",
@@ -2592,7 +2592,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Arslah",
 "2n Cognom": "",
-"Nom": "Muhamad",
+": "Muhamad",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Remolins",
@@ -2627,7 +2627,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Asttaf",
 "2n Cognom": "",
-"Nom": "Hicham",
+": "Hicham",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Daniel Mangrané",
@@ -2662,7 +2662,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Asttaf",
 "2n Cognom": "Kadili",
-"Nom": "Zhor ",
+": "Zhor ",
 "Data naixement": "6/8/2005",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -2697,7 +2697,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Asttaf",
 "2n Cognom": "",
-"Nom": "Samah ",
+": "Samah ",
 "Data naixement": "9/19/1998",
 "Edat ": "19",
 "Centre Educatiu": "IES Ebre",
@@ -2732,7 +2732,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Asttaf",
 "2n Cognom": "Kadili",
-"Nom": "Saffa ",
+": "Saffa ",
 "Data naixement": "8/22/2009",
 "Edat ": "9",
 "Centre Educatiu": "Temple",
@@ -2767,7 +2767,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Atmani",
 "2n Cognom": "",
-"Nom": "Fayssal",
+": "Fayssal",
 "Data naixement": "4/19/2007",
 "Edat ": "10",
 "Centre Educatiu": "Temple",
@@ -2802,7 +2802,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Avilés",
 "2n Cognom": "Gausachs",
-"Nom": "Javier",
+": "Javier",
 "Data naixement": "11/14/2008",
 "Edat ": "9",
 "Centre Educatiu": "Cinta Curto",
@@ -2837,7 +2837,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Avilez",
 "2n Cognom": "Gutierrez",
-"Nom": "Christian",
+": "Christian",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -2872,7 +2872,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ayala",
 "2n Cognom": "Velezmoro",
-"Nom": "Ruben",
+": "Ruben",
 "Data naixement": "12/9/2012",
 "Edat ": "5",
 "Centre Educatiu": "La Mercè",
@@ -2907,7 +2907,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ayora",
 "2n Cognom": "Tafalla",
-"Nom": "Aleix",
+": "Aleix",
 "Data naixement": "5/22/2003",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -2942,7 +2942,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ayora ",
 "2n Cognom": "Tafalla",
-"Nom": "Eric",
+": "Eric",
 "Data naixement": "11/24/2005",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -2977,7 +2977,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ayora ",
 "2n Cognom": "Tafalla ",
-"Nom": "Nerea",
+": "Nerea",
 "Data naixement": "11/24/2005",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -3012,7 +3012,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Azan Tariq",
 "2n Cognom": "",
-"Nom": "Muhammad",
+": "Muhammad",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Remolins",
@@ -3047,7 +3047,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Azara",
 "2n Cognom": "Boudhan",
-"Nom": "Ángel",
+": "Ángel",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Temple",
@@ -3082,7 +3082,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Azuara",
 "2n Cognom": " Martínez",
-"Nom": "Desire",
+": "Desire",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "Consolació",
@@ -3117,7 +3117,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Azuara ",
 "2n Cognom": "Moreno",
-"Nom": "José luís ",
+": "José luís ",
 "Data naixement": "5/29/2006",
 "Edat ": "12",
 "Centre Educatiu": "Ferreries",
@@ -3152,7 +3152,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Azuara ",
 "2n Cognom": "Moreno",
-"Nom": "Adonai",
+": "Adonai",
 "Data naixement": "8/27/2012",
 "Edat ": "4",
 "Centre Educatiu": "Ferreries",
@@ -3187,7 +3187,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Azuara ",
 "2n Cognom": "Moreno",
-"Nom": "Dilan",
+": "Dilan",
 "Data naixement": "11/24/2009",
 "Edat ": "8",
 "Centre Educatiu": "Ferreries",
@@ -3222,7 +3222,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Azuara ",
 "2n Cognom": "Moreno",
-"Nom": "Francisco",
+": "Francisco",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "La Mercè",
@@ -3257,7 +3257,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Azuara ",
 "2n Cognom": "Moreno",
-"Nom": "Kevin",
+": "Kevin",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -3292,7 +3292,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Babiref",
 "2n Cognom": "",
-"Nom": "Fatima",
+": "Fatima",
 "Data naixement": "1/15/2013",
 "Edat ": "5",
 "Centre Educatiu": "La Mercè",
@@ -3327,7 +3327,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Babiref",
 "2n Cognom": "",
-"Nom": "Hasna ",
+": "Hasna ",
 "Data naixement": "11/2/2008",
 "Edat ": "10",
 "Centre Educatiu": "La Mercè",
@@ -3362,7 +3362,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Badi",
 "2n Cognom": "",
-"Nom": "Nabila ",
+": "Nabila ",
 "Data naixement": "9/1/2003",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -3397,7 +3397,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Badi",
 "2n Cognom": "",
-"Nom": "Hiba ",
+": "Hiba ",
 "Data naixement": "10/8/2006",
 "Edat ": "12",
 "Centre Educatiu": "Dertosa",
@@ -3432,7 +3432,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Badi",
 "2n Cognom": "",
-"Nom": "Marwa ",
+": "Marwa ",
 "Data naixement": "3/7/2011",
 "Edat ": "7",
 "Centre Educatiu": "Temple",
@@ -3467,7 +3467,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Badi Hilal ",
 "2n Cognom": "",
-"Nom": "Dina",
+": "Dina",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Despuig",
@@ -3502,7 +3502,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Baicu",
 "2n Cognom": "",
-"Nom": "Alberto",
+": "Alberto",
 "Data naixement": "3/3/2005",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -3537,7 +3537,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Baicu",
 "2n Cognom": "",
-"Nom": "Bianca ",
+": "Bianca ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Consolació",
@@ -3572,7 +3572,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Balde",
 "2n Cognom": "",
-"Nom": "Dioulde",
+": "Dioulde",
 "Data naixement": "5/4/2009",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -3607,7 +3607,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Basharad",
 "2n Cognom": "",
-"Nom": "Zanib",
+": "Zanib",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Remolins",
@@ -3642,7 +3642,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Basiyd ",
 "2n Cognom": "Oudaou",
-"Nom": "Mouad",
+": "Mouad",
 "Data naixement": "11/21/2007",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -3677,7 +3677,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Basiyd",
 "2n Cognom": "Oudaou",
-"Nom": "Asma",
+": "Asma",
 "Data naixement": "9/21/2011",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -3712,7 +3712,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bassou",
 "2n Cognom": "Mounji",
-"Nom": "Salahadin",
+": "Salahadin",
 "Data naixement": "6/5/2012",
 "Edat ": "6",
 "Centre Educatiu": "Remolins",
@@ -3747,7 +3747,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bassou",
 "2n Cognom": "Mounji",
-"Nom": "Yassin",
+": "Yassin",
 "Data naixement": "5/12/2008",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -3782,7 +3782,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Batista ",
 "2n Cognom": "Gutierrez",
-"Nom": "Montse",
+": "Montse",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Consolació",
@@ -3817,7 +3817,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Batista ",
 "2n Cognom": "Recio",
-"Nom": "Sinaí",
+": "Sinaí",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Consolació",
@@ -3852,7 +3852,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Batista ",
 "2n Cognom": "Recio",
-"Nom": "Blai",
+": "Blai",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -3887,7 +3887,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Batiste ",
 "2n Cognom": "Giménez",
-"Nom": "Jonathan",
+": "Jonathan",
 "Data naixement": "7/28/2009",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -3922,7 +3922,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Batiste ",
 "2n Cognom": "Giménez",
-"Nom": "Lucía",
+": "Lucía",
 "Data naixement": "",
 "Edat ": "1",
 "Centre Educatiu": "La Mercè",
@@ -3957,7 +3957,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bazi",
 "2n Cognom": "",
-"Nom": "Marwane",
+": "Marwane",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Consolació",
@@ -3992,7 +3992,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Belabari",
 "2n Cognom": "",
-"Nom": "Noufal",
+": "Noufal",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -4027,7 +4027,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bellido",
 "2n Cognom": "Calabuig",
-"Nom": "Shakira",
+": "Shakira",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Despuig",
@@ -4062,7 +4062,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Beltran",
 "2n Cognom": "Bustillo",
-"Nom": "Guillem Antoni",
+": "Guillem Antoni",
 "Data naixement": "9/8/2005",
 "Edat ": "13",
 "Centre Educatiu": "Sagrada Família",
@@ -4097,7 +4097,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bendjebbar",
 "2n Cognom": "Sabates",
-"Nom": "Aisha",
+": "Aisha",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -4132,7 +4132,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben Bassou",
 "2n Cognom": "",
-"Nom": "Yassin",
+": "Yassin",
 "Data naixement": "5/12/2008",
 "Edat ": "9",
 "Centre Educatiu": "Remolins",
@@ -4167,7 +4167,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben -Chana",
 "2n Cognom": "",
-"Nom": "Fatima Kerrou",
+": "Fatima Kerrou",
 "Data naixement": "5/8/2008",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -4202,7 +4202,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben Driss",
 "2n Cognom": "",
-"Nom": "L'Houssaine ",
+": "L'Houssaine ",
 "Data naixement": "1/1/2002",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -4237,7 +4237,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben Seddik ",
 "2n Cognom": "",
-"Nom": "Mohamed Ali ",
+": "Mohamed Ali ",
 "Data naixement": "3/25/2004",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -4272,7 +4272,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben Seddik ",
 "2n Cognom": "",
-"Nom": "Yassin",
+": "Yassin",
 "Data naixement": "11/13/2006",
 "Edat ": "12",
 "Centre Educatiu": "La Mercè",
@@ -4307,7 +4307,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben Yazid ",
 "2n Cognom": "",
-"Nom": "Youssef",
+": "Youssef",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Dertosa",
@@ -4342,7 +4342,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben Yazid ",
 "2n Cognom": "",
-"Nom": "Abderrazak ",
+": "Abderrazak ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Despuig",
@@ -4377,7 +4377,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben Yazid ",
 "2n Cognom": "",
-"Nom": "Abderraman",
+": "Abderraman",
 "Data naixement": "5/17/2007",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -4412,7 +4412,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben Yazid ",
 "2n Cognom": "",
-"Nom": "Ammar",
+": "Ammar",
 "Data naixement": "3/9/2014",
 "Edat ": "4",
 "Centre Educatiu": "Ferreries",
@@ -4447,7 +4447,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben-Hamidi",
 "2n Cognom": "Alonso",
-"Nom": "Alma",
+": "Alma",
 "Data naixement": "7/5/2003",
 "Edat ": "15",
 "Centre Educatiu": "Despuig",
@@ -4482,7 +4482,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben-Hamidi",
 "2n Cognom": "Alonso",
-"Nom": "Izan",
+": "Izan",
 "Data naixement": "6/29/2011",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -4517,7 +4517,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben-Hammou",
 "2n Cognom": "",
-"Nom": "Fatima",
+": "Fatima",
 "Data naixement": "9/9/2011",
 "Edat ": "7",
 "Centre Educatiu": "Temple",
@@ -4552,7 +4552,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben-Lahcen",
 "2n Cognom": "Serhane",
-"Nom": "Meriem",
+": "Meriem",
 "Data naixement": "8/17/2007",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -4587,7 +4587,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben-Lahcen",
 "2n Cognom": "Serhane",
-"Nom": "Fatima ",
+": "Fatima ",
 "Data naixement": "8/17/2007",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -4622,7 +4622,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben-Lahcen",
 "2n Cognom": "Serhane",
-"Nom": "Rachid",
+": "Rachid",
 "Data naixement": "8/17/2007",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -4657,7 +4657,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben-Lahcen",
 "2n Cognom": "Serhane",
-"Nom": "Ayoub",
+": "Ayoub",
 "Data naixement": "10/5/2010",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -4692,7 +4692,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ben-Lahcen",
 "2n Cognom": "Serhane",
-"Nom": "Adam",
+": "Adam",
 "Data naixement": "4/12/2013",
 "Edat ": "4",
 "Centre Educatiu": "La Mercè",
@@ -4727,7 +4727,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Benet",
 "2n Cognom": "Tomas",
-"Nom": "Jordi",
+": "Jordi",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -4762,7 +4762,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Benítez",
 "2n Cognom": "Rua",
-"Nom": "Bianca ",
+": "Bianca ",
 "Data naixement": "3/23/2009",
 "Edat ": "9",
 "Centre Educatiu": "Temple",
@@ -4797,7 +4797,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bennadi",
 "2n Cognom": "",
-"Nom": "Amin ",
+": "Amin ",
 "Data naixement": "4/4/2008",
 "Edat ": "10",
 "Centre Educatiu": "La Mercè",
@@ -4832,7 +4832,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bertomeu",
 "2n Cognom": "Ponce",
-"Nom": "Josep",
+": "Josep",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Daniel Mangrané",
@@ -4867,7 +4867,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bghaoui",
 "2n Cognom": "",
-"Nom": "Nufisa",
+": "Nufisa",
 "Data naixement": "4/6/2011",
 "Edat ": "7",
 "Centre Educatiu": "Remolins",
@@ -4902,7 +4902,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bisbal",
 "2n Cognom": "Crespo",
-"Nom": "Lluís",
+": "Lluís",
 "Data naixement": "4/24/2007",
 "Edat ": "10",
 "Centre Educatiu": "Ferreries",
@@ -4937,7 +4937,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Blandin",
 "2n Cognom": " Silva ",
-"Nom": "Mª Ángeles ",
+": "Mª Ángeles ",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -4972,7 +4972,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Blandin",
 "2n Cognom": "",
-"Nom": "Melisa",
+": "Melisa",
 "Data naixement": "",
 "Edat ": "17",
 "Centre Educatiu": "Despuig",
@@ -5007,7 +5007,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bordera",
 "2n Cognom": "",
-"Nom": "Paula",
+": "Paula",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Daniel Mangrané",
@@ -5042,7 +5042,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Borsan ",
 "2n Cognom": "Salas",
-"Nom": "Andrea Denisa",
+": "Andrea Denisa",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Cinta Curto",
@@ -5077,7 +5077,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bot",
 "2n Cognom": "",
-"Nom": "Marco",
+": "Marco",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -5112,7 +5112,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bot",
 "2n Cognom": "",
-"Nom": "Salomea",
+": "Salomea",
 "Data naixement": "3/25/2010",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -5147,7 +5147,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Botella",
 "2n Cognom": "Fonollosa  ",
-"Nom": "Lluc ",
+": "Lluc ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Despuig",
@@ -5182,7 +5182,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bouaddi",
 "2n Cognom": "",
-"Nom": "Adam",
+": "Adam",
 "Data naixement": "8/4/2010",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -5217,7 +5217,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bouaddi",
 "2n Cognom": "",
-"Nom": "Rabab",
+": "Rabab",
 "Data naixement": "12/3/2014",
 "Edat ": "4",
 "Centre Educatiu": "Ferreries",
@@ -5252,7 +5252,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bouaddi",
 "2n Cognom": "",
-"Nom": "Aya",
+": "Aya",
 "Data naixement": "8/8/2012",
 "Edat ": "5",
 "Centre Educatiu": "Ferreries",
@@ -5287,7 +5287,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bouazgou",
 "2n Cognom": "",
-"Nom": "Malak",
+": "Malak",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -5322,7 +5322,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bouguensa",
 "2n Cognom": "",
-"Nom": "Sara ",
+": "Sara ",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Temple",
@@ -5357,7 +5357,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bouhamid",
 "2n Cognom": "Alaoui",
-"Nom": "Hiba ",
+": "Hiba ",
 "Data naixement": "8/3/2011",
 "Edat ": "6",
 "Centre Educatiu": "La Mercè",
@@ -5392,7 +5392,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bouidi",
 "2n Cognom": "Tbib",
-"Nom": "Soumaya",
+": "Soumaya",
 "Data naixement": "7/13/2007",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -5427,7 +5427,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bouidi",
 "2n Cognom": "Tbib",
-"Nom": "Fatima ",
+": "Fatima ",
 "Data naixement": "11/5/2010",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -5462,7 +5462,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Boujellab",
 "2n Cognom": "",
-"Nom": "Ryan",
+": "Ryan",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Remolins",
@@ -5497,7 +5497,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Boujemaaoui",
 "2n Cognom": "Randi",
-"Nom": "Amal",
+": "Amal",
 "Data naixement": "11/12/2009",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -5532,7 +5532,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Boumediene",
 "2n Cognom": "Smail",
-"Nom": "Abraham",
+": "Abraham",
 "Data naixement": "1/14/2013",
 "Edat ": "5",
 "Centre Educatiu": "Remolins",
@@ -5567,7 +5567,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Boumediene",
 "2n Cognom": "Smail",
-"Nom": "Jacob",
+": "Jacob",
 "Data naixement": "1/14/2013",
 "Edat ": "5",
 "Centre Educatiu": "Remolins",
@@ -5602,7 +5602,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Boussetta",
 "2n Cognom": "",
-"Nom": "Imane ",
+": "Imane ",
 "Data naixement": "8/2/2010",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -5637,7 +5637,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Boussetta",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "12/28/2013",
 "Edat ": "5",
 "Centre Educatiu": "Remolins",
@@ -5672,7 +5672,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Boussetta",
 "2n Cognom": "",
-"Nom": "Soumia",
+": "Soumia",
 "Data naixement": "3/17/2008",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -5707,7 +5707,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Boussetta",
 "2n Cognom": "",
-"Nom": "Ylias",
+": "Ylias",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -5742,7 +5742,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Boussetta",
 "2n Cognom": "",
-"Nom": "Anas",
+": "Anas",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -5777,7 +5777,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Boutahiri",
 "2n Cognom": "",
-"Nom": "Ayman ",
+": "Ayman ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Dertosa",
@@ -5812,7 +5812,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bouzagu",
 "2n Cognom": "",
-"Nom": "Malac",
+": "Malac",
 "Data naixement": "10/13/2008",
 "Edat ": "10",
 "Centre Educatiu": "Consolació",
@@ -5847,7 +5847,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bouzakraoui",
 "2n Cognom": "",
-"Nom": "Mouklhes",
+": "Mouklhes",
 "Data naixement": "5/5/2004",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -5882,7 +5882,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bouzakraoui",
 "2n Cognom": "",
-"Nom": "Asmaa",
+": "Asmaa",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "La Mercè",
@@ -5917,7 +5917,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Bouzakraoui",
 "2n Cognom": "",
-"Nom": "Imram",
+": "Imram",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -5952,7 +5952,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Briki Belalia",
 "2n Cognom": "",
-"Nom": "Yousra",
+": "Yousra",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Dertosa",
@@ -5987,7 +5987,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Brok",
 "2n Cognom": "",
-"Nom": "Hind",
+": "Hind",
 "Data naixement": "7/8/2010",
 "Edat ": "8",
 "Centre Educatiu": "REmolins",
@@ -6022,7 +6022,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Burgos",
 "2n Cognom": "Medeiros",
-"Nom": "Antonio",
+": "Antonio",
 "Data naixement": "11/10/2005",
 "Edat ": "13",
 "Centre Educatiu": "Consolació",
@@ -6057,7 +6057,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Burgueño",
 "2n Cognom": "Esteve",
-"Nom": "Noah",
+": "Noah",
 "Data naixement": "11/29/2007",
 "Edat ": "11",
 "Centre Educatiu": "Temple",
@@ -6092,7 +6092,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Butt",
 "2n Cognom": "Rani",
-"Nom": "Hadi",
+": "Hadi",
 "Data naixement": "5/24/2013",
 "Edat ": "5",
 "Centre Educatiu": "Cinta Curto",
@@ -6127,7 +6127,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Camara",
 "2n Cognom": "",
-"Nom": "Rokia",
+": "Rokia",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "La Mercè",
@@ -6162,7 +6162,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Cantó ",
 "2n Cognom": "Liberal",
-"Nom": "Júlia",
+": "Júlia",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -6197,7 +6197,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Cantó ",
 "2n Cognom": "Liberal",
-"Nom": "Robert Adrià",
+": "Robert Adrià",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "Temple",
@@ -6232,7 +6232,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Carbonell ",
 "2n Cognom": "Bustamante",
-"Nom": "Sara",
+": "Sara",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Consolació",
@@ -6267,7 +6267,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Carles ",
 "2n Cognom": "Vargas",
-"Nom": "Adria ",
+": "Adria ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Despuig",
@@ -6302,7 +6302,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Carrillo",
 "2n Cognom": "Fernández",
-"Nom": "Aurora",
+": "Aurora",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Dertosa",
@@ -6337,7 +6337,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Carrillo",
 "2n Cognom": "Flores",
-"Nom": "Dolores",
+": "Dolores",
 "Data naixement": "6/27/2008",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -6372,7 +6372,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Carrillo",
 "2n Cognom": "Marin",
-"Nom": "Joaquin",
+": "Joaquin",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "UEC",
@@ -6407,7 +6407,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Carrillo ",
 "2n Cognom": "Marin",
-"Nom": "Libertad",
+": "Libertad",
 "Data naixement": "10/1/2005",
 "Edat ": "13",
 "Centre Educatiu": "Consolació",
@@ -6442,7 +6442,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Carrillo ",
 "2n Cognom": "Marin",
-"Nom": "Francisco",
+": "Francisco",
 "Data naixement": "",
 "Edat ": "17",
 "Centre Educatiu": "PTT ",
@@ -6477,7 +6477,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Carvalho",
 "2n Cognom": "",
-"Nom": "Deborah",
+": "Deborah",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -6512,7 +6512,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Casanova",
 "2n Cognom": "Pallares",
-"Nom": "Nerea",
+": "Nerea",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -6547,7 +6547,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Casanova",
 "2n Cognom": "Pallares",
-"Nom": "Sergi",
+": "Sergi",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -6582,7 +6582,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Caserza",
 "2n Cognom": "",
-"Nom": "Viena",
+": "Viena",
 "Data naixement": "12/30/2014",
 "Edat ": "3",
 "Centre Educatiu": "no escolaritzat",
@@ -6617,7 +6617,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Castella",
 "2n Cognom": "",
-"Nom": "Darek",
+": "Darek",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Daniel Mangrané",
@@ -6652,7 +6652,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Castells",
 "2n Cognom": "",
-"Nom": "Dereck",
+": "Dereck",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Ferreries",
@@ -6687,7 +6687,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Castells",
 "2n Cognom": "",
-"Nom": "Dilan",
+": "Dilan",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -6722,7 +6722,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Castells",
 "2n Cognom": "",
-"Nom": "Thalia",
+": "Thalia",
 "Data naixement": "",
 "Edat ": "3",
 "Centre Educatiu": "Ferreries",
@@ -6757,7 +6757,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Castrejon",
 "2n Cognom": "Cano",
-"Nom": "Thaila",
+": "Thaila",
 "Data naixement": "8/19/2014",
 "Edat ": "4",
 "Centre Educatiu": "Ferreries",
@@ -6792,7 +6792,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Castrejon",
 "2n Cognom": "Cano",
-"Nom": "Dilan",
+": "Dilan",
 "Data naixement": "8/10/2010",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -6827,7 +6827,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Castrejon",
 "2n Cognom": "Cano",
-"Nom": "Dereck",
+": "Dereck",
 "Data naixement": "2/5/2007",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -6862,7 +6862,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Causape",
 "2n Cognom": "Seonae",
-"Nom": "Lara",
+": "Lara",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -6897,7 +6897,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Chamon",
 "2n Cognom": "Agudo",
-"Nom": "Jonathan",
+": "Jonathan",
 "Data naixement": "7/6/2002",
 "Edat ": "16",
 "Centre Educatiu": "PTT",
@@ -6932,7 +6932,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Charef",
 "2n Cognom": "",
-"Nom": "Ussama ",
+": "Ussama ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -6967,7 +6967,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Charef",
 "2n Cognom": "",
-"Nom": "Fatima ",
+": "Fatima ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -7002,7 +7002,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Chaudhry",
 "2n Cognom": "",
-"Nom": "Aqib",
+": "Aqib",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -7037,7 +7037,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Cevallos",
 "2n Cognom": "",
-"Nom": "Anaela",
+": "Anaela",
 "Data naixement": "3/18/2013",
 "Edat ": "5",
 "Centre Educatiu": "Ferreries",
@@ -7072,7 +7072,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ciobanu  ",
 "2n Cognom": "",
-"Nom": "Vasile ",
+": "Vasile ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Despuig",
@@ -7107,7 +7107,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ciurariu",
 "2n Cognom": "",
-"Nom": "Sandra",
+": "Sandra",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -7142,7 +7142,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ciurariu",
 "2n Cognom": "",
-"Nom": "Andrei ",
+": "Andrei ",
 "Data naixement": "11/5/2010",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -7177,7 +7177,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ciurariu",
 "2n Cognom": "",
-"Nom": "Radu",
+": "Radu",
 "Data naixement": "6/14/2008",
 "Edat ": "10",
 "Centre Educatiu": "La Mercè",
@@ -7212,7 +7212,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Claveria",
 "2n Cognom": "Jimenez",
-"Nom": "Bernardo",
+": "Bernardo",
 "Data naixement": "5/25/2008",
 "Edat ": "10",
 "Centre Educatiu": "Ferreries",
@@ -7247,7 +7247,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Claveria",
 "2n Cognom": "Fernánez",
-"Nom": "Aitana",
+": "Aitana",
 "Data naixement": "",
 "Edat ": "4",
 "Centre Educatiu": "La Mercè",
@@ -7282,7 +7282,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Claveria",
 "2n Cognom": "Jiménez",
-"Nom": "Antonio",
+": "Antonio",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "La Mercè",
@@ -7317,7 +7317,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Claveria",
 "2n Cognom": "Garcia Navas",
-"Nom": "Guadalupe",
+": "Guadalupe",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -7352,7 +7352,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Claveria",
 "2n Cognom": "Garcia Navas",
-"Nom": "Luis Pedro",
+": "Luis Pedro",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -7387,7 +7387,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Claveria ",
 "2n Cognom": "Gabarri",
-"Nom": "Maria",
+": "Maria",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -7422,7 +7422,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Claveria ",
 "2n Cognom": "Jiménez",
-"Nom": "Ángel",
+": "Ángel",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -7457,7 +7457,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Claveria ",
 "2n Cognom": "Jiménez",
-"Nom": "Nazaret",
+": "Nazaret",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -7492,7 +7492,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Claveria ",
 "2n Cognom": "Garcia",
-"Nom": "BErnardo",
+": "BErnardo",
 "Data naixement": "1/7/2015",
 "Edat ": "3",
 "Centre Educatiu": "no escolaritzat",
@@ -7527,7 +7527,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Codorniu ",
 "2n Cognom": "Bedós",
-"Nom": "Brian Maddox",
+": "Brian Maddox",
 "Data naixement": "4/7/2006",
 "Edat ": "12",
 "Centre Educatiu": "Sagrada Família",
@@ -7562,7 +7562,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Colome",
 "2n Cognom": "Molino",
-"Nom": "Lluis",
+": "Lluis",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -7597,7 +7597,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Cortez",
 "2n Cognom": "Huaman",
-"Nom": "Dylan",
+": "Dylan",
 "Data naixement": "8/29/2012",
 "Edat ": "5",
 "Centre Educatiu": "Ferreries",
@@ -7632,7 +7632,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Cortez",
 "2n Cognom": "Huaman",
-"Nom": "Adriano",
+": "Adriano",
 "Data naixement": "2/21/2006",
 "Edat ": "12",
 "Centre Educatiu": "Ferreries",
@@ -7667,7 +7667,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Cuc",
 "2n Cognom": "",
-"Nom": "Ana Maria",
+": "Ana Maria",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -7702,7 +7702,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Cuc",
 "2n Cognom": "",
-"Nom": "Cinta Isabel",
+": "Cinta Isabel",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "La Mercè",
@@ -7737,7 +7737,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Curto",
 "2n Cognom": "Aixendri",
-"Nom": "Pau",
+": "Pau",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -7772,7 +7772,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Chiverria",
 "2n Cognom": "Azuara",
-"Nom": "Jose Antonio",
+": "Jose Antonio",
 "Data naixement": "11/16/2007",
 "Edat ": "11",
 "Centre Educatiu": "Cinta Curto",
@@ -7807,7 +7807,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Daha ",
 "2n Cognom": "Daha",
-"Nom": "Brahim ",
+": "Brahim ",
 "Data naixement": "5/8/2005",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -7842,7 +7842,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Daha ",
 "2n Cognom": "",
-"Nom": "Mustapha",
+": "Mustapha",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "Despuig",
@@ -7877,7 +7877,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Daha ",
 "2n Cognom": "Daha",
-"Nom": "Fatima ",
+": "Fatima ",
 "Data naixement": "7/10/2010",
 "Edat ": "8",
 "Centre Educatiu": "El Temple",
@@ -7912,7 +7912,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Daha ",
 "2n Cognom": "",
-"Nom": "Adam",
+": "Adam",
 "Data naixement": "10/15/2014",
 "Edat ": "3",
 "Centre Educatiu": "La Mercè",
@@ -7947,7 +7947,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Daiz",
 "2n Cognom": "",
-"Nom": "Oumaima ",
+": "Oumaima ",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Temple",
@@ -7982,7 +7982,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Daiz",
 "2n Cognom": "",
-"Nom": "Youness ",
+": "Youness ",
 "Data naixement": "",
 "Edat ": "17",
 "Centre Educatiu": "",
@@ -8017,7 +8017,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Daoudi",
 "2n Cognom": "",
-"Nom": "Fatima ",
+": "Fatima ",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "DAniel Mangrané",
@@ -8052,7 +8052,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Datsier",
 "2n Cognom": "",
-"Nom": "Ahmed",
+": "Ahmed",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -8087,7 +8087,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Datsier",
 "2n Cognom": "",
-"Nom": "Ahmer",
+": "Ahmer",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -8122,7 +8122,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Daurell",
 "2n Cognom": "Franch",
-"Nom": "Francina",
+": "Francina",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Daniel Mangrané",
@@ -8157,7 +8157,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Davila",
 "2n Cognom": "",
-"Nom": "Angeley",
+": "Angeley",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "La Mercè",
@@ -8192,7 +8192,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Delgado",
 "2n Cognom": "",
-"Nom": "Darwin Stalin",
+": "Darwin Stalin",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -8227,7 +8227,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Demetrio ",
 "2n Cognom": "Moreno",
-"Nom": "Maria",
+": "Maria",
 "Data naixement": "2/14/2003",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -8262,7 +8262,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Demetrio ",
 "2n Cognom": "Moreno",
-"Nom": "Algeria",
+": "Algeria",
 "Data naixement": "3/21/2006",
 "Edat ": "12",
 "Centre Educatiu": "Dertosa",
@@ -8297,7 +8297,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Demtrio",
 "2n Cognom": "Moreno",
-"Nom": "Alfonso",
+": "Alfonso",
 "Data naixement": "3/10/2009",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -8332,7 +8332,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Denisa",
 "2n Cognom": "",
-"Nom": "Ana M. ",
+": "Ana M. ",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "",
@@ -8367,7 +8367,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Derkaoui",
 "2n Cognom": "",
-"Nom": "Abdessamat",
+": "Abdessamat",
 "Data naixement": "10/20/2003",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -8402,7 +8402,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Derkaoui",
 "2n Cognom": "",
-"Nom": "Fatima Zahrae",
+": "Fatima Zahrae",
 "Data naixement": "10/17/2006",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -8437,7 +8437,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Derkaoui",
 "2n Cognom": "",
-"Nom": "Mariam",
+": "Mariam",
 "Data naixement": "11/24/2008",
 "Edat ": "9",
 "Centre Educatiu": "Remolins",
@@ -8472,7 +8472,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Derkaoui",
 "2n Cognom": "",
-"Nom": "Mhamed",
+": "Mhamed",
 "Data naixement": "5/8/2010",
 "Edat ": "7",
 "Centre Educatiu": "Remolins",
@@ -8507,7 +8507,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Derkaoui",
 "2n Cognom": "",
-"Nom": "adil",
+": "adil",
 "Data naixement": "12/1/2014",
 "Edat ": "3",
 "Centre Educatiu": "Remolins",
@@ -8542,7 +8542,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Diallo",
 "2n Cognom": "",
-"Nom": "Mamadou",
+": "Mamadou",
 "Data naixement": "6/12/2010",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -8577,7 +8577,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Diallo",
 "2n Cognom": "",
-"Nom": "Modibo",
+": "Modibo",
 "Data naixement": "2/4/2002",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -8612,7 +8612,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Diane",
 "2n Cognom": "Dabo",
-"Nom": "Sita ",
+": "Sita ",
 "Data naixement": "11/1/2004",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -8647,7 +8647,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Diane",
 "2n Cognom": "Dabo",
-"Nom": "Natasha",
+": "Natasha",
 "Data naixement": "10/8/2011",
 "Edat ": "7",
 "Centre Educatiu": "Temple",
@@ -8682,7 +8682,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Diane",
 "2n Cognom": "Dabo",
-"Nom": "Yatrum ",
+": "Yatrum ",
 "Data naixement": "10/27/2005",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -8717,7 +8717,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Didi",
 "2n Cognom": "",
-"Nom": "Hamad ",
+": "Hamad ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Consolació",
@@ -8752,7 +8752,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Dimache",
 "2n Cognom": "",
-"Nom": "Andrea",
+": "Andrea",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "La Mercè",
@@ -8787,7 +8787,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Dimache",
 "2n Cognom": "",
-"Nom": "Denisa ",
+": "Denisa ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -8822,7 +8822,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Doaga",
 "2n Cognom": "",
-"Nom": "Ioana Monica",
+": "Ioana Monica",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "La Mercè",
@@ -8857,7 +8857,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Dolz",
 "2n Cognom": "",
-"Nom": "Elisabeth",
+": "Elisabeth",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -8892,7 +8892,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Domingo",
 "2n Cognom": "Velezmoro",
-"Nom": "Oriana Mia",
+": "Oriana Mia",
 "Data naixement": "12/1/2011",
 "Edat ": "7",
 "Centre Educatiu": "Consolació",
@@ -8927,7 +8927,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Doña",
 "2n Cognom": "Hernandez",
-"Nom": "Angie",
+": "Angie",
 "Data naixement": "1/21/2009",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -8962,7 +8962,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Dos anjos ",
 "2n Cognom": "Castro",
-"Nom": "Juan ",
+": "Juan ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Marcel·lí Domingo",
@@ -8997,7 +8997,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Douibi",
 "2n Cognom": "Maksoudi",
-"Nom": "Marwa ",
+": "Marwa ",
 "Data naixement": "7/10/2009",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -9032,7 +9032,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Ahmadi",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "4/1/2007",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -9067,7 +9067,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Badraoui",
 "2n Cognom": "",
-"Nom": "Amin ",
+": "Amin ",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -9102,7 +9102,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Balaui",
 "2n Cognom": "",
-"Nom": "Osama ",
+": "Osama ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "DAniel Mangrané",
@@ -9137,7 +9137,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Fadil",
 "2n Cognom": "Ettabet",
-"Nom": "Wahib",
+": "Wahib",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -9172,7 +9172,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Hachemy  ",
 "2n Cognom": "Housseni",
-"Nom": "Ayoub ",
+": "Ayoub ",
 "Data naixement": "5/5/2007",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -9207,7 +9207,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Hamdani",
 "2n Cognom": "",
-"Nom": "Ismail",
+": "Ismail",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Cinta Curto",
@@ -9242,7 +9242,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Hanafi",
 "2n Cognom": "",
-"Nom": "Imram",
+": "Imram",
 "Data naixement": "12/9/2011",
 "Edat ": "6",
 "Centre Educatiu": "Ferreries",
@@ -9277,7 +9277,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Hanafi",
 "2n Cognom": "",
-"Nom": "Mohamed Amin",
+": "Mohamed Amin",
 "Data naixement": "10/5/2007",
 "Edat ": "10",
 "Centre Educatiu": "Ferreries",
@@ -9312,7 +9312,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Hanafi",
 "2n Cognom": "",
-"Nom": "Sulayman",
+": "Sulayman",
 "Data naixement": "3/31/2014",
 "Edat ": "4",
 "Centre Educatiu": "Ferreries",
@@ -9347,7 +9347,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Hariouri",
 "2n Cognom": "",
-"Nom": "Badr ",
+": "Badr ",
 "Data naixement": "11/1/2012",
 "Edat ": "5",
 "Centre Educatiu": "Centre Educatiu Girona",
@@ -9382,7 +9382,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Hidoudi",
 "2n Cognom": "El Hidoudi",
-"Nom": "Hamza",
+": "Hamza",
 "Data naixement": "2/25/2009",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -9417,7 +9417,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Houch",
 "2n Cognom": "",
-"Nom": "Oualid",
+": "Oualid",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "La Mercè",
@@ -9452,7 +9452,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Hougari",
 "2n Cognom": "",
-"Nom": "Asma",
+": "Asma",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Ferreries",
@@ -9487,7 +9487,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Kabouri",
 "2n Cognom": "",
-"Nom": "Youssef",
+": "Youssef",
 "Data naixement": "10/28/2004",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -9522,7 +9522,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Kabouri",
 "2n Cognom": "",
-"Nom": "Adam",
+": "Adam",
 "Data naixement": "1/19/2013",
 "Edat ": "4",
 "Centre Educatiu": "Remolins",
@@ -9557,7 +9557,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Kabouri",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "8/9/2010",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -9592,7 +9592,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Kabouri",
 "2n Cognom": "",
-"Nom": "Mounia",
+": "Mounia",
 "Data naixement": "11/25/2008",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -9627,7 +9627,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Kabouri",
 "2n Cognom": "",
-"Nom": "Ahmed",
+": "Ahmed",
 "Data naixement": "",
 "Edat ": "18",
 "Centre Educatiu": "",
@@ -9662,7 +9662,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Kabouri",
 "2n Cognom": "",
-"Nom": "Hicham",
+": "Hicham",
 "Data naixement": "",
 "Edat ": "17",
 "Centre Educatiu": "",
@@ -9697,7 +9697,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Kadi",
 "2n Cognom": "",
-"Nom": "Omayma ",
+": "Omayma ",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -9732,7 +9732,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Kanchir",
 "2n Cognom": "Lorente",
-"Nom": "Bachir",
+": "Bachir",
 "Data naixement": "1/12/2004",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -9767,7 +9767,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Kanchir",
 "2n Cognom": "Lorente",
-"Nom": "Ismael",
+": "Ismael",
 "Data naixement": "5/28/2009",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -9802,7 +9802,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El khatbi",
 "2n Cognom": "",
-"Nom": "Walid ",
+": "Walid ",
 "Data naixement": "",
 "Edat ": "19",
 "Centre Educatiu": "Despuig",
@@ -9837,7 +9837,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Khatbi",
 "2n Cognom": "",
-"Nom": "Abdellah ",
+": "Abdellah ",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Temple",
@@ -9872,7 +9872,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Khatbi",
 "2n Cognom": "",
-"Nom": "Anuar ",
+": "Anuar ",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Temple",
@@ -9907,7 +9907,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Kichouhi",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "La Mercè",
@@ -9942,7 +9942,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Kichouhi",
 "2n Cognom": "",
-"Nom": "Sohayb ",
+": "Sohayb ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "La Mercè",
@@ -9977,7 +9977,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Mamoun",
 "2n Cognom": "",
-"Nom": "Mounim",
+": "Mounim",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "Temple",
@@ -10012,7 +10012,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Mamoun",
 "2n Cognom": "",
-"Nom": "Houda ",
+": "Houda ",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Teresianes",
@@ -10047,7 +10047,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Elmataoui",
 "2n Cognom": "",
-"Nom": "Yassin",
+": "Yassin",
 "Data naixement": "6/20/2007",
 "Edat ": "10",
 "Centre Educatiu": "Cinta Curto",
@@ -10082,7 +10082,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Merabet",
 "2n Cognom": "",
-"Nom": "Abdelmoughit",
+": "Abdelmoughit",
 "Data naixement": "5/1/2011",
 "Edat ": "6",
 "Centre Educatiu": "Remolins",
@@ -10117,7 +10117,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Merabet",
 "2n Cognom": "",
-"Nom": "Malak",
+": "Malak",
 "Data naixement": "6/28/2009",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -10152,7 +10152,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Moghra",
 "2n Cognom": "",
-"Nom": "Nesrine",
+": "Nesrine",
 "Data naixement": "6/7/2009",
 "Edat ": "8",
 "Centre Educatiu": "Ferreries",
@@ -10187,7 +10187,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Mouagni",
 "2n Cognom": "Jannati",
-"Nom": "Salma",
+": "Salma",
 "Data naixement": "5/17/2007",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -10222,7 +10222,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Mouagni",
 "2n Cognom": "",
-"Nom": "Aissa",
+": "Aissa",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -10257,7 +10257,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Mouagni",
 "2n Cognom": "Jannati",
-"Nom": "Asma",
+": "Asma",
 "Data naixement": "5/13/2010",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -10292,7 +10292,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Ouardy  ",
 "2n Cognom": "",
-"Nom": "Mohamed ",
+": "Mohamed ",
 "Data naixement": "10/27/2002",
 "Edat ": "15",
 "Centre Educatiu": "Despuig",
@@ -10327,7 +10327,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Ouasti",
 "2n Cognom": "",
-"Nom": "Zakaria ",
+": "Zakaria ",
 "Data naixement": "12/10/2001",
 "Edat ": "17",
 "Centre Educatiu": "IES Ebre",
@@ -10362,7 +10362,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "El Touhami",
 "2n Cognom": "",
-"Nom": "Samir",
+": "Samir",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -10397,7 +10397,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Elaouni",
 "2n Cognom": "",
-"Nom": "Chahira ",
+": "Chahira ",
 "Data naixement": "8/11/2007",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -10432,7 +10432,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Elaouni",
 "2n Cognom": "",
-"Nom": "Osama ",
+": "Osama ",
 "Data naixement": "7/29/2009",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -10467,7 +10467,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Elaouni",
 "2n Cognom": "",
-"Nom": "Mohammed ",
+": "Mohammed ",
 "Data naixement": "10/26/2004",
 "Edat ": "14",
 "Centre Educatiu": "Sagrada Família",
@@ -10502,7 +10502,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Elmataoui",
 "2n Cognom": "",
-"Nom": "Chaima",
+": "Chaima",
 "Data naixement": "6/21/2007",
 "Edat ": "11",
 "Centre Educatiu": "Cinta Curto",
@@ -10537,7 +10537,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Elouardy",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "10/27/2002",
 "Edat ": "16",
 "Centre Educatiu": "IES Ebre",
@@ -10572,7 +10572,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "En Naouri",
 "2n Cognom": "Abouimrane",
-"Nom": "Yacin",
+": "Yacin",
 "Data naixement": "1/23/2011",
 "Edat ": "6",
 "Centre Educatiu": "Temple",
@@ -10607,7 +10607,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "En Naouri",
 "2n Cognom": "Abouimrane",
-"Nom": "Karima",
+": "Karima",
 "Data naixement": "12/30/2012",
 "Edat ": "5",
 "Centre Educatiu": "Temple",
@@ -10642,7 +10642,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "En Naouri",
 "2n Cognom": "Abouimrane",
-"Nom": "Khadija",
+": "Khadija",
 "Data naixement": "4/26/2005",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -10677,7 +10677,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "En Nouary",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -10712,7 +10712,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "En Nouny",
 "2n Cognom": "",
-"Nom": "Yassin ",
+": "Yassin ",
 "Data naixement": "5/28/1998",
 "Edat ": "19",
 "Centre Educatiu": "IES Ebre",
@@ -10747,7 +10747,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "En Nouny",
 "2n Cognom": "Baranja",
-"Nom": "Ilyass ",
+": "Ilyass ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -10782,7 +10782,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Enaoui",
 "2n Cognom": "",
-"Nom": "Anuar ",
+": "Anuar ",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Temple",
@@ -10817,7 +10817,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ennaouri",
 "2n Cognom": "",
-"Nom": "Aziz ",
+": "Aziz ",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "IES Ebre",
@@ -10852,7 +10852,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Er Rami",
 "2n Cognom": "",
-"Nom": "Latifa",
+": "Latifa",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -10887,7 +10887,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Errahmany  ",
 "2n Cognom": "",
-"Nom": "Badr ",
+": "Badr ",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -10922,7 +10922,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Es Salehy",
 "2n Cognom": "",
-"Nom": "Khalid",
+": "Khalid",
 "Data naixement": "",
 "Edat ": "17",
 "Centre Educatiu": "Despuig",
@@ -10957,7 +10957,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Es Salehy",
 "2n Cognom": "",
-"Nom": "Abdelaziz",
+": "Abdelaziz",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Sagrada Família",
@@ -10992,7 +10992,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Es Salehy",
 "2n Cognom": "",
-"Nom": " Aicha",
+": " Aicha",
 "Data naixement": "",
 "Edat ": "3",
 "Centre Educatiu": "Sagrada Família",
@@ -11027,7 +11027,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Es Salehy",
 "2n Cognom": "",
-"Nom": "Khadija",
+": "Khadija",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Sagrada Família",
@@ -11062,7 +11062,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Es Salehy",
 "2n Cognom": "",
-"Nom": "Mustapha",
+": "Mustapha",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Temple",
@@ -11097,7 +11097,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Es Salehy Khazou",
 "2n Cognom": "",
-"Nom": "Rachida",
+": "Rachida",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "Sagrada Família",
@@ -11132,7 +11132,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Espinoza",
 "2n Cognom": "",
-"Nom": "Milady",
+": "Milady",
 "Data naixement": "",
 "Edat ": "18",
 "Centre Educatiu": "IES Ebre",
@@ -11167,7 +11167,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Espinoza",
 "2n Cognom": "Cabrera",
-"Nom": "Jaume ",
+": "Jaume ",
 "Data naixement": "5/17/2005",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -11202,7 +11202,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Espuny ",
 "2n Cognom": "Krimi ",
-"Nom": "Sarah ",
+": "Sarah ",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -11237,7 +11237,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Essanhaji",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "Dertosa",
@@ -11272,7 +11272,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Essanhaji",
 "2n Cognom": "",
-"Nom": "Yosef",
+": "Yosef",
 "Data naixement": "10/3/2013",
 "Edat ": "4",
 "Centre Educatiu": "Ferreries",
@@ -11307,7 +11307,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Esteban",
 "2n Cognom": "Miscu",
-"Nom": "Carla",
+": "Carla",
 "Data naixement": "",
 "Edat ": "4",
 "Centre Educatiu": "Cinta Curto",
@@ -11342,7 +11342,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ettaouil",
 "2n Cognom": "",
-"Nom": "Sofiane ",
+": "Sofiane ",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -11377,7 +11377,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ettaouil",
 "2n Cognom": "",
-"Nom": "Rabha ",
+": "Rabha ",
 "Data naixement": "9/12/1997",
 "Edat ": "20",
 "Centre Educatiu": "URV",
@@ -11412,7 +11412,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Eyong",
 "2n Cognom": "",
-"Nom": "Marta",
+": "Marta",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Sagrada Família",
@@ -11447,7 +11447,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ezouhairi",
 "2n Cognom": "Jannati",
-"Nom": "Nabil",
+": "Nabil",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Cinta Curto",
@@ -11482,7 +11482,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ezzine",
 "2n Cognom": "",
-"Nom": "Mohamed ",
+": "Mohamed ",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "",
@@ -11517,7 +11517,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fabian",
 "2n Cognom": "Malita",
-"Nom": "Jordi",
+": "Jordi",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Daniel Mangrané",
@@ -11552,7 +11552,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fellahi",
 "2n Cognom": "El Kabouri",
-"Nom": "Doha",
+": "Doha",
 "Data naixement": "9/16/2011",
 "Edat ": "7",
 "Centre Educatiu": "Remolins",
@@ -11587,7 +11587,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fellahi",
 "2n Cognom": "",
-"Nom": "Fatima Zahrae",
+": "Fatima Zahrae",
 "Data naixement": "2/18/2008",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -11622,7 +11622,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fellohi",
 "2n Cognom": "",
-"Nom": "Grezlan",
+": "Grezlan",
 "Data naixement": "8/21/2013",
 "Edat ": "5",
 "Centre Educatiu": "Remolins",
@@ -11657,7 +11657,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fernandez",
 "2n Cognom": "Caparros",
-"Nom": "Veronica",
+": "Veronica",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -11692,7 +11692,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fernandez",
 "2n Cognom": "Maya",
-"Nom": "Daniel",
+": "Daniel",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -11727,7 +11727,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fernandez",
 "2n Cognom": "Maya",
-"Nom": "Josefa",
+": "Josefa",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -11762,7 +11762,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fernandez",
 "2n Cognom": "Hayevska",
-"Nom": "Airon",
+": "Airon",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -11797,7 +11797,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fernández ",
 "2n Cognom": "Pacheco",
-"Nom": "Trinidad",
+": "Trinidad",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Ferreries",
@@ -11832,7 +11832,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fernández ",
 "2n Cognom": "Gabarri",
-"Nom": "Alejandro Bryan",
+": "Alejandro Bryan",
 "Data naixement": "",
 "Edat ": "1",
 "Centre Educatiu": "",
@@ -11867,7 +11867,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fernández ",
 "2n Cognom": "Gabarri",
-"Nom": "Julio",
+": "Julio",
 "Data naixement": "",
 "Edat ": "1",
 "Centre Educatiu": "",
@@ -11902,7 +11902,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fernández ",
 "2n Cognom": "Gabarri",
-"Nom": "Victoria",
+": "Victoria",
 "Data naixement": "",
 "Edat ": "3",
 "Centre Educatiu": "",
@@ -11937,7 +11937,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Fernández ",
 "2n Cognom": "Oliver",
-"Nom": "Agatha",
+": "Agatha",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "",
@@ -11972,7 +11972,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ferrando",
 "2n Cognom": "Pulgarin",
-"Nom": "Gerard",
+": "Gerard",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -12007,7 +12007,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ferreres ",
 "2n Cognom": "Ortiz ",
-"Nom": "Jaume ",
+": "Jaume ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Despuig",
@@ -12042,7 +12042,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ferri",
 "2n Cognom": "Alonso",
-"Nom": "Jaume ",
+": "Jaume ",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -12077,7 +12077,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Flores",
 "2n Cognom": "Meneses",
-"Nom": "Marcos",
+": "Marcos",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Consolació",
@@ -12112,7 +12112,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Flores",
 "2n Cognom": "Carrillo",
-"Nom": "Dolores",
+": "Dolores",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Consolació",
@@ -12147,7 +12147,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Forcadell",
 "2n Cognom": "Muñoz",
-"Nom": "Aleix",
+": "Aleix",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -12182,7 +12182,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Frimane",
 "2n Cognom": "",
-"Nom": "Asia",
+": "Asia",
 "Data naixement": "1/28/2008",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -12217,7 +12217,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Frimane",
 "2n Cognom": "",
-"Nom": "Ayoub",
+": "Ayoub",
 "Data naixement": "8/9/2011",
 "Edat ": "7",
 "Centre Educatiu": "Remolins",
@@ -12252,7 +12252,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gabarri ",
 "2n Cognom": "Hernández",
-"Nom": "Laura",
+": "Laura",
 "Data naixement": "8/8/2004",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -12287,7 +12287,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gabarri ",
 "2n Cognom": "Hernández",
-"Nom": "Alba",
+": "Alba",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Consolació",
@@ -12322,7 +12322,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gabarri ",
 "2n Cognom": "Hernández",
-"Nom": "Coraima",
+": "Coraima",
 "Data naixement": "5/14/2010",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -12357,7 +12357,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gabarri ",
 "2n Cognom": "Hernández",
-"Nom": "Sandra",
+": "Sandra",
 "Data naixement": "5/14/2010",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -12392,7 +12392,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gabarri ",
 "2n Cognom": "Claveria ",
-"Nom": "Juan Antonio",
+": "Juan Antonio",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "",
@@ -12427,7 +12427,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gabarri ",
 "2n Cognom": "Claveria",
-"Nom": "Melodi",
+": "Melodi",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "",
@@ -12462,7 +12462,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gabarri ",
 "2n Cognom": "Hernández ",
-"Nom": "Aitana",
+": "Aitana",
 "Data naixement": "",
 "Edat ": "1",
 "Centre Educatiu": "",
@@ -12497,7 +12497,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Galiana",
 "2n Cognom": "Sanchez",
-"Nom": "Erica",
+": "Erica",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Temple",
@@ -12532,7 +12532,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gallardo",
 "2n Cognom": "Martinez",
-"Nom": "Alex",
+": "Alex",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -12567,7 +12567,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gallardo",
 "2n Cognom": "",
-"Nom": "Saray",
+": "Saray",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Dertosa",
@@ -12602,7 +12602,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gaoui",
 "2n Cognom": "",
-"Nom": "Fatima ",
+": "Fatima ",
 "Data naixement": "",
 "Edat ": "17",
 "Centre Educatiu": "IES Ebre",
@@ -12637,7 +12637,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gaoui",
 "2n Cognom": "",
-"Nom": "Brahim ",
+": "Brahim ",
 "Data naixement": "12/1/2007",
 "Edat ": "10",
 "Centre Educatiu": "Temple",
@@ -12672,7 +12672,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Garcia ",
 "2n Cognom": "Liberal",
-"Nom": "Paula",
+": "Paula",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -12707,7 +12707,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Garcia ",
 "2n Cognom": "Llatge",
-"Nom": "Isaac",
+": "Isaac",
 "Data naixement": "1/13/2011",
 "Edat ": "7",
 "Centre Educatiu": "Cinta Curto",
@@ -12742,7 +12742,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Garcia",
 "2n Cognom": "Llatge",
-"Nom": "Marti",
+": "Marti",
 "Data naixement": "7/24/2008",
 "Edat ": "10",
 "Centre Educatiu": "Cinta Curto",
@@ -12777,7 +12777,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Garcia",
 "2n Cognom": "Llorach",
-"Nom": "Arnau",
+": "Arnau",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -12812,7 +12812,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Garcia Gango",
 "2n Cognom": "Sánchez",
-"Nom": "Marc",
+": "Marc",
 "Data naixement": "8/27/2005",
 "Edat ": "13",
 "Centre Educatiu": "Daniel Mangrané",
@@ -12847,7 +12847,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Garcia Gango ",
 "2n Cognom": "Sánchez",
-"Nom": "Jordi",
+": "Jordi",
 "Data naixement": "1/11/2004",
 "Edat ": "14",
 "Centre Educatiu": "Daniel Mangrané",
@@ -12882,7 +12882,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Garcia Navas",
 "2n Cognom": "",
-"Nom": "Magdalena",
+": "Magdalena",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -12917,7 +12917,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Garcia Navas",
 "2n Cognom": "",
-"Nom": "Angel",
+": "Angel",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "Ferreries",
@@ -12952,7 +12952,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Garcia Navas",
 "2n Cognom": "",
-"Nom": "Kasandra",
+": "Kasandra",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -12987,7 +12987,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gerardo",
 "2n Cognom": "",
-"Nom": "Luis",
+": "Luis",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Daniel Mangrané",
@@ -13022,7 +13022,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ghamrissi",
 "2n Cognom": "Jilalou",
-"Nom": "Safae",
+": "Safae",
 "Data naixement": "10/25/2003",
 "Edat ": "15",
 "Centre Educatiu": "Consolació",
@@ -13057,7 +13057,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ghoudane",
 "2n Cognom": "",
-"Nom": "Adam",
+": "Adam",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Daniel Mangrané",
@@ -13092,7 +13092,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Giménez ",
 "2n Cognom": "Gabarri",
-"Nom": "Marina",
+": "Marina",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Despuig",
@@ -13127,7 +13127,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Giménez de los Galanes",
 "2n Cognom": "",
-"Nom": "Jose",
+": "Jose",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Cinta Curto",
@@ -13162,7 +13162,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Giron ",
 "2n Cognom": "Jaramillo ",
-"Nom": "Paola ",
+": "Paola ",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "",
@@ -13197,7 +13197,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gisbert",
 "2n Cognom": "Lunica",
-"Nom": "Selena",
+": "Selena",
 "Data naixement": "4/17/2008",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -13232,7 +13232,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Glover",
 "2n Cognom": "",
-"Nom": "Harvey",
+": "Harvey",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Daniel Mangrané",
@@ -13267,7 +13267,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gomez",
 "2n Cognom": "",
-"Nom": "Elisabeth",
+": "Elisabeth",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Remolins",
@@ -13302,7 +13302,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gonzalez",
 "2n Cognom": "Balond",
-"Nom": "Maria",
+": "Maria",
 "Data naixement": "6/20/2008",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -13337,7 +13337,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "González",
 "2n Cognom": "Sans ",
-"Nom": "Lidia",
+": "Lidia",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Consolació",
@@ -13372,7 +13372,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "González",
 "2n Cognom": "Ramos",
-"Nom": "Aitor Arker",
+": "Aitor Arker",
 "Data naixement": "12/19/2010",
 "Edat ": "8",
 "Centre Educatiu": "",
@@ -13407,7 +13407,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "González ",
 "2n Cognom": "Sans",
-"Nom": "Diego",
+": "Diego",
 "Data naixement": "2/19/2012",
 "Edat ": "5",
 "Centre Educatiu": "Cinta Curto",
@@ -13442,7 +13442,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gordo ",
 "2n Cognom": "Rodríguez",
-"Nom": "Alex Benjamin",
+": "Alex Benjamin",
 "Data naixement": "",
 "Edat ": "18",
 "Centre Educatiu": "",
@@ -13477,7 +13477,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gordo ",
 "2n Cognom": "Rodríguez",
-"Nom": "Andrea",
+": "Andrea",
 "Data naixement": "",
 "Edat ": "17",
 "Centre Educatiu": "",
@@ -13512,7 +13512,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gorram",
 "2n Cognom": "El Korte",
-"Nom": "Heba",
+": "Heba",
 "Data naixement": "3/18/2011",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -13547,7 +13547,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gorram",
 "2n Cognom": "El Korte",
-"Nom": "Nawfal",
+": "Nawfal",
 "Data naixement": "1/24/2006",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -13582,7 +13582,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gorriz",
 "2n Cognom": "Miro",
-"Nom": "Miriam",
+": "Miriam",
 "Data naixement": "10/9/2010",
 "Edat ": "7",
 "Centre Educatiu": "St. Llatzer",
@@ -13617,7 +13617,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Gory",
 "2n Cognom": "",
-"Nom": "Maïmouna",
+": "Maïmouna",
 "Data naixement": "8/31/2013",
 "Edat ": "5",
 "Centre Educatiu": "Remolins",
@@ -13652,7 +13652,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Granja ",
 "2n Cognom": "Chavez",
-"Nom": "Alexander",
+": "Alexander",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "",
@@ -13687,7 +13687,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Guas ",
 "2n Cognom": "del Sol",
-"Nom": "Dani",
+": "Dani",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Temple",
@@ -13722,7 +13722,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Guas ",
 "2n Cognom": "del Sol",
-"Nom": "Raquel",
+": "Raquel",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Temple",
@@ -13757,7 +13757,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Guerguaouch",
 "2n Cognom": "Ouatiti",
-"Nom": "Younes",
+": "Younes",
 "Data naixement": "10/17/2006",
 "Edat ": "12",
 "Centre Educatiu": "La Mercè",
@@ -13792,7 +13792,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Habtiche",
 "2n Cognom": "Amara",
-"Nom": "D. Susana",
+": "D. Susana",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Cinta Curto",
@@ -13827,7 +13827,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Habtiche",
 "2n Cognom": "Amara",
-"Nom": "Maria Anfel",
+": "Maria Anfel",
 "Data naixement": "3/18/2009",
 "Edat ": "8",
 "Centre Educatiu": "Cinta Curto",
@@ -13862,7 +13862,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Habtiche",
 "2n Cognom": "Amara",
-"Nom": "Serine",
+": "Serine",
 "Data naixement": "3/9/2014",
 "Edat ": "4",
 "Centre Educatiu": "Cinta Curto",
@@ -13897,7 +13897,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Haddou",
 "2n Cognom": "",
-"Nom": "Khadija",
+": "Khadija",
 "Data naixement": "8/26/2005",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -13932,7 +13932,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Haddou",
 "2n Cognom": "",
-"Nom": "Malika",
+": "Malika",
 "Data naixement": "10/8/2007",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -13967,7 +13967,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Haddou",
 "2n Cognom": "",
-"Nom": "Souad",
+": "Souad",
 "Data naixement": "12/27/2008",
 "Edat ": "10",
 "Centre Educatiu": "La Mercè",
@@ -14002,7 +14002,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Haddou ",
 "2n Cognom": "",
-"Nom": "Aicha",
+": "Aicha",
 "Data naixement": "1/8/2012",
 "Edat ": "5",
 "Centre Educatiu": "La Mercè",
@@ -14037,7 +14037,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hajja",
 "2n Cognom": "",
-"Nom": "Yassin",
+": "Yassin",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Remolins",
@@ -14072,7 +14072,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hajja",
 "2n Cognom": "",
-"Nom": "Hasnae",
+": "Hasnae",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Daniel Mangrané",
@@ -14107,7 +14107,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hamayon",
 "2n Cognom": "Roman",
-"Nom": "Rakia",
+": "Rakia",
 "Data naixement": "5/25/2011",
 "Edat ": "6",
 "Centre Educatiu": "La Mercè",
@@ -14142,7 +14142,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hamayon",
 "2n Cognom": "Roman",
-"Nom": "Imran",
+": "Imran",
 "Data naixement": "1/7/2013",
 "Edat ": "4",
 "Centre Educatiu": "La Mercè",
@@ -14177,7 +14177,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hamidi",
 "2n Cognom": "Mellouki",
-"Nom": "Romaissae",
+": "Romaissae",
 "Data naixement": "8/23/2011",
 "Edat ": "7",
 "Centre Educatiu": "Remolins",
@@ -14212,7 +14212,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hamidi",
 "2n Cognom": "Mellouki",
-"Nom": "Ihab",
+": "Ihab",
 "Data naixement": "11/14/2004",
 "Edat ": "14",
 "Centre Educatiu": "",
@@ -14247,7 +14247,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hamidi",
 "2n Cognom": "Mellouki",
-"Nom": "Wail",
+": "Wail",
 "Data naixement": "10/30/2007",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -14282,7 +14282,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hammidan",
 "2n Cognom": "",
-"Nom": "Hamza ",
+": "Hamza ",
 "Data naixement": "7/24/2002",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -14317,7 +14317,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hammidan",
 "2n Cognom": "",
-"Nom": "Oussama",
+": "Oussama",
 "Data naixement": "8/12/2007",
 "Edat ": "10",
 "Centre Educatiu": "La Mercè",
@@ -14352,7 +14352,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hammidan",
 "2n Cognom": "",
-"Nom": "Jannat",
+": "Jannat",
 "Data naixement": "11/13/2012",
 "Edat ": "5",
 "Centre Educatiu": "La Mercè",
@@ -14387,7 +14387,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hammidan",
 "2n Cognom": "",
-"Nom": "Bassma",
+": "Bassma",
 "Data naixement": "10/22/2010",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -14422,7 +14422,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hamouchane",
 "2n Cognom": "",
-"Nom": "Zainab",
+": "Zainab",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "Temple",
@@ -14457,7 +14457,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hamza",
 "2n Cognom": "",
-"Nom": "Younesse ",
+": "Younesse ",
 "Data naixement": "",
 "Edat ": "19",
 "Centre Educatiu": "IES Ebre",
@@ -14492,7 +14492,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hamza",
 "2n Cognom": "",
-"Nom": "El Mahdi ",
+": "El Mahdi ",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Sagrada Família",
@@ -14527,7 +14527,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hamza",
 "2n Cognom": "Fathallah",
-"Nom": "Ilyass ",
+": "Ilyass ",
 "Data naixement": "3/18/2008",
 "Edat ": "10",
 "Centre Educatiu": "Temple",
@@ -14562,7 +14562,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hamza",
 "2n Cognom": "Fathallah",
-"Nom": "Tarek",
+": "Tarek",
 "Data naixement": "10/10/2010",
 "Edat ": "7",
 "Centre Educatiu": "Temple",
@@ -14597,7 +14597,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hamza",
 "2n Cognom": "",
-"Nom": "Youssef ",
+": "Youssef ",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Temple",
@@ -14632,7 +14632,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hanafou ",
 "2n Cognom": "",
-"Nom": "Doaa ",
+": "Doaa ",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Ferreries",
@@ -14667,7 +14667,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hanani",
 "2n Cognom": "",
-"Nom": "Safia ",
+": "Safia ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -14702,7 +14702,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hanani",
 "2n Cognom": "",
-"Nom": "Amine",
+": "Amine",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -14737,7 +14737,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hanif",
 "2n Cognom": "",
-"Nom": "Faraz",
+": "Faraz",
 "Data naixement": "7/22/2005",
 "Edat ": "12",
 "Centre Educatiu": "La Mercè",
@@ -14772,7 +14772,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hanif",
 "2n Cognom": "",
-"Nom": "Irfha",
+": "Irfha",
 "Data naixement": "10/12/2012",
 "Edat ": "5",
 "Centre Educatiu": "La Mercè",
@@ -14807,7 +14807,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hattaf",
 "2n Cognom": "",
-"Nom": "Hamza ",
+": "Hamza ",
 "Data naixement": "1/3/2005",
 "Edat ": "12",
 "Centre Educatiu": "Dertosa",
@@ -14842,7 +14842,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hernandez",
 "2n Cognom": "Rodríguez",
-"Nom": "Karla",
+": "Karla",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Ferreries",
@@ -14877,7 +14877,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hernandez",
 "2n Cognom": "Claveria",
-"Nom": "Josue",
+": "Josue",
 "Data naixement": "6/5/2009",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -14912,7 +14912,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Herrero",
 "2n Cognom": "Fernandez",
-"Nom": "Javi",
+": "Javi",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Sant Jordi",
@@ -14947,7 +14947,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hichoum??",
 "2n Cognom": "",
-"Nom": "",
+": "",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Daniel Mangrané",
@@ -14982,7 +14982,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hierro",
 "2n Cognom": "Gallardo",
-"Nom": "Sara",
+": "Sara",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Temple",
@@ -15017,7 +15017,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Houria",
 "2n Cognom": "",
-"Nom": "Rafik",
+": "Rafik",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Despuig",
@@ -15052,7 +15052,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Housseni",
 "2n Cognom": "",
-"Nom": "Malak",
+": "Malak",
 "Data naixement": "11/12/2014",
 "Edat ": "3",
 "Centre Educatiu": "Ferreries",
@@ -15087,7 +15087,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Housseni",
 "2n Cognom": "",
-"Nom": "Salah Eddine",
+": "Salah Eddine",
 "Data naixement": "7/13/2005",
 "Edat ": "13",
 "Centre Educatiu": "Ferreries",
@@ -15122,7 +15122,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hsissi",
 "2n Cognom": "",
-"Nom": "Ihssane",
+": "Ihssane",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "DAniel Mangrané",
@@ -15157,7 +15157,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hsissi",
 "2n Cognom": "",
-"Nom": "Mouchine",
+": "Mouchine",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "DAniel Mangrané",
@@ -15192,7 +15192,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hussain",
 "2n Cognom": "Sheroz",
-"Nom": "Muhammad",
+": "Muhammad",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -15227,7 +15227,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Hydara",
 "2n Cognom": "",
-"Nom": "Binta ",
+": "Binta ",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "St. Llatzer",
@@ -15262,7 +15262,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ibrahimi",
 "2n Cognom": "",
-"Nom": "Sofia",
+": "Sofia",
 "Data naixement": "7/20/2012",
 "Edat ": "6",
 "Centre Educatiu": "Remolins",
@@ -15297,7 +15297,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ibrahimi",
 "2n Cognom": "",
-"Nom": "Maria",
+": "Maria",
 "Data naixement": "2/7/2009",
 "Edat ": "9",
 "Centre Educatiu": "Remolins",
@@ -15332,7 +15332,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Igoui",
 "2n Cognom": "",
-"Nom": "Said",
+": "Said",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -15367,7 +15367,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Igoui",
 "2n Cognom": "",
-"Nom": "Bouchra",
+": "Bouchra",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "La Mercè",
@@ -15402,7 +15402,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Iqbal",
 "2n Cognom": "Chonillo",
-"Nom": "Alexandre",
+": "Alexandre",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Temple",
@@ -15437,7 +15437,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ishtiaq ",
 "2n Cognom": "",
-"Nom": "Farhan ",
+": "Farhan ",
 "Data naixement": "12/22/2002",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -15472,7 +15472,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ivan",
 "2n Cognom": "Uzunova",
-"Nom": "Gabriela",
+": "Gabriela",
 "Data naixement": "11/27/2012",
 "Edat ": "5",
 "Centre Educatiu": "La Mercè",
@@ -15507,7 +15507,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Izelmaden",
 "2n Cognom": "",
-"Nom": "Iman ",
+": "Iman ",
 "Data naixement": "5/15/2012",
 "Edat ": "5",
 "Centre Educatiu": "Remolins",
@@ -15542,7 +15542,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Jacome",
 "2n Cognom": "Burgos",
-"Nom": "Alan Javier",
+": "Alan Javier",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -15577,7 +15577,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Jawueh",
 "2n Cognom": "Galceran",
-"Nom": "Natalia",
+": "Natalia",
 "Data naixement": "8/28/2008",
 "Edat ": "10",
 "Centre Educatiu": "Temple",
@@ -15612,7 +15612,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Jimenez",
 "2n Cognom": "Altadill",
-"Nom": "Cristian",
+": "Cristian",
 "Data naixement": "11/4/2003",
 "Edat ": "15",
 "Centre Educatiu": "Sant Jordi",
@@ -15647,7 +15647,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Jrhi",
 "2n Cognom": "",
-"Nom": "Hana",
+": "Hana",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Remolins",
@@ -15682,7 +15682,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Juárez",
 "2n Cognom": "Cabrera",
-"Nom": "Félix",
+": "Félix",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -15717,7 +15717,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Juárez",
 "2n Cognom": "Cabrera",
-"Nom": "Karen",
+": "Karen",
 "Data naixement": "",
 "Edat ": "5",
 "Centre Educatiu": "La Mercè",
@@ -15752,7 +15752,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kabouri",
 "2n Cognom": "",
-"Nom": "Jouad",
+": "Jouad",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -15787,7 +15787,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kabouri",
 "2n Cognom": "",
-"Nom": "Brahim ",
+": "Brahim ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Temple",
@@ -15822,7 +15822,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kabouri",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Temple",
@@ -15857,7 +15857,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kabouri",
 "2n Cognom": "",
-"Nom": "Hassan ",
+": "Hassan ",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "",
@@ -15892,7 +15892,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kamouch",
 "2n Cognom": "",
-"Nom": "Hiba ",
+": "Hiba ",
 "Data naixement": "10/24/2010",
 "Edat ": "8",
 "Centre Educatiu": "Temple",
@@ -15927,7 +15927,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kamouch",
 "2n Cognom": "",
-"Nom": "Lahsen ",
+": "Lahsen ",
 "Data naixement": "1/4/2008",
 "Edat ": "9",
 "Centre Educatiu": "Temple",
@@ -15962,7 +15962,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kamouch",
 "2n Cognom": "",
-"Nom": "Lhocine ",
+": "Lhocine ",
 "Data naixement": "1/4/2008",
 "Edat ": "9",
 "Centre Educatiu": "Temple",
@@ -15997,7 +15997,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Karamat",
 "2n Cognom": "",
-"Nom": "Basma",
+": "Basma",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -16032,7 +16032,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Karamat",
 "2n Cognom": "",
-"Nom": "Nosh",
+": "Nosh",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Remolins",
@@ -16067,7 +16067,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Karamat",
 "2n Cognom": "",
-"Nom": "Suleman",
+": "Suleman",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Remolins",
@@ -16102,7 +16102,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Karamat",
 "2n Cognom": "",
-"Nom": "Anas",
+": "Anas",
 "Data naixement": "",
 "Edat ": "4",
 "Centre Educatiu": "Verge de la Cinta",
@@ -16137,7 +16137,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Karamat",
 "2n Cognom": "",
-"Nom": "Humna",
+": "Humna",
 "Data naixement": "",
 "Edat ": "2",
 "Centre Educatiu": "",
@@ -16172,7 +16172,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kartashaia",
 "2n Cognom": "",
-"Nom": "Ekaterina",
+": "Ekaterina",
 "Data naixement": "1/9/2001",
 "Edat ": "16",
 "Centre Educatiu": "CFA",
@@ -16207,7 +16207,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kasmi",
 "2n Cognom": "",
-"Nom": "Brahim ",
+": "Brahim ",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -16242,7 +16242,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kaur",
 "2n Cognom": "",
-"Nom": "Harleen",
+": "Harleen",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Ferreries",
@@ -16277,7 +16277,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kaur",
 "2n Cognom": "",
-"Nom": "Sargunpreet",
+": "Sargunpreet",
 "Data naixement": "11/20/2006",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -16312,7 +16312,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Keita",
 "2n Cognom": "",
-"Nom": "Abdoulaye",
+": "Abdoulaye",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -16347,7 +16347,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Keita",
 "2n Cognom": "",
-"Nom": "Aminata",
+": "Aminata",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "Dertosa",
@@ -16382,7 +16382,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Keita",
 "2n Cognom": "",
-"Nom": "Seydou",
+": "Seydou",
 "Data naixement": "9/16/2018",
 "Edat ": "10",
 "Centre Educatiu": "La Mercè",
@@ -16417,7 +16417,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Keita",
 "2n Cognom": "",
-"Nom": "Sidi",
+": "Sidi",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Temple",
@@ -16452,7 +16452,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kerboute",
 "2n Cognom": "Aarab",
-"Nom": "Fatima ",
+": "Fatima ",
 "Data naixement": "7/22/2006",
 "Edat ": "12",
 "Centre Educatiu": "Dertosa",
@@ -16487,7 +16487,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kerboute",
 "2n Cognom": "Aarab",
-"Nom": "Zakaria ",
+": "Zakaria ",
 "Data naixement": "8/24/2008",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -16522,7 +16522,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kerrou",
 "2n Cognom": "",
-"Nom": "Fatima",
+": "Fatima",
 "Data naixement": "5/8/2008",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -16557,7 +16557,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Khallaf",
 "2n Cognom": "",
-"Nom": "Nohalia",
+": "Nohalia",
 "Data naixement": "8/14/2006",
 "Edat ": "12",
 "Centre Educatiu": "Dertosa",
@@ -16592,7 +16592,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Khallaf",
 "2n Cognom": "",
-"Nom": "Sarah ",
+": "Sarah ",
 "Data naixement": "9/16/2014",
 "Edat ": "3",
 "Centre Educatiu": "Ferreries",
@@ -16627,7 +16627,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Khallaf",
 "2n Cognom": "",
-"Nom": "Ussama",
+": "Ussama",
 "Data naixement": "8/10/2009",
 "Edat ": "8",
 "Centre Educatiu": "Ferreries",
@@ -16662,7 +16662,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Khoule",
 "2n Cognom": "",
-"Nom": "Malik",
+": "Malik",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Despuig",
@@ -16697,7 +16697,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Khouya Ait",
 "2n Cognom": "",
-"Nom": "Asma ",
+": "Asma ",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "Temple",
@@ -16732,7 +16732,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Khouya Ait",
 "2n Cognom": "",
-"Nom": "Mustapha ",
+": "Mustapha ",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "Temple",
@@ -16767,7 +16767,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Kuizinaite",
 "2n Cognom": "",
-"Nom": "Aurelija",
+": "Aurelija",
 "Data naixement": "11/11/2008",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -16802,7 +16802,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Lamhalhli",
 "2n Cognom": "",
-"Nom": "Marouan",
+": "Marouan",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Daniel Mangrané",
@@ -16837,7 +16837,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Laraich",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Temple",
@@ -16872,7 +16872,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Laraich",
 "2n Cognom": "",
-"Nom": "Ryan",
+": "Ryan",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Temple",
@@ -16907,7 +16907,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Largo ",
 "2n Cognom": "Balado",
-"Nom": "Alan",
+": "Alan",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "Ferreries",
@@ -16942,7 +16942,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Largo ",
 "2n Cognom": "Balado",
-"Nom": "Laura Chanel",
+": "Laura Chanel",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "Ferreries",
@@ -16977,7 +16977,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Lasala",
 "2n Cognom": "Descarrega",
-"Nom": "Margarita",
+": "Margarita",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Daniel Mangrané",
@@ -17012,7 +17012,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Libdini",
 "2n Cognom": "Boudjelti",
-"Nom": "Youcef",
+": "Youcef",
 "Data naixement": "4/18/2011",
 "Edat ": "6",
 "Centre Educatiu": "Temple",
@@ -17047,7 +17047,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Lluis",
 "2n Cognom": "",
-"Nom": "Paula",
+": "Paula",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -17082,7 +17082,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Lluis",
 "2n Cognom": "Molina",
-"Nom": "Paula Cinta",
+": "Paula Cinta",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Ferreries",
@@ -17117,7 +17117,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Lostao",
 "2n Cognom": "",
-"Nom": "Paula",
+": "Paula",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -17152,7 +17152,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Luna",
 "2n Cognom": "Azara",
-"Nom": "Miquel",
+": "Miquel",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -17187,7 +17187,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Luna",
 "2n Cognom": "Guerola",
-"Nom": "Cinta ",
+": "Cinta ",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "DAniel Mangrané",
@@ -17222,7 +17222,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Maar",
 "2n Cognom": "Anani",
-"Nom": "Malake",
+": "Malake",
 "Data naixement": "8/28/2008",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -17257,7 +17257,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mabrok",
 "2n Cognom": "Ben Mohamed",
-"Nom": "Salma ",
+": "Salma ",
 "Data naixement": "8/8/2007",
 "Edat ": "10",
 "Centre Educatiu": "Ferreries",
@@ -17292,7 +17292,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mabrok",
 "2n Cognom": "",
-"Nom": "Aissa",
+": "Aissa",
 "Data naixement": "1/28/2014",
 "Edat ": "4",
 "Centre Educatiu": "Ferreries",
@@ -17327,7 +17327,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Maddouch",
 "2n Cognom": "",
-"Nom": "Adam ",
+": "Adam ",
 "Data naixement": "7/16/2008",
 "Edat ": "9",
 "Centre Educatiu": "Temple",
@@ -17362,7 +17362,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Maddouch",
 "2n Cognom": "",
-"Nom": "Saad",
+": "Saad",
 "Data naixement": "2/5/2011",
 "Edat ": "7",
 "Centre Educatiu": "Temple",
@@ -17397,7 +17397,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Maeso ",
 "2n Cognom": "Segarra",
-"Nom": "Aitor",
+": "Aitor",
 "Data naixement": "",
 "Edat ": "4",
 "Centre Educatiu": "Temple",
@@ -17432,7 +17432,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Maeso ",
 "2n Cognom": "Segarra",
-"Nom": "Jose Luis",
+": "Jose Luis",
 "Data naixement": "4/6/2006",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -17467,7 +17467,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Maeso ",
 "2n Cognom": "Segarra",
-"Nom": "Amy",
+": "Amy",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "",
@@ -17502,7 +17502,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mahal Ziani",
 "2n Cognom": "",
-"Nom": "Hamza ",
+": "Hamza ",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -17537,7 +17537,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mahnoor",
 "2n Cognom": "",
-"Nom": "Fatima",
+": "Fatima",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Dertosa",
@@ -17572,7 +17572,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Majdoubi",
 "2n Cognom": "",
-"Nom": "Ikram",
+": "Ikram",
 "Data naixement": "4/2/2014",
 "Edat ": "4",
 "Centre Educatiu": "",
@@ -17607,7 +17607,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Malik",
 "2n Cognom": "Sarwar",
-"Nom": "Muheeb",
+": "Muheeb",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Ferreries",
@@ -17642,7 +17642,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mohamed",
 "2n Cognom": "Cori",
-"Nom": "Mahmud",
+": "Mahmud",
 "Data naixement": "9/3/2005",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -17677,7 +17677,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mahti",
 "2n Cognom": "",
-"Nom": "Ayoub ",
+": "Ayoub ",
 "Data naixement": "3/1/2003",
 "Edat ": "14",
 "Centre Educatiu": "Sagrada Família",
@@ -17712,7 +17712,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Manar ",
 "2n Cognom": "",
-"Nom": "Salam ",
+": "Salam ",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -17747,7 +17747,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Manar ",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -17782,7 +17782,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Manni ",
 "2n Cognom": "",
-"Nom": "Khalid",
+": "Khalid",
 "Data naixement": "12/7/2005",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -17817,7 +17817,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Manni ",
 "2n Cognom": "",
-"Nom": "Ridouan",
+": "Ridouan",
 "Data naixement": "7/26/2008",
 "Edat ": "10",
 "Centre Educatiu": "Ferreries",
@@ -17852,7 +17852,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Manni ",
 "2n Cognom": "",
-"Nom": "Yasen",
+": "Yasen",
 "Data naixement": "8/19/2012",
 "Edat ": "5",
 "Centre Educatiu": "Ferreries",
@@ -17887,7 +17887,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Marong",
 "2n Cognom": "Flores",
-"Nom": "Lisa",
+": "Lisa",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -17922,7 +17922,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Martín ",
 "2n Cognom": "Planellas ",
-"Nom": "Núria ",
+": "Núria ",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "Sant Jordi",
@@ -17957,7 +17957,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Martin",
 "2n Cognom": "Terrado",
-"Nom": "Juan",
+": "Juan",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -17992,7 +17992,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Martinez",
 "2n Cognom": "",
-"Nom": "Angie",
+": "Angie",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -18027,7 +18027,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Martinez",
 "2n Cognom": "Oronoz",
-"Nom": "Juliana",
+": "Juliana",
 "Data naixement": "7/26/2011",
 "Edat ": "7",
 "Centre Educatiu": "Consolació",
@@ -18062,7 +18062,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Martinez ",
 "2n Cognom": "Villar",
-"Nom": "Desiree",
+": "Desiree",
 "Data naixement": "7/23/2001",
 "Edat ": "17",
 "Centre Educatiu": "no escolaritzat",
@@ -18097,7 +18097,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Martinez ",
 "2n Cognom": "",
-"Nom": "Laia",
+": "Laia",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Daniel Mangrané",
@@ -18132,7 +18132,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Martinez ",
 "2n Cognom": "",
-"Nom": "Josep",
+": "Josep",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Daniel Mangrané",
@@ -18167,7 +18167,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Masghar",
 "2n Cognom": "",
-"Nom": "Adam",
+": "Adam",
 "Data naixement": "6/6/2008",
 "Edat ": "10",
 "Centre Educatiu": "",
@@ -18202,7 +18202,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Masrour",
 "2n Cognom": "",
-"Nom": "Nirmin",
+": "Nirmin",
 "Data naixement": "5/1/2010",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -18237,7 +18237,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mazaoui",
 "2n Cognom": "",
-"Nom": "Amine",
+": "Amine",
 "Data naixement": "6/24/2009",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -18272,7 +18272,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mazouari ",
 "2n Cognom": "",
-"Nom": "Nadia ",
+": "Nadia ",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Ferreries",
@@ -18307,7 +18307,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mazouari ",
 "2n Cognom": "",
-"Nom": "Ilyass ",
+": "Ilyass ",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Ferreries",
@@ -18342,7 +18342,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mazouki",
 "2n Cognom": "",
-"Nom": "Aya",
+": "Aya",
 "Data naixement": "7/27/2014",
 "Edat ": "4",
 "Centre Educatiu": "La Mercè",
@@ -18377,7 +18377,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mazouki",
 "2n Cognom": "",
-"Nom": "Amine",
+": "Amine",
 "Data naixement": "6/24/2009",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -18412,7 +18412,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mechiu ",
 "2n Cognom": "Cortés",
-"Nom": "Adela",
+": "Adela",
 "Data naixement": "7/15/2009",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -18447,7 +18447,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mechiu ",
 "2n Cognom": "Cortes",
-"Nom": "Aynoa",
+": "Aynoa",
 "Data naixement": "4/19/2012",
 "Edat ": "5",
 "Centre Educatiu": "Remolins",
@@ -18482,7 +18482,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mechiu ",
 "2n Cognom": "Cortes",
-"Nom": "Nerea",
+": "Nerea",
 "Data naixement": "7/21/2007",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -18517,7 +18517,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mechiu ",
 "2n Cognom": "Cortes",
-"Nom": "Miguel",
+": "Miguel",
 "Data naixement": "8/17/2013",
 "Edat ": "5",
 "Centre Educatiu": "Remolins",
@@ -18552,7 +18552,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Melissa ",
 "2n Cognom": "Blandin ",
-"Nom": "Tania ",
+": "Tania ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Despuig",
@@ -18587,7 +18587,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Merchan ",
 "2n Cognom": "Tarira",
-"Nom": "Jefferson ",
+": "Jefferson ",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -18622,7 +18622,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Merchan ",
 "2n Cognom": "Tarira",
-"Nom": "Madelin",
+": "Madelin",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Temple",
@@ -18657,7 +18657,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Merzoug",
 "2n Cognom": "",
-"Nom": "Ridouane",
+": "Ridouane",
 "Data naixement": "9/4/2012",
 "Edat ": "6",
 "Centre Educatiu": "Remolins",
@@ -18692,7 +18692,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Merzoug",
 "2n Cognom": "",
-"Nom": "Khadija",
+": "Khadija",
 "Data naixement": "3/30/2010",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -18727,7 +18727,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Merzoug",
 "2n Cognom": "",
-"Nom": "Aicha",
+": "Aicha",
 "Data naixement": "11/20/2007",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -18762,7 +18762,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Meskini ",
 "2n Cognom": "",
-"Nom": "Hasna ",
+": "Hasna ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Dertosa",
@@ -18797,7 +18797,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Meskini ",
 "2n Cognom": "",
-"Nom": "Yassine ",
+": "Yassine ",
 "Data naixement": "4/7/2006",
 "Edat ": "12",
 "Centre Educatiu": "Dertosa",
@@ -18832,7 +18832,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Meskini ",
 "2n Cognom": "",
-"Nom": "Salma",
+": "Salma",
 "Data naixement": "12/14/2009",
 "Edat ": "8",
 "Centre Educatiu": "Ferreries",
@@ -18867,7 +18867,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mhamud",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -18902,7 +18902,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mia",
 "2n Cognom": "Domingo",
-"Nom": "Oriana",
+": "Oriana",
 "Data naixement": "12/1/2011",
 "Edat ": "6",
 "Centre Educatiu": "Consolació",
@@ -18937,7 +18937,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Michel",
 "2n Cognom": "",
-"Nom": "Heidi",
+": "Heidi",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Cinta Curto",
@@ -18972,7 +18972,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mihaela Baicu ",
 "2n Cognom": "",
-"Nom": "Bianca ",
+": "Bianca ",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "Consolació",
@@ -19007,7 +19007,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Minouni",
 "2n Cognom": "Zizaoui",
-"Nom": "Rayan ",
+": "Rayan ",
 "Data naixement": "9/12/2010",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -19042,7 +19042,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Minouni",
 "2n Cognom": "Zizaoui",
-"Nom": "Manal",
+": "Manal",
 "Data naixement": "7/25/2013",
 "Edat ": "5",
 "Centre Educatiu": "Ferreries",
@@ -19077,7 +19077,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Monllao",
 "2n Cognom": "Aurora",
-"Nom": "Cinta ",
+": "Cinta ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Despuig",
@@ -19112,7 +19112,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Montes",
 "2n Cognom": "Maeso",
-"Nom": "Carlos",
+": "Carlos",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -19147,7 +19147,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Montes",
 "2n Cognom": "Maeso",
-"Nom": "Andi",
+": "Andi",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -19182,7 +19182,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Montesó ",
 "2n Cognom": "Bartolomé ",
-"Nom": "Cinta ",
+": "Cinta ",
 "Data naixement": "",
 "Edat ": "19",
 "Centre Educatiu": "Sant Jordi",
@@ -19217,7 +19217,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Morales",
 "2n Cognom": "Pavo",
-"Nom": "Noa",
+": "Noa",
 "Data naixement": "4/15/2009",
 "Edat ": "10",
 "Centre Educatiu": "Cinta Curto",
@@ -19252,7 +19252,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno",
 "2n Cognom": "Moreno",
-"Nom": "Kevin",
+": "Kevin",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Consolació",
@@ -19287,7 +19287,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno",
 "2n Cognom": "Campos",
-"Nom": "Bryan",
+": "Bryan",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "La Mercè",
@@ -19322,7 +19322,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno",
 "2n Cognom": "Gonzalez",
-"Nom": "Nazaret",
+": "Nazaret",
 "Data naixement": "10/23/2010",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -19357,7 +19357,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno",
 "2n Cognom": "Campos",
-"Nom": "Antonio",
+": "Antonio",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè/St Jordi",
@@ -19392,7 +19392,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno",
 "2n Cognom": "Navarro",
-"Nom": "Noemi",
+": "Noemi",
 "Data naixement": "8/7/2013",
 "Edat ": "5",
 "Centre Educatiu": "Remolins",
@@ -19427,7 +19427,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno",
 "2n Cognom": "Navarro",
-"Nom": "Juan Antonio",
+": "Juan Antonio",
 "Data naixement": "3/26/2011",
 "Edat ": "7",
 "Centre Educatiu": "Remolins",
@@ -19462,7 +19462,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno ",
 "2n Cognom": "Campos",
-"Nom": "Maria",
+": "Maria",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -19497,7 +19497,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno ",
 "2n Cognom": "Demetrio",
-"Nom": "Joaquin",
+": "Joaquin",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Despuig",
@@ -19532,7 +19532,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno ",
 "2n Cognom": "Gonzalez",
-"Nom": "Lucia",
+": "Lucia",
 "Data naixement": "6/1/2007",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -19567,7 +19567,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno ",
 "2n Cognom": "Gonzalez",
-"Nom": "Melody",
+": "Melody",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "La Mercè",
@@ -19602,7 +19602,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno ",
 "2n Cognom": "Seba",
-"Nom": "José luís",
+": "José luís",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "La Mercè",
@@ -19637,7 +19637,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno ",
 "2n Cognom": "Seba",
-"Nom": "Sulamita",
+": "Sulamita",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -19672,7 +19672,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno ",
 "2n Cognom": "Fernández",
-"Nom": "Francisco",
+": "Francisco",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -19707,7 +19707,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno ",
 "2n Cognom": "Fernández",
-"Nom": "Daniel",
+": "Daniel",
 "Data naixement": "10/1/2006",
 "Edat ": "12",
 "Centre Educatiu": "Dertosa",
@@ -19742,7 +19742,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno ",
 "2n Cognom": "Rodriguez",
-"Nom": "Joan Miquel",
+": "Joan Miquel",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Verge de la Cinta",
@@ -19777,7 +19777,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno ",
 "2n Cognom": "Fernández",
-"Nom": "Noemí",
+": "Noemí",
 "Data naixement": "10/19/2002",
 "Edat ": "16",
 "Centre Educatiu": "",
@@ -19812,7 +19812,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno ",
 "2n Cognom": "Fernández",
-"Nom": "Nerea",
+": "Nerea",
 "Data naixement": "",
 "Edat ": "4",
 "Centre Educatiu": "",
@@ -19847,7 +19847,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno",
 "2n Cognom": "Subirats",
-"Nom": "Thais",
+": "Thais",
 "Data naixement": "12/31/2010",
 "Edat ": "7",
 "Centre Educatiu": "Remolins",
@@ -19882,7 +19882,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moreno",
 "2n Cognom": "",
-"Nom": "Saray",
+": "Saray",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Dertosa",
@@ -19917,7 +19917,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moufid",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "11/1/2004",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -19952,7 +19952,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moufid",
 "2n Cognom": "",
-"Nom": "Rachid",
+": "Rachid",
 "Data naixement": "2/8/2009",
 "Edat ": "9",
 "Centre Educatiu": "Remolins",
@@ -19987,7 +19987,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moufid",
 "2n Cognom": "",
-"Nom": "Amine",
+": "Amine",
 "Data naixement": "7/30/2007",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -20022,7 +20022,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moumen",
 "2n Cognom": "",
-"Nom": "Mariam",
+": "Mariam",
 "Data naixement": "11/1/2006",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -20057,7 +20057,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moumen",
 "2n Cognom": "",
-"Nom": "Omar",
+": "Omar",
 "Data naixement": "10/15/2012",
 "Edat ": "5",
 "Centre Educatiu": "Remolins",
@@ -20092,7 +20092,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moumen",
 "2n Cognom": "",
-"Nom": "Ahmad",
+": "Ahmad",
 "Data naixement": "6/26/2008",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -20127,7 +20127,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moya",
 "2n Cognom": "Martínez",
-"Nom": "Aroa",
+": "Aroa",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Temple",
@@ -20162,7 +20162,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Moya",
 "2n Cognom": "Martínez",
-"Nom": "Jesús",
+": "Jesús",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Temple",
@@ -20197,7 +20197,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Mtougui",
 "2n Cognom": "",
-"Nom": "Ikram",
+": "Ikram",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Cinta Curto",
@@ -20232,7 +20232,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Muhammad",
 "2n Cognom": "",
-"Nom": "Arsalan",
+": "Arsalan",
 "Data naixement": "1/4/2004",
 "Edat ": "13",
 "Centre Educatiu": "Sagrada Família",
@@ -20267,7 +20267,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Muhhamad",
 "2n Cognom": "",
-"Nom": "Alyan",
+": "Alyan",
 "Data naixement": "9/22/2002",
 "Edat ": "16",
 "Centre Educatiu": "Sagrada Família",
@@ -20302,7 +20302,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Munné ",
 "2n Cognom": "Valls",
-"Nom": "Arnau",
+": "Arnau",
 "Data naixement": "5/18/2010",
 "Edat ": "8",
 "Centre Educatiu": "Ferreries",
@@ -20337,7 +20337,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Nanou   ",
 "2n Cognom": "",
-"Nom": "Fadua ",
+": "Fadua ",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Ferreries",
@@ -20372,7 +20372,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Nasser Dine",
 "2n Cognom": "Er Dine",
-"Nom": "Latifa",
+": "Latifa",
 "Data naixement": "4/30/2009",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -20407,7 +20407,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Nassirdine ",
 "2n Cognom": "",
-"Nom": "Abdelaziz ",
+": "Abdelaziz ",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -20442,7 +20442,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Navarro ",
 "2n Cognom": "Claveria",
-"Nom": "Isabel",
+": "Isabel",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Despuig",
@@ -20477,7 +20477,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Navarro ",
 "2n Cognom": "Pinar",
-"Nom": "Sulamita",
+": "Sulamita",
 "Data naixement": "4/28/2010",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -20512,7 +20512,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Navarro ",
 "2n Cognom": "Pinar",
-"Nom": "Azahara",
+": "Azahara",
 "Data naixement": "10/1/2007",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -20547,7 +20547,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Navarro ",
 "2n Cognom": "",
-"Nom": "Chabeli",
+": "Chabeli",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Remolins",
@@ -20582,7 +20582,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Naves",
 "2n Cognom": "Maeso",
-"Nom": "Erika",
+": "Erika",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -20617,7 +20617,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Nawaz",
 "2n Cognom": "Kansar",
-"Nom": "Younis",
+": "Younis",
 "Data naixement": "10/4/2006",
 "Edat ": "12",
 "Centre Educatiu": "Remolins",
@@ -20652,7 +20652,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Nawaz",
 "2n Cognom": "Kansar",
-"Nom": "Zain",
+": "Zain",
 "Data naixement": "2/3/2008",
 "Edat ": "10",
 "Centre Educatiu": "Remolins",
@@ -20687,7 +20687,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Nawaz",
 "2n Cognom": "Kansar",
-"Nom": "Savera",
+": "Savera",
 "Data naixement": "11/14/2009",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -20722,7 +20722,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ngadi",
 "2n Cognom": "Mahboub",
-"Nom": "Israe",
+": "Israe",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Remolins",
@@ -20757,7 +20757,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ngadi",
 "2n Cognom": "Mahboub",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Remolins",
@@ -20792,7 +20792,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Noor",
 "2n Cognom": "",
-"Nom": "Inshrah",
+": "Inshrah",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Remolins",
@@ -20827,7 +20827,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ocles",
 "2n Cognom": "",
-"Nom": "Alex",
+": "Alex",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Dertosa",
@@ -20862,7 +20862,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Oloriz",
 "2n Cognom": "Villar",
-"Nom": "Gisela",
+": "Gisela",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -20897,7 +20897,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouabibi ",
 "2n Cognom": "",
-"Nom": "Salma",
+": "Salma",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Despuig",
@@ -20932,7 +20932,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouacha",
 "2n Cognom": "",
-"Nom": "Ayoub ",
+": "Ayoub ",
 "Data naixement": "4/15/2002",
 "Edat ": "16",
 "Centre Educatiu": "Dertosa",
@@ -20967,7 +20967,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouakhir",
 "2n Cognom": "",
-"Nom": "Abdelaziz",
+": "Abdelaziz",
 "Data naixement": "10/7/2012",
 "Edat ": "6",
 "Centre Educatiu": "Remolins",
@@ -21002,7 +21002,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Oubamou",
 "2n Cognom": "Addi",
-"Nom": "Imane",
+": "Imane",
 "Data naixement": "1/12/2012",
 "Edat ": "6",
 "Centre Educatiu": "Remolins",
@@ -21037,7 +21037,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Oubghouz",
 "2n Cognom": "",
-"Nom": "Meryem",
+": "Meryem",
 "Data naixement": "5/5/2006",
 "Edat ": "12",
 "Centre Educatiu": "Consolació",
@@ -21072,7 +21072,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouchguennou",
 "2n Cognom": "Chguennou",
-"Nom": "Amal",
+": "Amal",
 "Data naixement": "5/28/2011",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -21107,7 +21107,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Oufkir",
 "2n Cognom": "",
-"Nom": "Achouak",
+": "Achouak",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -21142,7 +21142,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Oufkir",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Remolins",
@@ -21177,7 +21177,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Oufkir",
 "2n Cognom": "",
-"Nom": "Saifeddine",
+": "Saifeddine",
 "Data naixement": "",
 "Edat ": "4",
 "Centre Educatiu": "Remolins",
@@ -21212,7 +21212,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouhammi",
 "2n Cognom": "",
-"Nom": "Ahmed ",
+": "Ahmed ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -21247,7 +21247,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouhammi",
 "2n Cognom": "",
-"Nom": "Youssef",
+": "Youssef",
 "Data naixement": "10/16/2006",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -21282,7 +21282,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouhammi",
 "2n Cognom": "",
-"Nom": "Mariam",
+": "Mariam",
 "Data naixement": "9/7/2010",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -21317,7 +21317,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouhammi",
 "2n Cognom": "",
-"Nom": "Hajar ",
+": "Hajar ",
 "Data naixement": "7/25/2013",
 "Edat ": "4",
 "Centre Educatiu": "La Mercè",
@@ -21352,7 +21352,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouhanni",
 "2n Cognom": "",
-"Nom": "Maryam",
+": "Maryam",
 "Data naixement": "9/2/2008",
 "Edat ": "10",
 "Centre Educatiu": "Temple",
@@ -21387,7 +21387,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouhfour",
 "2n Cognom": "",
-"Nom": "Magda",
+": "Magda",
 "Data naixement": "8/16/2009",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -21422,7 +21422,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouhfour",
 "2n Cognom": "",
-"Nom": "Hamza",
+": "Hamza",
 "Data naixement": "9/21/2006",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -21457,7 +21457,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouhfour",
 "2n Cognom": "",
-"Nom": "Mariem",
+": "Mariem",
 "Data naixement": "",
 "Edat ": "4",
 "Centre Educatiu": "La Mercè",
@@ -21492,7 +21492,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouiya",
 "2n Cognom": "",
-"Nom": "Ishane",
+": "Ishane",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Cinta Curto",
@@ -21527,7 +21527,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouiya",
 "2n Cognom": "",
-"Nom": "Imane",
+": "Imane",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Cinta Curto",
@@ -21562,7 +21562,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouiya",
 "2n Cognom": "",
-"Nom": "Zouhir",
+": "Zouhir",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Cinta Curto",
@@ -21597,7 +21597,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Oukattou",
 "2n Cognom": "",
-"Nom": "Yassmina",
+": "Yassmina",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -21632,7 +21632,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Oulkhir",
 "2n Cognom": "",
-"Nom": "Chaima ",
+": "Chaima ",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Dertosa",
@@ -21667,7 +21667,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ounda",
 "2n Cognom": "Bouhlali",
-"Nom": "Anouar",
+": "Anouar",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Cinta Curto",
@@ -21702,7 +21702,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouytou",
 "2n Cognom": "Portalés",
-"Nom": "Antonio Youssef",
+": "Antonio Youssef",
 "Data naixement": "6/29/2006",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -21737,7 +21737,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ouytou",
 "2n Cognom": "Portalés",
-"Nom": "Marc",
+": "Marc",
 "Data naixement": "12/1/2010",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -21772,7 +21772,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Oyagata",
 "2n Cognom": "Campos",
-"Nom": "Griselda",
+": "Griselda",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -21807,7 +21807,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ozaez",
 "2n Cognom": "",
-"Nom": "Recared",
+": "Recared",
 "Data naixement": "3/28/2012",
 "Edat ": "6",
 "Centre Educatiu": "Bitem",
@@ -21842,7 +21842,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Palwinder",
 "2n Cognom": "",
-"Nom": "Tanusha",
+": "Tanusha",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -21877,7 +21877,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Peña",
 "2n Cognom": "Caserza",
-"Nom": "Sarah Nicole",
+": "Sarah Nicole",
 "Data naixement": "4/20/2011",
 "Edat ": "7",
 "Centre Educatiu": "",
@@ -21912,7 +21912,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Perez",
 "2n Cognom": "",
-"Nom": "Nuria",
+": "Nuria",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Cinta Curto",
@@ -21947,7 +21947,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Pérez ",
 "2n Cognom": "Hunt ",
-"Nom": "Sarah",
+": "Sarah",
 "Data naixement": "",
 "Edat ": "2",
 "Centre Educatiu": "",
@@ -21982,7 +21982,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Perojil",
 "2n Cognom": "Chavez",
-"Nom": "Samuel",
+": "Samuel",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -22017,7 +22017,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Pineda",
 "2n Cognom": "Acosta",
-"Nom": "Luis Gerardo",
+": "Luis Gerardo",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Daniel Mangrané",
@@ -22052,7 +22052,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Pino",
 "2n Cognom": "Vargas",
-"Nom": "Enric",
+": "Enric",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -22087,7 +22087,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Pino",
 "2n Cognom": "Vargas",
-"Nom": "Elisabeth",
+": "Elisabeth",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Despuig",
@@ -22122,7 +22122,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Piñol ",
 "2n Cognom": "Colome",
-"Nom": "Nuria",
+": "Nuria",
 "Data naixement": "11/29/2007",
 "Edat ": "10",
 "Centre Educatiu": "Sagrada Família",
@@ -22157,7 +22157,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Pitarch",
 "2n Cognom": "Gausach",
-"Nom": "Isaac",
+": "Isaac",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "Temple",
@@ -22192,7 +22192,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Podlewsky",
 "2n Cognom": "",
-"Nom": "Elias",
+": "Elias",
 "Data naixement": "2/9/2006",
 "Edat ": "12",
 "Centre Educatiu": "Ferreries",
@@ -22227,7 +22227,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Pogacean",
 "2n Cognom": "Bugnar",
-"Nom": "Jessica",
+": "Jessica",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -22262,7 +22262,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Potyrala",
 "2n Cognom": "",
-"Nom": "Oliwier",
+": "Oliwier",
 "Data naixement": "1/14/2009",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -22297,7 +22297,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Prado",
 "2n Cognom": "Arteaga",
-"Nom": "Belen Luana",
+": "Belen Luana",
 "Data naixement": "10/25/2003",
 "Edat ": "15",
 "Centre Educatiu": "Sagrada Família",
@@ -22332,7 +22332,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Prado",
 "2n Cognom": "Arteaga",
-"Nom": "Aleix",
+": "Aleix",
 "Data naixement": "10/25/2003",
 "Edat ": "15",
 "Centre Educatiu": "Sagrada Família",
@@ -22367,7 +22367,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Prats",
 "2n Cognom": "Monteso",
-"Nom": "Marc",
+": "Marc",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -22402,7 +22402,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Puig",
 "2n Cognom": "",
-"Nom": "Pol",
+": "Pol",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Daniel Mangrané",
@@ -22437,7 +22437,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Rafi ",
 "2n Cognom": "",
-"Nom": "Yassine ",
+": "Yassine ",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -22472,7 +22472,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Rafik",
 "2n Cognom": "",
-"Nom": "Hassna",
+": "Hassna",
 "Data naixement": "12/5/2000",
 "Edat ": "17",
 "Centre Educatiu": "IES Ebre",
@@ -22507,7 +22507,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Rafik",
 "2n Cognom": "",
-"Nom": "Houria",
+": "Houria",
 "Data naixement": "10/26/2002",
 "Edat ": "16",
 "Centre Educatiu": "Despuig",
@@ -22542,7 +22542,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Rahim ",
 "2n Cognom": "Bhioui",
-"Nom": "Marwa",
+": "Marwa",
 "Data naixement": "5/17/2007",
 "Edat ": "11",
 "Centre Educatiu": "",
@@ -22577,7 +22577,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ramirez",
 "2n Cognom": "Garrido",
-"Nom": "Fernando",
+": "Fernando",
 "Data naixement": "8/17/2012",
 "Edat ": "6",
 "Centre Educatiu": "Remolins",
@@ -22612,7 +22612,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ramirez",
 "2n Cognom": "Garrido",
-"Nom": "Michael Jaden",
+": "Michael Jaden",
 "Data naixement": "9/2/2010",
 "Edat ": "7",
 "Centre Educatiu": "Remolins",
@@ -22647,7 +22647,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Randi",
 "2n Cognom": "Alvarin",
-"Nom": "Khalid",
+": "Khalid",
 "Data naixement": "10/1/2009",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -22682,7 +22682,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Randi",
 "2n Cognom": "Alvarin",
-"Nom": "Samira",
+": "Samira",
 "Data naixement": "3/29/2008",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -22717,7 +22717,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Randi",
 "2n Cognom": "Alvarin",
-"Nom": "Soraya",
+": "Soraya",
 "Data naixement": "9/15/2010",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -22752,7 +22752,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Raul",
 "2n Cognom": "Lulo",
-"Nom": "Fabrizzio",
+": "Fabrizzio",
 "Data naixement": "6/22/2008",
 "Edat ": "10",
 "Centre Educatiu": "Consolació",
@@ -22787,7 +22787,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Raza",
 "2n Cognom": "",
-"Nom": "Hassan Sayyed",
+": "Hassan Sayyed",
 "Data naixement": "9/22/2006",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -22822,7 +22822,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Restrepo",
 "2n Cognom": "",
-"Nom": "Verònica",
+": "Verònica",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -22857,7 +22857,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Rincon",
 "2n Cognom": "Galvis",
-"Nom": "Anderzon",
+": "Anderzon",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Despuig",
@@ -22892,7 +22892,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Rodriguez ",
 "2n Cognom": "Herrera",
-"Nom": "Eugenio",
+": "Eugenio",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "Ferreries",
@@ -22927,7 +22927,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Rodriguez ",
 "2n Cognom": "Herrera",
-"Nom": "Juan Alfonso",
+": "Juan Alfonso",
 "Data naixement": "3/21/2008",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -22962,7 +22962,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Rodriguez ",
 "2n Cognom": "",
-"Nom": "Lud Maria",
+": "Lud Maria",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "La Mercè",
@@ -22997,7 +22997,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Rodriguez ",
 "2n Cognom": "Aspa",
-"Nom": "Iker",
+": "Iker",
 "Data naixement": "4/15/2006",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -23032,7 +23032,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Rodriguez ",
 "2n Cognom": "Múñoz",
-"Nom": "Lucía",
+": "Lucía",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "Temple",
@@ -23067,7 +23067,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Rodriguez ",
 "2n Cognom": "del Sol ",
-"Nom": "Verònica",
+": "Verònica",
 "Data naixement": "",
 "Edat ": "0",
 "Centre Educatiu": "",
@@ -23102,7 +23102,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Roig",
 "2n Cognom": "",
-"Nom": "Xavier",
+": "Xavier",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Daniel Mangrané",
@@ -23137,7 +23137,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Rojas",
 "2n Cognom": "Cabrera",
-"Nom": "Montse",
+": "Montse",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -23172,7 +23172,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Roldan ",
 "2n Cognom": "Gonzalez",
-"Nom": "Concepcion",
+": "Concepcion",
 "Data naixement": "",
 "Edat ": "1",
 "Centre Educatiu": "",
@@ -23207,7 +23207,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Roldan ",
 "2n Cognom": "Gonzalez",
-"Nom": "Noemi",
+": "Noemi",
 "Data naixement": "",
 "Edat ": "0",
 "Centre Educatiu": "",
@@ -23242,7 +23242,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Romero ",
 "2n Cognom": "Triguero",
-"Nom": "Jordi",
+": "Jordi",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "",
@@ -23277,7 +23277,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ronda",
 "2n Cognom": "Papiol",
-"Nom": "Ethan",
+": "Ethan",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -23312,7 +23312,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Roxana Haica ",
 "2n Cognom": "",
-"Nom": "Denisa ",
+": "Denisa ",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Dertosa",
@@ -23347,7 +23347,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ruiz",
 "2n Cognom": "Lulo",
-"Nom": "Fabricio",
+": "Fabricio",
 "Data naixement": "6/22/2008",
 "Edat ": "10",
 "Centre Educatiu": "",
@@ -23382,7 +23382,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Saadoun",
 "2n Cognom": "",
-"Nom": "Nuhaila ",
+": "Nuhaila ",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -23417,7 +23417,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sabir",
 "2n Cognom": "",
-"Nom": "Hassan ",
+": "Hassan ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -23452,7 +23452,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sabir",
 "2n Cognom": "",
-"Nom": "Chaima ",
+": "Chaima ",
 "Data naixement": "6/27/2003",
 "Edat ": "16",
 "Centre Educatiu": "Despuig",
@@ -23487,7 +23487,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sabiri",
 "2n Cognom": "",
-"Nom": "Fatima ",
+": "Fatima ",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -23522,7 +23522,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sacko",
 "2n Cognom": "",
-"Nom": "Adam",
+": "Adam",
 "Data naixement": "3/20/2013",
 "Edat ": "4",
 "Centre Educatiu": "Ferreries",
@@ -23557,7 +23557,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Saghiri",
 "2n Cognom": "",
-"Nom": "Loufti",
+": "Loufti",
 "Data naixement": "10/25/2003",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -23592,7 +23592,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Saidi",
 "2n Cognom": "Saidi",
-"Nom": "Walid ",
+": "Walid ",
 "Data naixement": "3/23/2009",
 "Edat ": "9",
 "Centre Educatiu": "Remolins",
@@ -23627,7 +23627,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Saidi",
 "2n Cognom": "Echrif",
-"Nom": "Mehdi",
+": "Mehdi",
 "Data naixement": "10/17/2007",
 "Edat ": "10",
 "Centre Educatiu": "Ferreries",
@@ -23662,7 +23662,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Saidi",
 "2n Cognom": "Echrif",
-"Nom": "Malak",
+": "Malak",
 "Data naixement": "6/4/2006",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -23697,7 +23697,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Saidi",
 "2n Cognom": "",
-"Nom": "Noor",
+": "Noor",
 "Data naixement": "12/27/2014",
 "Edat ": "4",
 "Centre Educatiu": "Ferreries",
@@ -23732,7 +23732,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Salla",
 "2n Cognom": "López",
-"Nom": "Davinia",
+": "Davinia",
 "Data naixement": "1/21/2007",
 "Edat ": "11",
 "Centre Educatiu": "Temple",
@@ -23767,7 +23767,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Salla",
 "2n Cognom": "López",
-"Nom": "Eric",
+": "Eric",
 "Data naixement": "4/9/2005",
 "Edat ": "11",
 "Centre Educatiu": "Temple",
@@ -23802,7 +23802,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Salmi",
 "2n Cognom": "",
-"Nom": "Fatima Azahara",
+": "Fatima Azahara",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -23837,7 +23837,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Samdaoui ",
 "2n Cognom": "",
-"Nom": "Wisal ",
+": "Wisal ",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -23872,7 +23872,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sami",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "9/12/2011",
 "Edat ": "7",
 "Centre Educatiu": "La Mercè",
@@ -23907,7 +23907,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sami",
 "2n Cognom": "",
-"Nom": "Khadija",
+": "Khadija",
 "Data naixement": "12/24/2008",
 "Edat ": "9",
 "Centre Educatiu": "La Mercè",
@@ -23942,7 +23942,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sami",
 "2n Cognom": "",
-"Nom": "Aicha",
+": "Aicha",
 "Data naixement": "7/31/2013",
 "Edat ": "4",
 "Centre Educatiu": "La Mercè",
@@ -23977,7 +23977,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sánchez ",
 "2n Cognom": "Benegas",
-"Nom": "Iker",
+": "Iker",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -24012,7 +24012,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sánchez ",
 "2n Cognom": "Benegas",
-"Nom": "Brian ",
+": "Brian ",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -24047,7 +24047,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sánchez ",
 "2n Cognom": "Cid",
-"Nom": "Iker",
+": "Iker",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Consolació",
@@ -24082,7 +24082,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sánchez ",
 "2n Cognom": "Forcadell",
-"Nom": "Alba",
+": "Alba",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Despuig",
@@ -24117,7 +24117,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sánchez ",
 "2n Cognom": "Mandzhiev",
-"Nom": "Alexander",
+": "Alexander",
 "Data naixement": "11/25/2006",
 "Edat ": "12",
 "Centre Educatiu": "Sagrada Família",
@@ -24152,7 +24152,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sánchez ",
 "2n Cognom": "Mandzhiev",
-"Nom": "Sofia",
+": "Sofia",
 "Data naixement": "2/20/2011",
 "Edat ": "7",
 "Centre Educatiu": "Sagrada Família",
@@ -24187,7 +24187,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sánchez ",
 "2n Cognom": "Panisello",
-"Nom": "Carla",
+": "Carla",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -24222,7 +24222,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sanhajy",
 "2n Cognom": "",
-"Nom": "Badr ",
+": "Badr ",
 "Data naixement": "",
 "Edat ": "17",
 "Centre Educatiu": "IES Ebre",
@@ -24257,7 +24257,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sanhajy",
 "2n Cognom": "",
-"Nom": "Osama ",
+": "Osama ",
 "Data naixement": "9/13/2001",
 "Edat ": "16",
 "Centre Educatiu": "IES Montsia",
@@ -24292,7 +24292,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Segarra ",
 "2n Cognom": "Cusí ",
-"Nom": "Mireia ",
+": "Mireia ",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "",
@@ -24327,7 +24327,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sekkak",
 "2n Cognom": "",
-"Nom": "Adam",
+": "Adam",
 "Data naixement": "3/5/2011",
 "Edat ": "7",
 "Centre Educatiu": "Temple",
@@ -24362,7 +24362,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sekkak",
 "2n Cognom": "",
-"Nom": "Yesmin",
+": "Yesmin",
 "Data naixement": "11/4/2012",
 "Edat ": "5",
 "Centre Educatiu": "Temple",
@@ -24397,7 +24397,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Senkevic",
 "2n Cognom": "",
-"Nom": "Martin",
+": "Martin",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Despuig",
@@ -24432,7 +24432,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Serra",
 "2n Cognom": "Cuevas",
-"Nom": "Matias",
+": "Matias",
 "Data naixement": "10/6/2014",
 "Edat ": "3",
 "Centre Educatiu": "Sagrada Família",
@@ -24467,7 +24467,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Serret ",
 "2n Cognom": "Adell",
-"Nom": "Daniel",
+": "Daniel",
 "Data naixement": "",
 "Edat ": "16",
 "Centre Educatiu": "Dertosa",
@@ -24502,7 +24502,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Shabbir",
 "2n Cognom": "",
-"Nom": "Alisha",
+": "Alisha",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "La Mercè",
@@ -24537,7 +24537,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Shabbir",
 "2n Cognom": "",
-"Nom": "Sheroz",
+": "Sheroz",
 "Data naixement": "",
 "Edat ": "14",
 "Centre Educatiu": "Sagrada Família",
@@ -24572,7 +24572,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Shehroz",
 "2n Cognom": "",
-"Nom": "Muhammad",
+": "Muhammad",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Sagrada Família",
@@ -24607,7 +24607,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sidi",
 "2n Cognom": "",
-"Nom": "Hadi ",
+": "Hadi ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Consolació",
@@ -24642,7 +24642,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Simh",
 "2n Cognom": "",
-"Nom": "Riham ",
+": "Riham ",
 "Data naixement": "8/2/2002",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -24677,7 +24677,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Simh",
 "2n Cognom": "",
-"Nom": "Hajar ",
+": "Hajar ",
 "Data naixement": "11/23/1999",
 "Edat ": "19",
 "Centre Educatiu": "IES Ebre",
@@ -24712,7 +24712,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Singh",
 "2n Cognom": "Devi",
-"Nom": "Eshdeep",
+": "Eshdeep",
 "Data naixement": "11/7/2010",
 "Edat ": "8",
 "Centre Educatiu": "Ferreries",
@@ -24747,7 +24747,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Singh",
 "2n Cognom": "Devi",
-"Nom": "Harleen",
+": "Harleen",
 "Data naixement": "10/23/2008",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -24782,7 +24782,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Singh",
 "2n Cognom": "Zelaya",
-"Nom": "Andreu",
+": "Andreu",
 "Data naixement": "2/17/2009",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -24817,7 +24817,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Singh",
 "2n Cognom": "",
-"Nom": "Guteshwar",
+": "Guteshwar",
 "Data naixement": "1/1/2010",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -24852,7 +24852,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Singh",
 "2n Cognom": "Zelaya",
-"Nom": "Crhistopher",
+": "Crhistopher",
 "Data naixement": "9/5/2004",
 "Edat ": "14",
 "Centre Educatiu": "Dertosa",
@@ -24887,7 +24887,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sita",
 "2n Cognom": "",
-"Nom": "Diane",
+": "Diane",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -24922,7 +24922,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Soto",
 "2n Cognom": "Luna",
-"Nom": "Alberto",
+": "Alberto",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -24957,7 +24957,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sowe",
 "2n Cognom": "",
-"Nom": "Hogo",
+": "Hogo",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Daniel Mangrané",
@@ -24992,7 +24992,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Suarez",
 "2n Cognom": "Castillo",
-"Nom": "Gerard",
+": "Gerard",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Despuig",
@@ -25027,7 +25027,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Subirats",
 "2n Cognom": "Gabarri",
-"Nom": "Naima",
+": "Naima",
 "Data naixement": "12/22/2006",
 "Edat ": "12",
 "Centre Educatiu": "Ferreries",
@@ -25062,7 +25062,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sucunuta",
 "2n Cognom": "Hermano",
-"Nom": "Marina",
+": "Marina",
 "Data naixement": "2/18/2005",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -25097,7 +25097,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Sucunuta",
 "2n Cognom": "Hermano",
-"Nom": "Estefania",
+": "Estefania",
 "Data naixement": "4/8/2009",
 "Edat ": "9",
 "Centre Educatiu": "Cinta Curto",
@@ -25132,7 +25132,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Suquillo",
 "2n Cognom": "Orozco",
-"Nom": "Jennifer",
+": "Jennifer",
 "Data naixement": "5/18/2008",
 "Edat ": "10",
 "Centre Educatiu": "",
@@ -25167,7 +25167,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Suquillo",
 "2n Cognom": "Pilatuña",
-"Nom": "Gisele Dayana",
+": "Gisele Dayana",
 "Data naixement": "5/24/2005",
 "Edat ": "12",
 "Centre Educatiu": "Dertosa",
@@ -25202,7 +25202,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Syed",
 "2n Cognom": "",
-"Nom": "Emaan",
+": "Emaan",
 "Data naixement": "12/3/2011",
 "Edat ": "6",
 "Centre Educatiu": "Ferreries",
@@ -25237,7 +25237,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Syed",
 "2n Cognom": "",
-"Nom": "Rida",
+": "Rida",
 "Data naixement": "7/10/2008",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -25272,7 +25272,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Syed",
 "2n Cognom": "Amir",
-"Nom": "Zamn",
+": "Zamn",
 "Data naixement": "8/12/2006",
 "Edat ": "12",
 "Centre Educatiu": "Ferreries",
@@ -25307,7 +25307,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Taatout ",
 "2n Cognom": "",
-"Nom": "Aslam ",
+": "Aslam ",
 "Data naixement": "",
 "Edat ": "10",
 "Centre Educatiu": "Ferreries",
@@ -25342,7 +25342,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Tagani",
 "2n Cognom": "",
-"Nom": "Ouassin",
+": "Ouassin",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -25377,7 +25377,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Tagani",
 "2n Cognom": "",
-"Nom": "Mohamed Amine",
+": "Mohamed Amine",
 "Data naixement": "7/26/2006",
 "Edat ": "12",
 "Centre Educatiu": "La Mercè",
@@ -25412,7 +25412,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Talibi",
 "2n Cognom": "",
-"Nom": "Naoual",
+": "Naoual",
 "Data naixement": "11/13/2006",
 "Edat ": "12",
 "Centre Educatiu": "Consolació",
@@ -25447,7 +25447,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Tanveer",
 "2n Cognom": "",
-"Nom": "Raafia",
+": "Raafia",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Remolins",
@@ -25482,7 +25482,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Tariq",
 "2n Cognom": "",
-"Nom": "Mutahar",
+": "Mutahar",
 "Data naixement": "10/22/2004",
 "Edat ": "14",
 "Centre Educatiu": "Sagrada Família",
@@ -25517,7 +25517,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Tariq",
 "2n Cognom": "",
-"Nom": "Muhammad Azan",
+": "Muhammad Azan",
 "Data naixement": "9/29/2006",
 "Edat ": "12",
 "Centre Educatiu": "Remolins",
@@ -25552,7 +25552,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Tariq",
 "2n Cognom": "",
-"Nom": "Fezan",
+": "Fezan",
 "Data naixement": "1/14/2010",
 "Edat ": "8",
 "Centre Educatiu": "Remolins",
@@ -25587,7 +25587,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Tejeda",
 "2n Cognom": "Sanchez",
-"Nom": "Miguel A.",
+": "Miguel A.",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Consolació",
@@ -25622,7 +25622,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Temaraoui",
 "2n Cognom": "",
-"Nom": "Adil",
+": "Adil",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Dertosa",
@@ -25657,7 +25657,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Titaou",
 "2n Cognom": "",
-"Nom": "Brahim ",
+": "Brahim ",
 "Data naixement": "",
 "Edat ": "20",
 "Centre Educatiu": "Montsià ",
@@ -25692,7 +25692,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Titau",
 "2n Cognom": "",
-"Nom": "Fatima",
+": "Fatima",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Ferreries",
@@ -25727,7 +25727,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Toapanta",
 "2n Cognom": "",
-"Nom": "Jemima",
+": "Jemima",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -25762,7 +25762,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Toderasc",
 "2n Cognom": "",
-"Nom": "Radu Andrei",
+": "Radu Andrei",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Daniel Mangrané",
@@ -25797,7 +25797,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Tomas",
 "2n Cognom": "",
-"Nom": "Ikerne",
+": "Ikerne",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Dertosa",
@@ -25832,7 +25832,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Torres",
 "2n Cognom": "Celi",
-"Nom": "Iker",
+": "Iker",
 "Data naixement": "12/19/2011",
 "Edat ": "6",
 "Centre Educatiu": "Ferreries",
@@ -25867,7 +25867,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Torres",
 "2n Cognom": "Celi",
-"Nom": "Paul",
+": "Paul",
 "Data naixement": "7/17/2007",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -25902,7 +25902,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Toujane",
 "2n Cognom": "",
-"Nom": "Oussama ",
+": "Oussama ",
 "Data naixement": "6/21/2001",
 "Edat ": "16",
 "Centre Educatiu": "Despuig",
@@ -25937,7 +25937,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Toujane",
 "2n Cognom": "",
-"Nom": "Maroua",
+": "Maroua",
 "Data naixement": "",
 "Edat ": "6",
 "Centre Educatiu": "Temple",
@@ -25972,7 +25972,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Toujane",
 "2n Cognom": "",
-"Nom": "Achraf",
+": "Achraf",
 "Data naixement": "",
 "Edat ": "17",
 "Centre Educatiu": "",
@@ -26007,7 +26007,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Toujane",
 "2n Cognom": "",
-"Nom": "Karima",
+": "Karima",
 "Data naixement": "",
 "Edat ": "4",
 "Centre Educatiu": "",
@@ -26042,7 +26042,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Traore",
 "2n Cognom": "",
-"Nom": "Djekeny",
+": "Djekeny",
 "Data naixement": "1/29/2014",
 "Edat ": "4",
 "Centre Educatiu": "Remolins",
@@ -26077,7 +26077,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Traore",
 "2n Cognom": "",
-"Nom": "Lassini",
+": "Lassini",
 "Data naixement": "7/22/2010",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -26112,7 +26112,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Traore",
 "2n Cognom": "",
-"Nom": "Fousseni",
+": "Fousseni",
 "Data naixement": "7/22/2010",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -26147,7 +26147,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Traore",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "4/18/2006",
 "Edat ": "12",
 "Centre Educatiu": "La Mercè",
@@ -26182,7 +26182,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Triguero ",
 "2n Cognom": "Seba",
-"Nom": "Chelo",
+": "Chelo",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -26217,7 +26217,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Urbina",
 "2n Cognom": "Lulo",
-"Nom": "Alexander",
+": "Alexander",
 "Data naixement": "1/18/2008",
 "Edat ": "10",
 "Centre Educatiu": "",
@@ -26252,7 +26252,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Vaca ",
 "2n Cognom": "Pilatuña",
-"Nom": "Jordi",
+": "Jordi",
 "Data naixement": "9/26/2011",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -26287,7 +26287,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Vaca ",
 "2n Cognom": "",
-"Nom": "Gisela",
+": "Gisela",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "",
@@ -26322,7 +26322,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Vallejo ",
 "2n Cognom": "Barberà",
-"Nom": "Itzal",
+": "Itzal",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Sagrada Família",
@@ -26357,7 +26357,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Vallejo ",
 "2n Cognom": "Barberà",
-"Nom": "William",
+": "William",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Sagrada Família",
@@ -26392,7 +26392,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Valls",
 "2n Cognom": "",
-"Nom": "Nereida",
+": "Nereida",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Daniel Mangrané",
@@ -26427,7 +26427,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Vericat",
 "2n Cognom": "",
-"Nom": "Iker",
+": "Iker",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Dertosa",
@@ -26462,7 +26462,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Vidal",
 "2n Cognom": "Louginzitc",
-"Nom": "Alexandra",
+": "Alexandra",
 "Data naixement": "11/15/2012",
 "Edat ": "4",
 "Centre Educatiu": "Cinta Curto",
@@ -26497,7 +26497,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Vidiella",
 "2n Cognom": "Diallo",
-"Nom": "Yacine",
+": "Yacine",
 "Data naixement": "6/8/2010",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -26532,7 +26532,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Virgili ",
 "2n Cognom": "Herrero",
-"Nom": "Pau ",
+": "Pau ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -26567,7 +26567,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Weiss",
 "2n Cognom": "",
-"Nom": "Elena",
+": "Elena",
 "Data naixement": "",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -26602,7 +26602,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Yadani",
 "2n Cognom": "",
-"Nom": "Youssef",
+": "Youssef",
 "Data naixement": "6/24/2004",
 "Edat ": "14",
 "Centre Educatiu": "Sagrada Família",
@@ -26637,7 +26637,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Yankouskaya",
 "2n Cognom": "",
-"Nom": "Elizaveta",
+": "Elizaveta",
 "Data naixement": "",
 "Edat ": "",
 "Centre Educatiu": "Ferreries",
@@ -26672,7 +26672,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Yassin",
 "2n Cognom": "",
-"Nom": "Ahmed",
+": "Ahmed",
 "Data naixement": "",
 "Edat ": "8",
 "Centre Educatiu": "La Mercè",
@@ -26707,7 +26707,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Yatrum",
 "2n Cognom": "",
-"Nom": "Diane",
+": "Diane",
 "Data naixement": "10/27/2005",
 "Edat ": "12",
 "Centre Educatiu": "Despuig",
@@ -26742,7 +26742,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Yatsyshyn",
 "2n Cognom": "",
-"Nom": "Irina",
+": "Irina",
 "Data naixement": "1/3/2006",
 "Edat ": "11",
 "Centre Educatiu": "La Mercè",
@@ -26777,7 +26777,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Youssaf",
 "2n Cognom": "",
-"Nom": "Gulalai",
+": "Gulalai",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -26812,7 +26812,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Youssoufi",
 "2n Cognom": "",
-"Nom": "Ayman",
+": "Ayman",
 "Data naixement": "7/31/2007",
 "Edat ": "9",
 "Centre Educatiu": "Temple",
@@ -26847,7 +26847,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Zahra Abdelghani",
 "2n Cognom": "",
-"Nom": "Fàtima ",
+": "Fàtima ",
 "Data naixement": "",
 "Edat ": "17",
 "Centre Educatiu": "Despuig",
@@ -26882,7 +26882,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Zahra Yadani",
 "2n Cognom": "",
-"Nom": "Fatima ",
+": "Fatima ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -26917,7 +26917,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Zait",
 "2n Cognom": "",
-"Nom": "Malak",
+": "Malak",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -26952,7 +26952,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Zarif",
 "2n Cognom": "",
-"Nom": "Malaika",
+": "Malaika",
 "Data naixement": "",
 "Edat ": "13",
 "Centre Educatiu": "Dertosa",
@@ -26987,7 +26987,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ziani",
 "2n Cognom": "",
-"Nom": "Mahal ",
+": "Mahal ",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Ferreries",
@@ -27022,7 +27022,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ziani El Kadi",
 "2n Cognom": "",
-"Nom": "Omayma ",
+": "Omayma ",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Ferreries",
@@ -27057,7 +27057,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Ziani Mahal",
 "2n Cognom": "",
-"Nom": "Hamza ",
+": "Hamza ",
 "Data naixement": "",
 "Edat ": "9",
 "Centre Educatiu": "Ferreries",
@@ -27092,7 +27092,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Zoutine",
 "2n Cognom": "Briki",
-"Nom": "Akram ",
+": "Akram ",
 "Data naixement": "",
 "Edat ": "15",
 "Centre Educatiu": "Dertosa",
@@ -27127,7 +27127,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Zoutine",
 "2n Cognom": "Briki",
-"Nom": "Mohamed Amine",
+": "Mohamed Amine",
 "Data naixement": "12/16/2005",
 "Edat ": "13",
 "Centre Educatiu": "La Mercè",
@@ -27162,7 +27162,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Zoutine",
 "2n Cognom": "",
-"Nom": "Mohamed",
+": "Mohamed",
 "Data naixement": "",
 "Edat ": "11",
 "Centre Educatiu": "Remolins",
@@ -27197,7 +27197,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Zoutine",
 "2n Cognom": "Briki",
-"Nom": "Abdelazim",
+": "Abdelazim",
 "Data naixement": "",
 "Edat ": "7",
 "Centre Educatiu": "Remolins",
@@ -27232,7 +27232,7 @@ $alumno = App\Alumno::create([
 {
     "1r Cognom": "Zoutine",
 "2n Cognom": "Briki",
-"Nom": "Abdelalim",
+": "Abdelalim",
 "Data naixement": "7/25/2011",
 "Edat ": "7",
 "Centre Educatiu": "Remolins",
