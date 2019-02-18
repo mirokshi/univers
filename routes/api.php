@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ActivitatsController;
 use App\Http\Controllers\Api\AlumnesController;
 use Illuminate\Http\Request;
 
@@ -24,4 +25,10 @@ Route::middleware('auth:api')->group(function() {
     Route::post('/v1/alumnes', '\\'.AlumnesController::class.'@store');
     Route::delete('/v1/alumnes/{alumne}', '\\'.AlumnesController::class.'@destroy');
     Route::put('/v1/alumnes/{alumne}', '\\'.AlumnesController::class.'@update');
+
+    Route::get('/v1/activitats', '\\'.ActivitatsController::class.'@index');
+    Route::get('/v1/activitats/{actvitat}', '\\'.ActivitatsController::class.'@show');
+    Route::post('/v1/activitats', '\\'.ActivitatsController::class.'@store');
+    Route::delete('/v1/activitats/{actvitat}', '\\'.ActivitatsController::class.'@destroy');
+    Route::put('/v1/activitats/{actvitat}', '\\'.ActivitatsController::class.'@update');
 });

@@ -20,14 +20,10 @@ class Activitat extends Model
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'surname' => $this->surname,
-            'birthdate' => $this->birthdate,
-            'age' => $this->age,
-            'school' => $this->school,
-            'course' => $this->course,
+            'name_activity' => $this->name_activity,
+            'date_start' => $this->date_start,
+            'date_final' => $this->date_final,
             'school_course' => $this->school_course,
-            'sex' => $this->sex,
-            'phone' => $this->phone,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'created_at_formatted' => $this->created_at_formatted,
@@ -37,15 +33,14 @@ class Activitat extends Model
             'created_at_timestamp' => $this->created_at_timestamp,
             'updated_at_timestamp' => $this->updated_at_timestamp,
             'full_search' =>$this->full_search,
-
-        ];
+            ];
     }
         public function getFullSearchAttribute()
     {
 
         //$username = optional($this->user)->name;
         //$useremail = optional($this->user)->email;
-        return "$this->id $this->name $this->surname $this->birtthdate $this->age $this->school $this->course $this->school_course $this->sex $this->phone";
+        return "$this->id $this->name $this->name_activity $this->date_start $this->date_final $this->school_course";
     }
 
 }

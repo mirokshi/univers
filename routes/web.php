@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\ActivitatsController;
 use App\Http\Controllers\AlumnesController;
 use App\Http\Controllers\Auth\LoginAltController;
 use App\Http\Controllers\Auth\RegisterAltController;
@@ -31,6 +32,8 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/alumnes', '\\'.AlumnesController::class.'@index');
 
     Route::get('/entitats', '\\'.EntitatsController::class.'@index');
+
+    Route::get('/activitats', '\\'.ActivitatsController::class.'@index');
 
     Route::get('/sparklines', function () {
         return view('sparklines');
