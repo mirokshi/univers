@@ -10,6 +10,7 @@ use App\Http\Requests\Alumnes\AlumneIndex;
 use App\Http\Requests\Alumnes\AlumneShow;
 use App\Http\Requests\Alumnes\AlumneStore;
 use App\Http\Requests\Alumnes\AlumneUpdate;
+use Illuminate\Http\Request;
 
 class AlumnesController extends Controller
 {
