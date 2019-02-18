@@ -27,7 +27,7 @@
         },
         methods:{
             async destroy(alumne) {
-                let result = await this.$confirm('Los alumnos borrados ya no se podrán recuperar',
+                let result = await this.$confirm('Els alumnes esborrats ja no es podran recuperar',
                     {
                         title: 'Esta seguro?',
                         buttonTrueText: 'Eliminar',
@@ -37,12 +37,14 @@
                 if (result){
                     this.removing= true
                     window.axios.delete(this.uri + alumne.id).then(() => {
-                        this.$snackbar.showMessage('Se ha borrado correctamente el alumne')
+                        this.$snackbar.showMessage("S'ha esborrat correctament el alumne")
                         this.$emit('removed',alumne)
                         this.removing = false
+                        console.log('OK');
                     }).catch(error =>{
                         this.$snackbar.showError(error.message)
                         this.removing=false
+                        console.log(error);
                     })
                 }
             }

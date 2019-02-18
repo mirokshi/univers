@@ -26,6 +26,7 @@
 <body>
 <div id="app" v-cloak>
     <v-app id="inspire">
+        <snackbar></snackbar>
         <navigation v-model="drawer"></navigation>
         <v-toolbar
             color="red accent-4"

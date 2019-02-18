@@ -31,7 +31,7 @@
                 :search="search"
                 no-result-text="No hay nigun registro"
                 :loading="loading"
-                no-data-text="dcdcdcdcdcdcdc"
+                no-data-text="hola"
                 rows-per-page-text="Alumnos per página"
                 :rows-per-page-items="[5,10,25,50,100,200,{'text':'Tots','value':-1}]"
                 :pagination.sync="pagination"
@@ -66,6 +66,7 @@
                         </td>
                     </tr>
                 </template>
+
             </v-data-table>
         </v-card></span>
 </template>
@@ -114,7 +115,7 @@
             uri:{
                 type: String,
                 required: true
-            },
+            }
         },
         watch:{
             alumnes(newAlumne)
@@ -129,6 +130,7 @@
                 window.axios.get(this.uri).then(response => {
                     this.dataAlumnes = response.data
                     this.loading = false
+                    console.log('ok');
                     if (message) this.$snackbar.showMessage('Alumnes actualizats correctament')
                 }).catch(error => {
                     console.log(error)

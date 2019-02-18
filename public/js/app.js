@@ -2618,7 +2618,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return this.$confirm('Los alumnos borrados ya no se podrán recuperar', {
+                return this.$confirm('Els alumnes esborrats ja no es podran recuperar', {
                   title: 'Esta seguro?',
                   buttonTrueText: 'Eliminar',
                   buttonFalseText: 'Cancelar',
@@ -2631,15 +2631,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 if (result) {
                   this.removing = true;
                   window.axios.delete(this.uri + alumne.id).then(function () {
-                    _this.$snackbar.showMessage('Se ha borrado correctamente el alumne');
+                    _this.$snackbar.showMessage("S'ha esborrat correctament el alumne");
 
                     _this.$emit('removed', alumne);
 
                     _this.removing = false;
+                    console.log('OK');
                   }).catch(function (error) {
                     _this.$snackbar.showError(error.message);
 
                     _this.removing = false;
+                    console.log(error);
                   });
                 }
 
@@ -2673,6 +2675,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ShowAlumne__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ShowAlumne */ "./resources/js/components/alumnes/ShowAlumne.vue");
 /* harmony import */ var _DestroyAlumne__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DestroyAlumne */ "./resources/js/components/alumnes/DestroyAlumne.vue");
+//
 //
 //
 //
@@ -2825,6 +2828,7 @@ __webpack_require__.r(__webpack_exports__);
       window.axios.get(this.uri).then(function (response) {
         _this.dataAlumnes = response.data;
         _this.loading = false;
+        console.log('ok');
         if (message) _this.$snackbar.showMessage('Alumnes actualizats correctament');
       }).catch(function (error) {
         console.log(error);
@@ -7661,7 +7665,7 @@ exports.push([module.i, "@font-face {\n  font-family: 'Material Icons';\n  font-
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css?bdb9":
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css":
 /*!***********************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vuetify/dist/vuetify.min.css ***!
   \***********************************************************************************************************************************/
@@ -40928,7 +40932,7 @@ var render = function() {
                 search: _vm.search,
                 "no-result-text": "No hay nigun registro",
                 loading: _vm.loading,
-                "no-data-text": "dcdcdcdcdcdcdc",
+                "no-data-text": "hola",
                 "rows-per-page-text": "Alumnos per página",
                 "rows-per-page-items": [
                   5,
@@ -81486,7 +81490,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./vuetify.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css?bdb9");
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./vuetify.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -81697,6 +81701,7 @@ var token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
   window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+  window.csrf_token = token.content;
 } else {
   console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }

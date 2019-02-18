@@ -28,7 +28,7 @@
             uri: {
                 type: String,
                 required: true
-            }
+            },
         },
         methods: {
             add(alumne){

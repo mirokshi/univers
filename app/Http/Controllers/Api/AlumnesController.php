@@ -36,6 +36,7 @@ class AlumnesController extends Controller
         $alumne->school_course = $request->school_course;
         $alumne->sex = $request->sex;
         $alumne->phone = $request->phone;
+        return $alumne->map();
     }
 
     //ELIMINAR
