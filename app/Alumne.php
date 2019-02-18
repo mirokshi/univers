@@ -15,6 +15,13 @@ class Alumne extends Model
         'created_at'
     ];
 
+    public function assignUser(User $user)
+    {
+        $this->user()->associate($user);
+        $this->save();
+    }
+
+
     public function map()
     {
         return [
@@ -28,6 +35,9 @@ class Alumne extends Model
             'school_course' => $this->school_course,
             'sex' => $this->sex,
             'phone' => $this->phone,
+            'user_id' => (int)$this->user_id,
+            'user_name' => optional($this->user)->name,
+            'user_email' => optional($this->user)->email,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'created_at_formatted' => $this->created_at_formatted,
@@ -36,6 +46,7 @@ class Alumne extends Model
             'updated_at_human' => $this->updated_at_human,
             'created_at_timestamp' => $this->created_at_timestamp,
             'updated_at_timestamp' => $this->updated_at_timestamp,
+            'user' => $this->user,
             'full_search' =>$this->full_search,
 
         ];
@@ -43,9 +54,9 @@ class Alumne extends Model
         public function getFullSearchAttribute()
     {
 
-        //$username = optional($this->user)->name;
-        //$useremail = optional($this->user)->email;
-        return "$this->id $this->name $this->surname $this->birtthdate $this->age $this->school $this->course $this->school_course $this->sex $this->phone";
+        $username = optional($this->user)->name;
+        $useremail = optional($this->user)->email;
+        return "$this->id $this->name $this->surname $this->birtthdate $this->age $this->school $this->course $this->school_course $this->sex $this->phone $username $useremail";
     }
 
 }

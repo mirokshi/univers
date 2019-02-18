@@ -205,6 +205,10 @@
             }
             },
         props:{
+            users: {
+                type: Array,
+                required: true
+            },
             uri:{
                 type:String,
                 default:'/api/v1/alumnes'

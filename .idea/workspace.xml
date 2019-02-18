@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/Http/Controllers/AlumnesController.php" line="16" />
     <bookmark url="file://$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue" line="3" />
   </component>
   <component name="ChangeListManager">
@@ -18,8 +17,18 @@
       <change beforePath="$PROJECT_DIR$/../prueba/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../prueba/resources/js/components/ExampleComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../prueba/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../prueba/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tasks" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/app/Http/Controllers/TagsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks/app/Http/Controllers/TagsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/univers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/univers.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AlumnesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AlumnesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,41 +89,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1304" />
+            <state relative-caret-position="48">
+              <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/AlumnesController.php">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
-              <folding>
-                <element signature="e#45#60#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="362">
+              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/api.php">
+        <entry file="file://$PROJECT_DIR$/app/Alumne.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="29" column="86" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
+            <state relative-caret-position="384">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
-                <element signature="e#7#57#0#PHP" expanded="true" />
+                <element signature="e#23#53#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AlumnesController.php">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ShowAlumne.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="208">
+              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ShowFormAlumne.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3096">
+              <caret line="129" column="20" lean-forward="true" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -148,24 +165,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/layouts/login.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_07_101641_alumne.php" />
-        <option value="$PROJECT_DIR$/resources/js/components/alumnes/ShowForm Alumne.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/alumnes/ShowAlumne.vue" />
-        <option value="$PROJECT_DIR$/database/factories/AlumneFactory.php" />
-        <option value="$PROJECT_DIR$/app/Alumne.php" />
-        <option value="$PROJECT_DIR$/resources/js/plugins/confirm/Confirm.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/alumnes/ShowFormAlumne.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginAltController.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/welcome.blade.php" />
         <option value="$PROJECT_DIR$/app/helpers.php" />
         <option value="$PROJECT_DIR$/files/AlumnatSeeder.php" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/DestroyAlumne.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" />
         <option value="$PROJECT_DIR$/resources/js/bootstrap.js" />
         <option value="$PROJECT_DIR$/resources/js/components/mixins/HasSnackbar.js" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
@@ -193,12 +195,27 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_02_18_102718_activitats.php" />
         <option value="$PROJECT_DIR$/app/Activitat.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ActivitatsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ActivitatsController.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AlumnesController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/AlumnesController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
+        <option value="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
+        <option value="$PROJECT_DIR$/config/auth.php" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AlumnesController.php" />
+        <option value="$PROJECT_DIR$/resources/views/alumnes.blade.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/alumnes/ShowAlumne.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/alumnes/ShowFormAlumne.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" />
+        <option value="$PROJECT_DIR$/app/Alumne.php" />
       </list>
     </option>
   </component>
@@ -304,10 +321,18 @@
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
       <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/league/event" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="800" />
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="y" value="27" />
     <option name="width" value="800" />
     <option name="height" value="873" />
@@ -348,25 +373,46 @@
             <path>
               <item name="univers" type="b2602c69:ProjectViewProjectNode" />
               <item name="univers" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Api" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="univers" type="b2602c69:ProjectViewProjectNode" />
               <item name="univers" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="univers" type="b2602c69:ProjectViewProjectNode" />
               <item name="univers" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Requests" type="462c0819:PsiDirectoryNode" />
-              <item name="Alumnes" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="univers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="univers" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="alumnes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="univers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="univers" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="univers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="univers" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="univers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="univers" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -421,7 +467,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.lint">
+  <component name="RunManager" selected="npm.hot">
     <configuration name="ExampleTest (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="ExampleTest" file="$PROJECT_DIR$/tests/Feature/ExampleTest.php" scope="Class" />
       <method v="2" />
@@ -438,6 +484,16 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="hot" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="hot" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -450,6 +506,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.hot" />
         <item itemvalue="npm.lint" />
         <item itemvalue="PHPUnit.ExampleTest" />
         <item itemvalue="PHPUnit.ExampleTest (1)" />
@@ -488,18 +545,18 @@
       <workItem from="1549959062159" duration="11924000" />
       <workItem from="1550046287178" duration="9059000" />
       <workItem from="1550132116510" duration="12109000" />
-      <workItem from="1550477815280" duration="7442000" />
+      <workItem from="1550477815280" duration="10151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96844000" />
+    <option name="totallyTimeSpent" value="99553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="800" height="873" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49507388" weight="0.31875" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49507388" weight="0.29375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.5049261" side_tool="true" weight="0.25" />
@@ -526,923 +583,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/AlumnatSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-          <caret line="144" selection-start-line="144" selection-end-line="144" />
-          <caret line="179" selection-start-line="179" selection-end-line="179" />
-          <caret line="214" selection-start-line="214" selection-end-line="214" />
-          <caret line="249" selection-start-line="249" selection-end-line="249" />
-          <caret line="284" selection-start-line="284" selection-end-line="284" />
-          <caret line="319" selection-start-line="319" selection-end-line="319" />
-          <caret line="354" selection-start-line="354" selection-end-line="354" />
-          <caret line="389" selection-start-line="389" selection-end-line="389" />
-          <caret line="424" selection-start-line="424" selection-end-line="424" />
-          <caret line="459" selection-start-line="459" selection-end-line="459" />
-          <caret line="494" selection-start-line="494" selection-end-line="494" />
-          <caret line="529" selection-start-line="529" selection-end-line="529" />
-          <caret line="564" selection-start-line="564" selection-end-line="564" />
-          <caret line="599" selection-start-line="599" selection-end-line="599" />
-          <caret line="634" selection-start-line="634" selection-end-line="634" />
-          <caret line="669" selection-start-line="669" selection-end-line="669" />
-          <caret line="704" selection-start-line="704" selection-end-line="704" />
-          <caret line="739" selection-start-line="739" selection-end-line="739" />
-          <caret line="774" selection-start-line="774" selection-end-line="774" />
-          <caret line="809" selection-start-line="809" selection-end-line="809" />
-          <caret line="844" selection-start-line="844" selection-end-line="844" />
-          <caret line="879" selection-start-line="879" selection-end-line="879" />
-          <caret line="914" selection-start-line="914" selection-end-line="914" />
-          <caret line="949" selection-start-line="949" selection-end-line="949" />
-          <caret line="984" selection-start-line="984" selection-end-line="984" />
-          <caret line="1019" selection-start-line="1019" selection-end-line="1019" />
-          <caret line="1054" selection-start-line="1054" selection-end-line="1054" />
-          <caret line="1089" selection-start-line="1089" selection-end-line="1089" />
-          <caret line="1124" selection-start-line="1124" selection-end-line="1124" />
-          <caret line="1159" selection-start-line="1159" selection-end-line="1159" />
-          <caret line="1194" selection-start-line="1194" selection-end-line="1194" />
-          <caret line="1229" selection-start-line="1229" selection-end-line="1229" />
-          <caret line="1264" selection-start-line="1264" selection-end-line="1264" />
-          <caret line="1299" selection-start-line="1299" selection-end-line="1299" />
-          <caret line="1334" selection-start-line="1334" selection-end-line="1334" />
-          <caret line="1369" selection-start-line="1369" selection-end-line="1369" />
-          <caret line="1404" selection-start-line="1404" selection-end-line="1404" />
-          <caret line="1439" selection-start-line="1439" selection-end-line="1439" />
-          <caret line="1474" selection-start-line="1474" selection-end-line="1474" />
-          <caret line="1509" selection-start-line="1509" selection-end-line="1509" />
-          <caret line="1544" selection-start-line="1544" selection-end-line="1544" />
-          <caret line="1579" selection-start-line="1579" selection-end-line="1579" />
-          <caret line="1614" selection-start-line="1614" selection-end-line="1614" />
-          <caret line="1649" selection-start-line="1649" selection-end-line="1649" />
-          <caret line="1684" selection-start-line="1684" selection-end-line="1684" />
-          <caret line="1719" selection-start-line="1719" selection-end-line="1719" />
-          <caret line="1754" selection-start-line="1754" selection-end-line="1754" />
-          <caret line="1789" selection-start-line="1789" selection-end-line="1789" />
-          <caret line="1824" selection-start-line="1824" selection-end-line="1824" />
-          <caret line="1859" selection-start-line="1859" selection-end-line="1859" />
-          <caret line="1894" selection-start-line="1894" selection-end-line="1894" />
-          <caret line="1929" selection-start-line="1929" selection-end-line="1929" />
-          <caret line="1964" selection-start-line="1964" selection-end-line="1964" />
-          <caret line="1999" selection-start-line="1999" selection-end-line="1999" />
-          <caret line="2034" selection-start-line="2034" selection-end-line="2034" />
-          <caret line="2069" selection-start-line="2069" selection-end-line="2069" />
-          <caret line="2104" selection-start-line="2104" selection-end-line="2104" />
-          <caret line="2139" selection-start-line="2139" selection-end-line="2139" />
-          <caret line="2174" selection-start-line="2174" selection-end-line="2174" />
-          <caret line="2209" selection-start-line="2209" selection-end-line="2209" />
-          <caret line="2244" selection-start-line="2244" selection-end-line="2244" />
-          <caret line="2279" selection-start-line="2279" selection-end-line="2279" />
-          <caret line="2314" selection-start-line="2314" selection-end-line="2314" />
-          <caret line="2349" selection-start-line="2349" selection-end-line="2349" />
-          <caret line="2384" selection-start-line="2384" selection-end-line="2384" />
-          <caret line="2419" selection-start-line="2419" selection-end-line="2419" />
-          <caret line="2454" selection-start-line="2454" selection-end-line="2454" />
-          <caret line="2489" selection-start-line="2489" selection-end-line="2489" />
-          <caret line="2524" selection-start-line="2524" selection-end-line="2524" />
-          <caret line="2559" selection-start-line="2559" selection-end-line="2559" />
-          <caret line="2594" selection-start-line="2594" selection-end-line="2594" />
-          <caret line="2629" selection-start-line="2629" selection-end-line="2629" />
-          <caret line="2664" selection-start-line="2664" selection-end-line="2664" />
-          <caret line="2699" selection-start-line="2699" selection-end-line="2699" />
-          <caret line="2734" selection-start-line="2734" selection-end-line="2734" />
-          <caret line="2769" selection-start-line="2769" selection-end-line="2769" />
-          <caret line="2804" selection-start-line="2804" selection-end-line="2804" />
-          <caret line="2839" selection-start-line="2839" selection-end-line="2839" />
-          <caret line="2874" selection-start-line="2874" selection-end-line="2874" />
-          <caret line="2909" selection-start-line="2909" selection-end-line="2909" />
-          <caret line="2944" selection-start-line="2944" selection-end-line="2944" />
-          <caret line="2979" selection-start-line="2979" selection-end-line="2979" />
-          <caret line="3014" selection-start-line="3014" selection-end-line="3014" />
-          <caret line="3049" selection-start-line="3049" selection-end-line="3049" />
-          <caret line="3084" selection-start-line="3084" selection-end-line="3084" />
-          <caret line="3119" selection-start-line="3119" selection-end-line="3119" />
-          <caret line="3154" selection-start-line="3154" selection-end-line="3154" />
-          <caret line="3189" selection-start-line="3189" selection-end-line="3189" />
-          <caret line="3224" selection-start-line="3224" selection-end-line="3224" />
-          <caret line="3259" selection-start-line="3259" selection-end-line="3259" />
-          <caret line="3294" selection-start-line="3294" selection-end-line="3294" />
-          <caret line="3329" selection-start-line="3329" selection-end-line="3329" />
-          <caret line="3364" selection-start-line="3364" selection-end-line="3364" />
-          <caret line="3399" selection-start-line="3399" selection-end-line="3399" />
-          <caret line="3434" selection-start-line="3434" selection-end-line="3434" />
-          <caret line="3469" selection-start-line="3469" selection-end-line="3469" />
-          <caret line="3504" selection-start-line="3504" selection-end-line="3504" />
-          <caret line="3539" selection-start-line="3539" selection-end-line="3539" />
-          <caret line="3574" selection-start-line="3574" selection-end-line="3574" />
-          <caret line="3609" selection-start-line="3609" selection-end-line="3609" />
-          <caret line="3644" selection-start-line="3644" selection-end-line="3644" />
-          <caret line="3679" selection-start-line="3679" selection-end-line="3679" />
-          <caret line="3714" selection-start-line="3714" selection-end-line="3714" />
-          <caret line="3749" selection-start-line="3749" selection-end-line="3749" />
-          <caret line="3784" selection-start-line="3784" selection-end-line="3784" />
-          <caret line="3819" selection-start-line="3819" selection-end-line="3819" />
-          <caret line="3854" selection-start-line="3854" selection-end-line="3854" />
-          <caret line="3889" selection-start-line="3889" selection-end-line="3889" />
-          <caret line="3924" selection-start-line="3924" selection-end-line="3924" />
-          <caret line="3959" selection-start-line="3959" selection-end-line="3959" />
-          <caret line="3994" selection-start-line="3994" selection-end-line="3994" />
-          <caret line="4029" selection-start-line="4029" selection-end-line="4029" />
-          <caret line="4064" selection-start-line="4064" selection-end-line="4064" />
-          <caret line="4099" selection-start-line="4099" selection-end-line="4099" />
-          <caret line="4134" selection-start-line="4134" selection-end-line="4134" />
-          <caret line="4169" selection-start-line="4169" selection-end-line="4169" />
-          <caret line="4204" selection-start-line="4204" selection-end-line="4204" />
-          <caret line="4239" selection-start-line="4239" selection-end-line="4239" />
-          <caret line="4274" selection-start-line="4274" selection-end-line="4274" />
-          <caret line="4309" selection-start-line="4309" selection-end-line="4309" />
-          <caret line="4344" selection-start-line="4344" selection-end-line="4344" />
-          <caret line="4379" selection-start-line="4379" selection-end-line="4379" />
-          <caret line="4414" selection-start-line="4414" selection-end-line="4414" />
-          <caret line="4449" selection-start-line="4449" selection-end-line="4449" />
-          <caret line="4484" selection-start-line="4484" selection-end-line="4484" />
-          <caret line="4519" selection-start-line="4519" selection-end-line="4519" />
-          <caret line="4554" selection-start-line="4554" selection-end-line="4554" />
-          <caret line="4589" selection-start-line="4589" selection-end-line="4589" />
-          <caret line="4624" selection-start-line="4624" selection-end-line="4624" />
-          <caret line="4659" selection-start-line="4659" selection-end-line="4659" />
-          <caret line="4694" selection-start-line="4694" selection-end-line="4694" />
-          <caret line="4729" selection-start-line="4729" selection-end-line="4729" />
-          <caret line="4764" selection-start-line="4764" selection-end-line="4764" />
-          <caret line="4799" selection-start-line="4799" selection-end-line="4799" />
-          <caret line="4834" selection-start-line="4834" selection-end-line="4834" />
-          <caret line="4869" selection-start-line="4869" selection-end-line="4869" />
-          <caret line="4904" selection-start-line="4904" selection-end-line="4904" />
-          <caret line="4939" selection-start-line="4939" selection-end-line="4939" />
-          <caret line="4974" selection-start-line="4974" selection-end-line="4974" />
-          <caret line="5009" selection-start-line="5009" selection-end-line="5009" />
-          <caret line="5044" selection-start-line="5044" selection-end-line="5044" />
-          <caret line="5079" selection-start-line="5079" selection-end-line="5079" />
-          <caret line="5114" selection-start-line="5114" selection-end-line="5114" />
-          <caret line="5149" selection-start-line="5149" selection-end-line="5149" />
-          <caret line="5184" selection-start-line="5184" selection-end-line="5184" />
-          <caret line="5219" selection-start-line="5219" selection-end-line="5219" />
-          <caret line="5254" selection-start-line="5254" selection-end-line="5254" />
-          <caret line="5289" selection-start-line="5289" selection-end-line="5289" />
-          <caret line="5324" selection-start-line="5324" selection-end-line="5324" />
-          <caret line="5359" selection-start-line="5359" selection-end-line="5359" />
-          <caret line="5394" selection-start-line="5394" selection-end-line="5394" />
-          <caret line="5429" selection-start-line="5429" selection-end-line="5429" />
-          <caret line="5464" selection-start-line="5464" selection-end-line="5464" />
-          <caret line="5499" selection-start-line="5499" selection-end-line="5499" />
-          <caret line="5534" selection-start-line="5534" selection-end-line="5534" />
-          <caret line="5569" selection-start-line="5569" selection-end-line="5569" />
-          <caret line="5604" selection-start-line="5604" selection-end-line="5604" />
-          <caret line="5639" selection-start-line="5639" selection-end-line="5639" />
-          <caret line="5674" selection-start-line="5674" selection-end-line="5674" />
-          <caret line="5709" selection-start-line="5709" selection-end-line="5709" />
-          <caret line="5744" selection-start-line="5744" selection-end-line="5744" />
-          <caret line="5779" selection-start-line="5779" selection-end-line="5779" />
-          <caret line="5814" selection-start-line="5814" selection-end-line="5814" />
-          <caret line="5849" selection-start-line="5849" selection-end-line="5849" />
-          <caret line="5884" selection-start-line="5884" selection-end-line="5884" />
-          <caret line="5919" selection-start-line="5919" selection-end-line="5919" />
-          <caret line="5954" selection-start-line="5954" selection-end-line="5954" />
-          <caret line="5989" selection-start-line="5989" selection-end-line="5989" />
-          <caret line="6024" selection-start-line="6024" selection-end-line="6024" />
-          <caret line="6059" selection-start-line="6059" selection-end-line="6059" />
-          <caret line="6094" selection-start-line="6094" selection-end-line="6094" />
-          <caret line="6129" selection-start-line="6129" selection-end-line="6129" />
-          <caret line="6164" selection-start-line="6164" selection-end-line="6164" />
-          <caret line="6199" selection-start-line="6199" selection-end-line="6199" />
-          <caret line="6234" selection-start-line="6234" selection-end-line="6234" />
-          <caret line="6269" selection-start-line="6269" selection-end-line="6269" />
-          <caret line="6304" selection-start-line="6304" selection-end-line="6304" />
-          <caret line="6339" selection-start-line="6339" selection-end-line="6339" />
-          <caret line="6374" selection-start-line="6374" selection-end-line="6374" />
-          <caret line="6409" selection-start-line="6409" selection-end-line="6409" />
-          <caret line="6444" selection-start-line="6444" selection-end-line="6444" />
-          <caret line="6479" selection-start-line="6479" selection-end-line="6479" />
-          <caret line="6514" selection-start-line="6514" selection-end-line="6514" />
-          <caret line="6549" selection-start-line="6549" selection-end-line="6549" />
-          <caret line="6584" selection-start-line="6584" selection-end-line="6584" />
-          <caret line="6619" selection-start-line="6619" selection-end-line="6619" />
-          <caret line="6654" selection-start-line="6654" selection-end-line="6654" />
-          <caret line="6689" selection-start-line="6689" selection-end-line="6689" />
-          <caret line="6724" selection-start-line="6724" selection-end-line="6724" />
-          <caret line="6759" selection-start-line="6759" selection-end-line="6759" />
-          <caret line="6794" selection-start-line="6794" selection-end-line="6794" />
-          <caret line="6829" selection-start-line="6829" selection-end-line="6829" />
-          <caret line="6864" selection-start-line="6864" selection-end-line="6864" />
-          <caret line="6899" selection-start-line="6899" selection-end-line="6899" />
-          <caret line="6934" selection-start-line="6934" selection-end-line="6934" />
-          <caret line="6969" selection-start-line="6969" selection-end-line="6969" />
-          <caret line="7004" selection-start-line="7004" selection-end-line="7004" />
-          <caret line="7039" selection-start-line="7039" selection-end-line="7039" />
-          <caret line="7074" selection-start-line="7074" selection-end-line="7074" />
-          <caret line="7109" selection-start-line="7109" selection-end-line="7109" />
-          <caret line="7144" selection-start-line="7144" selection-end-line="7144" />
-          <caret line="7179" selection-start-line="7179" selection-end-line="7179" />
-          <caret line="7214" selection-start-line="7214" selection-end-line="7214" />
-          <caret line="7249" selection-start-line="7249" selection-end-line="7249" />
-          <caret line="7284" selection-start-line="7284" selection-end-line="7284" />
-          <caret line="7319" selection-start-line="7319" selection-end-line="7319" />
-          <caret line="7354" selection-start-line="7354" selection-end-line="7354" />
-          <caret line="7389" selection-start-line="7389" selection-end-line="7389" />
-          <caret line="7424" selection-start-line="7424" selection-end-line="7424" />
-          <caret line="7459" selection-start-line="7459" selection-end-line="7459" />
-          <caret line="7494" selection-start-line="7494" selection-end-line="7494" />
-          <caret line="7529" selection-start-line="7529" selection-end-line="7529" />
-          <caret line="7564" selection-start-line="7564" selection-end-line="7564" />
-          <caret line="7599" selection-start-line="7599" selection-end-line="7599" />
-          <caret line="7634" selection-start-line="7634" selection-end-line="7634" />
-          <caret line="7669" selection-start-line="7669" selection-end-line="7669" />
-          <caret line="7704" selection-start-line="7704" selection-end-line="7704" />
-          <caret line="7739" selection-start-line="7739" selection-end-line="7739" />
-          <caret line="7774" selection-start-line="7774" selection-end-line="7774" />
-          <caret line="7809" selection-start-line="7809" selection-end-line="7809" />
-          <caret line="7844" selection-start-line="7844" selection-end-line="7844" />
-          <caret line="7879" selection-start-line="7879" selection-end-line="7879" />
-          <caret line="7914" selection-start-line="7914" selection-end-line="7914" />
-          <caret line="7949" selection-start-line="7949" selection-end-line="7949" />
-          <caret line="7984" selection-start-line="7984" selection-end-line="7984" />
-          <caret line="8019" selection-start-line="8019" selection-end-line="8019" />
-          <caret line="8054" selection-start-line="8054" selection-end-line="8054" />
-          <caret line="8089" selection-start-line="8089" selection-end-line="8089" />
-          <caret line="8124" selection-start-line="8124" selection-end-line="8124" />
-          <caret line="8159" selection-start-line="8159" selection-end-line="8159" />
-          <caret line="8194" selection-start-line="8194" selection-end-line="8194" />
-          <caret line="8229" selection-start-line="8229" selection-end-line="8229" />
-          <caret line="8264" selection-start-line="8264" selection-end-line="8264" />
-          <caret line="8299" selection-start-line="8299" selection-end-line="8299" />
-          <caret line="8334" selection-start-line="8334" selection-end-line="8334" />
-          <caret line="8369" selection-start-line="8369" selection-end-line="8369" />
-          <caret line="8404" selection-start-line="8404" selection-end-line="8404" />
-          <caret line="8439" selection-start-line="8439" selection-end-line="8439" />
-          <caret line="8474" selection-start-line="8474" selection-end-line="8474" />
-          <caret line="8509" selection-start-line="8509" selection-end-line="8509" />
-          <caret line="8544" selection-start-line="8544" selection-end-line="8544" />
-          <caret line="8579" selection-start-line="8579" selection-end-line="8579" />
-          <caret line="8614" selection-start-line="8614" selection-end-line="8614" />
-          <caret line="8649" selection-start-line="8649" selection-end-line="8649" />
-          <caret line="8684" selection-start-line="8684" selection-end-line="8684" />
-          <caret line="8719" selection-start-line="8719" selection-end-line="8719" />
-          <caret line="8754" selection-start-line="8754" selection-end-line="8754" />
-          <caret line="8789" selection-start-line="8789" selection-end-line="8789" />
-          <caret line="8824" selection-start-line="8824" selection-end-line="8824" />
-          <caret line="8859" selection-start-line="8859" selection-end-line="8859" />
-          <caret line="8894" selection-start-line="8894" selection-end-line="8894" />
-          <caret line="8929" selection-start-line="8929" selection-end-line="8929" />
-          <caret line="8964" selection-start-line="8964" selection-end-line="8964" />
-          <caret line="8999" selection-start-line="8999" selection-end-line="8999" />
-          <caret line="9034" selection-start-line="9034" selection-end-line="9034" />
-          <caret line="9069" selection-start-line="9069" selection-end-line="9069" />
-          <caret line="9104" selection-start-line="9104" selection-end-line="9104" />
-          <caret line="9139" selection-start-line="9139" selection-end-line="9139" />
-          <caret line="9174" selection-start-line="9174" selection-end-line="9174" />
-          <caret line="9209" selection-start-line="9209" selection-end-line="9209" />
-          <caret line="9244" selection-start-line="9244" selection-end-line="9244" />
-          <caret line="9279" selection-start-line="9279" selection-end-line="9279" />
-          <caret line="9314" selection-start-line="9314" selection-end-line="9314" />
-          <caret line="9349" selection-start-line="9349" selection-end-line="9349" />
-          <caret line="9384" selection-start-line="9384" selection-end-line="9384" />
-          <caret line="9419" selection-start-line="9419" selection-end-line="9419" />
-          <caret line="9454" selection-start-line="9454" selection-end-line="9454" />
-          <caret line="9489" selection-start-line="9489" selection-end-line="9489" />
-          <caret line="9524" selection-start-line="9524" selection-end-line="9524" />
-          <caret line="9559" selection-start-line="9559" selection-end-line="9559" />
-          <caret line="9594" selection-start-line="9594" selection-end-line="9594" />
-          <caret line="9629" selection-start-line="9629" selection-end-line="9629" />
-          <caret line="9664" selection-start-line="9664" selection-end-line="9664" />
-          <caret line="9699" selection-start-line="9699" selection-end-line="9699" />
-          <caret line="9734" selection-start-line="9734" selection-end-line="9734" />
-          <caret line="9769" selection-start-line="9769" selection-end-line="9769" />
-          <caret line="9804" selection-start-line="9804" selection-end-line="9804" />
-          <caret line="9839" selection-start-line="9839" selection-end-line="9839" />
-          <caret line="9874" selection-start-line="9874" selection-end-line="9874" />
-          <caret line="9909" selection-start-line="9909" selection-end-line="9909" />
-          <caret line="9944" selection-start-line="9944" selection-end-line="9944" />
-          <caret line="9979" selection-start-line="9979" selection-end-line="9979" />
-          <caret line="10014" selection-start-line="10014" selection-end-line="10014" />
-          <caret line="10049" selection-start-line="10049" selection-end-line="10049" />
-          <caret line="10084" selection-start-line="10084" selection-end-line="10084" />
-          <caret line="10119" selection-start-line="10119" selection-end-line="10119" />
-          <caret line="10154" selection-start-line="10154" selection-end-line="10154" />
-          <caret line="10189" selection-start-line="10189" selection-end-line="10189" />
-          <caret line="10224" selection-start-line="10224" selection-end-line="10224" />
-          <caret line="10259" selection-start-line="10259" selection-end-line="10259" />
-          <caret line="10294" selection-start-line="10294" selection-end-line="10294" />
-          <caret line="10329" selection-start-line="10329" selection-end-line="10329" />
-          <caret line="10364" selection-start-line="10364" selection-end-line="10364" />
-          <caret line="10399" selection-start-line="10399" selection-end-line="10399" />
-          <caret line="10434" selection-start-line="10434" selection-end-line="10434" />
-          <caret line="10469" selection-start-line="10469" selection-end-line="10469" />
-          <caret line="10504" selection-start-line="10504" selection-end-line="10504" />
-          <caret line="10539" selection-start-line="10539" selection-end-line="10539" />
-          <caret line="10574" selection-start-line="10574" selection-end-line="10574" />
-          <caret line="10609" selection-start-line="10609" selection-end-line="10609" />
-          <caret line="10644" selection-start-line="10644" selection-end-line="10644" />
-          <caret line="10679" selection-start-line="10679" selection-end-line="10679" />
-          <caret line="10714" selection-start-line="10714" selection-end-line="10714" />
-          <caret line="10749" selection-start-line="10749" selection-end-line="10749" />
-          <caret line="10784" selection-start-line="10784" selection-end-line="10784" />
-          <caret line="10819" selection-start-line="10819" selection-end-line="10819" />
-          <caret line="10854" selection-start-line="10854" selection-end-line="10854" />
-          <caret line="10889" selection-start-line="10889" selection-end-line="10889" />
-          <caret line="10924" selection-start-line="10924" selection-end-line="10924" />
-          <caret line="10959" selection-start-line="10959" selection-end-line="10959" />
-          <caret line="10994" selection-start-line="10994" selection-end-line="10994" />
-          <caret line="11029" selection-start-line="11029" selection-end-line="11029" />
-          <caret line="11064" selection-start-line="11064" selection-end-line="11064" />
-          <caret line="11099" selection-start-line="11099" selection-end-line="11099" />
-          <caret line="11134" selection-start-line="11134" selection-end-line="11134" />
-          <caret line="11169" selection-start-line="11169" selection-end-line="11169" />
-          <caret line="11204" selection-start-line="11204" selection-end-line="11204" />
-          <caret line="11239" selection-start-line="11239" selection-end-line="11239" />
-          <caret line="11274" selection-start-line="11274" selection-end-line="11274" />
-          <caret line="11309" selection-start-line="11309" selection-end-line="11309" />
-          <caret line="11344" selection-start-line="11344" selection-end-line="11344" />
-          <caret line="11379" selection-start-line="11379" selection-end-line="11379" />
-          <caret line="11414" selection-start-line="11414" selection-end-line="11414" />
-          <caret line="11449" selection-start-line="11449" selection-end-line="11449" />
-          <caret line="11484" selection-start-line="11484" selection-end-line="11484" />
-          <caret line="11519" selection-start-line="11519" selection-end-line="11519" />
-          <caret line="11554" selection-start-line="11554" selection-end-line="11554" />
-          <caret line="11589" selection-start-line="11589" selection-end-line="11589" />
-          <caret line="11624" selection-start-line="11624" selection-end-line="11624" />
-          <caret line="11659" selection-start-line="11659" selection-end-line="11659" />
-          <caret line="11694" selection-start-line="11694" selection-end-line="11694" />
-          <caret line="11729" selection-start-line="11729" selection-end-line="11729" />
-          <caret line="11764" selection-start-line="11764" selection-end-line="11764" />
-          <caret line="11799" selection-start-line="11799" selection-end-line="11799" />
-          <caret line="11834" selection-start-line="11834" selection-end-line="11834" />
-          <caret line="11869" selection-start-line="11869" selection-end-line="11869" />
-          <caret line="11904" selection-start-line="11904" selection-end-line="11904" />
-          <caret line="11939" selection-start-line="11939" selection-end-line="11939" />
-          <caret line="11974" selection-start-line="11974" selection-end-line="11974" />
-          <caret line="12009" selection-start-line="12009" selection-end-line="12009" />
-          <caret line="12044" selection-start-line="12044" selection-end-line="12044" />
-          <caret line="12079" selection-start-line="12079" selection-end-line="12079" />
-          <caret line="12114" selection-start-line="12114" selection-end-line="12114" />
-          <caret line="12149" selection-start-line="12149" selection-end-line="12149" />
-          <caret line="12184" selection-start-line="12184" selection-end-line="12184" />
-          <caret line="12219" selection-start-line="12219" selection-end-line="12219" />
-          <caret line="12254" selection-start-line="12254" selection-end-line="12254" />
-          <caret line="12289" selection-start-line="12289" selection-end-line="12289" />
-          <caret line="12324" selection-start-line="12324" selection-end-line="12324" />
-          <caret line="12359" selection-start-line="12359" selection-end-line="12359" />
-          <caret line="12394" selection-start-line="12394" selection-end-line="12394" />
-          <caret line="12429" selection-start-line="12429" selection-end-line="12429" />
-          <caret line="12464" selection-start-line="12464" selection-end-line="12464" />
-          <caret line="12499" selection-start-line="12499" selection-end-line="12499" />
-          <caret line="12534" selection-start-line="12534" selection-end-line="12534" />
-          <caret line="12569" selection-start-line="12569" selection-end-line="12569" />
-          <caret line="12604" selection-start-line="12604" selection-end-line="12604" />
-          <caret line="12639" selection-start-line="12639" selection-end-line="12639" />
-          <caret line="12674" selection-start-line="12674" selection-end-line="12674" />
-          <caret line="12709" selection-start-line="12709" selection-end-line="12709" />
-          <caret line="12744" selection-start-line="12744" selection-end-line="12744" />
-          <caret line="12779" selection-start-line="12779" selection-end-line="12779" />
-          <caret line="12814" selection-start-line="12814" selection-end-line="12814" />
-          <caret line="12849" selection-start-line="12849" selection-end-line="12849" />
-          <caret line="12884" selection-start-line="12884" selection-end-line="12884" />
-          <caret line="12919" selection-start-line="12919" selection-end-line="12919" />
-          <caret line="12954" selection-start-line="12954" selection-end-line="12954" />
-          <caret line="12989" selection-start-line="12989" selection-end-line="12989" />
-          <caret line="13024" selection-start-line="13024" selection-end-line="13024" />
-          <caret line="13059" selection-start-line="13059" selection-end-line="13059" />
-          <caret line="13094" selection-start-line="13094" selection-end-line="13094" />
-          <caret line="13129" selection-start-line="13129" selection-end-line="13129" />
-          <caret line="13164" selection-start-line="13164" selection-end-line="13164" />
-          <caret line="13199" selection-start-line="13199" selection-end-line="13199" />
-          <caret line="13234" selection-start-line="13234" selection-end-line="13234" />
-          <caret line="13269" selection-start-line="13269" selection-end-line="13269" />
-          <caret line="13304" selection-start-line="13304" selection-end-line="13304" />
-          <caret line="13339" selection-start-line="13339" selection-end-line="13339" />
-          <caret line="13374" selection-start-line="13374" selection-end-line="13374" />
-          <caret line="13409" selection-start-line="13409" selection-end-line="13409" />
-          <caret line="13444" selection-start-line="13444" selection-end-line="13444" />
-          <caret line="13479" selection-start-line="13479" selection-end-line="13479" />
-          <caret line="13514" selection-start-line="13514" selection-end-line="13514" />
-          <caret line="13549" selection-start-line="13549" selection-end-line="13549" />
-          <caret line="13584" selection-start-line="13584" selection-end-line="13584" />
-          <caret line="13619" selection-start-line="13619" selection-end-line="13619" />
-          <caret line="13654" selection-start-line="13654" selection-end-line="13654" />
-          <caret line="13689" selection-start-line="13689" selection-end-line="13689" />
-          <caret line="13724" selection-start-line="13724" selection-end-line="13724" />
-          <caret line="13759" selection-start-line="13759" selection-end-line="13759" />
-          <caret line="13794" selection-start-line="13794" selection-end-line="13794" />
-          <caret line="13829" selection-start-line="13829" selection-end-line="13829" />
-          <caret line="13864" selection-start-line="13864" selection-end-line="13864" />
-          <caret line="13899" selection-start-line="13899" selection-end-line="13899" />
-          <caret line="13934" selection-start-line="13934" selection-end-line="13934" />
-          <caret line="13969" selection-start-line="13969" selection-end-line="13969" />
-          <caret line="14004" selection-start-line="14004" selection-end-line="14004" />
-          <caret line="14039" selection-start-line="14039" selection-end-line="14039" />
-          <caret line="14074" selection-start-line="14074" selection-end-line="14074" />
-          <caret line="14109" selection-start-line="14109" selection-end-line="14109" />
-          <caret line="14144" selection-start-line="14144" selection-end-line="14144" />
-          <caret line="14179" selection-start-line="14179" selection-end-line="14179" />
-          <caret line="14214" selection-start-line="14214" selection-end-line="14214" />
-          <caret line="14249" selection-start-line="14249" selection-end-line="14249" />
-          <caret line="14284" selection-start-line="14284" selection-end-line="14284" />
-          <caret line="14319" selection-start-line="14319" selection-end-line="14319" />
-          <caret line="14354" selection-start-line="14354" selection-end-line="14354" />
-          <caret line="14389" selection-start-line="14389" selection-end-line="14389" />
-          <caret line="14424" selection-start-line="14424" selection-end-line="14424" />
-          <caret line="14459" selection-start-line="14459" selection-end-line="14459" />
-          <caret line="14494" selection-start-line="14494" selection-end-line="14494" />
-          <caret line="14529" selection-start-line="14529" selection-end-line="14529" />
-          <caret line="14564" selection-start-line="14564" selection-end-line="14564" />
-          <caret line="14599" selection-start-line="14599" selection-end-line="14599" />
-          <caret line="14634" selection-start-line="14634" selection-end-line="14634" />
-          <caret line="14669" selection-start-line="14669" selection-end-line="14669" />
-          <caret line="14704" selection-start-line="14704" selection-end-line="14704" />
-          <caret line="14739" selection-start-line="14739" selection-end-line="14739" />
-          <caret line="14774" selection-start-line="14774" selection-end-line="14774" />
-          <caret line="14809" selection-start-line="14809" selection-end-line="14809" />
-          <caret line="14844" selection-start-line="14844" selection-end-line="14844" />
-          <caret line="14879" selection-start-line="14879" selection-end-line="14879" />
-          <caret line="14914" selection-start-line="14914" selection-end-line="14914" />
-          <caret line="14949" selection-start-line="14949" selection-end-line="14949" />
-          <caret line="14984" selection-start-line="14984" selection-end-line="14984" />
-          <caret line="15019" selection-start-line="15019" selection-end-line="15019" />
-          <caret line="15054" selection-start-line="15054" selection-end-line="15054" />
-          <caret line="15089" selection-start-line="15089" selection-end-line="15089" />
-          <caret line="15124" selection-start-line="15124" selection-end-line="15124" />
-          <caret line="15159" selection-start-line="15159" selection-end-line="15159" />
-          <caret line="15194" selection-start-line="15194" selection-end-line="15194" />
-          <caret line="15229" selection-start-line="15229" selection-end-line="15229" />
-          <caret line="15264" selection-start-line="15264" selection-end-line="15264" />
-          <caret line="15299" selection-start-line="15299" selection-end-line="15299" />
-          <caret line="15334" selection-start-line="15334" selection-end-line="15334" />
-          <caret line="15369" selection-start-line="15369" selection-end-line="15369" />
-          <caret line="15404" selection-start-line="15404" selection-end-line="15404" />
-          <caret line="15439" selection-start-line="15439" selection-end-line="15439" />
-          <caret line="15474" selection-start-line="15474" selection-end-line="15474" />
-          <caret line="15509" selection-start-line="15509" selection-end-line="15509" />
-          <caret line="15544" selection-start-line="15544" selection-end-line="15544" />
-          <caret line="15579" selection-start-line="15579" selection-end-line="15579" />
-          <caret line="15614" selection-start-line="15614" selection-end-line="15614" />
-          <caret line="15649" selection-start-line="15649" selection-end-line="15649" />
-          <caret line="15684" selection-start-line="15684" selection-end-line="15684" />
-          <caret line="15719" selection-start-line="15719" selection-end-line="15719" />
-          <caret line="15754" selection-start-line="15754" selection-end-line="15754" />
-          <caret line="15789" selection-start-line="15789" selection-end-line="15789" />
-          <caret line="15824" selection-start-line="15824" selection-end-line="15824" />
-          <caret line="15859" selection-start-line="15859" selection-end-line="15859" />
-          <caret line="15894" selection-start-line="15894" selection-end-line="15894" />
-          <caret line="15929" selection-start-line="15929" selection-end-line="15929" />
-          <caret line="15964" selection-start-line="15964" selection-end-line="15964" />
-          <caret line="15999" selection-start-line="15999" selection-end-line="15999" />
-          <caret line="16034" selection-start-line="16034" selection-end-line="16034" />
-          <caret line="16069" selection-start-line="16069" selection-end-line="16069" />
-          <caret line="16104" selection-start-line="16104" selection-end-line="16104" />
-          <caret line="16139" selection-start-line="16139" selection-end-line="16139" />
-          <caret line="16174" selection-start-line="16174" selection-end-line="16174" />
-          <caret line="16209" selection-start-line="16209" selection-end-line="16209" />
-          <caret line="16244" selection-start-line="16244" selection-end-line="16244" />
-          <caret line="16279" selection-start-line="16279" selection-end-line="16279" />
-          <caret line="16314" selection-start-line="16314" selection-end-line="16314" />
-          <caret line="16349" selection-start-line="16349" selection-end-line="16349" />
-          <caret line="16384" selection-start-line="16384" selection-end-line="16384" />
-          <caret line="16419" selection-start-line="16419" selection-end-line="16419" />
-          <caret line="16454" selection-start-line="16454" selection-end-line="16454" />
-          <caret line="16489" selection-start-line="16489" selection-end-line="16489" />
-          <caret line="16524" selection-start-line="16524" selection-end-line="16524" />
-          <caret line="16559" selection-start-line="16559" selection-end-line="16559" />
-          <caret line="16594" selection-start-line="16594" selection-end-line="16594" />
-          <caret line="16629" selection-start-line="16629" selection-end-line="16629" />
-          <caret line="16664" selection-start-line="16664" selection-end-line="16664" />
-          <caret line="16699" selection-start-line="16699" selection-end-line="16699" />
-          <caret line="16734" selection-start-line="16734" selection-end-line="16734" />
-          <caret line="16769" selection-start-line="16769" selection-end-line="16769" />
-          <caret line="16804" selection-start-line="16804" selection-end-line="16804" />
-          <caret line="16839" selection-start-line="16839" selection-end-line="16839" />
-          <caret line="16874" selection-start-line="16874" selection-end-line="16874" />
-          <caret line="16909" selection-start-line="16909" selection-end-line="16909" />
-          <caret line="16944" selection-start-line="16944" selection-end-line="16944" />
-          <caret line="16979" selection-start-line="16979" selection-end-line="16979" />
-          <caret line="17014" selection-start-line="17014" selection-end-line="17014" />
-          <caret line="17049" selection-start-line="17049" selection-end-line="17049" />
-          <caret line="17084" selection-start-line="17084" selection-end-line="17084" />
-          <caret line="17119" selection-start-line="17119" selection-end-line="17119" />
-          <caret line="17154" selection-start-line="17154" selection-end-line="17154" />
-          <caret line="17189" selection-start-line="17189" selection-end-line="17189" />
-          <caret line="17224" selection-start-line="17224" selection-end-line="17224" />
-          <caret line="17259" selection-start-line="17259" selection-end-line="17259" />
-          <caret line="17294" selection-start-line="17294" selection-end-line="17294" />
-          <caret line="17329" selection-start-line="17329" selection-end-line="17329" />
-          <caret line="17364" selection-start-line="17364" selection-end-line="17364" />
-          <caret line="17399" selection-start-line="17399" selection-end-line="17399" />
-          <caret line="17434" selection-start-line="17434" selection-end-line="17434" />
-          <caret line="17469" selection-start-line="17469" selection-end-line="17469" />
-          <caret line="17504" selection-start-line="17504" selection-end-line="17504" />
-          <caret line="17539" selection-start-line="17539" selection-end-line="17539" />
-          <caret line="17574" selection-start-line="17574" selection-end-line="17574" />
-          <caret line="17609" selection-start-line="17609" selection-end-line="17609" />
-          <caret line="17644" selection-start-line="17644" selection-end-line="17644" />
-          <caret line="17679" selection-start-line="17679" selection-end-line="17679" />
-          <caret line="17714" selection-start-line="17714" selection-end-line="17714" />
-          <caret line="17749" selection-start-line="17749" selection-end-line="17749" />
-          <caret line="17784" selection-start-line="17784" selection-end-line="17784" />
-          <caret line="17819" selection-start-line="17819" selection-end-line="17819" />
-          <caret line="17854" selection-start-line="17854" selection-end-line="17854" />
-          <caret line="17889" selection-start-line="17889" selection-end-line="17889" />
-          <caret line="17924" selection-start-line="17924" selection-end-line="17924" />
-          <caret line="17959" selection-start-line="17959" selection-end-line="17959" />
-          <caret line="17994" selection-start-line="17994" selection-end-line="17994" />
-          <caret line="18029" selection-start-line="18029" selection-end-line="18029" />
-          <caret line="18064" selection-start-line="18064" selection-end-line="18064" />
-          <caret line="18099" selection-start-line="18099" selection-end-line="18099" />
-          <caret line="18134" selection-start-line="18134" selection-end-line="18134" />
-          <caret line="18169" selection-start-line="18169" selection-end-line="18169" />
-          <caret line="18204" selection-start-line="18204" selection-end-line="18204" />
-          <caret line="18239" selection-start-line="18239" selection-end-line="18239" />
-          <caret line="18274" selection-start-line="18274" selection-end-line="18274" />
-          <caret line="18309" selection-start-line="18309" selection-end-line="18309" />
-          <caret line="18344" selection-start-line="18344" selection-end-line="18344" />
-          <caret line="18379" selection-start-line="18379" selection-end-line="18379" />
-          <caret line="18414" selection-start-line="18414" selection-end-line="18414" />
-          <caret line="18449" selection-start-line="18449" selection-end-line="18449" />
-          <caret line="18484" selection-start-line="18484" selection-end-line="18484" />
-          <caret line="18519" selection-start-line="18519" selection-end-line="18519" />
-          <caret line="18554" selection-start-line="18554" selection-end-line="18554" />
-          <caret line="18589" selection-start-line="18589" selection-end-line="18589" />
-          <caret line="18624" selection-start-line="18624" selection-end-line="18624" />
-          <caret line="18659" selection-start-line="18659" selection-end-line="18659" />
-          <caret line="18694" selection-start-line="18694" selection-end-line="18694" />
-          <caret line="18729" selection-start-line="18729" selection-end-line="18729" />
-          <caret line="18764" selection-start-line="18764" selection-end-line="18764" />
-          <caret line="18799" selection-start-line="18799" selection-end-line="18799" />
-          <caret line="18834" selection-start-line="18834" selection-end-line="18834" />
-          <caret line="18869" selection-start-line="18869" selection-end-line="18869" />
-          <caret line="18904" selection-start-line="18904" selection-end-line="18904" />
-          <caret line="18939" selection-start-line="18939" selection-end-line="18939" />
-          <caret line="18974" selection-start-line="18974" selection-end-line="18974" />
-          <caret line="19009" selection-start-line="19009" selection-end-line="19009" />
-          <caret line="19044" selection-start-line="19044" selection-end-line="19044" />
-          <caret line="19079" selection-start-line="19079" selection-end-line="19079" />
-          <caret line="19114" selection-start-line="19114" selection-end-line="19114" />
-          <caret line="19149" selection-start-line="19149" selection-end-line="19149" />
-          <caret line="19184" selection-start-line="19184" selection-end-line="19184" />
-          <caret line="19219" selection-start-line="19219" selection-end-line="19219" />
-          <caret line="19254" selection-start-line="19254" selection-end-line="19254" />
-          <caret line="19289" selection-start-line="19289" selection-end-line="19289" />
-          <caret line="19324" selection-start-line="19324" selection-end-line="19324" />
-          <caret line="19359" selection-start-line="19359" selection-end-line="19359" />
-          <caret line="19394" selection-start-line="19394" selection-end-line="19394" />
-          <caret line="19429" selection-start-line="19429" selection-end-line="19429" />
-          <caret line="19464" selection-start-line="19464" selection-end-line="19464" />
-          <caret line="19499" selection-start-line="19499" selection-end-line="19499" />
-          <caret line="19534" selection-start-line="19534" selection-end-line="19534" />
-          <caret line="19569" selection-start-line="19569" selection-end-line="19569" />
-          <caret line="19604" selection-start-line="19604" selection-end-line="19604" />
-          <caret line="19639" selection-start-line="19639" selection-end-line="19639" />
-          <caret line="19674" selection-start-line="19674" selection-end-line="19674" />
-          <caret line="19709" selection-start-line="19709" selection-end-line="19709" />
-          <caret line="19744" selection-start-line="19744" selection-end-line="19744" />
-          <caret line="19779" selection-start-line="19779" selection-end-line="19779" />
-          <caret line="19814" selection-start-line="19814" selection-end-line="19814" />
-          <caret line="19849" selection-start-line="19849" selection-end-line="19849" />
-          <caret line="19884" selection-start-line="19884" selection-end-line="19884" />
-          <caret line="19919" selection-start-line="19919" selection-end-line="19919" />
-          <caret line="19954" selection-start-line="19954" selection-end-line="19954" />
-          <caret line="19989" selection-start-line="19989" selection-end-line="19989" />
-          <caret line="20024" selection-start-line="20024" selection-end-line="20024" />
-          <caret line="20059" selection-start-line="20059" selection-end-line="20059" />
-          <caret line="20094" selection-start-line="20094" selection-end-line="20094" />
-          <caret line="20129" selection-start-line="20129" selection-end-line="20129" />
-          <caret line="20164" selection-start-line="20164" selection-end-line="20164" />
-          <caret line="20199" selection-start-line="20199" selection-end-line="20199" />
-          <caret line="20234" selection-start-line="20234" selection-end-line="20234" />
-          <caret line="20269" selection-start-line="20269" selection-end-line="20269" />
-          <caret line="20304" selection-start-line="20304" selection-end-line="20304" />
-          <caret line="20339" selection-start-line="20339" selection-end-line="20339" />
-          <caret line="20374" selection-start-line="20374" selection-end-line="20374" />
-          <caret line="20409" selection-start-line="20409" selection-end-line="20409" />
-          <caret line="20444" selection-start-line="20444" selection-end-line="20444" />
-          <caret line="20479" selection-start-line="20479" selection-end-line="20479" />
-          <caret line="20514" selection-start-line="20514" selection-end-line="20514" />
-          <caret line="20549" selection-start-line="20549" selection-end-line="20549" />
-          <caret line="20584" selection-start-line="20584" selection-end-line="20584" />
-          <caret line="20619" selection-start-line="20619" selection-end-line="20619" />
-          <caret line="20654" selection-start-line="20654" selection-end-line="20654" />
-          <caret line="20689" selection-start-line="20689" selection-end-line="20689" />
-          <caret line="20724" selection-start-line="20724" selection-end-line="20724" />
-          <caret line="20759" selection-start-line="20759" selection-end-line="20759" />
-          <caret line="20794" selection-start-line="20794" selection-end-line="20794" />
-          <caret line="20829" selection-start-line="20829" selection-end-line="20829" />
-          <caret line="20864" selection-start-line="20864" selection-end-line="20864" />
-          <caret line="20899" selection-start-line="20899" selection-end-line="20899" />
-          <caret line="20934" selection-start-line="20934" selection-end-line="20934" />
-          <caret line="20969" selection-start-line="20969" selection-end-line="20969" />
-          <caret line="21004" selection-start-line="21004" selection-end-line="21004" />
-          <caret line="21039" selection-start-line="21039" selection-end-line="21039" />
-          <caret line="21074" selection-start-line="21074" selection-end-line="21074" />
-          <caret line="21109" selection-start-line="21109" selection-end-line="21109" />
-          <caret line="21144" selection-start-line="21144" selection-end-line="21144" />
-          <caret line="21179" selection-start-line="21179" selection-end-line="21179" />
-          <caret line="21214" selection-start-line="21214" selection-end-line="21214" />
-          <caret line="21249" selection-start-line="21249" selection-end-line="21249" />
-          <caret line="21284" selection-start-line="21284" selection-end-line="21284" />
-          <caret line="21319" selection-start-line="21319" selection-end-line="21319" />
-          <caret line="21354" selection-start-line="21354" selection-end-line="21354" />
-          <caret line="21389" selection-start-line="21389" selection-end-line="21389" />
-          <caret line="21424" selection-start-line="21424" selection-end-line="21424" />
-          <caret line="21459" selection-start-line="21459" selection-end-line="21459" />
-          <caret line="21494" selection-start-line="21494" selection-end-line="21494" />
-          <caret line="21529" selection-start-line="21529" selection-end-line="21529" />
-          <caret line="21564" selection-start-line="21564" selection-end-line="21564" />
-          <caret line="21599" selection-start-line="21599" selection-end-line="21599" />
-          <caret line="21634" selection-start-line="21634" selection-end-line="21634" />
-          <caret line="21669" selection-start-line="21669" selection-end-line="21669" />
-          <caret line="21704" selection-start-line="21704" selection-end-line="21704" />
-          <caret line="21739" selection-start-line="21739" selection-end-line="21739" />
-          <caret line="21774" selection-start-line="21774" selection-end-line="21774" />
-          <caret line="21809" selection-start-line="21809" selection-end-line="21809" />
-          <caret line="21844" selection-start-line="21844" selection-end-line="21844" />
-          <caret line="21879" selection-start-line="21879" selection-end-line="21879" />
-          <caret line="21914" selection-start-line="21914" selection-end-line="21914" />
-          <caret line="21949" selection-start-line="21949" selection-end-line="21949" />
-          <caret line="21984" selection-start-line="21984" selection-end-line="21984" />
-          <caret line="22019" selection-start-line="22019" selection-end-line="22019" />
-          <caret line="22054" selection-start-line="22054" selection-end-line="22054" />
-          <caret line="22089" selection-start-line="22089" selection-end-line="22089" />
-          <caret line="22124" selection-start-line="22124" selection-end-line="22124" />
-          <caret line="22159" selection-start-line="22159" selection-end-line="22159" />
-          <caret line="22194" selection-start-line="22194" selection-end-line="22194" />
-          <caret line="22229" selection-start-line="22229" selection-end-line="22229" />
-          <caret line="22264" selection-start-line="22264" selection-end-line="22264" />
-          <caret line="22299" selection-start-line="22299" selection-end-line="22299" />
-          <caret line="22334" selection-start-line="22334" selection-end-line="22334" />
-          <caret line="22369" selection-start-line="22369" selection-end-line="22369" />
-          <caret line="22404" selection-start-line="22404" selection-end-line="22404" />
-          <caret line="22439" selection-start-line="22439" selection-end-line="22439" />
-          <caret line="22474" selection-start-line="22474" selection-end-line="22474" />
-          <caret line="22509" selection-start-line="22509" selection-end-line="22509" />
-          <caret line="22544" selection-start-line="22544" selection-end-line="22544" />
-          <caret line="22579" selection-start-line="22579" selection-end-line="22579" />
-          <caret line="22614" selection-start-line="22614" selection-end-line="22614" />
-          <caret line="22649" selection-start-line="22649" selection-end-line="22649" />
-          <caret line="22684" selection-start-line="22684" selection-end-line="22684" />
-          <caret line="22719" selection-start-line="22719" selection-end-line="22719" />
-          <caret line="22754" selection-start-line="22754" selection-end-line="22754" />
-          <caret line="22789" selection-start-line="22789" selection-end-line="22789" />
-          <caret line="22824" selection-start-line="22824" selection-end-line="22824" />
-          <caret line="22859" selection-start-line="22859" selection-end-line="22859" />
-          <caret line="22894" selection-start-line="22894" selection-end-line="22894" />
-          <caret line="22929" selection-start-line="22929" selection-end-line="22929" />
-          <caret line="22964" selection-start-line="22964" selection-end-line="22964" />
-          <caret line="22999" selection-start-line="22999" selection-end-line="22999" />
-          <caret line="23034" selection-start-line="23034" selection-end-line="23034" />
-          <caret line="23069" selection-start-line="23069" selection-end-line="23069" />
-          <caret line="23104" selection-start-line="23104" selection-end-line="23104" />
-          <caret line="23139" selection-start-line="23139" selection-end-line="23139" />
-          <caret line="23174" selection-start-line="23174" selection-end-line="23174" />
-          <caret line="23209" selection-start-line="23209" selection-end-line="23209" />
-          <caret line="23244" selection-start-line="23244" selection-end-line="23244" />
-          <caret line="23279" selection-start-line="23279" selection-end-line="23279" />
-          <caret line="23314" selection-start-line="23314" selection-end-line="23314" />
-          <caret line="23349" selection-start-line="23349" selection-end-line="23349" />
-          <caret line="23384" selection-start-line="23384" selection-end-line="23384" />
-          <caret line="23419" selection-start-line="23419" selection-end-line="23419" />
-          <caret line="23454" selection-start-line="23454" selection-end-line="23454" />
-          <caret line="23489" selection-start-line="23489" selection-end-line="23489" />
-          <caret line="23524" selection-start-line="23524" selection-end-line="23524" />
-          <caret line="23559" selection-start-line="23559" selection-end-line="23559" />
-          <caret line="23594" selection-start-line="23594" selection-end-line="23594" />
-          <caret line="23629" selection-start-line="23629" selection-end-line="23629" />
-          <caret line="23664" selection-start-line="23664" selection-end-line="23664" />
-          <caret line="23699" selection-start-line="23699" selection-end-line="23699" />
-          <caret line="23734" selection-start-line="23734" selection-end-line="23734" />
-          <caret line="23769" selection-start-line="23769" selection-end-line="23769" />
-          <caret line="23804" selection-start-line="23804" selection-end-line="23804" />
-          <caret line="23839" selection-start-line="23839" selection-end-line="23839" />
-          <caret line="23874" selection-start-line="23874" selection-end-line="23874" />
-          <caret line="23909" selection-start-line="23909" selection-end-line="23909" />
-          <caret line="23944" selection-start-line="23944" selection-end-line="23944" />
-          <caret line="23979" selection-start-line="23979" selection-end-line="23979" />
-          <caret line="24014" selection-start-line="24014" selection-end-line="24014" />
-          <caret line="24049" selection-start-line="24049" selection-end-line="24049" />
-          <caret line="24084" selection-start-line="24084" selection-end-line="24084" />
-          <caret line="24119" selection-start-line="24119" selection-end-line="24119" />
-          <caret line="24154" selection-start-line="24154" selection-end-line="24154" />
-          <caret line="24189" selection-start-line="24189" selection-end-line="24189" />
-          <caret line="24224" selection-start-line="24224" selection-end-line="24224" />
-          <caret line="24259" selection-start-line="24259" selection-end-line="24259" />
-          <caret line="24294" selection-start-line="24294" selection-end-line="24294" />
-          <caret line="24329" selection-start-line="24329" selection-end-line="24329" />
-          <caret line="24364" selection-start-line="24364" selection-end-line="24364" />
-          <caret line="24399" selection-start-line="24399" selection-end-line="24399" />
-          <caret line="24434" selection-start-line="24434" selection-end-line="24434" />
-          <caret line="24469" selection-start-line="24469" selection-end-line="24469" />
-          <caret line="24504" selection-start-line="24504" selection-end-line="24504" />
-          <caret line="24539" selection-start-line="24539" selection-end-line="24539" />
-          <caret line="24574" selection-start-line="24574" selection-end-line="24574" />
-          <caret line="24609" selection-start-line="24609" selection-end-line="24609" />
-          <caret line="24644" selection-start-line="24644" selection-end-line="24644" />
-          <caret line="24679" selection-start-line="24679" selection-end-line="24679" />
-          <caret line="24714" selection-start-line="24714" selection-end-line="24714" />
-          <caret line="24749" selection-start-line="24749" selection-end-line="24749" />
-          <caret line="24784" selection-start-line="24784" selection-end-line="24784" />
-          <caret line="24819" selection-start-line="24819" selection-end-line="24819" />
-          <caret line="24854" selection-start-line="24854" selection-end-line="24854" />
-          <caret line="24889" selection-start-line="24889" selection-end-line="24889" />
-          <caret line="24924" selection-start-line="24924" selection-end-line="24924" />
-          <caret line="24959" selection-start-line="24959" selection-end-line="24959" />
-          <caret line="24994" selection-start-line="24994" selection-end-line="24994" />
-          <caret line="25029" selection-start-line="25029" selection-end-line="25029" />
-          <caret line="25064" selection-start-line="25064" selection-end-line="25064" />
-          <caret line="25099" selection-start-line="25099" selection-end-line="25099" />
-          <caret line="25134" selection-start-line="25134" selection-end-line="25134" />
-          <caret line="25169" selection-start-line="25169" selection-end-line="25169" />
-          <caret line="25204" selection-start-line="25204" selection-end-line="25204" />
-          <caret line="25239" selection-start-line="25239" selection-end-line="25239" />
-          <caret line="25274" selection-start-line="25274" selection-end-line="25274" />
-          <caret line="25309" selection-start-line="25309" selection-end-line="25309" />
-          <caret line="25344" selection-start-line="25344" selection-end-line="25344" />
-          <caret line="25379" selection-start-line="25379" selection-end-line="25379" />
-          <caret line="25414" selection-start-line="25414" selection-end-line="25414" />
-          <caret line="25449" selection-start-line="25449" selection-end-line="25449" />
-          <caret line="25484" selection-start-line="25484" selection-end-line="25484" />
-          <caret line="25519" selection-start-line="25519" selection-end-line="25519" />
-          <caret line="25554" selection-start-line="25554" selection-end-line="25554" />
-          <caret line="25589" selection-start-line="25589" selection-end-line="25589" />
-          <caret line="25624" selection-start-line="25624" selection-end-line="25624" />
-          <caret line="25659" selection-start-line="25659" selection-end-line="25659" />
-          <caret line="25694" selection-start-line="25694" selection-end-line="25694" />
-          <caret line="25729" selection-start-line="25729" selection-end-line="25729" />
-          <caret line="25764" selection-start-line="25764" selection-end-line="25764" />
-          <caret line="25799" selection-start-line="25799" selection-end-line="25799" />
-          <caret line="25834" selection-start-line="25834" selection-end-line="25834" />
-          <caret line="25869" selection-start-line="25869" selection-end-line="25869" />
-          <caret line="25904" selection-start-line="25904" selection-end-line="25904" />
-          <caret line="25939" selection-start-line="25939" selection-end-line="25939" />
-          <caret line="25974" selection-start-line="25974" selection-end-line="25974" />
-          <caret line="26009" selection-start-line="26009" selection-end-line="26009" />
-          <caret line="26044" selection-start-line="26044" selection-end-line="26044" />
-          <caret line="26079" selection-start-line="26079" selection-end-line="26079" />
-          <caret line="26114" selection-start-line="26114" selection-end-line="26114" />
-          <caret line="26149" selection-start-line="26149" selection-end-line="26149" />
-          <caret line="26184" selection-start-line="26184" selection-end-line="26184" />
-          <caret line="26219" selection-start-line="26219" selection-end-line="26219" />
-          <caret line="26254" selection-start-line="26254" selection-end-line="26254" />
-          <caret line="26289" selection-start-line="26289" selection-end-line="26289" />
-          <caret line="26324" selection-start-line="26324" selection-end-line="26324" />
-          <caret line="26359" selection-start-line="26359" selection-end-line="26359" />
-          <caret line="26394" selection-start-line="26394" selection-end-line="26394" />
-          <caret line="26429" selection-start-line="26429" selection-end-line="26429" />
-          <caret line="26464" selection-start-line="26464" selection-end-line="26464" />
-          <caret line="26499" selection-start-line="26499" selection-end-line="26499" />
-          <caret line="26534" selection-start-line="26534" selection-end-line="26534" />
-          <caret line="26569" selection-start-line="26569" selection-end-line="26569" />
-          <caret line="26604" selection-start-line="26604" selection-end-line="26604" />
-          <caret line="26639" selection-start-line="26639" selection-end-line="26639" />
-          <caret line="26674" selection-start-line="26674" selection-end-line="26674" />
-          <caret line="26709" selection-start-line="26709" selection-end-line="26709" />
-          <caret line="26744" selection-start-line="26744" selection-end-line="26744" />
-          <caret line="26779" selection-start-line="26779" selection-end-line="26779" />
-          <caret line="26814" selection-start-line="26814" selection-end-line="26814" />
-          <caret line="26849" selection-start-line="26849" selection-end-line="26849" />
-          <caret line="26884" selection-start-line="26884" selection-end-line="26884" />
-          <caret line="26919" selection-start-line="26919" selection-end-line="26919" />
-          <caret line="26954" selection-start-line="26954" selection-end-line="26954" />
-          <caret line="26989" selection-start-line="26989" selection-end-line="26989" />
-          <caret line="27024" selection-start-line="27024" selection-end-line="27024" />
-          <caret line="27059" selection-start-line="27059" selection-end-line="27059" />
-          <caret line="27094" selection-start-line="27094" selection-end-line="27094" />
-          <caret line="27129" selection-start-line="27129" selection-end-line="27129" />
-          <caret line="27164" selection-start-line="27164" selection-end-line="27164" />
-          <caret line="27199" selection-start-line="27199" selection-end-line="27199" />
-          <caret line="27234" selection-start-line="27234" selection-end-line="27234" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/DestroyAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding>
-            <element signature="e#196#234#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/plugins/snackbar/permissions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/plugins/snackbar/Snackbar.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/eventBus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/mixins/HasSnackbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginAltController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/auth/LoginForm.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="61" column="84" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/auth/RegisterForm.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1752">
-          <caret line="74" column="98" selection-start-line="74" selection-start-column="98" selection-end-line="74" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/ui/Navigation.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1466,13 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/alumnes.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -1531,9 +664,6 @@
     <entry file="file://$PROJECT_DIR$/app/Entitats.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Alumne.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_18_102718_activitats.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1562,16 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-          <folding>
-            <element signature="e#391#437#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1645,34 +765,174 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1304" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AlumnesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/AlumnesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="912">
-          <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
           <folding>
             <element signature="e#45#60#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/channels.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/console.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="29" column="86" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
+        <state relative-caret-position="242">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
           <folding>
             <element signature="e#7#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+          <folding>
+            <element signature="e#391#437#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-416">
+          <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="211" selection-start-line="8" selection-start-column="211" selection-end-line="8" selection-end-column="211" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="73" column="25" lean-forward="true" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AlumnesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+          <folding>
+            <element signature="e#40#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/alumnes.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="210" column="14" selection-start-line="210" selection-start-column="14" selection-end-line="210" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ShowAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ShowFormAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3096">
+          <caret line="129" column="20" lean-forward="true" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Alumne.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#23#53#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

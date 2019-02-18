@@ -4,10 +4,10 @@
     Alumnes
     @endsection
 @section('content')
-    <v-container>
+    <v-container fluid>
         <v-layout>
             <v-flex>
-                <alumnes class="m-5" :alumnes="{{$alumnes}}" uri="{{$uri}}"></alumnes>
+                <alumnes  :alumnes="{{$alumnes}}" :users="{{$users}}" uri="{{$uri}}"></alumnes>
             </v-flex>
         </v-layout>
     </v-container>

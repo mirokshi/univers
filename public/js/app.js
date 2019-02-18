@@ -2044,6 +2044,10 @@ __webpack_require__.r(__webpack_exports__);
       type: Array,
       required: true
     },
+    users: {
+      type: Array,
+      required: true
+    },
     uri: {
       type: String,
       required: true
@@ -2120,6 +2124,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   props: {
+    users: {
+      type: Array,
+      required: true
+    },
     uri: {
       type: String,
       required: true
@@ -2314,6 +2322,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     };
   },
   props: {
+    users: {
+      type: Array,
+      required: true
+    },
     uri: {
       type: String,
       default: '/api/v1/alumnes'
@@ -2611,6 +2623,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2625,10 +2638,14 @@ __webpack_require__.r(__webpack_exports__);
       course: '',
       loading: false,
       dataAlumnes: this.alumnes,
+      dataUsers: this.users,
       selected: '',
       headers: [{
         text: 'ID',
         value: 'id'
+      }, {
+        text: 'USER',
+        value: 'user_id'
       }, {
         text: 'NOM',
         value: 'name'
@@ -2669,6 +2686,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {
     alumnes: {
+      type: Array,
+      required: true
+    },
+    users: {
       type: Array,
       required: true
     },
@@ -2763,6 +2784,10 @@ __webpack_require__.r(__webpack_exports__);
   props: {
     alumne: {
       type: Object,
+      required: true
+    },
+    users: {
+      type: Array,
       required: true
     }
   }
@@ -2904,6 +2929,10 @@ __webpack_require__.r(__webpack_exports__);
   props: {
     alumne: {
       type: Object,
+      required: true
+    },
+    users: {
+      type: Array,
       required: true
     }
   }
@@ -7688,7 +7717,7 @@ exports.push([module.i, "@font-face {\n  font-family: 'Material Icons';\n  font-
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css?bdb9":
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css":
 /*!***********************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vuetify/dist/vuetify.min.css ***!
   \***********************************************************************************************************************************/
@@ -40100,9 +40129,14 @@ var render = function() {
   return _c(
     "span",
     [
-      _c("list-alumne", { attrs: { uri: _vm.uri, alumnes: _vm.dataAlumnes } }),
+      _c("list-alumne", {
+        attrs: { users: _vm.users, uri: _vm.uri, alumnes: _vm.dataAlumnes }
+      }),
       _vm._v(" "),
-      _c("create-alumne", { attrs: { uri: _vm.uri }, on: { created: _vm.add } })
+      _c("create-alumne", {
+        attrs: { users: _vm.users, uri: _vm.uri },
+        on: { created: _vm.add }
+      })
     ],
     1
   )
@@ -40227,7 +40261,7 @@ var render = function() {
                 "v-card-text",
                 [
                   _c("create-form-alumne", {
-                    attrs: { uri: _vm.uri },
+                    attrs: { users: _vm.users, uri: _vm.uri },
                     on: {
                       close: function($event) {
                         _vm.dialog = false
@@ -40819,6 +40853,8 @@ var render = function() {
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(alumne.id))]),
                         _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(alumne.user_name))]),
+                        _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(alumne.name))]),
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(alumne.surname))]),
@@ -40846,7 +40882,9 @@ var render = function() {
                         _c(
                           "td",
                           [
-                            _c("show-alumne", { attrs: { alumne: alumne } }),
+                            _c("show-alumne", {
+                              attrs: { users: _vm.users, alumne: alumne }
+                            }),
                             _vm._v(" "),
                             _c("destroy-alumne", {
                               attrs: { alumne: alumne, uri: _vm.uri },
@@ -40986,7 +41024,11 @@ var render = function() {
             [
               _c(
                 "v-card-text",
-                [_c("show-form-alumne", { attrs: { alumne: _vm.alumne } })],
+                [
+                  _c("show-form-alumne", {
+                    attrs: { users: _vm.users, alumne: _vm.alumne }
+                  })
+                ],
                 1
               )
             ],
@@ -81537,7 +81579,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./vuetify.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css?bdb9");
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./vuetify.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

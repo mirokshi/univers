@@ -14,7 +14,7 @@
         </v-toolbar>
             <v-card>
                 <v-card-text>
-                    <show-form-alumne :alumne="alumne"></show-form-alumne>
+                    <show-form-alumne :users="users" :alumne="alumne"></show-form-alumne>
                 </v-card-text>
             </v-card>
         </v-dialog>
@@ -43,7 +43,12 @@
             alumne:{
                 type:Object,
                 required:true
+            },
+            users: {
+                type: Array,
+                required: true
             }
+
         }
     }
 </script>

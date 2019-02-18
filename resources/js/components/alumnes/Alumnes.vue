@@ -1,7 +1,7 @@
 <template>
     <span>
-        <list-alumne :uri="uri" :alumnes="dataAlumnes"></list-alumne>
-        <create-alumne :uri="uri" @created="add"></create-alumne>
+        <list-alumne :users="users" :uri="uri" :alumnes="dataAlumnes"></list-alumne>
+        <create-alumne :users="users" :uri="uri" @created="add"></create-alumne>
     </span>
 </template>
 
@@ -22,6 +22,10 @@
         },
         props: {
             alumnes: {
+                type: Array,
+                required: true
+            },
+            users: {
                 type: Array,
                 required: true
             },

@@ -126,6 +126,10 @@
             alumne:{
                 type: Object,
                 required: true
+            },
+            users: {
+                type: Array,
+                required: true
             }
         }
     }

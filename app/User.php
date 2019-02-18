@@ -5,10 +5,11 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use HasApiTokens,Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -63,6 +64,11 @@ class User extends Authenticatable
     public function scopeAdmin($query)
     {
         return $query ->where('admin', true);
+    }
+
+    public function scopeRegular($query)
+    {
+        return $query ->where('admin', false);
     }
 
     public function map()

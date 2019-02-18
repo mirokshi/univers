@@ -20,7 +20,7 @@
             </v-toolbar>
             <v-card>
                 <v-card-text>
-                    <create-form-alumne :uri="uri" @close="dialog = false" @created="created"></create-form-alumne>
+                    <create-form-alumne :users="users" :uri="uri" @close="dialog = false" @created="created"></create-form-alumne>
                 </v-card-text>
             </v-card>
         </v-dialog>
@@ -52,6 +52,10 @@
             }
         },
         props:{
+            users: {
+                type: Array,
+                required: true
+            },
             uri:{
                 type: String,
                 required:true

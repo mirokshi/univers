@@ -51,6 +51,7 @@
                             ></v-checkbox>
                         </td>
                         <td>{{alumne.id}}</td>
+                        <td>{{alumne.user_name}}</td>
                         <td>{{alumne.name}}</td>
                         <td>{{alumne.surname}}</td>
                         <td>{{alumne.sex}}</td>
@@ -61,7 +62,7 @@
                         <td>{{alumne.school_course}}</td>
                         <td><span :title="alumne.created_at_formatted">{{alumne.created_at_human}}</span></td>
                         <td>
-                            <show-alumne :alumne="alumne"></show-alumne>
+                            <show-alumne :users="users" :alumne="alumne"></show-alumne>
                             <destroy-alumne :alumne="alumne" @removed="removeAlumne" :uri="uri"></destroy-alumne>
                         </td>
                     </tr>
@@ -87,9 +88,11 @@
                 course:'',
                 loading: false,
                 dataAlumnes: this.alumnes,
+                dataUsers: this.users,
                 selected:'',
                 headers :[
                     {text:'ID', value: 'id'},
+                    {text:'USER', value: 'user_id'},
                     {text:'NOM', value: 'name'},
                     {text:'COGNOMS', value: 'surname'},
                     {text:'SEXE', value: 'sex'},
@@ -111,6 +114,10 @@
             alumnes:{
                 type: Array,
                 required:true
+            },
+            users: {
+                type: Array,
+                required: true
             },
             uri:{
                 type: String,
