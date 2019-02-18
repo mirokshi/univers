@@ -112,5 +112,16 @@ if (!function_exists('create_example_simple_alumne')){
             'school' => 'Temple',
             'school_course' => '1r',
         ]);
+        $user =factory(User::class)->create();
+
+        Alumne::create([
+            'name' => 'Lorena',
+            'surname' => ' del Sol',
+            'age' => '6',
+            'school' => 'Temple',
+            'school_course' => '1r',
+            'user_id' => $user->id
+        ]);
+
     }
 }

@@ -40853,7 +40853,7 @@ var render = function() {
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(alumne.id))]),
                         _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(alumne.user_name))]),
+                        _c("td", [_vm._v(_vm._s(alumne.user_id))]),
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(alumne.name))]),
                         _vm._v(" "),

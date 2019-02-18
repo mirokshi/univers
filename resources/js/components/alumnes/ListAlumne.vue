@@ -51,7 +51,7 @@
                             ></v-checkbox>
                         </td>
                         <td>{{alumne.id}}</td>
-                        <td>{{alumne.user_name}}</td>
+                        <td>{{alumne.user_id}}</td>
                         <td>{{alumne.name}}</td>
                         <td>{{alumne.surname}}</td>
                         <td>{{alumne.sex}}</td>

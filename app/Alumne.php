@@ -15,12 +15,43 @@ class Alumne extends Model
         'created_at'
     ];
 
+    public function addActivitats($activitat)
+    {
+        try{
+            $this->activitats()->saveMany($activitat);
+        }catch (\Exception $e){
+
+        }
+    }
+
+    public function addActivitat($actvitat)
+    {
+
+        !is_int($actvitat) ?: $actvitat = Activitat::find($actvitat);
+        try {
+            $this->activitats()->save($actvitat);
+        }catch (\Exception $e){
+
+        }
+        return $this;
+    }
+
+    public function activitats()
+    {
+        return $this->belongsToMany(Activitat::class);
+    }
+
+
     public function assignUser(User $user)
     {
         $this->user()->associate($user);
         $this->save();
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function map()
     {

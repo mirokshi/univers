@@ -24,6 +24,7 @@ class Alumne extends Migration
             $table->text('school_course')->nullable();
             $table->text('sex')->nullable();
             $table->integer('phone')->nullable();
+            $table->unsignedInteger('user_id') ->nullable();
             $table->timestamps();
         });
     }

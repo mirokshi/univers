@@ -6,10 +6,11 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasApiTokens,Notifiable;
+    use HasApiTokens,Notifiable,HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -98,5 +99,62 @@ class User extends Authenticatable
             'online' => $this->online,
         ];
     }
+
+    public function alumnes()
+    {
+        return $this->hasMany(Alumne::class);
+    }
+
+    public function addAlumne($alumnes)
+    {
+        $this->alumnes()->save($alumnes);
+    }
+
+    public function addAlumnes($alumnes)
+    {
+        $this->alumnes()->saveMany($alumnes);
+    }
+
+    public function haveAlumne(Alumne $alumnes)
+    {
+        return $this->alumnes()->where('id',$alumnes->id)->first();
+    }
+
+    public function removeAlumne(Alumne $alumnes)
+    {
+        $alumnes = $this->haveAlumne($alumnes);
+        if(!is_null($alumnes)) {
+            return $alumnes->delete();
+        }
+        return false;
+    }
+
+    public function actvitat()
+    {
+        return $this->hasMany(Activitat::class);
+    }
+
+    public function addActvitat(Activitat $activitat){
+        $this->actvitat()->save($activitat);
+    }
+
+    public function addActvitats($tags){
+        $this->actvitat()->saveMany($tags);
+    }
+
+    public function haveActvitat(Activitat $activitat)
+    {
+        return $this->actvitat()->where('id',$activitat->id)->first();
+    }
+
+    public function removeActivitat(Activitat $activitat)
+    {
+        $activitat = $this->haveActvitat($activitat);
+        if(!is_null($activitat)) {
+            return $activitat->delete();
+        }
+        return false;
+    }
+
 
 }

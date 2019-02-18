@@ -15,6 +15,16 @@ class Activitat extends Model
         'created_at'
     ];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function assignUser(User $user)
+    {
+        $this->user()->associate($user);
+        $this->save();
+    }
+
     public function map()
     {
         return [
@@ -35,6 +45,20 @@ class Activitat extends Model
             'full_search' =>$this->full_search,
             ];
     }
+
+    public function addAlumne($alumne)
+    {
+        !is_int($alumne) ?: $alumne = Alumne::find($alumne);
+        $this->alumnes()->save($alumne);
+        return $this;
+    }
+
+    public function alumnes()
+    {
+        return $this->belongsToMany(Alumne::class);
+
+    }
+
         public function getFullSearchAttribute()
     {
 
