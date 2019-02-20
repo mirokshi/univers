@@ -1,7 +1,7 @@
 <template>
     <span>
         <v-toolbar color="red accent-2">
-      <v-toolbar-title class="white--text">Alumnes {{total}}</v-toolbar-title>
+      <v-toolbar-title class="white--text">Activitats {{total}}</v-toolbar-title>
       <v-spacer></v-spacer>
 
         <v-btn icon dark class="white--text">
@@ -27,12 +27,12 @@
             </v-card-title>
             <v-data-table
                 :headers="headers"
-                :items="dataAlumnes"
+                :items="dataActivitats"
                 :search="search"
                 no-result-text="No hay nigun registro"
                 :loading="loading"
                 no-data-text="hola"
-                rows-per-page-text="Alumnos per página"
+                rows-per-page-text="Alumnes per página"
                 :rows-per-page-items="[5,10,25,50,100,200,{'text':'Tots','value':-1}]"
                 :pagination.sync="pagination"
                 class="hidden-md-and-down"
@@ -41,28 +41,25 @@
                 item-key="id"
             >
                 <v-progress-linear slot="progess" color="blue" indeterminate></v-progress-linear>
-                <template slot="items" slot-scope="{item: alumne}">
+                <template slot="items" slot-scope="{item: activitat}">
                     <tr>
                         <td>
                             <v-checkbox
-                                :input-value="alumne.selected"
+                                :input-value="activitat.selected"
                                 primary
                                 hide-details
                             ></v-checkbox>
                         </td>
-                        <td>{{alumne.id}}</td>
-                        <td>{{alumne.name}}</td>
-                        <td>{{alumne.surname}}</td>
-                        <td>{{alumne.sex}}</td>
-                        <td>{{alumne.birthdate}}</td>
-                        <td>{{alumne.age}}</td>
-                        <td>{{alumne.school}}</td>
-                        <td>{{alumne.course}}</td>
-                        <td>{{alumne.school_course}}</td>
-                        <td><span :title="alumne.created_at_formatted">{{alumne.created_at_human}}</span></td>
+                        <td>{{activitat.id}}</td>
+                        <td>{{activitat.name}}</td>
+                        <td>{{activitat.name_activity}}</td>
+                        <td>{{activitat.date_start}}</td>
+                        <td>{{activitat.date_final}}</td>
+                        <td>{{activitat.course}}</td>
+                        <td><span :title="activitat.created_at_formatted">{{activitat.created_at_human}}</span></td>
                         <td>
-                            <show-alumne :users="users" :alumne="alumne"></show-alumne>
-                            <destroy-alumne :alumne="alumne" @removed="removeAlumne" :uri="uri"></destroy-alumne>
+                            <show-activitat :users="users" :activitat="activitat"></show-activitat>
+                            <destroy-activitat :activitat="activitat" @removed="removeActivitat" :uri="uri"></destroy-activitat>
                         </td>
                     </tr>
                 </template>
@@ -72,35 +69,31 @@
 </template>
 
 <script>
-    import ShowAlumne from "./ShowAlumne";
-    import DestroyAlumne from "./DestroyAlumne";
+    import ShowActivitat from "./ShowActivitat";
+    import DestroyActivitat from "./DestroyActivitat";
 
     export default {
-        name:'ListAlumne',
+        name: "ListActivitat",
         components:{
-          'show-alumne' :ShowAlumne,
-          'destroy-alumne':DestroyAlumne
+            'show-activitat' : ShowActivitat,
+            'destroy-activitat' :DestroyActivitat
         },
-        data(){
-            return {
-                search:'',
-                course:'',
+        data (){
+            return{
+                search :'',
                 loading: false,
-                dataAlumnes: this.alumnes,
+                dataActivitats: this.activitats,
                 dataUsers: this.users,
                 selected:'',
-                headers :[
-                    {text:'ID', value: 'id'},
-                    {text:'NOM', value: 'name'},
-                    {text:'COGNOMS', value: 'surname'},
-                    {text:'SEXE', value: 'sex'},
-                    {text:'DATA DE NAIXIMENT', value:'birthdate'},
-                    {text:'EDAT', value: 'age'},
-                    {text:'CENTRE EDUCATIU', value: 'school'},
-                    {text:'CURS', value:'course'},
-                    {text:'NIVELL', value: 'school_course'},
-                    {text:'CREAT', value:'created_at_timestamp'},
-                    {text:'ACCIONS',sorteable:false, value:'full_search'},
+                headers:[
+                    {text:'ID',value: 'id'},
+                    {text:'NOM',value: 'name'},
+                    {text:'NOM ACTIVITAT',value: 'name_activity'},
+                    {text:'DATA INICI',value: 'date_start'},
+                    {text:'DATA FINAL',value: 'date_final'},
+                    {text:'CURS',value: 'course'},
+                    {text:'CREAT',value: 'created_at_timestamp'},
+                    {text:'ACCIONS',sorteable: false,value: 'full_search'},
                 ],
                 pagination:{
                     rowsPerPage:25,
@@ -109,12 +102,12 @@
             }
         },
         props:{
-            alumnes:{
-                type: Array,
+            activitats:{
+                type:Array,
                 required:true
             },
-            users: {
-                type: Array,
+            users:{
+                type:Array,
                 required: true
             },
             uri:{
@@ -123,36 +116,33 @@
             }
         },
         watch:{
-            alumnes(newAlumne)
-            {
-                this.dataAlumnes = newAlumne
+            activitats(newActivitat){
+                this.dataActivitats = newActivitat
             }
         },
-
         methods:{
             refresh(message = true){
                 this.loading = true;
                 window.axios.get(this.uri).then(response => {
-                    this.dataAlumnes = response.data;
+                    this.dataActivitats = response.data;
                     this.loading = false;
-                    console.log('ok');
-                    if (message) this.$snackbar.showMessage('Alumnes actualizats correctament')
+                    console.log('OK');
+                    if (message) this.$snackbar.showMessage('Activitats actualizats correctament')
                 }).catch(error => {
                     console.log(error);
                     this.loading = false
                 })
             },
-            removeAlumne(alumne){
-                this.dataAlumnes.splice(this.dataAlumnes.indexOf(alumne),1)
+            removeActivitat(actvitat){
+                this.dataActivitats.splice(this.dataActivitats.indexOf(actvitat),1)
             }
         },
         computed:{
             total(){
-                return this.dataAlumnes.length
+                return this.dataActivitats.length
             }
         }
     }
-
 </script>
 
 <style scoped>

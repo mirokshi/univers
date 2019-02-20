@@ -24,6 +24,10 @@ import DestroyAlumne from './components/alumnes/DestroyAlumne.vue';
 
 /** ACTIVITATS* */
 import Activitats from './components/activitats/Activitats.vue';
+import ListActivitat from './components/activitats/ListActivitat.vue';
+import CreateActivitat from './components/activitats/CreateActivitat.vue';
+import CreateFormActivitat from "./components/activitats/CreateFormActivitat.vue";
+
 
 /** PLUGINS* */
 import permissions from './plugins/permissions';
@@ -61,5 +65,9 @@ window.Vue.component('destroy-alumne', DestroyAlumne);
 
 /** Activitat* */
 window.Vue.component('activitats', Activitats);
+window.Vue.component('list-activitat', ListActivitat);
+window.Vue.component('create-activitat', CreateActivitat);
+window.Vue.component('create-form-activitat',CreateFormActivitat)
+
 // eslint-disable-next-line no-unused-vars
 const app = new Vue(AppComponent);

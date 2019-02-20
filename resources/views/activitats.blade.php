@@ -7,7 +7,7 @@
     <v-container>
         <v-layout>
             <v-flex>
-                <activitats class="m-5" :activitats="{{$activitats}}" uri="{{$uri}}"></activitats>
+                <activitats :activitats="{{$activitats}}" :users="{{$users}}" uri="{{$uri}}"></activitats>
             </v-flex>
         </v-layout>
     </v-container>

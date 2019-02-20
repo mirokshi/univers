@@ -31,7 +31,7 @@ class ActivitatsController extends Controller
         $activitats->name_activity  = $request->name_activity;
         $activitats->date_start  = $request->date_start;
         $activitats->date_final  = $request->date_final;
-        $activitats->school_course  = $request->school_course;
+        $activitats->course  = $request->course;
         return $activitats->map();
     }
 
@@ -49,7 +49,7 @@ class ActivitatsController extends Controller
         $activitats->name_activity  = $request->name_activity;
         $activitats->date_start  = $request->date_start;
         $activitats->date_final  = $request->date_final;
-        $activitats->school_course  = $request->school_course;
+        $activitats->course  = $request->course;
         $activitats->save();
         return $activitats->map();
     }

@@ -19,7 +19,7 @@ class Activitats extends Migration
             $table->string('name_activity')->nullable();
             $table->string('date_start')->nullable();
             $table->string('date_final')->nullable();
-            $table->string('school_course')->nullable();
+            $table->string('course')->nullable();
             $table->timestamps();
         });
     }

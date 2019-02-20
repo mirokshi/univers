@@ -15,6 +15,6 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         create_primary_user();
         create_example_simple_alumne();
-
+        create_example_simple_activitat();
     }
 }
