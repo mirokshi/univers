@@ -40,7 +40,7 @@
                 v-model="selected"
                 item-key="id"
             >
-                <v-progress-linear slot="progess" color="blue" indeterminate></v-progress-linear>
+                <v-progress-linear slot="progress" color="blue" indeterminate></v-progress-linear>
                 <template slot="items" slot-scope="{item: alumne}">
                     <tr>
                         <td>

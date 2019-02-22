@@ -15,8 +15,7 @@ use App\Http\Controllers\ActivitatsController;
 use App\Http\Controllers\AlumnesController;
 use App\Http\Controllers\Auth\LoginAltController;
 use App\Http\Controllers\Auth\RegisterAltController;
-use App\Http\Controllers\EntitatsController;
-
+use App\Http\Controllers\UsersController;
 
 Auth::routes();
 
@@ -28,17 +27,18 @@ Route::get('/', function () {
     return view('layouts.welcome');
 });
 
-//Route::middleware(['auth'])->group(function() {
+Route::middleware(['auth'])->group(function() {
     Route::get('/alumnes', '\\'.AlumnesController::class.'@index');
-
-    Route::get('/entitats', '\\'.EntitatsController::class.'@index');
 
     Route::get('/activitats', '\\'.ActivitatsController::class.'@index');
 
-    Route::get('/sparklines', function () {
+    Route::get('/users', '\\'.UsersController::class.'@index');
+
+
+Route::get('/sparklines', function () {
         return view('sparklines');
     });
-//});
+});
 
 
 Route::get('/prueva', function () {

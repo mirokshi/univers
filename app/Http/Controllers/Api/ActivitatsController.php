@@ -32,6 +32,7 @@ class ActivitatsController extends Controller
         $activitats->date_start  = $request->date_start;
         $activitats->date_final  = $request->date_final;
         $activitats->course  = $request->course;
+        $activitats->save();
         return $activitats->map();
     }
 

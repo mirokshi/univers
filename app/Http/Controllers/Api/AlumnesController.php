@@ -37,6 +37,8 @@ class AlumnesController extends Controller
         $alumne->school_course = $request->school_course;
         $alumne->sex = $request->sex;
         $alumne->phone = $request->phone;
+        $alumne->user_id = $request->user_id;
+        $alumne->save();
         return $alumne->map();
     }
 
@@ -59,6 +61,7 @@ class AlumnesController extends Controller
         $alumne->school_course = $request->school_course;
         $alumne->sex = $request->sex;
         $alumne->phone = $request->phone;
+        $alumne->user_id = $request->user_id;
         $alumne->save();
         return $alumne->map();
     }

@@ -9,9 +9,11 @@ import Sparklines from './components/Sparklines.vue';
 import LoginForm from './components/auth/LoginForm.vue';
 import RegisterForm from './components/auth/RegisterForm.vue';
 
+/** PLUGINS* */
+import permissions from './plugins/permissions';
+import snackbar from './plugins/snackbar';
+import confirm from './plugins/confirm';
 
-/** ENTITATS * */
-import Entitats from './components/Entitats.vue';
 
 /** ALUMNES * */
 import ListAlumne from './components/alumnes/ListAlumne.vue';
@@ -26,13 +28,12 @@ import DestroyAlumne from './components/alumnes/DestroyAlumne.vue';
 import Activitats from './components/activitats/Activitats.vue';
 import ListActivitat from './components/activitats/ListActivitat.vue';
 import CreateActivitat from './components/activitats/CreateActivitat.vue';
-import CreateFormActivitat from "./components/activitats/CreateFormActivitat.vue";
+import CreateFormActivitat from './components/activitats/CreateFormActivitat.vue';
 
-
-/** PLUGINS* */
-import permissions from './plugins/permissions';
-import snackbar from './plugins/snackbar';
-import confirm from './plugins/confirm';
+/** USERS * */
+import Users from './components/users/Users.vue';
+import ListUser from './components/users/ListUser.vue';
+import ShowUser from './components/users/ShowUser.vue';
 
 
 // instalacion vuetify
@@ -52,7 +53,6 @@ window.Vue.component('navigation', Navigation);
 window.Vue.component('login-form', LoginForm);
 window.Vue.component('register-form', RegisterForm);
 
-window.Vue.component('entitats', Entitats);
 window.Vue.component('sparklines', Sparklines);
 /** Alumnes* */
 window.Vue.component('alumnes', Alumnes);
@@ -67,7 +67,14 @@ window.Vue.component('destroy-alumne', DestroyAlumne);
 window.Vue.component('activitats', Activitats);
 window.Vue.component('list-activitat', ListActivitat);
 window.Vue.component('create-activitat', CreateActivitat);
-window.Vue.component('create-form-activitat',CreateFormActivitat)
+window.Vue.component('create-form-activitat', CreateFormActivitat);
+
+
+/** Users * */
+window.Vue.component('users', Users);
+window.Vue.component('list-user', ListUser);
+window.Vue.component('show-user', ShowUser);
+
 
 // eslint-disable-next-line no-unused-vars
 const app = new Vue(AppComponent);

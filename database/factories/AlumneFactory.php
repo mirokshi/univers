@@ -14,7 +14,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(Alumne::class, function (Faker $faker) {
+$factory->define(App\Alumne::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'surname' => $faker->word,

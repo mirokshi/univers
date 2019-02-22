@@ -2,15 +2,18 @@
 
 namespace App;
 
+use App\Traits\FormattedDates;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Session;
+use Lab404\Impersonate\Models\Impersonate;
 use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasApiTokens,Notifiable,HasRoles;
+    use HasApiTokens,Notifiable,HasRoles, FormattedDates, Impersonate;
 
     /**
      * The attributes that are mass assignable.
@@ -61,6 +64,12 @@ class User extends Authenticatable
         return !$this->isSuperAdmin();
     }
 
+    public function impersonatedBy()
+    {
+        if ($this->isImpersonated()) return User::findOrFail(Session::get('impersonated_by'));
+        return null;
+    }
+
 
     public function scopeAdmin($query)
     {
@@ -78,12 +87,19 @@ class User extends Authenticatable
             'id' => $this->id,
             'name' => $this->name,
             'email' => $this->email,
-            'gravatar' => $this->gravatar,
             'admin' => (boolean)$this->admin,
             'roles' => $this->roles()->pluck('name')->unique()->toArray(),
             'permissions' => $this->getAllPermissions()->pluck('name')->unique()->toArray(),
             'hash_id' => $this->hash_id,
             'online' => $this->online,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
+            'created_at_formatted' => $this->created_at_formatted,
+            'updated_at_formatted' => $this->updated_at_formatted,
+            'created_at_human' => $this->created_at_human,
+            'updated_at_human' => $this->updated_at_human,
+            'created_at_timestamp' => $this->created_at_timestamp,
+            'updated_at_timestamp' => $this->updated_at_timestamp,
         ];
     }
 
@@ -93,7 +109,6 @@ class User extends Authenticatable
             'id' => $this->id,
             'name' => $this->name,
             'email' => $this->email,
-            'gravatar' => $this->gravatar,
             'admin' => (boolean) $this->admin,
             'hash_id' => $this->hash_id,
             'online' => $this->online,

@@ -1,10 +1,10 @@
 <template>
-    <span><h1>TODO DATA TABLE ENTITATS</h1></span>
+    <span>TODO</span>
 </template>
 
 <script>
     export default {
-        name: "Entitats"
+        name: "ShowUser"
     }
 </script>
 

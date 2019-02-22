@@ -5,12 +5,12 @@ namespace App\Http\Requests\Alumnes;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 
-class AlumneUpdate extends FormRequest
+class UserAlumneIndex extends FormRequest
 {
 
     public function authorize()
     {
-        return Auth::user()->can('alumnes.update');
+        return Auth::user()->can('user.alumnes.index');
     }
 
     public function rules()

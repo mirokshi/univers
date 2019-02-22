@@ -84,7 +84,7 @@
                         model: true,
                         children: [
                             { icon: 'child_care', text: 'Alumnes', url: '/alumnes' },
-                            { icon: 'domain', text: 'Entitats', url: '/entitats' },
+                            { icon: 'domain', text: 'Entitats', url: '/users' },
                             { icon: 'event_note', text: 'Activitats', url: '/activitats' },
                         ]
                     },
