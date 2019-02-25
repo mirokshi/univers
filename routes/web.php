@@ -27,7 +27,7 @@ Route::get('/', function () {
     return view('layouts.welcome');
 });
 
-Route::middleware(['auth'])->group(function() {
+//Route::middleware(['auth'])->group(function() {
     Route::get('/alumnes', '\\'.AlumnesController::class.'@index');
 
     Route::get('/activitats', '\\'.ActivitatsController::class.'@index');
@@ -38,7 +38,7 @@ Route::middleware(['auth'])->group(function() {
 Route::get('/sparklines', function () {
         return view('sparklines');
     });
-});
+//});
 
 
 Route::get('/prueva', function () {
