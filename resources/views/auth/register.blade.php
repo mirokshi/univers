@@ -1,6 +1,6 @@
-@extends('layouts.login')
+s@extends('layouts.login')
 @section('title')
-    Tasks  | Register
+  Register
 @endsection
 
 @section('content')

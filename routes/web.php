@@ -19,15 +19,12 @@ use App\Http\Controllers\UsersController;
 
 Auth::routes();
 
-//Route::post('login_alt','\\', LoginAltController::class.'@login');
-//Route::post('register_alt','\\',RegisterAltController::class.'@register');
-
 
 Route::get('/', function () {
     return view('layouts.welcome');
 });
 
-//Route::middleware(['auth'])->group(function() {
+Route::middleware(['auth'])->group(function() {
     Route::get('/alumnes', '\\'.AlumnesController::class.'@index');
 
     Route::get('/activitats', '\\'.ActivitatsController::class.'@index');
@@ -38,7 +35,7 @@ Route::get('/', function () {
 Route::get('/sparklines', function () {
         return view('sparklines');
     });
-//});
+});
 
 
 Route::get('/prueva', function () {
@@ -50,5 +47,8 @@ Route::get('/prueva', function () {
     }
     return $csv;
 
-
 });
+
+Route::post('login_alt', 'Auth\LoginAltController@login');
+Route::post('register_alt','Auth\RegisterAltController@register');
+

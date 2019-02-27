@@ -1,6 +1,6 @@
 @extends('layouts.login')
 @section('title')
-    Tasks  | Login
+     Login
 @endsection
 
 @section('content')

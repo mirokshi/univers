@@ -29,6 +29,7 @@ class AlumnesControllerTest extends TestCase
      */
     public function guest_user_cannot_index_alumnes()
     {
+
         $response = $this->get('/alumnes');
         $response->assertRedirect('login');
     }
@@ -49,14 +50,14 @@ class AlumnesControllerTest extends TestCase
     public function superadmin_can_index_alumnes()
     {
         create_example_simple_alumne();
-        $user  = $this->loginAsSuperAdmin();
-        $response = $this->get('/alumnes');
+        $this->loginAsSuperAdmin();
+        $response = $this->get('alumnes');
         $response->assertSuccessful();
         $response->assertViewIs('alumnes');
 
 
         $response->assertViewHas('alumnes',function ($alumnes){
-           return count($alumnes) === 8 &&
+           return count($alumnes) === 3 &&
            $alumnes[0]['name'] === 'Juan';
         });
 

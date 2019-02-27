@@ -19,7 +19,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-//Route::middleware('auth:api')->group(function() {
+Route::middleware('auth:api')->group(function() {
 
     Route::get('/v1/alumnes', '\\'.AlumnesController::class.'@index');
     Route::get('/v1/alumnes/{alumne}', '\\'.AlumnesController::class.'@show');
@@ -38,4 +38,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     Route::post('/v1/users', '\\'.UsersController::class.'@store');
     Route::delete('/v1/users/{user}', '\\'.UsersController::class.'@destroy');
     Route::put('/v1/users/{user}', '\\'.UsersController::class.'@update');
-//});
+});

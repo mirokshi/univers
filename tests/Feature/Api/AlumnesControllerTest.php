@@ -24,11 +24,12 @@ class AlumnesControllerTest extends TestCase
      */
     public function alumne_manager_can_show_a_alumne()
     {
+        $this->withoutExceptionHandling();
+
         $this->loginAsAlumnesManager('api');
         $alumne = factory(Alumne::class)->create();
 
-        $response = $this->json('GET','/api/v1/alumnes/' . $alumne->id);
-
+        $response = $this->json('GET','/api/v1/alumnes/'.$alumne->id);
         $result = json_decode($response->getContent());
         $response->assertSuccessful();
         $this->assertEquals($alumne->name, $result->name);
@@ -41,7 +42,7 @@ class AlumnesControllerTest extends TestCase
     public function superadmin_can_show_a_alumne()
     {
 
-        $this->loginAsAlumnesManager('api');
+        $this->loginAsSuperAdmin('api');
         $alumne = factory(Alumne::class)->create();
 
         $response = $this->json('GET','/api/v1/alumnes/' . $alumne->id);

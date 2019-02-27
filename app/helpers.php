@@ -267,14 +267,10 @@ if (!function_exists('create_primary_user')){
                 'email' => 'mirokshirojas@tortosa.cat',
                 'password' => bcrypt(env('PRIMARY_USER_PASSWORD', 'secret'))
             ]);
-            try{
 
                 $user->admin = true;
                 $user->save();
-                $user->assignRole('AlumnesManager');
-                $user->assignRole('ActivitatsManager');
-                //$user->assignRole('AlumnesManager');
-            }catch (Exception $e){}
+
 
         }
     }
