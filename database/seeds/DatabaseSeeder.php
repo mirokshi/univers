@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         initialize_roles();
         create_primary_user();
         create_example_alumnes();
-        create_example_simple_alumne();
         create_example_simple_activitat();
+        create_example_simple_alumne();
     }
 }

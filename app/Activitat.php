@@ -30,7 +30,6 @@ class Activitat extends Model
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'name_activity' => $this->name_activity,
             'date_start' => $this->date_start,
             'date_final' => $this->date_final,
             'course' => $this->course,
@@ -64,7 +63,7 @@ class Activitat extends Model
 
         //$username = optional($this->user)->name;
         //$useremail = optional($this->user)->email;
-        return "$this->id $this->name $this->name_activity $this->date_start $this->date_final $this->course";
+        return "$this->id $this->name  $this->date_start $this->date_final $this->course";
     }
 
 }

@@ -17,7 +17,6 @@ use Faker\Generator as Faker;
 $factory->define(Activitat::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
-        'name_activity' => $faker->word,
         'date_start' => $faker->date($format='d/m/Y'),
         'date_final' => $faker->date($format='d/m/Y'),
         'course' => $faker->word,

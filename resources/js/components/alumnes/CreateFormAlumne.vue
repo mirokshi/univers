@@ -211,7 +211,7 @@
             },
             uri:{
                 type:String,
-                default:'/api/v1/alumnes'
+                required: true
             }
         },
         methods:{

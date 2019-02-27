@@ -52,7 +52,6 @@
                         </td>
                         <td>{{activitat.id}}</td>
                         <td>{{activitat.name}}</td>
-                        <td>{{activitat.name_activity}}</td>
                         <td>{{activitat.date_start}}</td>
                         <td>{{activitat.date_final}}</td>
                         <td>{{activitat.course}}</td>
@@ -88,7 +87,6 @@
                 headers:[
                     {text:'ID',value: 'id'},
                     {text:'NOM',value: 'name'},
-                    {text:'NOM ACTIVITAT',value: 'name_activity'},
                     {text:'DATA INICI',value: 'date_start'},
                     {text:'DATA FINAL',value: 'date_final'},
                     {text:'CURS',value: 'course'},

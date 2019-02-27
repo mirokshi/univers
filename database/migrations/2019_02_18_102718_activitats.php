@@ -16,7 +16,6 @@ class Activitats extends Migration
         Schema::create('activitats', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('name_activity')->nullable();
             $table->string('date_start')->nullable();
             $table->string('date_final')->nullable();
             $table->string('course')->nullable();

@@ -2113,12 +2113,214 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuelidate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate */ "./node_modules/vuelidate/lib/index.js");
+/* harmony import */ var vuelidate__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 //
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "CreateFormActivitat"
+  mixins: [vuelidate__WEBPACK_IMPORTED_MODULE_0__["validationMixin"]],
+  validations: {
+    name: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    }
+  },
+  name: "CreateFormActivitat",
+  data: function data() {
+    return {
+      date: new Date().toISOString().substring(0, 10),
+      dateFormatted: this.formatDate(new Date().toISOString().substring(0, 10)),
+      date_start: false,
+      date_final: false,
+      name: '',
+      loading: false
+    };
+  },
+  props: {
+    users: {
+      type: Array,
+      required: true
+    },
+    uri: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    selectLoggedUser: function selectLoggedUser() {
+      if (window.laravel_user) {
+        this.user = this.users.find(function (user) {
+          return parseInt(user.id) === parseInt(window.laravel_user.id);
+        });
+      }
+    },
+    reset: function reset() {
+      this.name = '';
+    },
+    add: function add() {
+      var _this = this;
+
+      this.loading = true;
+      var activitat = {
+        'name': this.name,
+        'date_start': this.date_start,
+        'date_final': this.date_final
+      };
+      window.axios.post(this.uri, activitat).then(function (response) {
+        _this.$snackbar.showMessage('Activitat creat correctament');
+
+        _this.reset();
+
+        _this.$emit('created', response.data);
+
+        _this.loading = false;
+
+        _this.$emit('close');
+      }).catch(function (error) {
+        console.log(error);
+        console.log(error.data);
+
+        _this.$snackbar.showError(error.data);
+
+        _this.loading = false;
+      });
+    },
+    created: function created() {
+      this.selectLoggedUser();
+    },
+    formatDate: function formatDate(date) {
+      if (!date) return null;
+
+      var _date$split = date.split('-'),
+          _date$split2 = _slicedToArray(_date$split, 3),
+          year = _date$split2[0],
+          month = _date$split2[1],
+          day = _date$split2[2];
+
+      return "".concat(month, "/").concat(day, "/").concat(year);
+    },
+    parseDate: function parseDate(date) {
+      if (!date) return null;
+
+      var _date$split3 = date.split('/'),
+          _date$split4 = _slicedToArray(_date$split3, 3),
+          month = _date$split4[0],
+          day = _date$split4[1],
+          year = _date$split4[2];
+
+      return "".concat(year, "-").concat(month.padStart(2, '0'), "-").concat(day.padStart(2, '0'));
+    }
+  },
+  computed: {
+    nameErrors: function nameErrors() {
+      if (!this.$v.name.$dirty()) {
+        return errors;
+      } else {
+        !this.$v.name.required && errors.push('El nom del alumne  és obligatori.');
+      }
+
+      return errors;
+    },
+    computedDateFormatted: function computedDateFormatted() {
+      return this.formatDate(this.date);
+    }
+  },
+  watch: {
+    date: function date(val) {
+      this.dateFormatted = this.formatDate(this.date);
+    }
+  }
 });
 
 /***/ }),
@@ -2222,7 +2424,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2244,9 +2445,6 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         text: 'NOM',
         value: 'name'
-      }, {
-        text: 'NOM ACTIVITAT',
-        value: 'name_activity'
       }, {
         text: 'DATA INICI',
         value: 'date_start'
@@ -2657,7 +2855,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     },
     uri: {
       type: String,
-      default: '/api/v1/alumnes'
+      required: true
     }
   },
   methods: {
@@ -40802,7 +41000,253 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "span",
+    [
+      _c(
+        "v-form",
+        [
+          _c(
+            "v-container",
+            [
+              _c(
+                "div",
+                { staticClass: "headline font-weight-light grey--text" },
+                [_vm._v("DADES ACTIVITAT")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-layout",
+                { attrs: { row: "", wrap: "" } },
+                [
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", sm6: "" } },
+                    [
+                      _c("v-text-field", {
+                        attrs: {
+                          autofocus: "",
+                          label: "Nom",
+                          hint: "Nom de la activitat",
+                          placeholder: "Nom de la activitat",
+                          "error-messages": _vm.nameErrors
+                        },
+                        on: {
+                          input: function($event) {
+                            return _vm.$v.name.$touch()
+                          },
+                          blur: function($event) {
+                            return _vm.$v.name.$touch()
+                          }
+                        },
+                        model: {
+                          value: _vm.name,
+                          callback: function($$v) {
+                            _vm.name = $$v
+                          },
+                          expression: "name"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", sm6: "", md3: "" } },
+                    [
+                      _c(
+                        "v-menu",
+                        {
+                          ref: "date_start",
+                          attrs: {
+                            "close-on-content-click": false,
+                            "nudge-right": 40,
+                            lazy: "",
+                            transition: "scale-transition",
+                            "offset-y": "",
+                            "full-width": "",
+                            "max-width": "290px",
+                            "min-width": "290px"
+                          },
+                          model: {
+                            value: _vm.date_start,
+                            callback: function($$v) {
+                              _vm.date_start = $$v
+                            },
+                            expression: "date_start"
+                          }
+                        },
+                        [
+                          _c("v-text-field", {
+                            attrs: {
+                              slot: "activator",
+                              label: "Data naixement",
+                              hint: "MM/DD/YYYY format",
+                              "persistent-hint": ""
+                            },
+                            on: {
+                              blur: function($event) {
+                                _vm.date = _vm.parseDate(_vm.dateFormatted)
+                              }
+                            },
+                            slot: "activator",
+                            model: {
+                              value: _vm.dateFormatted,
+                              callback: function($$v) {
+                                _vm.dateFormatted = $$v
+                              },
+                              expression: "dateFormatted"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-date-picker", {
+                            attrs: { "no-title": "" },
+                            on: {
+                              input: function($event) {
+                                _vm.birthdate = false
+                              }
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", sm6: "", md3: "" } },
+                    [
+                      _c(
+                        "v-menu",
+                        {
+                          ref: "date_final",
+                          attrs: {
+                            "close-on-content-click": false,
+                            "nudge-right": 40,
+                            lazy: "",
+                            transition: "scale-transition",
+                            "offset-y": "",
+                            "full-width": "",
+                            "max-width": "290px",
+                            "min-width": "290px"
+                          },
+                          model: {
+                            value: _vm.date_final,
+                            callback: function($$v) {
+                              _vm.date_final = $$v
+                            },
+                            expression: "date_final"
+                          }
+                        },
+                        [
+                          _c("v-text-field", {
+                            attrs: {
+                              slot: "activator",
+                              label: "Data naixement",
+                              hint: "MM/DD/YYYY format",
+                              "persistent-hint": ""
+                            },
+                            on: {
+                              blur: function($event) {
+                                _vm.date = _vm.parseDate(_vm.dateFormatted)
+                              }
+                            },
+                            slot: "activator",
+                            model: {
+                              value: _vm.dateFormatted,
+                              callback: function($$v) {
+                                _vm.dateFormatted = $$v
+                              },
+                              expression: "dateFormatted"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-date-picker", {
+                            attrs: { "no-title": "" },
+                            on: {
+                              input: function($event) {
+                                _vm.birthdate = false
+                              }
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "text-xs-center" },
+            [
+              _c(
+                "v-btn",
+                {
+                  attrs: { color: "grey" },
+                  on: {
+                    click: function($event) {
+                      return _vm.$emit("close")
+                    }
+                  }
+                },
+                [
+                  _c("v-icon", { staticClass: "mr-1" }, [
+                    _vm._v("exit_to_app")
+                  ]),
+                  _vm._v("\n                SORTIR\n            ")
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  attrs: {
+                    color: "success",
+                    disabled: _vm.loading || _vm.$v.$invalid,
+                    loading: _vm.loading
+                  },
+                  on: { click: _vm.add }
+                },
+                [
+                  _c("v-icon", { staticClass: "mr-1" }, [_vm._v("save")]),
+                  _vm._v("\n                GUARDAR\n            ")
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -40982,8 +41426,6 @@ var render = function() {
                         _c("td", [_vm._v(_vm._s(activitat.id))]),
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(activitat.name))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(activitat.name_activity))]),
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(activitat.date_start))]),
                         _vm._v(" "),
