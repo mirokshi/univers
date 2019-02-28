@@ -88,7 +88,7 @@
                 loading: false,
                 dataAlumnes: this.alumnes,
                 dataUsers: this.users,
-                selected:'',
+                selected:[],
                 headers :[
                     {text:'ID', value: 'id'},
                     {text:'NOM', value: 'name'},

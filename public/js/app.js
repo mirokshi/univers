@@ -3165,7 +3165,7 @@ __webpack_require__.r(__webpack_exports__);
       loading: false,
       dataAlumnes: this.alumnes,
       dataUsers: this.users,
-      selected: '',
+      selected: [],
       headers: [{
         text: 'ID',
         value: 'id'

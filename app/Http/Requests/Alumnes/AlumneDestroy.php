@@ -10,8 +10,8 @@ class AlumneDestroy extends FormRequest
 
     public function authorize()
     {
-        //return true;
-        return Auth::user()->can('alumnes.destroy');
+        return true;
+        //return Auth::user()->can('alumnes.destroy');
     }
 
     public function rules()
