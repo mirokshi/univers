@@ -21,6 +21,12 @@ class Activitats extends Migration
             $table->string('course')->nullable();
             $table->timestamps();
         });
+        Schema::create('activitat_alumne',function (Blueprint $table){
+            $table->increments('id');
+            $table->unsignedInteger('alumne_id');
+            $table->unsignedInteger('activitat_id');
+            $table->index(['alumne_id','activitat_id']);
+        });
     }
 
     /**
@@ -31,5 +37,6 @@ class Activitats extends Migration
     public function down()
     {
         Schema::dropIfExists('activitats');
+        Schema::dropIfExists('activitat_alumne');
     }
 }

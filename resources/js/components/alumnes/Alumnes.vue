@@ -1,6 +1,6 @@
 <template>
     <span>
-        <list-alumne :users="users" :uri="uri" :alumnes="dataAlumnes"></list-alumne>
+        <list-alumne :users="users" :uri="uri" :alumnes="dataAlumnes" :activitats="activitats"></list-alumne>
         <create-alumne :users="users" :uri="uri" @created="add"></create-alumne>
     </span>
 </template>
@@ -24,6 +24,10 @@
             alumnes: {
                 type: Array,
                 required: true
+            },
+            activitats:{
+              type:Array,
+              required:true
             },
             users: {
                 type: Array,

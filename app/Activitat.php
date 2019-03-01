@@ -41,7 +41,6 @@ class Activitat extends Model
             'updated_at_human' => $this->updated_at_human,
             'created_at_timestamp' => $this->created_at_timestamp,
             'updated_at_timestamp' => $this->updated_at_timestamp,
-            'full_search' =>$this->full_search,
             ];
     }
 
@@ -56,14 +55,6 @@ class Activitat extends Model
     {
         return $this->belongsToMany(Alumne::class);
 
-    }
-
-        public function getFullSearchAttribute()
-    {
-
-        //$username = optional($this->user)->name;
-        //$useremail = optional($this->user)->email;
-        return "$this->id $this->name  $this->date_start $this->date_final $this->course";
     }
 
 }

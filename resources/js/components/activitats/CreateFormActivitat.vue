@@ -32,12 +32,12 @@
                               <v-text-field
                                   slot="activator"
                                   v-model="dateFormatted"
-                                  label="Data naixement"
-                                  hint="MM/DD/YYYY format"
+                                  label="Data inici"
+                                  hint="MM/DD/AAAA format"
                                   persistent-hint
                                   @blur="date = parseDate(dateFormatted)"
                               ></v-text-field>
-                              <v-date-picker v-model="date" no-title @input="birthdate = false"></v-date-picker>
+                              <v-date-picker v-model="date" no-title @input="date_start = false"></v-date-picker>
                           </v-menu>
                       </v-flex>
                      <v-flex xs12 sm6 md3>
@@ -56,12 +56,12 @@
                               <v-text-field
                                   slot="activator"
                                   v-model="dateFormatted"
-                                  label="Data naixement"
-                                  hint="MM/DD/YYYY format"
+                                  label="Data final"
+                                  hint="MM/DD/AAAA format"
                                   persistent-hint
                                   @blur="date = parseDate(dateFormatted)"
                               ></v-text-field>
-                              <v-date-picker v-model="date" no-title @input="birthdate = false"></v-date-picker>
+                              <v-date-picker v-model="date" no-title @input="date_final = false"></v-date-picker>
                           </v-menu>
                       </v-flex>
                 </v-layout>
@@ -91,8 +91,8 @@
         name: "CreateFormActivitat",
         data(){
             return{
-                date:new Date().toISOString().substring(0,10),
-                dateFormatted:this.formatDate(new Date().toISOString().substring(0,10)),
+                date: new Date().toISOString().substr(0, 10),
+                dateFormatted: this.formatDate(new Date().toISOString().substr(0, 10)),
                 date_start:false,
                 date_final:false,
                 name:'',
@@ -110,7 +110,7 @@
             }
         },
         methods: {
-            selectLoggedUser() {
+            selectLoggedUser () {
                 if (window.laravel_user) {
                     this.user = this.users.find((user) => {
                         return parseInt(user.id) === parseInt(window.laravel_user.id)
@@ -145,18 +145,19 @@
             },
             formatDate:function (date) {
                 if (!date) return null
-                const [year,month,day] = date.split('-')
+                const [year, month, day] = date.split('-')
                 return `${month}/${day}/${year}`
             },
             parseDate(date){
                 if (!date) return null
-                const [month,day,year] = date.split('/')
+                const [month, day, year] = date.split('/')
                 return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
             }
         },
         computed:{
             nameErrors(){
-                if (!this.$v.name.$dirty()){
+                const errors = []
+                if (!this.$v.name.$dirty){
                     return errors
                 }  else { !this.$v.name.required && errors.push('El nom del alumne  és obligatori.') }
                     return errors

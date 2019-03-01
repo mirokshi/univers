@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\ActivitatsController;
+use App\Http\Controllers\Api\AlumnesActivitats;
 use App\Http\Controllers\Api\AlumnesController;
 use App\Http\Controllers\Api\UsersController;
 use Illuminate\Http\Request;
@@ -38,4 +39,7 @@ Route::middleware('auth:api')->group(function() {
     Route::post('/v1/users', '\\'.UsersController::class.'@store');
     Route::delete('/v1/users/{user}', '\\'.UsersController::class.'@destroy');
     Route::put('/v1/users/{user}', '\\'.UsersController::class.'@update');
+
+    //AlumnesActvitats
+    Route::put('/v1/alumnes/{alumne}/activitats/','\\'.AlumnesActivitats::class.'@update');
 });

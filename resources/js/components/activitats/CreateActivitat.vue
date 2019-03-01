@@ -9,14 +9,6 @@
                 </v-btn>
                 <v-toolbar-title class="white--text">Crear Activitat </v-toolbar-title>
                 <v-spacer></v-spacer>
-                <v-btn color="white" flat @click="dialog = false ">
-                    <v-icon>exit_to_app</v-icon>
-                    SORTIR
-                </v-btn>
-                <v-btn color="white" flat @click="dialog = false">
-                    <v-icon class="mr-1">save</v-icon>
-                    GUARDAR
-                </v-btn>
             </v-toolbar>
             <v-card>
                 <v-card-text>

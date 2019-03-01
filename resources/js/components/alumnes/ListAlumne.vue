@@ -59,6 +59,9 @@
                         <td>{{alumne.school}}</td>
                         <td>{{alumne.course}}</td>
                         <td>{{alumne.school_course}}</td>
+                        <td>
+                            <alumnes-activitats :alumne="alumne" :alumne-activitats="alumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>
+                        </td>
                         <td><span :title="alumne.created_at_formatted">{{alumne.created_at_human}}</span></td>
                         <td>
                             <show-alumne :users="users" :alumne="alumne"></show-alumne>
@@ -74,12 +77,14 @@
 <script>
     import ShowAlumne from "./ShowAlumne";
     import DestroyAlumne from "./DestroyAlumne";
+    import AlumnesActivitats from "../AlumnesActivitats";
 
     export default {
         name:'ListAlumne',
         components:{
           'show-alumne' :ShowAlumne,
-          'destroy-alumne':DestroyAlumne
+          'destroy-alumne':DestroyAlumne,
+          'alumnes-activitats':AlumnesActivitats
         },
         data(){
             return {
@@ -99,6 +104,7 @@
                     {text:'CENTRE EDUCATIU', value: 'school'},
                     {text:'CURS', value:'course'},
                     {text:'NIVELL', value: 'school_course'},
+                    {text:'ACTIVITAS', value:'activitats'},
                     {text:'CREAT', value:'created_at_timestamp'},
                     {text:'ACCIONS',sorteable:false, value:'full_search'},
                 ],
@@ -112,6 +118,10 @@
             alumnes:{
                 type: Array,
                 required:true
+            },
+            activitats:{
+                type: Array,
+                required: true
             },
             users: {
                 type: Array,

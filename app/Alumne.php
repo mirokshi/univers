@@ -79,7 +79,7 @@ class Alumne extends Model
             'updated_at_timestamp' => $this->updated_at_timestamp,
             'user' => $this->user,
             'full_search' =>$this->full_search,
-            //'activitats' =>$this->activitats
+            'activitats' =>$this->activitats
 
         ];
     }

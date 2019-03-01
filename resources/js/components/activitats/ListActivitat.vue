@@ -36,20 +36,11 @@
                 :rows-per-page-items="[5,10,25,50,100,200,{'text':'Tots','value':-1}]"
                 :pagination.sync="pagination"
                 class="hidden-md-and-down"
-                select-all
-                v-model="selected"
-                item-key="id"
+
             >
                 <v-progress-linear slot="progess" color="blue" indeterminate></v-progress-linear>
                 <template slot="items" slot-scope="{item: activitat}">
                     <tr>
-                        <td>
-                            <v-checkbox
-                                :input-value="activitat.selected"
-                                primary
-                                hide-details
-                            ></v-checkbox>
-                        </td>
                         <td>{{activitat.id}}</td>
                         <td>{{activitat.name}}</td>
                         <td>{{activitat.date_start}}</td>
@@ -83,7 +74,6 @@
                 loading: false,
                 dataActivitats: this.activitats,
                 dataUsers: this.users,
-                selected:'',
                 headers:[
                     {text:'ID',value: 'id'},
                     {text:'NOM',value: 'name'},

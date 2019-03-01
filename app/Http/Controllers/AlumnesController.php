@@ -24,9 +24,9 @@ class AlumnesController extends Controller
         }
 
         $users=map_collection(User::all());
-        //$activitats = map_collection(Activitat::all());
-        //TODO ACTIVITATS
-     return view('alumnes',compact('alumnes','users', 'uri'));
+        $activitats = map_collection(Activitat::all());
+
+     return view('alumnes',compact('alumnes','users', 'uri','activitats'));
 
 
     }

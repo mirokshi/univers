@@ -39,12 +39,15 @@
                               full-width
                               max-width="290px"
                               min-width="290px"
+                              :error-messages="birthdateErrors"
+                              @input="$v.birthdate.$touch()"
+                              @blur="$v.birthdate.$touch()"
                           >
                               <v-text-field
                                   slot="activator"
                                   v-model="dateFormatted"
                                   label="Data naixement"
-                                  hint="MM/DD/YYYY format"
+                                  hint="MM/DD/AAAA format"
                                   persistent-hint
                                   @blur="date = parseDate(dateFormatted)"
                               ></v-text-field>
@@ -60,7 +63,14 @@
                         ></v-text-field>
                     </v-flex>
                     <v-flex xs12 sm6 md3>
-                        <v-radio-group row v-model="sex">
+                        <span class="subheading font-weight grey--text">Genere</span>
+                        <v-radio-group row
+                                       v-model="sex"
+
+                                       :error-messages="sexErrors"
+                                       @input="$v.sex.$touch()"
+                                       @blur="$v.sex.$touch()"
+                        >
                             <v-radio
                                 label="Home"
                                 color="blue"
@@ -79,6 +89,7 @@
                         </v-radio-group>
                     </v-flex>
                 </v-layout>
+                <v-divider></v-divider>
                 <div class="headline font-weight-light grey--text">CENTRE EDUCATIU</div>
                 <v-layout>
                     <v-flex xs12 sm6 >
@@ -104,6 +115,7 @@
                     <!--</v-flex>-->
 
                 </v-layout>
+                <v-divider></v-divider>
                 <div class="headline font-weight-light grey--text">ACTIVITAT</div>
                 <v-layout>
                     <v-flex>
@@ -127,13 +139,16 @@
 
 <script>
     import { validationMixin } from 'vuelidate'
-    import { required } from 'vuelidate/lib/validators'
+    import { required , minLength,maxLength} from 'vuelidate/lib/validators'
 
     export default {
         mixins:[validationMixin],
         validations:{
           name:{required},
           surname:{required},
+            sex:{required},
+            phone:{required, minLength: minLength(9) , maxLength: maxLength(9)},
+            birthdate:{required},
         },
         name: "CreateFormAlumne",
         data(){
@@ -203,7 +218,7 @@
                     'Altres',
                 ]
             }
-            },
+        },
         props:{
             users: {
                 type: Array,
@@ -284,6 +299,20 @@
                 if (!this.$v.name.$dirty) {
                     return errors
                 } else { !this.$v.name.required && errors.push('El cognom del alumne  és obligatori.') }
+                return errors
+            },
+            sexErrors(){
+                const errors = []
+                if(!this.$v.sex.$dirty){
+                    return errors
+                }else{ !this.$v.sex.required && errors.push('És obligatori marcar un gènere')}
+                return errors
+            },
+            birthdateErrors(){
+                const errors = []
+                if(!this.$v.birthdate.$dirty){
+                    return errors
+                }else{ !this.$v.birthdate.required && errors.push('És obligatori la data de naiximent')}
                 return errors
             },
             computedDateFormatted () {
