@@ -15,6 +15,7 @@ class Alumne extends Model
         'created_at'
     ];
 
+
     public function addActivitats($activitat)
     {
         try{
@@ -62,7 +63,7 @@ class Alumne extends Model
             'birthdate' => $this->birthdate,
             'age' => $this->age,
             'school' => $this->school,
-            'course' => $this->course,
+            'course' => $this->course= date('Y').'-'.(date('Y')+1),
             'school_course' => $this->school_course,
             'sex' => $this->sex,
             'phone' => $this->phone,

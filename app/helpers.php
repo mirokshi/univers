@@ -3,6 +3,7 @@
 use App\Activitat;
 use App\Alumne;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Gate;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
@@ -161,10 +162,10 @@ if (!function_exists('create_example_alumnes')) {
         Alumne::create([
             'name' => 'Jose',
             'surname' => 'Lopez',
-            'birthdate' => '22/10/2000',
-            'age' => '20',
+            'birthdate' => date('d').'/'.date('m').'/'.date('Y'),
+            'age' => 'dd',
             'school' => 'IES EBRE',
-            'course' => '2018-2019',
+            'course' => date('Y').'-'.(date('Y')+1),
             'school_course' => 'CFGS',
             'sex' => 'altre',
             'phone' => '777888999',
@@ -176,7 +177,7 @@ if (!function_exists('create_example_alumnes')) {
             'birthdate' => '22/10/2000',
             'age' => '23',
             'school' => 'IES EBRE',
-            'course' => '2018-2019',
+            'course' => date('Y').'-'.(date('Y')+1),
             'school_course' => 'CFGS',
             'sex' => 'home',
             'phone' => '616531219',
@@ -188,7 +189,7 @@ if (!function_exists('create_example_alumnes')) {
             'birthdate' => '22/10/2000',
             'age' => '20',
             'school' => 'IES EBRE',
-            'course' => '2018-2019',
+            'course' => date('Y').'-'.(date('Y')+1),
             'school_course' => 'CFGS',
             'sex' => 'dona',
             'phone' => '6564445152',
@@ -207,7 +208,7 @@ if (!function_exists('create_example_simple_alumne')) {
             'birthdate' => '22/10/2000',
             'age' => '19',
             'school' => 'IES EBRE',
-            'course' => '2018-2019',
+            'course' =>date('Y').'-'.(date('Y')+1),
             'school_course' => 'CFGS',
             'sex' => 'home',
             'phone' => '616531219'
@@ -218,7 +219,7 @@ if (!function_exists('create_example_simple_alumne')) {
             'birthdate' => '22/10/2000',
             'age' => '19',
             'school' => 'IES EBRE',
-            'course' => '2018-2019',
+            'course' =>date('Y').'-'.(date('Y')+1),
             'school_course' => 'CFGS',
             'sex' => 'dona',
             'phone' => '987654321'
@@ -229,7 +230,7 @@ if (!function_exists('create_example_simple_alumne')) {
             'birthdate' => '22/10/2000',
             'age' => '20',
             'school' => 'IES EBRE',
-            'course' => '2017-2018',
+            'course' =>date('Y').'-'.(date('Y')+1),
             'school_course' => 'CFGS',
             'sex' => 'home',
             'phone' => '123456789'
@@ -247,33 +248,48 @@ if (!function_exists('create_example_simple_activitat')) {
             'name' => 'Futbol',
             'date_start' => '22/10/2000',
             'date_final' => '22/10/2000',
-            'course' => '2018-2019',
+            'course' => date('Y').'-'.(date('Y')+1),
         ]);
         Activitat::create([
             'name' => 'Comedor',
             'date_start' => '22/10/2000',
             'date_final' => '22/10/2000',
-            'course' => '2018-2019',
+            'course' => date('Y').'-'.(date('Y')+1),
         ]);
         Activitat::create([
             'name' => 'Repaso',
             'date_start' => '22/10/2000',
             'date_final' => '22/10/2000',
-            'course' => '2017-2018',
+            'course' =>date('Y').'-'.(date('Y')+1),
         ]);
         Activitat::create([
             'name' => 'Natacion',
             'date_start' => '22/10/2000',
             'date_final' => '22/10/2000',
-            'course' => '2018-2019',
+            'course' =>date('Y').'-'.(date('Y')+1),
         ]);
         Activitat::create([
             'name' => 'Excursion',
             'date_start' => '22/10/2000',
             'date_final' => '22/10/2000',
-            'course' => '2018-2019',
+            'course' => date('Y').'-'.(date('Y')+1),
         ]);
 
     }
 }
 
+if (!function_exists('calculateYears')) {
+    function calculateYears($date1)
+    {
+
+            $d1 = $date1;
+            $carbon =  Carbon::now();
+            $d2 = $carbon;
+
+
+        $diff = $d2->diff($d1);
+
+        // Return years
+        return $diff->y;
+    }
+}

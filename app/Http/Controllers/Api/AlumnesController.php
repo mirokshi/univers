@@ -10,6 +10,7 @@ use App\Http\Requests\Alumnes\AlumneIndex;
 use App\Http\Requests\Alumnes\AlumneShow;
 use App\Http\Requests\Alumnes\AlumneStore;
 use App\Http\Requests\Alumnes\AlumneUpdate;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class AlumnesController extends Controller
@@ -31,9 +32,9 @@ class AlumnesController extends Controller
         $alumne->name  = $request->name;
         $alumne->surname = $request->surname;
         $alumne->birthdate = $request->birthdate;
-        $alumne->age = $request->age;
+        $alumne->age = $request->age = calculateYears($alumne->birthdate, Carbon::now());
         $alumne->school = $request->school;
-        $alumne->course = $request->course;
+        $alumne->course = $request->course =date('Y').'-'.(date('Y')+1);
         $alumne->school_course = $request->school_course;
         $alumne->sex = $request->sex;
         $alumne->phone = $request->phone;

@@ -14,14 +14,16 @@ use Faker\Generator as Faker;
 |
 */
 
+
+
 $factory->define(App\Alumne::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'surname' => $faker->word,
         'birthdate' => $faker->date($format='d/m/Y'),
-        'age'=>$faker->numberBetween($min=1, $max=99),
+        'age' =>"dd",
         'school'=>$faker->word,
-        'course'=> $faker->word,
+        'course'=> date('Y').'-'.(date('Y')+1),
         'school_course'=>$faker->word,
         'sex' => $faker->word,
         'phone'=>$faker->phoneNumber

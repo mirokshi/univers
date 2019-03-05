@@ -17,10 +17,10 @@ class Alumne extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('surname')->nullable();
-            $table->string('birthdate')->nullable();
+            $table->date('birthdate');
             $table->integer('age')->nullable();
             $table->text('school')->nullable();
-            $table->text('course')->nullable();
+            $table->text('course')->default(date('Y').'-'.(date('Y')+1));
             $table->text('school_course')->nullable();
             $table->text('sex')->nullable();
             $table->integer('phone')->nullable();
