@@ -44,6 +44,16 @@ class Activitat extends Model
             ];
     }
 
+    public function map_simple()
+    {
+        return[
+          'id'=>$this->id,
+          'name'=>$this->name,
+          'date_start'=>$this->date_start,
+            'date_final'=>$this->date_final
+
+        ];
+    }
     public function addAlumne($alumne)
     {
         !is_int($alumne) ?: $alumne = Alumne::find($alumne);

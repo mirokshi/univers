@@ -10,6 +10,7 @@
     <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="user" content="{{ logged_user() }}">
 
     <style>
         [v-cloak] > * { display:none; }
@@ -61,7 +62,7 @@
                             class="blue lighten-2 mt-5"
                             dark
                             large
-                            href="/alumnes"
+                            href="/home"
                         >
                             Comença
                         </v-btn>

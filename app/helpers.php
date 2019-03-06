@@ -9,6 +9,12 @@ use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 
+if (!function_exists('logged_user')){
+    function logged_user(){
+        return json_encode(optional(Auth::user())->map());
+    }
+}
+
 if (!function_exists('map_collection')){
     function  map_collection($collection){
         return $collection -> map(function ($item){
@@ -274,6 +280,33 @@ if (!function_exists('create_example_simple_activitat')) {
             'date_final' => '22/10/2000',
             'course' => date('Y').'-'.(date('Y')+1),
         ]);
+
+    }
+}
+
+if (!function_exists('create_example_alumnes_with_actvitats')){
+    function create_example_alumnes_with_actvitats(){
+        $user1 = factory(User::class)->create();
+
+        $alumne = Alumne::create([
+           'name'=> 'Paco',
+           'surname' => 'Diaz',
+           'user_id' => $user1->id
+        ]);
+
+        $activitat1 = Activitat::create([
+           'name' => 'A1'
+        ]);
+        $activitat2 = Activitat::create([
+           'name'=> 'A2'
+        ]);
+        $activitat3 = Activitat::create([
+            'name'=> 'A3'
+        ]);
+
+        $alumne->addActivitat($activitat1);
+        $alumne->addActivitat($activitat2);
+        $alumne->addActivitat($activitat3);
 
     }
 }

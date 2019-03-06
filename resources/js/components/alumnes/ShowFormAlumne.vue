@@ -6,53 +6,48 @@
                 <v-layout row wrap>
                     <v-flex>
                         <v-text-field
-                            autofocus
                             v-model="name"
                             label="Nom"
                             hint="El nom del alumne..."
                             placeholder="Nom del alumne"
-                            :readOnly="true"
+                            readonly
                         ></v-text-field>
                     </v-flex>
                     <v-flex>
                         <v-text-field
-                            autofocus
                             v-model="surname"
                             label="Cognoms"
                             hint="Els cognoms del alumne..."
                             placeholder="Cognoms del alumne"
-                            :readOnly="true"
+                            readonly
                         ></v-text-field>
                     </v-flex>
                     <v-flex>
                         <v-text-field
-                            autofocus
                             v-model="birthdate"
                             label="Data naiximente"
                             hint="MM/DD/YY format"
-                            :readOnly="true"
+                            readonly
                         ></v-text-field>
                     </v-flex>
                     <v-flex>
                         <v-text-field
-                            autofocus
                             v-model="phone"
                             label="Telefon"
                             hint="Telefon de contacte.."
-                            :readOnly="true"
+                            readonly
                         ></v-text-field>
                     </v-flex>
                     <v-flex>
                         <v-text-field
-                            autofocus
                             v-model="age"
                             label="Edat"
                             hint="Edat del alumne"
-                            :readOnly="true"
+                            readonly
                         ></v-text-field>
                     </v-flex>
                     <v-flex xs12 sm6 md3>
-                        <v-radio-group :disabled="true" row v-model="sex">
+                        <v-radio-group readonly row v-model="sex">
                             <v-radio
                                 label="Home"
                                 color="blue"
@@ -77,13 +72,13 @@
                         <v-combobox
                             v-model="school"
                             label="Escola"
-                            :readOnly="true"
+                            readonly
                         >
                         </v-combobox>
                     </v-flex>
                     <v-flex>
                         <v-combobox
-                            :readOnly="true"
+                            readonly
                             v-model="school_course"
                             label="Selcciona el nivell"
                         >
@@ -91,13 +86,18 @@
                     </v-flex>
                     <v-flex>
                         <v-text-field
-                            autofocus
                             v-model="course"
                             label="Curs escolar"
                             hint="Curs escolar"
                             placeholder="Curs escolar"
-                            :readOnly="true"
+                            readonly
                         ></v-text-field>
+                    </v-flex>
+                </v-layout>
+                 <div class="headline font-weight-light grey--text">ACTIVITATS</div>
+                <v-layout>
+                    <v-flex>
+                        <v-chip v-for="activitat in dataAlumne.activitats" :key="activitat.id" v-text="activitat.name"  color="#9575CD"></v-chip>
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -110,6 +110,8 @@
         name: "ShowFormAlumne",
         data(){
             return{
+                dataAlumneActivitats:this.alumneActivitats,
+                dataAlumne:this.alumne,
                 name:this.alumne.name,
                 surname:this.alumne.surname,
                 birthdate:this.alumne.birthdate,
@@ -128,6 +130,14 @@
                 required: true
             },
             users: {
+                type: Array,
+                required: true
+            },
+            activitats: {
+                type: Array,
+                required: true
+            },
+            alumneActivitats: {
                 type: Array,
                 required: true
             }

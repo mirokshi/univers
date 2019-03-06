@@ -42,4 +42,6 @@ Route::middleware('auth:api')->group(function() {
 
     //AlumnesActvitats
     Route::put('/v1/alumnes/{alumne}/activitats/','\\'.AlumnesActivitats::class.'@update');
+    Route::delete('/v1/alumnes/{alumne}/activitats/{activitat}','\\'.AlumnesActivitats::class.'@destroy');
+    Route::post('/v1/alumnes/{alumne}/activiats','\\'.AlumnesActivitats::class.'@store');
 });

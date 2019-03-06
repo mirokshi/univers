@@ -14,7 +14,7 @@
         </v-toolbar>
             <v-card>
                 <v-card-text>
-                    <show-form-alumne :users="users" :alumne="alumne"></show-form-alumne>
+                    <show-form-alumne :users="users" :alumne="alumne" :activitats="activitats"></show-form-alumne>
                 </v-card-text>
             </v-card>
         </v-dialog>
@@ -45,6 +45,10 @@
                 required:true
             },
             users: {
+                type: Array,
+                required: true
+            },
+            activitats: {
                 type: Array,
                 required: true
             }

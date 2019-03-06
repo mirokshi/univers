@@ -1,8 +1,7 @@
 <template>
     <span>
-         <v-chip v-for="activitat in alumneActivitats" :key="activitat.id" v-text="activitat.name"  @dblclick="removeActivitat"></v-chip>
+         <v-chip v-for="activitat in dataAlumne.activitats" :key="activitat.id" v-text="activitat.name"  @dblclick="removeActivitat(activitat)" color="#9575CD"></v-chip>
         <v-btn icon @click="dialog = true"><v-icon>add</v-icon></v-btn>
-        <v-btn icon @click="dialog = true"><v-icon>remove</v-icon></v-btn>
         <v-dialog v-model="dialog" width="500">
             <v-card>
                 <v-card-title>Afegir activitat a un alumne</v-card-title>
@@ -25,6 +24,7 @@
                                 :key="JSON.stringify(data.item)"
                                 class="v-chip--select-multi"
                                 @input="data.parent.selectItem(data.item)"
+                                color="#9575CD"
                             >
                                 {{ data.item.name }}
                             </v-chip>
@@ -40,6 +40,7 @@
                 </v-card-actions>
             </v-card>
         </v-dialog>
+
     </span>
 </template>
 <script>
@@ -50,7 +51,8 @@
                 dialog: false,
                 loading: false,
                 selectedActivitats: [],
-                dataAlumneActivitats: this.alumneActivitats
+                dataAlumneActivitats: this.alumneActivitats,
+                dataAlumne:this.alumne
             }
         },
         props: {
@@ -80,33 +82,77 @@
                     }
                 }
             },
-            removeActivitat () {
-                // TODO ASYNC PRIMER EXECUTAR UN CONFIRM
-                console.log('TODO REMOVE TAG')
-                window.axios.delete('api/v1/alumnes/' + this.alumne.id + '/activitats/' + this.activitat).then(response => {
-                    this.$snackbar.showMessage('Etiqueta eliminada correctamente')
-                }).catch(error => {
-                    this.$snackbar.showError(error)
-                })
-            },
             addActivitat () {
                 // pluck collection Laravel
-                //   console.log(this.selectedActivitats)
-                this.loading = true
-                window.axios.put('/api/v1/alumnes/' + this.alumne.id + '/activitats/', {
-                    activitats: this.selectedActivitats.map((activitat) => {
-                        if (activitat.id) return activitat.id
-                        else return activitat.name
-                    })
-                }).then(response => {
-                    this.$snackbar.showMessage('Etiqueta agregada correctamente')
-                    this.dialog = false
-                    this.loading = false
-                    this.$emit('change', this.selectedActivitats)
-                }).catch(error => {
-                    this.$snackbar.showError(error)
+                  console.log(this.selectedActivitats)
+                let ids = []
+                this.selectedActivitats.map((activitat)=>{
+                    if (activitat.id){
+                        this.alumneActivitats.map((actividad)=>{
+                            if (actividad.id === activitat.id){
+                                ids.push(activitat)
+                            }
+                        })
+                    } else {
+                        this.alumneActivitats.map((actividad)=>{
+                            if (actividad.name === activitat.name){
+                                ids.push(activitat)
+                            }
+                        })
+                    }
                 })
-            }
+                for (var id in ids){
+                    this.selectedActivitats = this.selectedActivitats.filter(function (e) {
+                        return e!==ids[id]
+                    })
+                }
+                this.loading = true
+                window.axios.put('/api/v1/alumnes/'+this.alumne.id+'/activitats',{
+                    activitats: this.selectedActivitats.map((activitat)=>{
+                        if (activitat.id){
+                            return activitat.id
+                        } else return activitat.name
+                    })
+                }).then(response =>{
+                    this.$snackbar.showMessage('Actvitat/s afegida/es correctament')
+                    this.dialog=false
+                    this.loading = false
+                    this.$emit('change',this.selectedActivitats)
+                }).catch(()=>{
+                    this.$snackbar.showError('Error, seleccioni o crei una actvitat no existent ja en el alumne')
+                    this.loading = false
+                })
+
+            },
+            async removeActivitat (activitat) {
+                let result
+                if ((activitat == null || this.alumne.activitats == null)){
+                    this.$snackbar.showError('No hi ha activitats a esborrar')
+                }else {
+                    result = await this.$confirm('Les activitats esborrades no es poden recuperar',
+                        {
+                            title: 'Esteu segurs?',
+                            buttonTrueText: 'Eliminiar',
+                            buttonFalseText: 'Cancel·lar',
+                            color: 'blue'
+                        })
+                }
+                if (result) {
+                    console.log('TODO REMOVE TAG')
+                    this.removing = true
+                    window.axios.delete('api/v1/alumnes/' + this.alumne.id + '/activitats/' + activitat.id).then((response) => {
+                        console.log(activitat)
+                        this.$snackbar.showMessage('Activitat eliminada correctament')
+                        this.$emit('removed')
+                        this.removing = false
+                    }).catch(error => {
+                        this.$snackbar.showError(error.message)
+                        this.removing = false
+
+                    })
+                    this.selectedActivitats = null
+                }
+            },
         }
     }
 </script>

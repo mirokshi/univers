@@ -1766,6 +1766,226 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AlumnesActivitats.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/AlumnesActivitats.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'AlumnesActivitats',
+  data: function data() {
+    return {
+      dialog: false,
+      loading: false,
+      selectedActivitats: [],
+      dataAlumneActivitats: this.alumneActivitats,
+      dataAlumne: this.alumne
+    };
+  },
+  props: {
+    alumne: {
+      type: Object
+    },
+    activitats: {
+      type: Array,
+      required: true
+    },
+    alumneActivitats: {
+      type: Array,
+      required: true
+    }
+  },
+  watch: {
+    alumneActivitats: function alumneActivitats(_alumneActivitats) {
+      this.dataAlumneActivitats = _alumneActivitats;
+    }
+  },
+  methods: {
+    formatActivitat: function formatActivitat() {
+      var value = this.selectedActivitats[this.selectedActivitats.length - 1];
+
+      if (typeof value === 'string') {
+        this.selectedActivitats[this.selectedActivitats.length - 1] = {
+          'name': this.selectedActivitats[this.selectedActivitats.length - 1]
+        };
+      }
+    },
+    addActivitat: function addActivitat() {
+      var _this = this;
+
+      // pluck collection Laravel
+      console.log(this.selectedActivitats);
+      var ids = [];
+      this.selectedActivitats.map(function (activitat) {
+        if (activitat.id) {
+          _this.alumneActivitats.map(function (actividad) {
+            if (actividad.id === activitat.id) {
+              ids.push(activitat);
+            }
+          });
+        } else {
+          _this.alumneActivitats.map(function (actividad) {
+            if (actividad.name === activitat.name) {
+              ids.push(activitat);
+            }
+          });
+        }
+      });
+
+      for (var id in ids) {
+        this.selectedActivitats = this.selectedActivitats.filter(function (e) {
+          return e !== ids[id];
+        });
+      }
+
+      this.loading = true;
+      window.axios.put('/api/v1/alumnes/' + this.alumne.id + '/activitats', {
+        activitats: this.selectedActivitats.map(function (activitat) {
+          if (activitat.id) {
+            return activitat.id;
+          } else return activitat.name;
+        })
+      }).then(function (response) {
+        _this.$snackbar.showMessage('Actvitat/s afegida/es correctament');
+
+        _this.dialog = false;
+        _this.loading = false;
+
+        _this.$emit('change', _this.selectedActivitats);
+      }).catch(function () {
+        _this.$snackbar.showError('Error, seleccioni o crei una actvitat no existent ja en el alumne');
+
+        _this.loading = false;
+      });
+    },
+    removeActivitat: function () {
+      var _removeActivitat = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(activitat) {
+        var _this2 = this;
+
+        var result;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (!(activitat == null || this.alumne.activitats == null)) {
+                  _context.next = 4;
+                  break;
+                }
+
+                this.$snackbar.showError('No hi ha activitats a esborrar');
+                _context.next = 7;
+                break;
+
+              case 4:
+                _context.next = 6;
+                return this.$confirm('Les activitats esborrades no es poden recuperar', {
+                  title: 'Esteu segurs?',
+                  buttonTrueText: 'Eliminiar',
+                  buttonFalseText: 'Cancel·lar',
+                  color: 'blue'
+                });
+
+              case 6:
+                result = _context.sent;
+
+              case 7:
+                if (result) {
+                  console.log('TODO REMOVE TAG');
+                  this.removing = true;
+                  window.axios.delete('api/v1/alumnes/' + this.alumne.id + '/activitats/' + activitat.id).then(function (response) {
+                    console.log(activitat);
+
+                    _this2.$snackbar.showMessage('Activitat eliminada correctament');
+
+                    _this2.$emit('removed');
+
+                    _this2.removing = false;
+                  }).catch(function (error) {
+                    _this2.$snackbar.showError(error.message);
+
+                    _this2.removing = false;
+                  });
+                  this.selectedActivitats = null;
+                }
+
+              case 8:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function removeActivitat(_x) {
+        return _removeActivitat.apply(this, arguments);
+      }
+
+      return removeActivitat;
+    }()
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/App.vue?vue&type=script&lang=js& ***!
@@ -2066,14 +2286,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CreateActivitat",
@@ -2219,8 +2431,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
   name: "CreateFormActivitat",
   data: function data() {
     return {
-      date: new Date().toISOString().substring(0, 10),
-      dateFormatted: this.formatDate(new Date().toISOString().substring(0, 10)),
+      date: new Date().toISOString().substr(0, 10),
+      dateFormatted: this.formatDate(new Date().toISOString().substr(0, 10)),
       date_start: false,
       date_final: false,
       name: '',
@@ -2304,7 +2516,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
   },
   computed: {
     nameErrors: function nameErrors() {
-      if (!this.$v.name.$dirty()) {
+      var errors = [];
+
+      if (!this.$v.name.$dirty) {
         return errors;
       } else {
         !this.$v.name.required && errors.push('El nom del alumne  és obligatori.');
@@ -2334,12 +2548,95 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
 //
 //
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "DestroyActivitat"
+  name: "DestroyActivitat",
+  data: function data() {
+    return {
+      removing: false
+    };
+  },
+  props: {
+    activitat: {
+      type: Object,
+      required: true
+    },
+    uri: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    destroy: function () {
+      var _destroy = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(activitat) {
+        var _this = this;
+
+        var result;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return this.$confirm('Els activitats esborrats ja no es podran recuperar', {
+                  title: 'Esta seguro?',
+                  buttonTrueText: 'Eliminar',
+                  buttonFalseText: 'Cancelar',
+                  color: 'error'
+                });
+
+              case 2:
+                result = _context.sent;
+
+                if (result) {
+                  this.removing = true;
+                  window.axios.delete(this.uri + activitat.id).then(function () {
+                    _this.$snackbar.showMessage("S'ha esborrat correctament el activitat");
+
+                    _this.$emit('removed', activitat);
+
+                    _this.removing = false;
+                    console.log('OK');
+                  }).catch(function (error) {
+                    _this.$snackbar.showError(error.message);
+
+                    _this.removing = false;
+                    console.log(error);
+                  });
+                }
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function destroy(_x) {
+        return _destroy.apply(this, arguments);
+      }
+
+      return destroy;
+    }()
+  }
 });
 
 /***/ }),
@@ -2415,15 +2712,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2438,7 +2726,6 @@ __webpack_require__.r(__webpack_exports__);
       loading: false,
       dataActivitats: this.activitats,
       dataUsers: this.users,
-      selected: '',
       headers: [{
         text: 'ID',
         value: 'id'
@@ -2563,11 +2850,17 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      dataAlumnes: this.alumnes
+      dataAlumnes: this.alumnes,
+      dataActivitats: this.activitats,
+      dataAlumneActivitats: this.alumneActivitats
     };
   },
   props: {
     alumnes: {
+      type: Array,
+      required: true
+    },
+    activitats: {
       type: Array,
       required: true
     },
@@ -2577,6 +2870,10 @@ __webpack_require__.r(__webpack_exports__);
     },
     uri: {
       type: String,
+      required: true
+    },
+    alumneActivitats: {
+      type: Array,
       required: true
     }
   },
@@ -2599,14 +2896,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CreateFormAlumne__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CreateFormAlumne */ "./resources/js/components/alumnes/CreateFormAlumne.vue");
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2817,6 +3106,18 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2826,6 +3127,17 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
     },
     surname: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    },
+    sex: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    },
+    phone: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"],
+      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["minLength"])(9),
+      maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["maxLength"])(9)
+    },
+    birthdate: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
     }
   },
@@ -2947,6 +3259,28 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         return errors;
       } else {
         !this.$v.name.required && errors.push('El cognom del alumne  és obligatori.');
+      }
+
+      return errors;
+    },
+    sexErrors: function sexErrors() {
+      var errors = [];
+
+      if (!this.$v.sex.$dirty) {
+        return errors;
+      } else {
+        !this.$v.sex.required && errors.push('És obligatori marcar un gènere');
+      }
+
+      return errors;
+    },
+    birthdateErrors: function birthdateErrors() {
+      var errors = [];
+
+      if (!this.$v.birthdate.$dirty) {
+        return errors;
+      } else {
+        !this.$v.birthdate.required && errors.push('És obligatori la data de naiximent');
       }
 
       return errors;
@@ -3077,6 +3411,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ShowAlumne__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ShowAlumne */ "./resources/js/components/alumnes/ShowAlumne.vue");
 /* harmony import */ var _DestroyAlumne__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DestroyAlumne */ "./resources/js/components/alumnes/DestroyAlumne.vue");
+/* harmony import */ var _AlumnesActivitats__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AlumnesActivitats */ "./resources/js/components/AlumnesActivitats.vue");
 //
 //
 //
@@ -3150,13 +3485,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'ListAlumne',
   components: {
     'show-alumne': _ShowAlumne__WEBPACK_IMPORTED_MODULE_0__["default"],
-    'destroy-alumne': _DestroyAlumne__WEBPACK_IMPORTED_MODULE_1__["default"]
+    'destroy-alumne': _DestroyAlumne__WEBPACK_IMPORTED_MODULE_1__["default"],
+    'alumnes-activitats': _AlumnesActivitats__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
@@ -3194,6 +3534,9 @@ __webpack_require__.r(__webpack_exports__);
         text: 'NIVELL',
         value: 'school_course'
       }, {
+        text: 'ACTIVITAS',
+        value: 'activitats'
+      }, {
         text: 'CREAT',
         value: 'created_at_timestamp'
       }, {
@@ -3212,12 +3555,20 @@ __webpack_require__.r(__webpack_exports__);
       type: Array,
       required: true
     },
+    activitats: {
+      type: Array,
+      required: true
+    },
     users: {
       type: Array,
       required: true
     },
     uri: {
       type: String,
+      required: true
+    },
+    alumneActivitats: {
+      type: Array,
       required: true
     }
   },
@@ -3310,6 +3661,14 @@ __webpack_require__.r(__webpack_exports__);
       required: true
     },
     users: {
+      type: Array,
+      required: true
+    },
+    activitats: {
+      type: Array,
+      required: true
+    },
+    alumneActivitats: {
       type: Array,
       required: true
     }
@@ -3438,6 +3797,8 @@ __webpack_require__.r(__webpack_exports__);
   name: "ShowFormAlumne",
   data: function data() {
     return {
+      dataAlumneActivitats: this.alumneActivitats,
+      dataAlumne: this.alumne,
       name: this.alumne.name,
       surname: this.alumne.surname,
       birthdate: this.alumne.birthdate,
@@ -3455,6 +3816,14 @@ __webpack_require__.r(__webpack_exports__);
       required: true
     },
     users: {
+      type: Array,
+      required: true
+    },
+    activitats: {
+      type: Array,
+      required: true
+    },
+    alumneActivitats: {
       type: Array,
       required: true
     }
@@ -40527,6 +40896,178 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AlumnesActivitats.vue?vue&type=template&id=e083fe18&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/AlumnesActivitats.vue?vue&type=template&id=e083fe18& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "span",
+    [
+      _vm._l(_vm.dataAlumne.activitats, function(activitat) {
+        return _c("v-chip", {
+          key: activitat.id,
+          attrs: { color: "#9575CD" },
+          domProps: { textContent: _vm._s(activitat.name) },
+          on: {
+            dblclick: function($event) {
+              return _vm.removeActivitat(activitat)
+            }
+          }
+        })
+      }),
+      _vm._v(" "),
+      _c(
+        "v-btn",
+        {
+          attrs: { icon: "" },
+          on: {
+            click: function($event) {
+              _vm.dialog = true
+            }
+          }
+        },
+        [_c("v-icon", [_vm._v("add")])],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-dialog",
+        {
+          attrs: { width: "500" },
+          model: {
+            value: _vm.dialog,
+            callback: function($$v) {
+              _vm.dialog = $$v
+            },
+            expression: "dialog"
+          }
+        },
+        [
+          _c(
+            "v-card",
+            [
+              _c("v-card-title", [_vm._v("Afegir activitat a un alumne")]),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
+                [
+                  _c("v-combobox", {
+                    attrs: {
+                      items: _vm.activitats,
+                      multiple: "",
+                      chips: "",
+                      "item-text": "name"
+                    },
+                    on: { change: _vm.formatActivitat },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "selection",
+                        fn: function(data) {
+                          return [
+                            _c(
+                              "v-chip",
+                              {
+                                key: JSON.stringify(data.item),
+                                staticClass: "v-chip--select-multi",
+                                attrs: {
+                                  selected: data.selected,
+                                  disabled: data.disabled,
+                                  color: "#9575CD"
+                                },
+                                on: {
+                                  input: function($event) {
+                                    return data.parent.selectItem(data.item)
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                            " +
+                                    _vm._s(data.item.name) +
+                                    "\n                        "
+                                )
+                              ]
+                            )
+                          ]
+                        }
+                      }
+                    ]),
+                    model: {
+                      value: _vm.selectedActivitats,
+                      callback: function($$v) {
+                        _vm.selectedActivitats = $$v
+                      },
+                      expression: "selectedActivitats"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("v-divider"),
+              _vm._v(" "),
+              _c(
+                "v-card-actions",
+                [
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { flat: "" },
+                      on: {
+                        click: function($event) {
+                          _vm.dialog = false
+                        }
+                      }
+                    },
+                    [_vm._v("CANCELAR")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: {
+                        color: "grey darken-3",
+                        flat: "",
+                        loading: _vm.loading,
+                        disabled: _vm.loading
+                      },
+                      on: { click: _vm.addActivitat }
+                    },
+                    [_vm._v("AÑADIR")]
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
@@ -40896,41 +41437,7 @@ var render = function() {
                 _vm._v("Crear Activitat ")
               ]),
               _vm._v(" "),
-              _c("v-spacer"),
-              _vm._v(" "),
-              _c(
-                "v-btn",
-                {
-                  attrs: { color: "white", flat: "" },
-                  on: {
-                    click: function($event) {
-                      _vm.dialog = false
-                    }
-                  }
-                },
-                [
-                  _c("v-icon", [_vm._v("exit_to_app")]),
-                  _vm._v("\n                SORTIR\n            ")
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-btn",
-                {
-                  attrs: { color: "white", flat: "" },
-                  on: {
-                    click: function($event) {
-                      _vm.dialog = false
-                    }
-                  }
-                },
-                [
-                  _c("v-icon", { staticClass: "mr-1" }, [_vm._v("save")]),
-                  _vm._v("\n                GUARDAR\n            ")
-                ],
-                1
-              )
+              _c("v-spacer")
             ],
             1
           ),
@@ -41081,8 +41588,8 @@ var render = function() {
                           _c("v-text-field", {
                             attrs: {
                               slot: "activator",
-                              label: "Data naixement",
-                              hint: "MM/DD/YYYY format",
+                              label: "Data inici",
+                              hint: "MM/DD/AAAA format",
                               "persistent-hint": ""
                             },
                             on: {
@@ -41104,7 +41611,7 @@ var render = function() {
                             attrs: { "no-title": "" },
                             on: {
                               input: function($event) {
-                                _vm.birthdate = false
+                                _vm.date_start = false
                               }
                             },
                             model: {
@@ -41152,8 +41659,8 @@ var render = function() {
                           _c("v-text-field", {
                             attrs: {
                               slot: "activator",
-                              label: "Data naixement",
-                              hint: "MM/DD/YYYY format",
+                              label: "Data final",
+                              hint: "MM/DD/AAAA format",
                               "persistent-hint": ""
                             },
                             on: {
@@ -41175,7 +41682,7 @@ var render = function() {
                             attrs: { "no-title": "" },
                             on: {
                               input: function($event) {
-                                _vm.birthdate = false
+                                _vm.date_final = false
                               }
                             },
                             model: {
@@ -41270,7 +41777,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "v-btn",
+    {
+      attrs: {
+        icon: "",
+        color: "error",
+        flat: "",
+        title: "Eliminar una activitat",
+        loading: _vm.removing,
+        disabled: _vm.removing
+      },
+      on: {
+        click: function($event) {
+          return _vm.destroy(_vm.activitat)
+        }
+      }
+    },
+    [_c("v-icon", [_vm._v("delete")])],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -41393,9 +41919,7 @@ var render = function() {
                   200,
                   { text: "Tots", value: -1 }
                 ],
-                pagination: _vm.pagination,
-                "select-all": "",
-                "item-key": "id"
+                pagination: _vm.pagination
               },
               on: {
                 "update:pagination": function($event) {
@@ -41409,20 +41933,6 @@ var render = function() {
                     var activitat = ref.item
                     return [
                       _c("tr", [
-                        _c(
-                          "td",
-                          [
-                            _c("v-checkbox", {
-                              attrs: {
-                                "input-value": activitat.selected,
-                                primary: "",
-                                "hide-details": ""
-                              }
-                            })
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(activitat.id))]),
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(activitat.name))]),
@@ -41461,14 +41971,7 @@ var render = function() {
                     ]
                   }
                 }
-              ]),
-              model: {
-                value: _vm.selected,
-                callback: function($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected"
-              }
+              ])
             },
             [
               _c("v-progress-linear", {
@@ -41535,7 +42038,13 @@ var render = function() {
     "span",
     [
       _c("list-alumne", {
-        attrs: { users: _vm.users, uri: _vm.uri, alumnes: _vm.dataAlumnes }
+        attrs: {
+          users: _vm.users,
+          uri: _vm.uri,
+          alumnes: _vm.dataAlumnes,
+          activitats: _vm.dataActivitats,
+          "alumne-activitats": _vm.dataAlumneActivitats
+        }
       }),
       _vm._v(" "),
       _c("create-alumne", {
@@ -41620,41 +42129,7 @@ var render = function() {
                 _vm._v("Crear Alumne ")
               ]),
               _vm._v(" "),
-              _c("v-spacer"),
-              _vm._v(" "),
-              _c(
-                "v-btn",
-                {
-                  attrs: { color: "white", flat: "" },
-                  on: {
-                    click: function($event) {
-                      _vm.dialog = false
-                    }
-                  }
-                },
-                [
-                  _c("v-icon", [_vm._v("exit_to_app")]),
-                  _vm._v("\n                SORTIR\n            ")
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-btn",
-                {
-                  attrs: { color: "white", flat: "" },
-                  on: {
-                    click: function($event) {
-                      _vm.dialog = false
-                    }
-                  }
-                },
-                [
-                  _c("v-icon", { staticClass: "mr-1" }, [_vm._v("save")]),
-                  _vm._v("\n                GUARDAR\n            ")
-                ],
-                1
-              )
+              _c("v-spacer")
             ],
             1
           ),
@@ -41822,7 +42297,16 @@ var render = function() {
                             "offset-y": "",
                             "full-width": "",
                             "max-width": "290px",
-                            "min-width": "290px"
+                            "min-width": "290px",
+                            "error-messages": _vm.birthdateErrors
+                          },
+                          on: {
+                            input: function($event) {
+                              return _vm.$v.birthdate.$touch()
+                            },
+                            blur: function($event) {
+                              return _vm.$v.birthdate.$touch()
+                            }
                           },
                           model: {
                             value: _vm.birthdate,
@@ -41837,7 +42321,7 @@ var render = function() {
                             attrs: {
                               slot: "activator",
                               label: "Data naixement",
-                              hint: "MM/DD/YYYY format",
+                              hint: "MM/DD/AAAA format",
                               "persistent-hint": ""
                             },
                             on: {
@@ -41904,9 +42388,23 @@ var render = function() {
                     { attrs: { xs12: "", sm6: "", md3: "" } },
                     [
                       _c(
+                        "span",
+                        { staticClass: "subheading font-weight grey--text" },
+                        [_vm._v("Genere")]
+                      ),
+                      _vm._v(" "),
+                      _c(
                         "v-radio-group",
                         {
-                          attrs: { row: "" },
+                          attrs: { row: "", "error-messages": _vm.sexErrors },
+                          on: {
+                            input: function($event) {
+                              return _vm.$v.sex.$touch()
+                            },
+                            blur: function($event) {
+                              return _vm.$v.sex.$touch()
+                            }
+                          },
                           model: {
                             value: _vm.sex,
                             callback: function($$v) {
@@ -41948,6 +42446,8 @@ var render = function() {
                 ],
                 1
               ),
+              _vm._v(" "),
+              _c("v-divider"),
               _vm._v(" "),
               _c(
                 "div",
@@ -42001,6 +42501,8 @@ var render = function() {
                 ],
                 1
               ),
+              _vm._v(" "),
+              _c("v-divider"),
               _vm._v(" "),
               _c(
                 "div",
@@ -42274,6 +42776,25 @@ var render = function() {
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(alumne.school_course))]),
                         _vm._v(" "),
+                        _c(
+                          "td",
+                          [
+                            _c("alumnes-activitats", {
+                              attrs: {
+                                alumne: alumne,
+                                "alumne-activitats": alumne.activitats,
+                                activitats: _vm.activitats
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.refresh(true)
+                                }
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
                         _c("td", [
                           _c(
                             "span",
@@ -42286,7 +42807,12 @@ var render = function() {
                           "td",
                           [
                             _c("show-alumne", {
-                              attrs: { users: _vm.users, alumne: alumne }
+                              attrs: {
+                                users: _vm.users,
+                                alumne: alumne,
+                                activitats: _vm.activitats,
+                                "alumne-activitats": _vm.alumneActivitats
+                              }
                             }),
                             _vm._v(" "),
                             _c("destroy-alumne", {
@@ -42429,7 +42955,12 @@ var render = function() {
                 "v-card-text",
                 [
                   _c("show-form-alumne", {
-                    attrs: { users: _vm.users, alumne: _vm.alumne }
+                    attrs: {
+                      users: _vm.users,
+                      alumne: _vm.alumne,
+                      activitats: _vm.activitats,
+                      "alumne-activitats": _vm.alumneActivitats
+                    }
                   })
                 ],
                 1
@@ -42509,11 +43040,10 @@ var render = function() {
                     [
                       _c("v-text-field", {
                         attrs: {
-                          autofocus: "",
                           label: "Nom",
                           hint: "El nom del alumne...",
                           placeholder: "Nom del alumne",
-                          readOnly: true
+                          readonly: ""
                         },
                         model: {
                           value: _vm.name,
@@ -42532,11 +43062,10 @@ var render = function() {
                     [
                       _c("v-text-field", {
                         attrs: {
-                          autofocus: "",
                           label: "Cognoms",
                           hint: "Els cognoms del alumne...",
                           placeholder: "Cognoms del alumne",
-                          readOnly: true
+                          readonly: ""
                         },
                         model: {
                           value: _vm.surname,
@@ -42555,10 +43084,9 @@ var render = function() {
                     [
                       _c("v-text-field", {
                         attrs: {
-                          autofocus: "",
                           label: "Data naiximente",
                           hint: "MM/DD/YY format",
-                          readOnly: true
+                          readonly: ""
                         },
                         model: {
                           value: _vm.birthdate,
@@ -42577,10 +43105,9 @@ var render = function() {
                     [
                       _c("v-text-field", {
                         attrs: {
-                          autofocus: "",
                           label: "Telefon",
                           hint: "Telefon de contacte..",
-                          readOnly: true
+                          readonly: ""
                         },
                         model: {
                           value: _vm.phone,
@@ -42599,10 +43126,9 @@ var render = function() {
                     [
                       _c("v-text-field", {
                         attrs: {
-                          autofocus: "",
                           label: "Edat",
                           hint: "Edat del alumne",
-                          readOnly: true
+                          readonly: ""
                         },
                         model: {
                           value: _vm.age,
@@ -42623,7 +43149,7 @@ var render = function() {
                       _c(
                         "v-radio-group",
                         {
-                          attrs: { disabled: true, row: "" },
+                          attrs: { readonly: "", row: "" },
                           model: {
                             value: _vm.sex,
                             callback: function($$v) {
@@ -42680,7 +43206,7 @@ var render = function() {
                     { attrs: { xs12: "", sm6: "" } },
                     [
                       _c("v-combobox", {
-                        attrs: { label: "Escola", readOnly: true },
+                        attrs: { label: "Escola", readonly: "" },
                         model: {
                           value: _vm.school,
                           callback: function($$v) {
@@ -42697,7 +43223,7 @@ var render = function() {
                     "v-flex",
                     [
                       _c("v-combobox", {
-                        attrs: { readOnly: true, label: "Selcciona el nivell" },
+                        attrs: { readonly: "", label: "Selcciona el nivell" },
                         model: {
                           value: _vm.school_course,
                           callback: function($$v) {
@@ -42715,11 +43241,10 @@ var render = function() {
                     [
                       _c("v-text-field", {
                         attrs: {
-                          autofocus: "",
                           label: "Curs escolar",
                           hint: "Curs escolar",
                           placeholder: "Curs escolar",
-                          readOnly: true
+                          readonly: ""
                         },
                         model: {
                           value: _vm.course,
@@ -42730,6 +43255,30 @@ var render = function() {
                         }
                       })
                     ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "headline font-weight-light grey--text" },
+                [_vm._v("ACTIVITATS")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-layout",
+                [
+                  _c(
+                    "v-flex",
+                    _vm._l(_vm.dataAlumne.activitats, function(activitat) {
+                      return _c("v-chip", {
+                        key: activitat.id,
+                        attrs: { color: "#9575CD" },
+                        domProps: { textContent: _vm._s(activitat.name) }
+                      })
+                    }),
                     1
                   )
                 ],
@@ -43613,7 +44162,7 @@ var render = function() {
   return _c(
     "v-snackbar",
     {
-      attrs: { timeout: _vm.timeout, color: _vm.color },
+      attrs: { timeout: _vm.timeout, color: _vm.color, top: "" },
       model: {
         value: _vm.show,
         callback: function($$v) {
@@ -83478,6 +84027,75 @@ if (user) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/AlumnesActivitats.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/AlumnesActivitats.vue ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AlumnesActivitats_vue_vue_type_template_id_e083fe18___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AlumnesActivitats.vue?vue&type=template&id=e083fe18& */ "./resources/js/components/AlumnesActivitats.vue?vue&type=template&id=e083fe18&");
+/* harmony import */ var _AlumnesActivitats_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AlumnesActivitats.vue?vue&type=script&lang=js& */ "./resources/js/components/AlumnesActivitats.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AlumnesActivitats_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AlumnesActivitats_vue_vue_type_template_id_e083fe18___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AlumnesActivitats_vue_vue_type_template_id_e083fe18___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/AlumnesActivitats.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/AlumnesActivitats.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/AlumnesActivitats.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AlumnesActivitats_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./AlumnesActivitats.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AlumnesActivitats.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AlumnesActivitats_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/AlumnesActivitats.vue?vue&type=template&id=e083fe18&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/AlumnesActivitats.vue?vue&type=template&id=e083fe18& ***!
+  \**************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AlumnesActivitats_vue_vue_type_template_id_e083fe18___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./AlumnesActivitats.vue?vue&type=template&id=e083fe18& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AlumnesActivitats.vue?vue&type=template&id=e083fe18&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AlumnesActivitats_vue_vue_type_template_id_e083fe18___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AlumnesActivitats_vue_vue_type_template_id_e083fe18___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 

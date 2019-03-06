@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         create_example_alumnes();
         create_example_simple_activitat();
         create_example_simple_alumne();
+        create_example_alumnes_with_actvitats();
     }
 }

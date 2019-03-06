@@ -17,7 +17,7 @@ class Alumne extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('surname')->nullable();
-            $table->date('birthdate');
+            $table->date('birthdate')->nullable();
             $table->integer('age')->nullable();
             $table->text('school')->nullable();
             $table->text('course')->default(date('Y').'-'.(date('Y')+1));

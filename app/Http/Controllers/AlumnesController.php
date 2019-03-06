@@ -18,6 +18,7 @@ class AlumnesController extends Controller
         if (Auth::user()->can('alumnes.manage')){
             $alumnes = map_collection(Alumne::orderBy('created_at','desc')->get());
             $uri= '/api/v1/alumnes/';
+
         }else{
             $alumnes = map_collection($request->user()->alumnes);
             $uri= '/api/v1/alumnes/';

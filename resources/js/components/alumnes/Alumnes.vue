@@ -1,6 +1,6 @@
 <template>
     <span>
-        <list-alumne :users="users" :uri="uri" :alumnes="dataAlumnes" :activitats="activitats"></list-alumne>
+        <list-alumne :users="users" :uri="uri" :alumnes="dataAlumnes" :activitats="dataActivitats"></list-alumne>
         <create-alumne :users="users" :uri="uri" @created="add"></create-alumne>
     </span>
 </template>
@@ -18,6 +18,8 @@
         data() {
             return {
                 dataAlumnes: this.alumnes,
+                dataActivitats:this.activitats,
+                dataAlumneActivitats:this.alumneActivitats
             }
         },
         props: {
@@ -36,7 +38,7 @@
             uri: {
                 type: String,
                 required: true
-            },
+            }
         },
         methods: {
             add(alumne){

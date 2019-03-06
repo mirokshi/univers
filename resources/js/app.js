@@ -6,6 +6,7 @@ import './bootstrap';
 import AppComponent from './components/App.vue';
 import Navigation from './components/ui/Navigation.vue';
 import Sparklines from './components/Sparklines.vue';
+import Home from './components/Home.vue';
 import LoginForm from './components/auth/LoginForm.vue';
 import RegisterForm from './components/auth/RegisterForm.vue';
 
@@ -47,13 +48,12 @@ window.Vue.use(snackbar);
 window.Vue.use(confirm);
 
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
 window.Vue.component('navigation', Navigation);
 window.Vue.component('login-form', LoginForm);
 window.Vue.component('register-form', RegisterForm);
 
 window.Vue.component('sparklines', Sparklines);
+window.Vue.component('home', Home);
 /** Alumnes* */
 window.Vue.component('alumnes', Alumnes);
 window.Vue.component('list-alumne', ListAlumne);

@@ -64,7 +64,7 @@
                         </td>
                         <td><span :title="alumne.created_at_formatted">{{alumne.created_at_human}}</span></td>
                         <td>
-                            <show-alumne :users="users" :alumne="alumne"></show-alumne>
+                            <show-alumne :users="users" :alumne="alumne" :activitats="activitats"></show-alumne>
                             <destroy-alumne :alumne="alumne" @removed="removeAlumne" :uri="uri"></destroy-alumne>
                         </td>
                     </tr>

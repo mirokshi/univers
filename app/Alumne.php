@@ -42,6 +42,10 @@ class Alumne extends Model
         return $this->belongsToMany(Activitat::class);
     }
 
+    public function removeActivitat($activitat)
+    {
+        $this->activitats()->detach($activitat);
+    }
 
     public function assignUser(User $user)
     {
@@ -82,6 +86,19 @@ class Alumne extends Model
             'full_search' =>$this->full_search,
             'activitats' =>$this->activitats
 
+        ];
+    }
+
+    public function mapSimple()
+    {
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'surname' => $this->surname,
+            'birthdate' => $this->birthdate,
+            'school' => $this->school,
+            'activitats' =>$this->activitats,
+            'user_id' => optional($this->user)->id
         ];
     }
         public function getFullSearchAttribute()

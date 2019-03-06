@@ -76,12 +76,14 @@
             return {
                 dataDrawer: this.drawer,
                 items: [
-                    { icon: 'home', text: 'Home', url: '/' },
+                    { icon: 'accessibility', text: 'Welcome', url: '/' },
+                    { icon: 'home', text: 'Home', url: '/home' },
+
                     {
                         icon: 'keyboard_arrow_up',
                         'icon-alt': 'keyboard_arrow_down',
                         text: 'Univers',
-                        model: true,
+                        model: false,
                         children: [
                             { icon: 'child_care', text: 'Alumnes', url: '/alumnes' },
                             { icon: 'domain', text: 'Entitats', url: '/users' },

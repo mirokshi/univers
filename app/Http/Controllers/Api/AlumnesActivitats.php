@@ -5,10 +5,21 @@ namespace App\Http\Controllers\Api;
 use App\Activitat;
 use App\Alumne;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AlumnesActivitatsDestroy;
+use App\Http\Requests\AlumnesActivitatsStore;
 use App\Http\Requests\AlumnesActivitatsUpdate;
+use Carbon\Carbon;
 
 class AlumnesActivitats extends Controller{
 
+
+    public function store(AlumnesActivitatsStore $request, Alumne $alumne)
+    {
+        $activitat = Activitat::findOrFail($request->activitat['id']);
+        $alumne->addActivitat($activitat);
+        return $activitat->map();
+    }
+    
     public function update(AlumnesActivitatsUpdate $request, Alumne $alumne)
     {
         $mappedActivitats = collect($request->activitats)->map(function ($activitat){
@@ -16,7 +27,7 @@ class AlumnesActivitats extends Controller{
            else {
                return Activitat::create([
                    'name' => $activitat,
-                   'date_start' => '',
+                   'date_start' => Carbon::now(),
                    'date_final' => '',
                    'course' => date('Y').'-'.(date('Y')+1)
                ])->id;
@@ -24,6 +35,14 @@ class AlumnesActivitats extends Controller{
         });
 
         $alumne->addActivitats(Activitat::find($mappedActivitats));
+    }
+
+    public function destroy(AlumnesActivitatsDestroy $request, Alumne $alumne, Activitat $activitat)
+    {
+        $alumne->mapSimple();
+//        $alumne->activitats()->detach($activitat['id']);
+        $alumne->removeActivitat($activitat);
+        return $alumne->map();
     }
 
 }

@@ -32,6 +32,10 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/users', '\\'.UsersController::class.'@index');
 
 
+    Route::get('/home', function () {
+        return view('home');
+    });
+
 Route::get('/sparklines', function () {
         return view('sparklines');
     });
