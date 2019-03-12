@@ -100,6 +100,7 @@ class User extends Authenticatable
             'updated_at_human' => $this->updated_at_human,
             'created_at_timestamp' => $this->created_at_timestamp,
             'updated_at_timestamp' => $this->updated_at_timestamp,
+
         ];
     }
 

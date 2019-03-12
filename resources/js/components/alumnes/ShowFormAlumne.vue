@@ -97,7 +97,12 @@
                  <div class="headline font-weight-light grey--text">ACTIVITATS</div>
                 <v-layout>
                     <v-flex>
-                        <v-chip v-for="activitat in dataAlumne.activitats" :key="activitat.id" v-text="activitat.name"  color="#9575CD"></v-chip>
+                        <!--<v-chip id="activitat" v-for="activitat in dataAlumne.activitats" :key="activitat.id" v-text="activitat.name" class="white&#45;&#45;text m-3 body-1"  color="#9575CD"></v-chip>-->
+                        <ul id="activitat">
+                            <li v-for="activitat in dataAlumne.activitats" class="body-2 m-1">
+                                {{activitat.name}}
+                            </li>
+                        </ul>
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -107,10 +112,9 @@
 
 <script>
     export default {
-        name: "ShowFormAlumne",
+            name: "ShowFormAlumne",
         data(){
             return{
-                dataAlumneActivitats:this.alumneActivitats,
                 dataAlumne:this.alumne,
                 name:this.alumne.name,
                 surname:this.alumne.surname,
@@ -146,5 +150,9 @@
 </script>
 
 <style scoped>
+    #activitat{
+        list-style: none;
+        column-count: 3;
+    }
 
 </style>

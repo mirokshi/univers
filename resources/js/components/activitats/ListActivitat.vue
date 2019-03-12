@@ -48,7 +48,7 @@
                         <td>{{activitat.course}}</td>
                         <td><span :title="activitat.created_at_formatted">{{activitat.created_at_human}}</span></td>
                         <td>
-                            <show-activitat :users="users" :activitat="activitat"></show-activitat>
+                            <show-activitat :users="users" :activitat="activitat" :alumnes="alumnes"></show-activitat>
                             <destroy-activitat :activitat="activitat" @removed="removeActivitat" :uri="uri"></destroy-activitat>
                         </td>
                     </tr>
@@ -101,6 +101,10 @@
             uri:{
                 type: String,
                 required: true
+            },
+            alumnes:{
+                type:Array,
+                required:true
             }
         },
         watch:{

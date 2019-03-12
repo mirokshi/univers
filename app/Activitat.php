@@ -41,6 +41,7 @@ class Activitat extends Model
             'updated_at_human' => $this->updated_at_human,
             'created_at_timestamp' => $this->created_at_timestamp,
             'updated_at_timestamp' => $this->updated_at_timestamp,
+            'alumne' => $this->alumne
             ];
     }
 

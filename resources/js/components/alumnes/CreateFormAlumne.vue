@@ -109,17 +109,24 @@
                         >
                         </v-combobox>
                     </v-flex>
-                    <!--<v-flex>-->
-                        <!--&lt;!&ndash;TODO ASIGNAR UNA ACTIVIDAD&ndash;&gt;-->
-                        <!--&lt;!&ndash;<activat-select></activat-select>&ndash;&gt;-->
-                    <!--</v-flex>-->
-
                 </v-layout>
                 <v-divider></v-divider>
                 <div class="headline font-weight-light grey--text">ACTIVITAT</div>
                 <v-layout>
                     <v-flex>
-
+                        <v-select
+                            :items="dataActivitats"
+                            label="Actvitats"
+                        ></v-select>
+                    </v-flex>
+                </v-layout>
+                <v-divider></v-divider>
+                <div class="headline font-weight-light grey--text">ENTITAT</div>
+                <v-layout>
+                    <v-flex>
+                        <v-text-field
+                            :value="dataUsers"
+                        ></v-text-field>
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -147,7 +154,6 @@
           name:{required},
           surname:{required},
             sex:{required},
-            phone:{required, minLength: minLength(9) , maxLength: maxLength(9)},
             birthdate:{required},
         },
         name: "CreateFormAlumne",
@@ -162,6 +168,8 @@
                 sex:'',
                 phone:'',
                 dataAlumnes: this.alumnes,
+                dataActivitats:this.activitats,
+                dataUsers:this.users,
                 loading:false,
                 selectSchool:'',
                 itemSchool:
@@ -227,6 +235,10 @@
             uri:{
                 type:String,
                 required: true
+            },
+            activitats:{
+                type:Array,
+                required: true
             }
         },
         methods:{
@@ -234,6 +246,7 @@
                 if (window.laravel_user) {
                     this.user = this.users.find((user) => {
                         return parseInt(user.id) === parseInt(window.laravel_user.id)
+
                     })
                 }
             },
@@ -246,6 +259,7 @@
                 this.age='',
                 this.phone='',
                 this.sex=''
+                this.user_id=''
             },
             add () {
                 this.loading = true
@@ -265,6 +279,7 @@
                     this.$emit('created',response.data)
                     this.loading=false
                     this.$emit('close')
+
                 }).catch(error => {
                     console.log(error);
                     console.log(error.data);

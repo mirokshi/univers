@@ -1,6 +1,6 @@
 <template>
     <span>
-        <list-activitat :users="users" :uri="uri" :activitats="dataActivitats"></list-activitat>
+        <list-activitat :users="users" :uri="uri" :activitats="dataActivitats" :alumnes="dataAlumnes"></list-activitat>
         <create-activitat :users="users" :uri="uri" @created="add"></create-activitat>
     </span>
 </template>
@@ -18,9 +18,14 @@
         data(){
             return {
                 dataActivitats: this.activitats,
+                dataAlumnes:this.alumnes
             }
         },
         props:{
+            alumnes: {
+                type: Array,
+                required: true
+            },
             activitats:{
                 type:Array,
                 required: true

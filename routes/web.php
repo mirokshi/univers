@@ -29,7 +29,7 @@ Route::middleware(['auth'])->group(function() {
 
     Route::get('/activitats', '\\'.ActivitatsController::class.'@index');
 
-    Route::get('/users', '\\'.UsersController::class.'@index');
+    Route::get('/entitats', '\\'.UsersController::class.'@index');
 
 
     Route::get('/home', function () {

@@ -1,10 +1,14 @@
 <template>
     <span>
-         <v-chip v-for="activitat in dataAlumne.activitats" :key="activitat.id" v-text="activitat.name"  @dblclick="removeActivitat(activitat)" color="#9575CD"></v-chip>
-        <v-btn icon @click="dialog = true"><v-icon>add</v-icon></v-btn>
-        <v-dialog v-model="dialog" width="500">
+         <v-chip v-for="activitat in dataAlumne.activitats" :key="activitat.id" v-text="activitat.name"  class="body-1" @dblclick="removeActivitat(activitat)" color="blue lighten-4"></v-chip>
+        <v-btn icon @click="dialog = true" class="red lighten-4"><v-icon>add</v-icon></v-btn>
+        <v-dialog v-model="dialog" width="500" @keydown.esc.stop.prevent="dialog=false">
+            <v-toolbar>
+                <v-toolbar-title>Afegir activitat a un alumne</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-btn @click="dialog=false" icon><v-icon>close</v-icon></v-btn>
+            </v-toolbar>
             <v-card>
-                <v-card-title>Afegir activitat a un alumne</v-card-title>
                 <v-card-text>
                     <v-combobox
                         v-model="selectedActivitats"
@@ -35,8 +39,8 @@
                 <v-divider></v-divider>
                 <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn flat @click="dialog = false">CANCELAR</v-btn>
-                    <v-btn color="grey darken-3" flat  :loading="loading" :disabled="loading" @click="addActivitat">AÑADIR</v-btn>
+                    <v-btn flat @click="dialog = false">Cancel·lar</v-btn>
+                    <v-btn color="grey darken-3" flat  :loading="loading" :disabled="loading" @click="addActivitat" class="teal lighten-4">Afegir</v-btn>
                 </v-card-actions>
             </v-card>
         </v-dialog>

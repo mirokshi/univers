@@ -16,7 +16,7 @@
                             @blur="$v.name.$touch()"
                         ></v-text-field>
                     </v-flex>
-                           <v-flex xs12 sm6 md3>
+                    <v-flex xs12 sm6 md3>
                           <v-menu
                               ref="date_start"
                               v-model="date_start"
@@ -40,7 +40,7 @@
                               <v-date-picker v-model="date" no-title @input="date_start = false"></v-date-picker>
                           </v-menu>
                       </v-flex>
-                     <v-flex xs12 sm6 md3>
+                    <v-flex xs12 sm6 md3>
                           <v-menu
                               ref="date_final"
                               v-model="date_final"

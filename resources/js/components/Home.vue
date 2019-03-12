@@ -5,7 +5,7 @@
                     md8
             >
                 <h1 class="display-3 grey--text text--darken-2 mt-3">&#128075; Benvingut!</h1>
-                <h3 class="headline grey--text mt-5">Escolliu quin tipus de relació voleu tenir amb la nostra comunitat educativa:</h3>
+                <h3 class="headline grey--text mt-5">Escolliu:</h3>
                 <v-layout align-center justify-center row wrap class="mt-5">
                     <v-flex sm12
                             md4
@@ -17,7 +17,7 @@
                                 size="130"
                             >
                                 <img
-                                    src="/img/students.jpg"
+                                    src="/img/userTypes/students.jpg"
                                 >
                             </v-avatar>
                             <v-btn
@@ -26,8 +26,8 @@
                                 round
                                 :loading="loading[2]"
                                 :disabled="loading[2]"
-                                @click="setUserType(2)"
-                            >Alumne</v-btn>
+                                href="/alumnes"
+                            >Alumnes</v-btn>
                         </material-card>
                     </v-flex>
                     <v-flex xs12
@@ -41,7 +41,7 @@
                                 size="130"
                             >
                                 <img
-                                    src="/img/gg.jpg"
+                                    src="/img/userTypes/gg.jpg"
                                 >
                             </v-avatar>
                             <v-btn
@@ -50,8 +50,8 @@
                                 round
                                 :loading="loading[1]"
                                 :disabled="loading[1]"
-                                @click="setUserType(1)"
-                            >Professor</v-btn>
+                                href="/entitats"
+                            >Entitats</v-btn>
                         </material-card>
                     </v-flex>
                     <v-flex sm12
@@ -64,7 +64,7 @@
                                 size="130"
                             >
                                 <img
-                                    src="/img/gg.jpg"
+                                    src="/img/userTypes/activities.jpg"
                                 >
                             </v-avatar>
                             <v-btn  large
@@ -72,8 +72,9 @@
                                     round
                                     :loading="loading[3]"
                                     :disabled="loading[3]"
-                                    @click="setUserType(3)"
-                            >Personal</v-btn>
+                                    href="/activitats"
+                            >Activitats
+                            </v-btn>
                         </material-card>
                     </v-flex>
                 </v-layout>
@@ -85,22 +86,10 @@
 <script>
 
     export default {
-        name: 'Welcome',
+        name: 'Home',
         data () {
             return {
                 loading: []
-            }
-        },
-        methods: {
-            setUserType (type) {
-                this.loading[type] = true
-                window.axios.post('/api/v1/user/type', { type }).then(() => {
-                    this.loading[type] = false
-                    location.reload()
-                }).catch(error => {
-                    this.$snackbar.showError(error)
-                    this.loading[type] = false
-                })
             }
         }
     }

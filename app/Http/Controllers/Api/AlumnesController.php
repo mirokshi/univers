@@ -32,7 +32,7 @@ class AlumnesController extends Controller
         $alumne->name  = $request->name;
         $alumne->surname = $request->surname;
         $alumne->birthdate = $request->birthdate;
-        $alumne->age = $request->age = calculateYears($alumne->birthdate, Carbon::now());
+        $alumne->age = $request->age;
         $alumne->school = $request->school;
         $alumne->course = $request->course =date('Y').'-'.(date('Y')+1);
         $alumne->school_course = $request->school_course;

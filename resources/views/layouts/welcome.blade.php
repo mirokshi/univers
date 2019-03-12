@@ -34,8 +34,8 @@
             <img src="img/logo1.png" alt="sisetze" height="50">
             <v-spacer></v-spacer>
             @if(empty(Auth::user()->email))
-                <v-btn href="login" class="red "> LOGIN  </v-btn>
-                <v-btn href="register" class="red"> REGISTER</v-btn>
+                <v-btn href="login" class="red ">LOGIN </v-btn>
+                <v-btn href="register" class="red">REGISTER</v-btn>
 
             @else
                 <v-form action="/logout" method="POST">
@@ -46,14 +46,14 @@
         </v-toolbar>
         <v-content>
             <section>
-                <v-parallax src="img/background-books.jpg" height="700">
+                <v-parallax src="img/background.jpg" height="700">
                     <v-layout
                         column
                         align-center
                         justify-center
                         class="white--text"
                     >
-                        <img src="img/logo.PNG" alt="Vuetify.js" height="200">
+                        <img src="img/ajuntamentLogo.png" alt="Ajuntament de Tortosa   " height="200">
                         <h1 class="white--text text--ligthen-2 mb-2 display-4 text-xs-center font-weight-bold"
                             style="text-shadow: 0 0 50px hsla(0, 0%, 0%, .4);font-family: 'Montserrat', sans-serif !important; z-index: 10;"
                         >Univers alumnat</h1>
