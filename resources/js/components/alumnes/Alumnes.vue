@@ -1,7 +1,7 @@
 <template>
     <span>
         <list-alumne :users="users" :uri="uri" :alumnes="dataAlumnes" :activitats="dataActivitats"></list-alumne>
-        <create-alumne :users="users" :uri="uri" :activitats="dataActivitats" @created="add"></create-alumne>
+        <create-alumne :users="users" :uri="uri" :activitats="dataActivitats" :alumnes="dataAlumnes" @created="add"></create-alumne>
     </span>
 </template>
 

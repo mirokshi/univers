@@ -26,7 +26,8 @@ $factory->define(App\Alumne::class, function (Faker $faker) {
         'course'=> date('Y').'-'.(date('Y')+1),
         'school_course'=>$faker->word,
         'sex' => $faker->word,
-        'phone'=>$faker->phoneNumber
+        'phone'=>$faker->phoneNumber,
+        'change'=>$faker->boolean
 
     ];
 });

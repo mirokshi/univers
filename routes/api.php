@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\ActivitatsController;
 use App\Http\Controllers\Api\AlumnesActivitats;
 use App\Http\Controllers\Api\AlumnesController;
+use App\Http\Controllers\Api\ChangeAlumnesController;
 use App\Http\Controllers\Api\UsersController;
 use Illuminate\Http\Request;
 
@@ -27,6 +28,9 @@ Route::middleware('auth:api')->group(function() {
     Route::post('/v1/alumnes', '\\'.AlumnesController::class.'@store');
     Route::delete('/v1/alumnes/{alumne}', '\\'.AlumnesController::class.'@destroy');
     Route::put('/v1/alumnes/{alumne}', '\\'.AlumnesController::class.'@update');
+
+    Route::delete('/v1/change_alumne/{alumne}','\\'.ChangeAlumnesController::class.'@destroy');
+    Route::post('/v1/change_alumne/{alumne}','\\'.ChangeAlumnesController::class.'@store');
 
     Route::get('/v1/activitats', '\\'.ActivitatsController::class.'@index');
     Route::get('/v1/activitats/{actvitat}', '\\'.ActivitatsController::class.'@show');

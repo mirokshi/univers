@@ -12,7 +12,7 @@
             </v-toolbar>
             <v-card>
                 <v-card-text>
-                    <create-form-alumne :users="users" :uri="uri" :activitats="activitats" @close="dialog = false" @created="created"></create-form-alumne>
+                    <create-form-alumne :users="users" :uri="uri" :activitats="activitats" :alumnes="alumnes" @close="dialog = false" @created="created"></create-form-alumne>
                 </v-card-text>
             </v-card>
         </v-dialog>
@@ -55,7 +55,11 @@
             activitats:{
                 type:Array,
                 required: true
-            }
+            },
+            alumnes:{
+                type: Array,
+                required:true
+            },
         },
         methods:{
             created(alumne){

@@ -66,10 +66,10 @@
                         <td>
                             <show-alumne :users="users" :alumne="alumne" :activitats="activitats"></show-alumne>
                             <destroy-alumne :alumne="alumne" @removed="removeAlumne" :uri="uri"></destroy-alumne>
+                             <toggle :value="alumne.change" uri="/api/v1/change_alumne" active-text="Alta" unactive-text="Baja" :resource="alumne"></toggle>
                         </td>
                     </tr>
                 </template>
-
             </v-data-table>
         </v-card></span>
 </template>
@@ -78,10 +78,12 @@
     import ShowAlumne from "./ShowAlumne";
     import DestroyAlumne from "./DestroyAlumne";
     import AlumnesActivitats from "../AlumnesActivitats";
+    import Toggle from "../helper/Toggle";
 
     export default {
         name:'ListAlumne',
         components:{
+            'toggle':Toggle,
           'show-alumne' :ShowAlumne,
           'destroy-alumne':DestroyAlumne,
           'alumnes-activitats':AlumnesActivitats
@@ -154,7 +156,7 @@
             },
             removeAlumne(alumne){
                 this.dataAlumnes.splice(this.dataAlumnes.indexOf(alumne),1)
-            }
+            },
         },
         computed:{
             total(){

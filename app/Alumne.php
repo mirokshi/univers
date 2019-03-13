@@ -58,6 +58,11 @@ class Alumne extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function toggleChange()
+    {
+        $this->change = !$this->change;
+        $this->save();
+    }
     public function map()
     {
         return [
@@ -71,6 +76,7 @@ class Alumne extends Model
             'school_course' => $this->school_course,
             'sex' => $this->sex,
             'phone' => $this->phone,
+            'change' => (boolean)$this->change,
             'user_id' => (int)$this->user_id,
             'user_name' => optional($this->user)->name,
             'user_email' => optional($this->user)->email,
@@ -103,10 +109,10 @@ class Alumne extends Model
     }
         public function getFullSearchAttribute()
     {
-
+        $state = $this->change ? 'Alta' : 'Baja';
         $username = optional($this->user)->name;
         $useremail = optional($this->user)->email;
-        return "$this->id $this->name $this->surname $this->birtthdate $this->age $this->school $this->course $this->school_course $this->sex $this->phone $username $useremail";
+        return "$this->id $this->name $this->surname $this->birtthdate $this->age $this->school $this->course $this->school_course $this->sex $this->phone $state $username $useremail";
     }
 
 }

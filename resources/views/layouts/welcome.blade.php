@@ -31,7 +31,7 @@
     <v-app light v-cloak>
         <v-toolbar class="red lighten-2">
             <v-toolbar-title v-text="title"></v-toolbar-title>
-            <img src="img/logo1.png" alt="sisetze" height="50">
+            <img src="img/sisetzeLogo.png" alt="sisetze" height="50">
             <v-spacer></v-spacer>
             @if(empty(Auth::user()->email))
                 <v-btn href="login" class="red ">LOGIN </v-btn>

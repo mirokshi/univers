@@ -97,6 +97,9 @@
                             v-model="selectSchool"
                             :items="itemSchool"
                             label="Selecciona la escola"
+                            :error-messages="schoolErrors"
+                            @input="$v.school.$touch()"
+                            @blur="$v.school.$touch()"
                         >
                         </v-combobox>
                     </v-flex>
@@ -114,19 +117,14 @@
                 <div class="headline font-weight-light grey--text">ACTIVITAT</div>
                 <v-layout>
                     <v-flex>
-                        <v-select
-                            :items="dataActivitats"
-                            label="Actvitats"
-                        ></v-select>
+                        <!--<alumnes-activitats :alumne="alumnes" :alumne-activitats="alumnes.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>-->
                     </v-flex>
                 </v-layout>
                 <v-divider></v-divider>
                 <div class="headline font-weight-light grey--text">ENTITAT</div>
                 <v-layout>
                     <v-flex>
-                        <v-text-field
-                            :value="dataUsers"
-                        ></v-text-field>
+                        <!--<alumnes-activitats :alumne="alumne" :alumne-activitats="alumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>-->
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -147,6 +145,7 @@
 <script>
     import { validationMixin } from 'vuelidate'
     import { required , minLength,maxLength} from 'vuelidate/lib/validators'
+    import AlumnesActivitats from "../AlumnesActivitats";
 
     export default {
         mixins:[validationMixin],
@@ -155,8 +154,12 @@
           surname:{required},
             sex:{required},
             birthdate:{required},
+            school: {required}
         },
         name: "CreateFormAlumne",
+        components:{
+          'alumnes-activitats':AlumnesActivitats
+        },
         data(){
             return  {
                 date: new Date().toISOString().substr(0, 10),
@@ -239,7 +242,11 @@
             activitats:{
                 type:Array,
                 required: true
-            }
+            },
+            alumnes:{
+                type: Array,
+                required:true
+            },
         },
         methods:{
             selectLoggedUser () {
@@ -328,6 +335,13 @@
                 if(!this.$v.birthdate.$dirty){
                     return errors
                 }else{ !this.$v.birthdate.required && errors.push('És obligatori la data de naiximent')}
+                return errors
+            },
+            schoolErrors(){
+                const errors = []
+                if(!this.$v.school.$dirty){
+                    return errors
+                }else{ !this.$v.school.required && errors.push('És obligatori la data de naiximent')}
                 return errors
             },
             computedDateFormatted () {

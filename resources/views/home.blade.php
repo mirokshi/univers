@@ -4,5 +4,14 @@
     Home
 @endsection
 @section('content')
-    <home></home>
+    <v-container
+        fill-height
+        fluid
+        grid-list-xl
+        text-xs-center
+    >
+        <v-layout wrap row>
+                <home></home>
+        </v-layout>
+    </v-container>
 @endsection
