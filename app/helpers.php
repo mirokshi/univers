@@ -9,6 +9,7 @@ use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 
+
 if (!function_exists('logged_user')){
     function logged_user(){
         return json_encode(optional(Auth::user())->map());
@@ -31,9 +32,7 @@ if (! function_exists('map_simple_collection')) {
         });
     }
 }
-/**
- *
- */
+
 if (!function_exists('create_role')) {
     function create_role($role)
     {
@@ -46,9 +45,7 @@ if (!function_exists('create_role')) {
         }
     }
 }
-/**
- *
- */
+
 if (!function_exists('create_permission')) {
     function create_permission($permission)
     {
@@ -154,8 +151,6 @@ if (!function_exists('create_primary_user')){
 
                 $user->admin = true;
                 $user->save();
-
-
         }
     }
 }
@@ -164,7 +159,7 @@ if (!function_exists('create_example_alumnes')) {
 
     function create_example_alumnes()
     {
-        $user1 = factory(User::class)->create();
+        $user = User::find(1);
         Alumne::create([
             'name' => 'Jose',
             'surname' => 'Lopez',
@@ -175,7 +170,7 @@ if (!function_exists('create_example_alumnes')) {
             'school_course' => 'CFGS',
             'sex' => 'altre',
             'phone' => '777888999',
-            'user_id' => $user1->id
+            'user_id' => $user->id
         ]);
         Alumne::create([
             'name' => 'Marc',
@@ -187,7 +182,7 @@ if (!function_exists('create_example_alumnes')) {
             'school_course' => 'CFGS',
             'sex' => 'home',
             'phone' => '616531219',
-            'user_id' => $user1->id
+            'user_id' => $user->id
         ]);
         Alumne::create([
             'name' => 'Martha',
@@ -199,7 +194,7 @@ if (!function_exists('create_example_alumnes')) {
             'school_course' => 'CFGS',
             'sex' => 'dona',
             'phone' => '6564445152',
-            'user_id' => $user1->id
+            'user_id' => $user->id
         ]);
 
     }
@@ -208,6 +203,7 @@ if (!function_exists('create_example_simple_alumne')) {
 
     function create_example_simple_alumne()
     {
+        $user = User::find(1);
         Alumne::create([
             'name' => 'Juan',
             'surname' => 'Gutierrez Sanchez',
@@ -217,7 +213,8 @@ if (!function_exists('create_example_simple_alumne')) {
             'course' =>date('Y').'-'.(date('Y')+1),
             'school_course' => 'CFGS',
             'sex' => 'home',
-            'phone' => '616531219'
+            'phone' => '616531219',
+            'user_id' => $user->id
         ]);
         Alumne::create([
             'name' => 'Carla',
@@ -228,7 +225,8 @@ if (!function_exists('create_example_simple_alumne')) {
             'course' =>date('Y').'-'.(date('Y')+1),
             'school_course' => 'CFGS',
             'sex' => 'dona',
-            'phone' => '987654321'
+            'phone' => '987654321',
+            'user_id' => $user->id
         ]);
         Alumne::create([
             'name' => 'Joan',
@@ -239,7 +237,8 @@ if (!function_exists('create_example_simple_alumne')) {
             'course' =>date('Y').'-'.(date('Y')+1),
             'school_course' => 'CFGS',
             'sex' => 'home',
-            'phone' => '123456789'
+            'phone' => '123456789',
+            'user_id' => $user->id
         ]);
         Alumne::create([
             'name' => 'Joan',
@@ -250,7 +249,8 @@ if (!function_exists('create_example_simple_alumne')) {
             'course' =>'2017-2018',
             'school_course' => 'CFGS',
             'sex' => 'home',
-            'phone' => '123456789'
+            'phone' => '123456789',
+            'user_id' => $user->id
         ]);
 
 
@@ -262,53 +262,61 @@ if (!function_exists('create_example_simple_activitat')) {
 
     function create_example_simple_activitat()
     {
+        $user = User::find(1);
         Activitat::create([
             'name' => 'Futbol',
             'date_start' => '22/10/2000',
             'date_final' => '22/10/2000',
             'course' => date('Y').'-'.(date('Y')+1),
+            'user_id' => $user->id
         ]);
         Activitat::create([
             'name' => 'Comedor',
             'date_start' => '22/10/2000',
             'date_final' => '22/10/2000',
             'course' => date('Y').'-'.(date('Y')+1),
+            'user_id' => $user->id
         ]);
         Activitat::create([
             'name' => 'Repaso',
             'date_start' => '22/10/2000',
             'date_final' => '22/10/2000',
             'course' =>date('Y').'-'.(date('Y')+1),
+            'user_id' => $user->id
         ]);
         Activitat::create([
             'name' => 'Natacion',
             'date_start' => '22/10/2000',
             'date_final' => '22/10/2000',
             'course' =>date('Y').'-'.(date('Y')+1),
+            'user_id' => $user->id
         ]);
         Activitat::create([
             'name' => 'Excursion',
             'date_start' => '22/10/2000',
             'date_final' => '22/10/2000',
             'course' => date('Y').'-'.(date('Y')+1),
+            'user_id' => $user->id
         ]);
         Activitat::create([
             'name' => 'Excursion',
             'date_start' => '22/10/2000',
             'date_final' => '22/10/2000',
             'course' => date('Y').'-'.(date('Y')+1),
+            'user_id' => $user->id
         ]);
     }
 }
 
 if (!function_exists('create_example_alumnes_with_actvitats')){
     function create_example_alumnes_with_actvitats(){
-        $user1 = factory(User::class)->create();
+
+        $user = User::find(1);
 
         $alumne = Alumne::create([
            'name'=> 'Paco',
            'surname' => 'Diaz',
-           'user_id' => $user1->id
+           'user_id' => $user->id
         ]);
 
         $activitat1 = Activitat::create([
@@ -341,5 +349,11 @@ if (!function_exists('calculateYears')) {
 
         // Return years
         return $diff->y;
+    }
+}
+
+if (!function_exists('migrate_entitats')){
+    function migrate_entitats(){
+        
     }
 }

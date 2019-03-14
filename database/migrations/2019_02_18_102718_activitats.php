@@ -19,6 +19,7 @@ class Activitats extends Migration
             $table->string('date_start')->nullable();
             $table->string('date_final')->nullable();
             $table->string('course')->nullable();
+            $table->unsignedInteger('user_id') ->nullable();
             $table->timestamps();
         });
         Schema::create('activitat_alumne',function (Blueprint $table){
