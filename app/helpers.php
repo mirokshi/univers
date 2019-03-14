@@ -241,6 +241,18 @@ if (!function_exists('create_example_simple_alumne')) {
             'sex' => 'home',
             'phone' => '123456789'
         ]);
+        Alumne::create([
+            'name' => 'Joan',
+            'surname' => 'Tiscar',
+            'birthdate' => '22/10/2000',
+            'age' => '20',
+            'school' => 'IES EBRE',
+            'course' =>'2017-2018',
+            'school_course' => 'CFGS',
+            'sex' => 'home',
+            'phone' => '123456789'
+        ]);
+
 
     }
 
@@ -280,7 +292,12 @@ if (!function_exists('create_example_simple_activitat')) {
             'date_final' => '22/10/2000',
             'course' => date('Y').'-'.(date('Y')+1),
         ]);
-
+        Activitat::create([
+            'name' => 'Excursion',
+            'date_start' => '22/10/2000',
+            'date_final' => '22/10/2000',
+            'course' => date('Y').'-'.(date('Y')+1),
+        ]);
     }
 }
 

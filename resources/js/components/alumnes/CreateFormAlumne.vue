@@ -97,9 +97,6 @@
                             v-model="selectSchool"
                             :items="itemSchool"
                             label="Selecciona la escola"
-                            :error-messages="schoolErrors"
-                            @input="$v.school.$touch()"
-                            @blur="$v.school.$touch()"
                         >
                         </v-combobox>
                     </v-flex>
@@ -117,14 +114,13 @@
                 <div class="headline font-weight-light grey--text">ACTIVITAT</div>
                 <v-layout>
                     <v-flex>
-                        <!--<alumnes-activitats :alumne="alumnes" :alumne-activitats="alumnes.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>-->
+                        <alumnes-activitats :alumne="alumnes" :alumne-activitats="alumnes.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>
                     </v-flex>
                 </v-layout>
                 <v-divider></v-divider>
                 <div class="headline font-weight-light grey--text">ENTITAT</div>
                 <v-layout>
                     <v-flex>
-                        <!--<alumnes-activitats :alumne="alumne" :alumne-activitats="alumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>-->
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -154,7 +150,6 @@
           surname:{required},
             sex:{required},
             birthdate:{required},
-            school: {required}
         },
         name: "CreateFormAlumne",
         components:{

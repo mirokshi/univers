@@ -3,26 +3,20 @@
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue" line="3" />
     <bookmark url="file://$PROJECT_DIR$/resources/views/users.blade.php" line="3" />
-    <bookmark url="file://$PROJECT_DIR$/app/helpers.php" line="253" />
+    <bookmark url="file://$PROJECT_DIR$/app/helpers.php" line="265" />
     <bookmark url="file://$PROJECT_DIR$/resources/js/components/activitats/CreateFormActivitat.vue" line="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="671ac4b2-eb58-42de-b0c3-f9190173bdb0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Alumne.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Alumne.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AlumnesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AlumnesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/AlumneFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AlumneFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_07_101641_alumne.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_07_101641_alumne.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/background-books.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/userTypes/activities.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/userTypes/activities.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/userTypes/entitats.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/userTypes/entitats.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/userTypes/students.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/userTypes/students.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/users/ListUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/users/ListUser.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
-              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -80,20 +74,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="1121">
               <caret line="59" column="27" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
+            <state relative-caret-position="330">
+              <caret line="117" column="29" selection-start-line="117" selection-start-column="29" selection-end-line="117" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/users/ListUser.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1600">
+              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="268" column="51" selection-start-line="268" selection-start-column="24" selection-end-line="268" selection-end-column="51" />
               <folding>
-                <element signature="e#7229#8350#0" />
-                <element signature="e#8424#8949#0" />
+                <element signature="e#7#25#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/AlumnesActivitats.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="42" column="153" lean-forward="true" selection-start-line="42" selection-start-column="153" selection-end-line="42" selection-end-column="153" />
+            <state relative-caret-position="798">
+              <caret line="42" column="153" selection-start-line="42" selection-start-column="153" selection-end-line="42" selection-end-column="153" />
             </state>
           </provider>
         </entry>
@@ -111,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-971">
-              <caret line="62" column="175" lean-forward="true" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="175" />
+            <state relative-caret-position="1178">
+              <caret line="62" column="175" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="175" />
             </state>
           </provider>
         </entry>
@@ -129,7 +149,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/ui/Navigation.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
+            <state relative-caret-position="1672">
               <caret line="88" column="79" selection-start-line="88" selection-start-column="79" selection-end-line="88" selection-end-column="79" />
             </state>
           </provider>
@@ -170,6 +190,9 @@
       <find>date_start</find>
       <find>selectLoggedUser</find>
       <find>icon</find>
+      <find>schoolErrors</find>
+      <find>hel</find>
+      <find>help</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -181,8 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/Feature/Api/AlumnesActivitats.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/Api/AlumnesActivitatsTest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Alumnes/AlumneDestroy.php" />
         <option value="$PROJECT_DIR$/resources/js/plugins/snackbar/Snackbar.vue" />
         <option value="$PROJECT_DIR$/app/Http/Requests/AlumnesActivitatsDestroy.php" />
@@ -193,7 +214,6 @@
         <option value="$PROJECT_DIR$/resources/views/alumnes.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AlumnesController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/app/helpers.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
@@ -231,7 +251,10 @@
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue" />
+        <option value="$PROJECT_DIR$/app/helpers.php" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/users/ListUser.vue" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -395,7 +418,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="alumnes" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -548,6 +571,7 @@
       <workItem from="1551945079764" duration="7905000" />
       <workItem from="1552378094203" duration="5347000" />
       <workItem from="1552464515762" duration="10322000" />
+      <workItem from="1552551623648" duration="3950000" />
     </task>
     <servers />
   </component>
@@ -584,11 +608,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191099000" />
+    <option name="totallyTimeSpent" value="195049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="810" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49507388" visible="true" weight="0.33375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -617,23 +640,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/alumnes.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="114" selection-start-line="9" selection-start-column="114" selection-end-line="9" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/activitats.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/sparklines.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -654,9 +660,7 @@
     <entry file="file://$PROJECT_DIR$/public/img/userTypes/activities.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/background-books.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/background-books.jpg" />
     <entry file="file://$PROJECT_DIR$/public/img/userTypes/students1.jpg" />
     <entry file="file://$PROJECT_DIR$/public/img/userTypes/students.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -773,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/ui/Navigation.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="88" column="79" selection-start-line="88" selection-start-column="79" selection-end-line="88" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -797,16 +794,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/ui/MaterialStatsCard.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="56" selection-start-line="52" selection-end-line="56" />
-          <folding>
-            <element signature="e#1182#1224#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/ui/MaterialStatsCard.vue" />
     <entry file="file://$PROJECT_DIR$/resources/js/components/ui/MaterialCard.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
@@ -814,27 +802,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="166" column="5" lean-forward="true" selection-start-line="166" selection-start-column="5" selection-end-line="166" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#25#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -917,42 +888,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/AlumnesActivitats.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="42" column="153" lean-forward="true" selection-start-line="42" selection-start-column="153" selection-end-line="42" selection-end-column="153" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-971">
-          <caret line="62" column="175" lean-forward="true" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="175" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="1121">
           <caret line="59" column="27" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/AlumnesActivitats.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="42" column="153" selection-start-line="42" selection-start-column="153" selection-end-line="42" selection-end-column="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1178">
+          <caret line="62" column="175" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="175" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/ui/Navigation.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1672">
+          <caret line="88" column="79" selection-start-line="88" selection-start-column="79" selection-end-line="88" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="268" column="51" selection-start-line="268" selection-start-column="24" selection-end-line="268" selection-end-column="51" />
+          <folding>
+            <element signature="e#7#25#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
-          <folding>
-            <element signature="e#7229#8350#0" />
-            <element signature="e#8424#8949#0" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="117" column="29" selection-start-line="117" selection-start-column="29" selection-end-line="117" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="202" selection-start-line="8" selection-start-column="202" selection-end-line="8" selection-end-column="202" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/users/ListUser.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1600">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
         </state>
       </provider>
     </entry>
