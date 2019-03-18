@@ -27,6 +27,7 @@
                     @input="$v.password.$touch()"
                     @blur="$v.password.$touch()"
             ></v-text-field>
+            <span>No tens usuari? <a href="/register">Registrar-se!</a></span>
         </v-card-text>
         <v-divider light></v-divider>
         <v-card-actions>

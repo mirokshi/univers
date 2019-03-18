@@ -59,11 +59,11 @@ class AlumnesController extends Controller
         $alumne->birthdate = $request->birthdate;
         $alumne->age = $request->age;
         $alumne->school = $request->school;
-        $alumne->course = $request->course;
+        $alumne->course = $request->course =date('Y').'-'.(date('Y')+1);
         $alumne->school_course = $request->school_course;
         $alumne->sex = $request->sex;
         $alumne->phone = $request->phone;
-        $alumne->change = $request->change;
+        $alumne->change = $request->change ? true : false;
         $alumne->user_id = $request->user_id;
         $alumne->save();
         return $alumne->map();

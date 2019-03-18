@@ -40,6 +40,10 @@
             <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
             <v-toolbar-title>Application</v-toolbar-title>
             <v-spacer></v-spacer>
+            <v-form action="/logout" method="POST">
+                @csrf
+                <v-btn class="red" type="submit">LOGOUT</v-btn>
+            </v-form>
         </v-toolbar>
         <v-content>
             @yield('content')

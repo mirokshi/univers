@@ -88,7 +88,7 @@
     // import '../../../../resources/img/userTypes/activities.jpg'
 
     export default {
-        name: 'Welcome',
+        name: 'Home',
 
         data () {
             return {

@@ -43,6 +43,7 @@
                     <tr>
                         <td>{{activitat.id}}</td>
                         <td>{{activitat.name}}</td>
+                        <td>{{activitat.category}}</td>
                         <td>{{activitat.date_start}}</td>
                         <td>{{activitat.date_final}}</td>
                         <td>{{activitat.course}}</td>
@@ -77,6 +78,7 @@
                 headers:[
                     {text:'ID',value: 'id'},
                     {text:'NOM',value: 'name'},
+                    {text: 'CATEGORIA', value: 'category'},
                     {text:'DATA INICI',value: 'date_start'},
                     {text:'DATA FINAL',value: 'date_final'},
                     {text:'CURS',value: 'course'},
@@ -85,7 +87,7 @@
                 ],
                 pagination:{
                     rowsPerPage:25,
-                    sortBy:'name'
+                    sortBy:'id'
                 }
             }
         },

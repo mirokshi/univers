@@ -13,14 +13,15 @@ class Alumne extends Migration
      */
     public function up()
     {
+        $date = date('Y').'-'.(date('Y')+1);
         Schema::create('alumnes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('surname')->nullable();
-            $table->date('birthdate')->nullable();
+            $table->text('birthdate')->nullable();
             $table->integer('age')->nullable();
             $table->text('school')->nullable();
-            $table->text('course')->default(date('Y').'-'.(date('Y')+1));
+            $table->text('course')->nullable();
             $table->text('school_course')->nullable();
             $table->text('sex')->nullable();
             $table->integer('phone')->nullable();

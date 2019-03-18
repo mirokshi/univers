@@ -21,7 +21,7 @@ $factory->define(App\Alumne::class, function (Faker $faker) {
         'name' => $faker->name,
         'surname' => $faker->word,
         'birthdate' => $faker->date($format='d/m/Y'),
-        'age' =>"dd",
+        'age' =>$faker->randomDigitNotNull,
         'school'=>$faker->word,
         'course'=> date('Y').'-'.(date('Y')+1),
         'school_course'=>$faker->word,

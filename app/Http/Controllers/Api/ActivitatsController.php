@@ -28,6 +28,7 @@ class ActivitatsController extends Controller
     {
         $activitats = new Activitat();
         $activitats->name  = $request->name;
+        $activitats->category = $request->category;
         $activitats->date_start  = $request->date_start;
         $activitats->date_final  = $request->date_final;
         $activitats->course  = $request->course;
@@ -46,6 +47,7 @@ class ActivitatsController extends Controller
     public function update(ActivitatUpdate $request, Activitat $activitats)
     {
         $activitats->name  = $request->name;
+        $activitats->category = $request->category;
         $activitats->date_start  = $request->date_start;
         $activitats->date_final  = $request->date_final;
         $activitats->course  = $request->course;

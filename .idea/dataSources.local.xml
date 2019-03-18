@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="database.sqlite" uuid="adeda55d-eebb-4b9d-bc6c-23a11c4c1762">
-      <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1">
-        <identifier-quote-string>&quot;</identifier-quote-string>
+    <data-source name="univers" uuid="8dad8307-7b31-4cac-8bf3-0c6a61373132">
+      <database-info product="MySQL" version="5.7.25-0ubuntu0.18.04.2" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" dbms="MYSQL" exact-version="5.7.25" exact-driver-version="5.1">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
       </database-info>
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
+      <user-name>debian-sys-maint</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
   </component>

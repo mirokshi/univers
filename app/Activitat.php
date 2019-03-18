@@ -30,6 +30,7 @@ class Activitat extends Model
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'category' => $this->category,
             'date_start' => $this->date_start,
             'date_final' => $this->date_final,
             'course' => $this->course,

@@ -54,6 +54,7 @@ window.Vue.component('register-form', RegisterForm);
 
 window.Vue.component('sparklines', Sparklines);
 window.Vue.component('home', Home);
+
 /** Alumnes* */
 window.Vue.component('alumnes', Alumnes);
 window.Vue.component('list-alumne', ListAlumne);
