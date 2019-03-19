@@ -1,6 +1,6 @@
 <template>
     <span>
-         <v-chip v-for="activitat in dataAlumne.activitats" :key="activitat.id" v-text="activitat.name"  class="body-1" @dblclick="removeActivitat(activitat)" color="blue lighten-4"></v-chip>
+         <v-chip v-for="activitat in alumneActivitats" :key="activitat.id" v-text="activitat.name"  class="body-1" @dblclick="removeActivitat(activitat)" color="blue lighten-4"></v-chip>
         <v-btn icon @click="dialog = true" class="red lighten-4"><v-icon>add</v-icon></v-btn>
         <v-dialog v-model="dialog" width="500" @keydown.esc.stop.prevent="dialog=false">
             <v-toolbar>
@@ -56,12 +56,14 @@
                 loading: false,
                 selectedActivitats: [],
                 dataAlumneActivitats: this.alumneActivitats,
-                dataAlumne:this.alumne
             }
         },
         props: {
             alumne: {
-                type: Object
+                type: Object,
+                default: function () {
+                    return {}
+                }
             },
             activitats: {
                 type: Array,
@@ -69,8 +71,9 @@
             },
             alumneActivitats: {
                 type: Array,
-                required: true
-            }
+                default: function () {
+                    return []
+                }
         },
         watch: {
             alumneActivitats (alumneActivitats) {

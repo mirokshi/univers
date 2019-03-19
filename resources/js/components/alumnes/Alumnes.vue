@@ -1,7 +1,7 @@
 <template>
     <span>
-        <list-alumne :users="users" :uri="uri" :alumnes="dataAlumnes" :activitats="dataActivitats"></list-alumne>
-        <create-alumne :users="users" :uri="uri" :activitats="dataActivitats" :alumnes="dataAlumnes" @created="add"></create-alumne>
+        <list-alumne :users="users" :uri="uri" :alumnes="dataAlumnes" :activitats="activitats"></list-alumne>
+        <create-alumne :users="users" :uri="uri" :activitats="activitats" :alumne="dataAlumnes" @created="add"></create-alumne>
     </span>
 </template>
 
@@ -18,8 +18,6 @@
         data() {
             return {
                 dataAlumnes: this.alumnes,
-                dataActivitats:this.activitats,
-                dataAlumneActivitats:this.alumneActivitats
             }
         },
         props: {

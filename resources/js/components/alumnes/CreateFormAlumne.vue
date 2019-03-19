@@ -114,7 +114,7 @@
                 <div class="headline font-weight-light grey--text">ACTIVITAT</div>
                 <v-layout>
                     <v-flex>
-                        <alumnes-activitats :alumne="alumnes" :alumne-activitats="alumnes.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>
+                        <span>Activitats : <alumnes-activitats  :alumne-activitats="editingAlumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats></span>
                     </v-flex>
                 </v-layout>
                 <v-divider></v-divider>
@@ -160,13 +160,20 @@
                 date: new Date().toISOString().substr(0, 10),
                 dateFormatted: this.formatDate(new Date().toISOString().substr(0, 10)),
                 birthdate: false,
-                name:'',
+                name:this.alumne.name,
+                editingAlumne:{
+                  id: this.alumne.id,
+                  name: this.alumne.name,
+                  surname:this.alumne.surname,
+                  age: this.alumne.age,
+                  sex: this.alumne.sex,
+                  phone: this.alumne.phone,
+                },
                 surname: '',
                 age:'',
                 sex:'',
                 phone:'',
-                dataAlumnes: this.alumnes,
-                dataActivitats:this.activitats,
+                dataAlumne:this.alumne,
                 dataUsers:this.users,
                 loading:false,
                 selectSchool:'',
@@ -226,6 +233,14 @@
             }
         },
         props:{
+            alumne:{
+                type:Object,
+                default: function () {
+                    return {
+                        activitats: []
+                    }
+                }
+            },
             users: {
                 type: Array,
                 required: true
@@ -237,10 +252,6 @@
             activitats:{
                 type:Array,
                 required: true
-            },
-            alumnes:{
-                type: Array,
-                required:true
             },
         },
         methods:{
