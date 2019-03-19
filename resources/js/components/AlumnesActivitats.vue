@@ -74,6 +74,7 @@
                 default: function () {
                     return []
                 }
+            }
         },
         watch: {
             alumneActivitats (alumneActivitats) {

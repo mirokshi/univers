@@ -12,7 +12,7 @@
             </v-toolbar>
             <v-card>
                 <v-card-text>
-                    <create-form-alumne :users="users" :uri="uri" :activitats="activitats" :alumne="alumne"  @close="dialog = false" @created="created"></create-form-alumne>
+                    <create-form-alumne :users="users" :uri="uri" :activitats="activitats"  @close="dialog = false" @created="created"></create-form-alumne>
                 </v-card-text>
             </v-card>
         </v-dialog>
@@ -44,9 +44,6 @@
             }
         },
         props:{
-            alumne:{
-              type: Array
-            },
             users: {
                 type: Array,
                 required: true

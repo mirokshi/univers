@@ -112,7 +112,7 @@
                 ],
                 pagination:{
                     rowsPerPage:25,
-                    sortBy:'name'
+                    sortBy:'id'
                 }
             }
         },

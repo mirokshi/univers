@@ -66,7 +66,6 @@
                         <span class="subheading font-weight grey--text">Genere</span>
                         <v-radio-group row
                                        v-model="sex"
-
                                        :error-messages="sexErrors"
                                        @input="$v.sex.$touch()"
                                        @blur="$v.sex.$touch()"
@@ -94,33 +93,44 @@
                 <v-layout>
                     <v-flex xs12 sm6 >
                         <v-combobox
-                            v-model="selectSchool"
+                            v-model="school"
                             :items="itemSchool"
+                            :error-messages="schoolErrors"
+                            @input="$v.school.$touch()"
+                            @blur="$v.school.$touch()"
                             label="Selecciona la escola"
-                        >
-                        </v-combobox>
+                        ></v-combobox>
                     </v-flex>
 
                     <v-flex>
                         <v-combobox
-                            v-model="selectSchoolCourse"
+                            v-model="schoolCourse"
                             :items="itemSchoolCourse"
                             label="Selcciona el nivell"
-                        >
-                        </v-combobox>
+                        ></v-combobox>
                     </v-flex>
                 </v-layout>
                 <v-divider></v-divider>
                 <div class="headline font-weight-light grey--text">ACTIVITAT</div>
                 <v-layout>
                     <v-flex>
-                        <span>Activitats : <alumnes-activitats  :alumne-activitats="editingAlumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats></span>
+                        <alumnes-activitats v-model="datactivitats" :alumne="alumne" :alumne-activitats="alumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>
+                        <!--<v-combobox-->
+                            <!--v-model="datactivitats"-->
+                            <!--:items="activitats"-->
+                        <!--&gt;-->
+                        <!--</v-combobox>-->
                     </v-flex>
                 </v-layout>
                 <v-divider></v-divider>
                 <div class="headline font-weight-light grey--text">ENTITAT</div>
                 <v-layout>
                     <v-flex>
+                        <v-text-field
+                            v-model="user"
+                            label="Entitat"
+                        ></v-text-field>
+
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -146,10 +156,11 @@
     export default {
         mixins:[validationMixin],
         validations:{
-          name:{required},
-          surname:{required},
+            name:{required},
+            surname:{required},
             sex:{required},
             birthdate:{required},
+            school:{required}
         },
         name: "CreateFormAlumne",
         components:{
@@ -160,23 +171,16 @@
                 date: new Date().toISOString().substr(0, 10),
                 dateFormatted: this.formatDate(new Date().toISOString().substr(0, 10)),
                 birthdate: false,
+                id:this.alumne.id,
                 name:this.alumne.name,
-                editingAlumne:{
-                  id: this.alumne.id,
-                  name: this.alumne.name,
-                  surname:this.alumne.surname,
-                  age: this.alumne.age,
-                  sex: this.alumne.sex,
-                  phone: this.alumne.phone,
-                },
-                surname: '',
-                age:'',
-                sex:'',
-                phone:'',
-                dataAlumne:this.alumne,
-                dataUsers:this.users,
+                surname:this.alumne.surname,
+                sex:this.alumne.sex,
+                phone:this.alumne.phone,
+                school:this.alumne.school,
+                schoolCourse:this.alumne.schoolCourse,
+                datactivitats:this.alumne.activitats,
+                user:null,
                 loading:false,
-                selectSchool:'',
                 itemSchool:
                     [
                         'Bitem',
@@ -209,7 +213,6 @@
                         'Verge de la Cinta',
                         'Altres'
                     ],
-                selectSchoolCourse:'',
                 itemSchoolCourse:[
                     'P3',
                     'P4',
@@ -259,32 +262,33 @@
                 if (window.laravel_user) {
                     this.user = this.users.find((user) => {
                         return parseInt(user.id) === parseInt(window.laravel_user.id)
-
                     })
                 }
             },
-            reset () {
+            reset: function () {
                 this.name = '',
-                this.surname = '',
-                this.age = '',
-                this.selectSchool = '',
-                this.selectSchoolCourse='',
-                this.age='',
-                this.phone='',
-                this.sex=''
-                this.user_id=''
+                    this.surname = '',
+                    this.birthdate = '',
+                    this.school = '',
+                    this.schoolCourse = '',
+                    this.phone = '',
+                    this.sex = '',
+                    this.datactivitats = '',
+                    this.user = ''
             },
-            add () {
+             add () {
                 this.loading = true
                 const alumne = {
                     'name': this.name,
                     'surname': this.surname,
                     'birthdate':this.birthdate,
                     'age': this.age,
-                    'school': this.selectSchool,
-                    'school_course':this.selectSchoolCourse,
+                    'school': this.school,
+                    'school_course':this.schoolCourse,
                     'sex':this.sex,
-                    'phone':this.phone
+                    'phone':this.phone,
+                    'user_id': (this.user!==null)? this.user.id :null,
+                    'activitats':this.datactivitats
                 }
                 window.axios.post(this.uri,alumne).then(response => {
                     this.$snackbar.showMessage('Alumne creat correctament')
@@ -292,13 +296,28 @@
                     this.$emit('created',response.data)
                     this.loading=false
                     this.$emit('close')
-
+                    this.verifyActivitat()
                 }).catch(error => {
                     console.log(error);
                     console.log(error.data);
                     this.$snackbar.showError(error.data)
                     this.loading=false
                 })
+            },
+            verifyActivitat(){
+              this.datactivitats.forEach((activitat) =>{
+                  if ((!activitat.name)) {
+                      window.axios.post('/api/v1/activitats',{
+                          name: activitat
+                      }).then((response) => {
+                          this.datactivitats[this.datactivitats.indexOf(activitat)] = response.data.id
+                      }).catch((error) =>{
+                          this.$snackbar.showError(error.message)
+                      })
+                  }else {
+                      this.datactivitats[this.datactivitats.indexOf(activitat)] = activitat.id
+                  }
+              })
             },
             created(){
                 this.selectLoggedUser()
@@ -347,7 +366,7 @@
                 const errors = []
                 if(!this.$v.school.$dirty){
                     return errors
-                }else{ !this.$v.school.required && errors.push('És obligatori la data de naiximent')}
+                }else{ !this.$v.school.required && errors.push('És obligatori la escola')}
                 return errors
             },
             computedDateFormatted () {
