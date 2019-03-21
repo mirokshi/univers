@@ -70,7 +70,7 @@ class Alumne extends Model
             'name' => $this->name,
             'surname' => $this->surname,
             'birthdate' => $this->birthdate,
-            'age' => $this->age,
+            'age' => $this->age ,
             'school' => $this->school,
             'course' => $this->course= date('Y').'-'.(date('Y')+1),
             'school_course' => $this->school_course,

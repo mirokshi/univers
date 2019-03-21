@@ -28,11 +28,12 @@ class AlumnesController extends Controller
     //CREATE
     public function store(AlumneStore $request)
     {
+
         $alumne = new Alumne();
         $alumne->name  = $request->name;
         $alumne->surname = $request->surname;
         $alumne->birthdate = $request->birthdate;
-        $alumne->age = $request->age;
+        $alumne->age = $request->age = calculateYears($alumne->birhdate);
         $alumne->school = $request->school;
         $alumne->course = $request->course =date('Y').'-'.(date('Y')+1);
         $alumne->school_course = $request->school_course;

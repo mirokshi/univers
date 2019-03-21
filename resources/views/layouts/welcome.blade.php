@@ -8,6 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
     <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="icon" ref="/favicon.ico" type="img/ico">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="user" content="{{ logged_user() }}">
@@ -47,16 +48,27 @@
         <v-content>
             <section>
                 <v-parallax src="img/background.jpg" height="700">
+                </v-parallax>
+                <div class="overlay" style="
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    background: rgba(0,0,0,.5);
+                    width:100%;
+                    height:700px;"
+                >
                     <v-layout
                         column
                         align-center
                         justify-center
                         class="white--text"
+                        style="height: 100%;"
                     >
-                        <img src="img/ajuntamentLogo.png" alt="Ajuntament de Tortosa   " height="200">
+                        <img src="img/ajuntamentLogo.png" alt="Ajuntament de Tortosa  " height="200">
                         <h1 class="white--text text--ligthen-2 mb-2 display-4 text-xs-center font-weight-bold"
                             style="text-shadow: 0 0 50px hsla(0, 0%, 0%, .4);font-family: 'Montserrat', sans-serif !important; z-index: 10;"
-                        >Univers alumnat</h1>
+                            :class="{'display-2': $vuetify.breakpoint.md, 'display-1': $vuetify.breakpoint.xs}"
+                        >Univers Alumnat</h1>
                         <div class="display-1 mb-3 text-xs-center" style="text-shadow: rgba(0, 0, 0, 0.6) 0px 0px 50px;">Ajuntament Tortosa</div>
                         <v-btn
                             class="blue lighten-2 mt-5"
@@ -67,7 +79,7 @@
                             Comença
                         </v-btn>
                     </v-layout>
-                </v-parallax>
+                </div>
             </section>
             <section class="red lighten-2">
                 <v-container grid-list-xl>
@@ -130,8 +142,6 @@
                         <div class="white--text ml-3">
                             Made with
                             <v-icon class="red--text">favorite</v-icon>
-                            by <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a>
-                            and <a class="white--text" href="https://github.com/vwxyzjn">Costa Huang</a>
                         </div>
                     </v-flex>
                 </v-layout>

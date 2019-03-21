@@ -160,13 +160,11 @@ if (!function_exists("create_example_alumnes")) {
     function create_example_alumnes()
     {
         $user = User::find(1);
-        Alumne::create([
+       Alumne::create([
             "name" => "Jose",
             "surname" => "Lopez",
-            "birthdate" => date("d")."/".date("m")."/".date("Y"),
-            "age" => 12,
+            "birthdate" =>'12',
             "school" => "IES EBRE",
-            "course" => date("Y")."-".(date("Y")+1),
             "school_course" => "CFGS",
             "sex" => "altre",
             "phone" => "777888999",
@@ -175,10 +173,9 @@ if (!function_exists("create_example_alumnes")) {
         Alumne::create([
             "name" => "Marc",
             "surname" => "Mestre",
-            "birthdate" => "22/10/2000",
+            "birthdate" =>'12',
             "age" => 12,
             "school" => "IES EBRE",
-            "course" => date("Y")."-".(date("Y")+1),
             "school_course" => "CFGS",
             "sex" => "home",
             "phone" => "616531219",
@@ -187,10 +184,9 @@ if (!function_exists("create_example_alumnes")) {
         Alumne::create([
             "name" => "Martha",
             "surname" => "Ramirez",
-            "birthdate" => "22/10/2000",
+            "birthdate" => '12',
             "age" => 12,
             "school" => "IES EBRE",
-            "course" => date("Y")."-".(date("Y")+1),
             "school_course" => "CFGS",
             "sex" => "dona",
             "phone" => "656445152",
@@ -207,7 +203,7 @@ if (!function_exists("create_example_simple_alumne")) {
         Alumne::create([
             "name" => "Juan",
             "surname" => "Gutierrez Sanchez",
-            "birthdate" => "22/10/2000",
+            "birthdate" =>'12',
             "age" => 12,
             "school" => "IES EBRE",
             "course" =>date("Y")."-".(date("Y")+1),
@@ -219,7 +215,7 @@ if (!function_exists("create_example_simple_alumne")) {
         Alumne::create([
             "name" => "Carla",
             "surname" => "Garcia Gomez",
-            "birthdate" => "22/10/2000",
+            "birthdate" => '12',
             "age" => 12,
             "school" => "IES EBRE",
             "course" =>date("Y")."-".(date("Y")+1),
@@ -231,7 +227,7 @@ if (!function_exists("create_example_simple_alumne")) {
         Alumne::create([
             "name" => "Joan",
             "surname" => "Blabla",
-            "birthdate" => "22/10/2000",
+            "birthdate" => '12',
             "age" => 12,
             "school" => "IES EBRE",
             "course" =>date("Y")."-".(date("Y")+1),
@@ -243,7 +239,7 @@ if (!function_exists("create_example_simple_alumne")) {
         Alumne::create([
             "name" => "Joan",
             "surname" => "Nada",
-            "birthdate" => "22/10/2000",
+            "birthdate" =>'12',
             "age" => 12,
             "school" => "IES EBRE",
             "course" =>"2017-2018",
@@ -333,21 +329,13 @@ if (!function_exists("create_example_alumnes_with_actvitats")){
 
     }
 }
-if (!function_exists("calculateYears")) {
-    function calculateYears($date1)
-    {
-
-            $d1 = $date1;
-            $carbon =  Carbon::now();
-            $d2 = $carbon;
-
-
-        $diff = $d2->diff($d1);
-
-        // Return years
-        return $diff->y;
-    }
-}
+//if (!function_exists("calculateYears")) {
+//    function calculateYears($fecha)
+//    {
+//        list($Y,$m,$d) = explode("/",$fecha);
+//        return( date("md") < $m.$d ? date("Y")-$Y-1 : date("Y")-$Y );
+//    }
+//}
 
 if (!function_exists("migrate_entitats")){
     function migrate_entitats(){

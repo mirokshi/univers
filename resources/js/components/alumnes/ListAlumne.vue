@@ -39,10 +39,11 @@
                 select-all
                 v-model="selected"
                 item-key="id"
+
             >
                 <v-progress-linear slot="progress" color="blue" indeterminate></v-progress-linear>
                 <template slot="items" slot-scope="{item: alumne}">
-                    <tr>
+                    <tr id="tr">
                         <td>
                             <v-checkbox
                                 :input-value="alumne.selected"
@@ -157,11 +158,18 @@
             removeAlumne(alumne){
                 this.dataAlumnes.splice(this.dataAlumnes.indexOf(alumne),1)
             },
+            FilterChange(){
+                if (this.dataAlumnes.change===false) document.getElementById("td").style.backgroundColor = "red"
+
+            }
         },
         computed:{
             total(){
                 return this.dataAlumnes.length
             }
+        },
+        mounted() {
+            this.FilterChange
         }
     }
 

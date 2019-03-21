@@ -28,31 +28,7 @@
                         ></v-text-field>
                     </v-flex>
                       <v-flex xs12 sm6 md3>
-                          <v-menu
-                              ref="birthdate"
-                              v-model="birthdate"
-                              :close-on-content-click="false"
-                              :nudge-right="40"
-                              lazy
-                              transition="scale-transition"
-                              offset-y
-                              full-width
-                              max-width="290px"
-                              min-width="290px"
-                              :error-messages="birthdateErrors"
-                              @input="$v.birthdate.$touch()"
-                              @blur="$v.birthdate.$touch()"
-                          >
-                              <v-text-field
-                                  slot="activator"
-                                  v-model="dateFormatted"
-                                  label="Data naixement"
-                                  hint="MM/DD/AAAA format"
-                                  persistent-hint
-                                  @blur="date = parseDate(dateFormatted)"
-                              ></v-text-field>
-                              <v-date-picker v-model="date" no-title @input="birthdate = false"></v-date-picker>
-                          </v-menu>
+                          <data-picker date=""></data-picker>
                       </v-flex>
                     <v-flex xs12 sm6 md3>
                         <v-text-field
@@ -152,6 +128,7 @@
     import { validationMixin } from 'vuelidate'
     import { required , minLength,maxLength} from 'vuelidate/lib/validators'
     import AlumnesActivitats from "../AlumnesActivitats";
+    import DataPicker from "../ui/DataPicker";
 
     export default {
         mixins:[validationMixin],
@@ -164,7 +141,8 @@
         },
         name: "CreateFormAlumne",
         components:{
-          'alumnes-activitats':AlumnesActivitats
+          'alumnes-activitats':AlumnesActivitats,
+            'data-picker':DataPicker
         },
         data(){
             return  {

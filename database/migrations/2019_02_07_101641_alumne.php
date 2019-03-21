@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -13,17 +14,17 @@ class Alumne extends Migration
      */
     public function up()
     {
-        $date = date('Y').'-'.(date('Y')+1);
+
         Schema::create('alumnes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('surname')->nullable();
-            $table->text('birthdate')->nullable();
+            $table->string('birthdate')->nullable();
             $table->integer('age')->nullable();
-            $table->text('school')->nullable();
-            $table->text('course')->nullable();
-            $table->text('school_course')->nullable();
-            $table->text('sex')->nullable();
+            $table->string('school')->nullable();
+            $table->string('course')->nullable()->default(date('Y').'-'.(date('Y')+1));
+            $table->string('school_course')->nullable();
+            $table->string('sex')->nullable();
             $table->integer('phone')->nullable();
             $table->boolean('change')->nullable()->default(true);
             $table->unsignedInteger('user_id') ->nullable();
