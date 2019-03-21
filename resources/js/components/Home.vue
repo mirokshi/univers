@@ -5,7 +5,7 @@
                     md8
             >
                 <h1 class="display-3 grey--text text--darken-2 mt-3">&#128075; Benvingut!</h1>
-                <h3 class="headline grey--text mt-5">Escolliu :</h3>
+                <h3 class="headline grey--text text--darken-1 mt-5">Escolliu :</h3>
                 <v-layout align-center justify-center row wrap class="mt-5">
                     <v-flex sm12
                             md4

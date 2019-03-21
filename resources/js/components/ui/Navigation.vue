@@ -4,6 +4,7 @@
         fixed
         app
         clipped
+        class="red lighten-3"
     >
         <v-list dense>
             <template v-for="item in items">
@@ -125,7 +126,7 @@
                 if (this.isSelectedItem(item)) {
                     return {
                         'border-right': '5px solid #E53935',
-                        'background-color': '#FFCDD2',
+                        'background-color': '#ffbeb4',
                         'font-size': '1em'
                     }
                 }

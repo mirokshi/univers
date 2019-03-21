@@ -3,7 +3,6 @@
         <v-toolbar color="red accent-2">
       <v-toolbar-title class="white--text">Alumnes {{total}}</v-toolbar-title>
       <v-spacer></v-spacer>
-
         <v-btn icon dark class="white--text">
             <v-icon>settings</v-icon>
         </v-btn>
@@ -13,17 +12,7 @@
         </v-toolbar>
         <v-card>
             <v-card-title>
-            <v-layout row wrap>
-                <v-flex xs12>
-                    <v-text-field
-                        v-model="search"
-                        append-icon="search"
-                        label="Búsqueda"
-                        single-line
-                        hide-details
-                    ></v-text-field>
-                </v-flex>
-            </v-layout>
+            <filters></filters>
             </v-card-title>
             <v-data-table
                 :headers="headers"
@@ -72,7 +61,9 @@
                     </tr>
                 </template>
             </v-data-table>
-        </v-card></span>
+            <!--<data-iterator :users="users" :uri="uri" :activitats="activitats" :alumnes="alumnes"></data-iterator>-->
+        </v-card>
+    </span>
 </template>
 
 <script>
@@ -80,6 +71,8 @@
     import DestroyAlumne from "./DestroyAlumne";
     import AlumnesActivitats from "../AlumnesActivitats";
     import Toggle from "../helper/Toggle";
+    import DataIterator from "../helper/DataIterator";
+    import Filters from "../helper/Filters";
 
     export default {
         name:'ListAlumne',
@@ -87,7 +80,9 @@
             'toggle':Toggle,
           'show-alumne' :ShowAlumne,
           'destroy-alumne':DestroyAlumne,
-          'alumnes-activitats':AlumnesActivitats
+          'alumnes-activitats':AlumnesActivitats,
+            'data-iterator':DataIterator,
+            'filters':Filters
         },
         data(){
             return {
