@@ -199,7 +199,7 @@ if (!function_exists("create_example_simple_alumne")) {
 
     function create_example_simple_alumne()
     {
-        $user = User::find(1);
+        $user = User::find(2);
         Alumne::create([
             "name" => "Juan",
             "surname" => "Gutierrez Sanchez",

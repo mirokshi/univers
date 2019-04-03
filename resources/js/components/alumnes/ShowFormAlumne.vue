@@ -105,6 +105,12 @@
                         </ul>
                     </v-flex>
                 </v-layout>
+                <div class="headline font-weight-light grey--text">ENTITAT</div>
+                <v-layout>
+                    <v-flex>
+                        <h3>{{user.name}}</h3>
+                    </v-flex>
+                </v-layout>
             </v-container>
         </v-form>
     </span>
@@ -145,6 +151,9 @@
                 type: Array,
                 required: true
             }
+        },
+        created() {
+            this.user = window.laravel_user
         }
     }
 </script>

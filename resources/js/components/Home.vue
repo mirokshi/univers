@@ -87,9 +87,13 @@
     // import '../../../../resources/img/userTypes/entitats.jpg'
     // import '../../../../resources/img/userTypes/activities.jpg'
 
+    import MaterialCard from "./ui/MaterialCard";
+
     export default {
         name: 'Home',
-
+        components:{
+          'material-card':MaterialCard
+        },
         data () {
             return {
                 loading: false

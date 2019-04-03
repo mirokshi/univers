@@ -3,36 +3,33 @@
         <v-toolbar color="red accent-2">
       <v-toolbar-title class="white--text">Alumnes {{total}}</v-toolbar-title>
       <v-spacer></v-spacer>
-        <v-btn icon dark class="white--text">
-            <v-icon>settings</v-icon>
-        </v-btn>
         <v-btn icon dark class="white--text" @click="refresh" :loading="loading" :disabled="loading">
             <v-icon>refresh</v-icon>
         </v-btn>
         </v-toolbar>
         <v-card>
             <v-card-title>
-            <filters></filters>
+            <!--<filters></filters>-->
             </v-card-title>
             <v-data-table
+                v-model="selected"
                 :headers="headers"
                 :items="dataAlumnes"
+                item-key="id"
+                select-all
                 :search="search"
-                no-result-text="No hay nigun registro"
+                no-result-text="No hi ha cap registre"
                 :loading="loading"
-                no-data-text="hola"
-                rows-per-page-text="Alumnos per página"
+                no-data-text="No hi ha res per mostrar aquí :("
+                rows-per-page-text="Alumnes per página"
                 :rows-per-page-items="[5,10,25,50,100,200,{'text':'Tots','value':-1}]"
                 :pagination.sync="pagination"
                 class="hidden-md-and-down"
-                select-all
-                v-model="selected"
-                item-key="id"
 
             >
                 <v-progress-linear slot="progress" color="blue" indeterminate></v-progress-linear>
                 <template slot="items" slot-scope="{item: alumne}">
-                    <tr id="tr">
+                    <tr :class="{'red': alumne.change === false}">
                         <td>
                             <v-checkbox
                                 :input-value="alumne.selected"
@@ -43,7 +40,10 @@
                         <td>{{alumne.id}}</td>
                         <td>{{alumne.name}}</td>
                         <td>{{alumne.surname}}</td>
-                        <td>{{alumne.sex}}</td>
+
+                        <td v-if="alumne.sex === 'dona'"><span class="fas fa-code"></span></td>
+                        <td v-else-if="alumne.sex === 'home'"><v-icon>home</v-icon></td>
+                        <td v-else><v-icon>share</v-icon></td>
                         <td>{{alumne.birthdate}}</td>
                         <td>{{alumne.age}}</td>
                         <td>{{alumne.school}}</td>
@@ -56,7 +56,8 @@
                         <td>
                             <show-alumne :users="users" :alumne="alumne" :activitats="activitats"></show-alumne>
                             <destroy-alumne :alumne="alumne" @removed="removeAlumne" :uri="uri"></destroy-alumne>
-                             <toggle :value="alumne.change" uri="/api/v1/change_alumne" active-text="Alta" unactive-text="Baja" :resource="alumne"></toggle>
+                            <update-alumne :users="users" :alumne="alumne" @updated="updateAlumne" :uri="uri"></update-alumne>
+                             <toggle :value="alumne.change" uri="/api/v1/change_alumne" active-text="Alta" unactive-text="Baja" :resource="alumne" @change="refresh(false)"></toggle>
                         </td>
                     </tr>
                 </template>
@@ -73,14 +74,16 @@
     import Toggle from "../helper/Toggle";
     import DataIterator from "../helper/DataIterator";
     import Filters from "../helper/Filters";
+    import UpdateAlumne from "./UpdateAlumne";
 
     export default {
         name:'ListAlumne',
         components:{
             'toggle':Toggle,
-          'show-alumne' :ShowAlumne,
-          'destroy-alumne':DestroyAlumne,
-          'alumnes-activitats':AlumnesActivitats,
+            'show-alumne' :ShowAlumne,
+            'destroy-alumne':DestroyAlumne,
+            'update-alumne':UpdateAlumne,
+            'alumnes-activitats':AlumnesActivitats,
             'data-iterator':DataIterator,
             'filters':Filters
         },
@@ -92,6 +95,7 @@
                 dataAlumnes: this.alumnes,
                 dataUsers: this.users,
                 selected:[],
+                pagination:{},
                 headers :[
                     {text:'ID', value: 'id'},
                     {text:'NOM', value: 'name'},
@@ -106,10 +110,6 @@
                     {text:'CREAT', value:'created_at_timestamp'},
                     {text:'ACCIONS',sorteable:false, value:'full_search'},
                 ],
-                pagination:{
-                    rowsPerPage:25,
-                    sortBy:'id'
-                }
             }
         },
         props:{
@@ -153,18 +153,14 @@
             removeAlumne(alumne){
                 this.dataAlumnes.splice(this.dataAlumnes.indexOf(alumne),1)
             },
-            FilterChange(){
-                if (this.dataAlumnes.change===false) document.getElementById("td").style.backgroundColor = "red"
-
+            updateAlumne(alumne){
+                this.refresh()
             }
         },
         computed:{
             total(){
                 return this.dataAlumnes.length
             }
-        },
-        mounted() {
-            this.FilterChange
         }
     }
 

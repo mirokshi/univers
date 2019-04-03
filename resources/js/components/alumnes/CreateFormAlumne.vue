@@ -102,11 +102,7 @@
                 <div class="headline font-weight-light grey--text">ENTITAT</div>
                 <v-layout>
                     <v-flex>
-                        <v-text-field
-                            v-model="user"
-                            label="Entitat"
-                        ></v-text-field>
-
+                        <h4>{{user.name}}</h4>
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -157,7 +153,6 @@
                 school:this.alumne.school,
                 schoolCourse:this.alumne.schoolCourse,
                 datactivitats:this.alumne.activitats,
-                user:null,
                 loading:false,
                 itemSchool:
                     [
@@ -355,7 +350,10 @@
             date (val) {
                 this.dateFormatted = this.formatDate(this.date)
             }
-        }
+        },
+    created() {
+        this.user = window.laravel_user
+    }
     }
 </script>
 
