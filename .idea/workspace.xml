@@ -7,8 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="671ac4b2-eb58-42de-b0c3-f9190173bdb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.prod" beforeDir="false" afterPath="$PROJECT_DIR$/.env.prod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +63,49 @@
             <state relative-caret-position="190">
               <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env.example">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="741">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="718" column="36" lean-forward="true" selection-start-line="718" selection-start-column="36" selection-end-line="718" selection-end-column="36" />
+              <folding>
+                <element signature="e#7#25#0#PHP" expanded="true" />
+                <element signature="e#23388#23680#0#PHP" />
+                <element signature="e#23681#23961#0#PHP" />
+                <element signature="e#23962#24457#0#PHP" />
+                <element signature="e#24458#24884#0#PHP" />
+                <element signature="e#24512#24882#0#PHP" />
+                <element signature="e#24885#25160#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env.prod">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" selection-start-line="8" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-570" />
           </provider>
         </entry>
       </file>
@@ -120,8 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/js/components/helper/Offset.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/ui/MaterialStatsCard.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/ui/MaterialCard.vue" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ChargeAlumnesController.php" />
@@ -160,17 +204,19 @@
         <option value="$PROJECT_DIR$/resources/js/components/helper/Filters.vue" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/resources/js/components/Home.vue" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/AlumneUpdate.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/UpdateFormAlumne.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/UpdateAlumne.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/ShowAlumne.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/ShowFormAlumne.vue" />
-        <option value="$PROJECT_DIR$/app/helpers.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
+        <option value="$PROJECT_DIR$/app/helpers.php" />
+        <option value="$PROJECT_DIR$/.env.example" />
+        <option value="$PROJECT_DIR$/.env.prod" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -293,7 +339,7 @@
     <option name="x" value="800" />
     <option name="y" value="25" />
     <option name="width" value="800" />
-    <option name="height" value="808" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -303,12 +349,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="univers" type="b2602c69:ProjectViewProjectNode" />
               <item name="univers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="univers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="univers" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="univers" type="b2602c69:ProjectViewProjectNode" />
@@ -350,7 +402,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -429,12 +480,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHP Script.AlumnesActivitats.php" />
-      <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHPUnit.AlumnesActivitatsTest.can_add_activitats_to_alumnes" />
+      <item itemvalue="PHPUnit.AlumnesActivitats.can_add_activitats_to_alumnes" />
       <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_create_alumne" />
       <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_show_a_alumne" />
-      <item itemvalue="PHPUnit.AlumnesActivitats.can_add_activitats_to_alumnes" />
-      <item itemvalue="PHPUnit.AlumnesActivitatsTest.can_add_activitats_to_alumnes" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHP Script.AlumnesActivitats.php" />
     </list>
     <recent_temporary>
       <list>
@@ -509,6 +560,7 @@
       <workItem from="1554103298228" duration="9718000" />
       <workItem from="1554278129661" duration="157000" />
       <workItem from="1554280977671" duration="503000" />
+      <workItem from="1554282658934" duration="1223000" />
     </task>
     <servers />
   </component>
@@ -545,10 +597,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246022000" />
+    <option name="totallyTimeSpent" value="247245000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="800" y="25" width="800" height="808" extended-state="4" />
+    <frame x="800" y="25" width="800" height="810" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49507388" weight="0.49375" />
@@ -578,23 +630,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-384">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -879,16 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3705">
-          <caret line="201" column="28" selection-start-line="201" selection-start-column="28" selection-end-line="201" selection-end-column="28" />
-          <folding>
-            <element signature="e#7#25#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/helper/Toggle.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -935,6 +960,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="718" column="36" lean-forward="true" selection-start-line="718" selection-start-column="36" selection-end-line="718" selection-end-column="36" />
+          <folding>
+            <element signature="e#7#25#0#PHP" expanded="true" />
+            <element signature="e#23388#23680#0#PHP" />
+            <element signature="e#23681#23961#0#PHP" />
+            <element signature="e#23962#24457#0#PHP" />
+            <element signature="e#24458#24884#0#PHP" />
+            <element signature="e#24512#24882#0#PHP" />
+            <element signature="e#24885#25160#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.prod">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" selection-start-line="8" selection-end-line="14" />
         </state>
       </provider>
     </entry>
