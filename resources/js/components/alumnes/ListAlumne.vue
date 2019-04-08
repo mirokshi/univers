@@ -40,10 +40,7 @@
                         <td>{{alumne.id}}</td>
                         <td>{{alumne.name}}</td>
                         <td>{{alumne.surname}}</td>
-
-                        <td v-if="alumne.sex === 'dona'"><span class="fas fa-code"></span></td>
-                        <td v-else-if="alumne.sex === 'home'"><v-icon>home</v-icon></td>
-                        <td v-else><v-icon>share</v-icon></td>
+                        <td>{{alumne.sex}}</td>
                         <td>{{alumne.birthdate}}</td>
                         <td>{{alumne.age}}</td>
                         <td>{{alumne.school}}</td>
@@ -56,7 +53,7 @@
                         <td>
                             <show-alumne :users="users" :alumne="alumne" :activitats="activitats"></show-alumne>
                             <destroy-alumne :alumne="alumne" @removed="removeAlumne" :uri="uri"></destroy-alumne>
-                            <update-alumne :users="users" :alumne="alumne" @updated="updateAlumne" :uri="uri"></update-alumne>
+                            <!--<update-alumne :users="users" :alumne="alumne" @updated="updateAlumne" :uri="uri"></update-alumne>-->
                              <toggle :value="alumne.change" uri="/api/v1/change_alumne" active-text="Alta" unactive-text="Baja" :resource="alumne" @change="refresh(false)"></toggle>
                         </td>
                     </tr>

@@ -76,7 +76,7 @@ class Alumne extends Model
             'school_course' => $this->school_course,
             'sex' => $this->sex,
             'phone' => $this->phone,
-            'change' => (boolean)$this->change,
+            'change' => (boolean)$this->change = true,
             'user_id' => (int)$this->user_id,
             'user_name' => optional($this->user)->name,
             'user_email' => optional($this->user)->email,

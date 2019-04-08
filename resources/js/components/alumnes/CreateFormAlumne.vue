@@ -28,14 +28,14 @@
                         ></v-text-field>
                     </v-flex>
                       <v-flex xs12 sm6 md3>
-                          <data-picker date=""></data-picker>
+                          <birthday></birthday>
                       </v-flex>
                     <v-flex xs12 sm6 md3>
                         <v-text-field
                             autofocus
                             v-model="phone"
                             label="Telefon"
-                            hint="Telefon de contacte"
+                            hint="Telefon de contacte (opcional)"
                         ></v-text-field>
                     </v-flex>
                     <v-flex xs12 sm6 md3>
@@ -83,6 +83,9 @@
                             v-model="schoolCourse"
                             :items="itemSchoolCourse"
                             label="Selcciona el nivell"
+                            :error-messages="schoolCourseErrors"
+                            @input="$v.schoolCourse.$touch()"
+                            @blur="$v.schoolCourse.$touch()"
                         ></v-combobox>
                     </v-flex>
                 </v-layout>
@@ -91,11 +94,6 @@
                 <v-layout>
                     <v-flex>
                         <alumnes-activitats v-model="datactivitats" :alumne="alumne" :alumne-activitats="alumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>
-                        <!--<v-combobox-->
-                            <!--v-model="datactivitats"-->
-                            <!--:items="activitats"-->
-                        <!--&gt;-->
-                        <!--</v-combobox>-->
                     </v-flex>
                 </v-layout>
                 <v-divider></v-divider>
@@ -124,7 +122,8 @@
     import { validationMixin } from 'vuelidate'
     import { required , minLength,maxLength} from 'vuelidate/lib/validators'
     import AlumnesActivitats from "../AlumnesActivitats";
-    import DataPicker from "../ui/DataPicker";
+    import DateBirthday from "../ui/DateBirthday";
+
 
     export default {
         mixins:[validationMixin],
@@ -133,17 +132,16 @@
             surname:{required},
             sex:{required},
             birthdate:{required},
-            school:{required}
+            school:{required},
+            schoolCourse:{required}
         },
         name: "CreateFormAlumne",
         components:{
           'alumnes-activitats':AlumnesActivitats,
-            'data-picker':DataPicker
+            'birthday': DateBirthday
         },
         data(){
             return  {
-                date: new Date().toISOString().substr(0, 10),
-                dateFormatted: this.formatDate(new Date().toISOString().substr(0, 10)),
                 birthdate: false,
                 id:this.alumne.id,
                 name:this.alumne.name,
@@ -263,17 +261,16 @@
                     'user_id': (this.user!==null)? this.user.id :null,
                     'activitats':this.datactivitats
                 }
-                window.axios.post(this.uri,alumne).then(response => {
+                window.axios.post(this.uri,alumne).then((response) => {
                     this.$snackbar.showMessage('Alumne creat correctament')
                     this.reset()
                     this.$emit('created',response.data)
                     this.loading=false
                     this.$emit('close')
                     this.verifyActivitat()
-                }).catch(error => {
+                }).catch((error) => {
                     console.log(error);
                     console.log(error.data);
-                    this.$snackbar.showError(error.data)
                     this.loading=false
                 })
             },
@@ -295,16 +292,6 @@
             created(){
                 this.selectLoggedUser()
             },
-            formatDate: function(date) {
-                if (!date) return null
-                const [year, month, day] = date.split('-')
-                return `${month}/${day}/${year}`
-            },
-            parseDate (date) {
-                if (!date) return null
-                const [month, day, year] = date.split('/')
-                return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
-            }
         },
         computed:{
             nameErrors(){
@@ -342,13 +329,12 @@
                 }else{ !this.$v.school.required && errors.push('És obligatori la escola')}
                 return errors
             },
-            computedDateFormatted () {
-                return this.formatDate(this.date)
-            },
-        },
-        watch:{
-            date (val) {
-                this.dateFormatted = this.formatDate(this.date)
+            schoolCourseErrors(){
+                const errors = []
+                if(!this.$v.schoolCourse.$dirty){
+                    return errors
+                }else{ !this.$v.schoolCourse.required && errors.push('És obligatori el nivell educatiu')}
+                return errors
             }
         },
     created() {
