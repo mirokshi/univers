@@ -27,7 +27,7 @@
                     ></v-text-field>
                 </v-flex>
                 <v-flex xs12 sm6 md3>
-                    <!--<data-picker date=""></data-picker>-->
+                    <birthday></birthday>
                 </v-flex>
                 <v-flex xs12 sm6 md3>
                     <v-text-field
@@ -90,18 +90,13 @@
             <v-layout>
                 <v-flex>
                     <alumnes-activitats v-model="datactivitats" :alumne="alumne" :alumne-activitats="alumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>
-                    <!--<v-combobox-->
-                    <!--v-model="datactivitats"-->
-                    <!--:items="activitats"-->
-                    <!--&gt;-->
-                    <!--</v-combobox>-->
                 </v-flex>
             </v-layout>
             <v-divider></v-divider>
             <div class="headline font-weight-light grey--text">ENTITAT</div>
             <v-layout>
                 <v-flex>
-                    <h4>{{user.name}}</h4>
+                    <!--<h4>{{user.name}}</h4>-->
                 </v-flex>
             </v-layout>
         </v-container>
@@ -121,26 +116,97 @@
 <script>
     import { validationMixin } from 'vuelidate'
     import { required , minLength,maxLength} from 'vuelidate/lib/validators'
+    import AlumnesActivitats from "../AlumnesActivitats";
+    import DateBirthday from "../ui/DateBirthday";
     export default {
         mixins:[validationMixin],
         validations:{
-          name:{required},
-          surname:{required},
-          sex:{required},
-          bithdate:{required},
-          school:{required},
+            name:{required},
+            surname:{required},
+            sex:{required},
+            bithdate:{required},
+            school:{required},
+            schoolCourse:{required}
         },
         name: "UpdateFormAlumne",
+        components:{
+            'alumnes-activitats':AlumnesActivitats,
+            'birthday':DateBirthday
+        },
         data () {
             return {
-                name: this.alumne.name,
-                loading : false
+                birthdate: false,
+                id:this.alumne.id,
+                name:this.alumne.name,
+                surname:this.alumne.surname,
+                sex:this.alumne.sex,
+                phone:this.alumne.phone,
+                school:this.alumne.school,
+                schoolCourse:this.alumne.schoolCourse,
+                loading : false,
+                datactivitats:this.alumne.activitats,
+                itemSchool:
+                    [
+                        'Bitem',
+                        'Centre Educatiu',
+                        'Centre Educatiu Girona',
+                        'CFA',
+                        'Cinta Curto',
+                        'Consolació',
+                        'Daniel Mangrané',
+                        'Dertosa',
+                        'Despuig',
+                        'El Temple',
+                        'Ferreries',
+                        'IES Ebre',
+                        'IES Montsia',
+                        'La Mercè',
+                        'La Mercè/St Jordi',
+                        'Marcel-lí Domingo',
+                        'Montsià',
+                        'no escolarizat',
+                        'PTT',
+                        'Remolins',
+                        'Sagrada Familia',
+                        'Sant Jordi',
+                        'St. Llatzer',
+                        'Temple',
+                        'Teresianes',
+                        'UEC',
+                        'URV',
+                        'Verge de la Cinta',
+                        'Altres'
+                    ],
+                itemSchoolCourse:[
+                    'P3',
+                    'P4',
+                    'P5',
+                    '1r',
+                    '2n',
+                    '3r',
+                    '5è',
+                    '6è',
+                    '1r ESO',
+                    '2n ESO',
+                    '1r BATX',
+                    '2n BATX',
+                    'CFGM',
+                    'CFGMS',
+                    'CEE',
+                    'CFA',
+                    'Universitat',
+                    'Altres',
+                ]
             }
         },
         props:{
             alumne:{
                 type: Object,
-                required: true
+                default: function () {
+                    return {
+                        activitats: []
+                    }
+                }
             },
             users:{
                 type: Array,
@@ -149,7 +215,11 @@
             uri: {
                 type: String,
                 required: true
-            }
+            },
+            activitats:{
+                type:Array,
+                required: true
+            },
         },
         methods:{
             update(){
@@ -165,6 +235,50 @@
                     this.loading = false
                     console.log(error);
                 })
+            }
+        },
+        computed:{
+            nameErrors(){
+                const errors = []
+                if (!this.$v.name.$dirty) {
+                    return errors
+                } else { !this.$v.name.required && errors.push('El nom del alumne  és obligatori.') }
+                return errors
+            },
+            surnameErrors(){
+                const errors = []
+                if (!this.$v.name.$dirty) {
+                    return errors
+                } else { !this.$v.name.required && errors.push('El cognom del alumne  és obligatori.') }
+                return errors
+            },
+            sexErrors(){
+                const errors = []
+                if(!this.$v.sex.$dirty){
+                    return errors
+                }else{ !this.$v.sex.required && errors.push('És obligatori marcar un gènere')}
+                return errors
+            },
+            birthdateErrors(){
+                const errors = []
+                if(!this.$v.birthdate.$dirty){
+                    return errors
+                }else{ !this.$v.birthdate.required && errors.push('És obligatori la data de naiximent')}
+                return errors
+            },
+            schoolErrors(){
+                const errors = []
+                if(!this.$v.school.$dirty){
+                    return errors
+                }else{ !this.$v.school.required && errors.push('És obligatori la escola')}
+                return errors
+            },
+            schoolCourseErrors(){
+                const errors = []
+                if(!this.$v.schoolCourse.$dirty){
+                    return errors
+                }else{ !this.$v.schoolCourse.required && errors.push('És obligatori el nivell educatiu')}
+                return errors
             }
         }
     }

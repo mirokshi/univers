@@ -53,7 +53,7 @@
                         <td>
                             <show-alumne :users="users" :alumne="alumne" :activitats="activitats"></show-alumne>
                             <destroy-alumne :alumne="alumne" @removed="removeAlumne" :uri="uri"></destroy-alumne>
-                            <!--<update-alumne :users="users" :alumne="alumne" @updated="updateAlumne" :uri="uri"></update-alumne>-->
+                            <update-alumne :users="users" :alumne="alumne" @updated="updateAlumne" :uri="uri" :activitats="activitats"></update-alumne>
                              <toggle :value="alumne.change" uri="/api/v1/change_alumne" active-text="Alta" unactive-text="Baja" :resource="alumne" @change="refresh(false)"></toggle>
                         </td>
                     </tr>

@@ -38,8 +38,8 @@
                             hint="Telefon de contacte (opcional)"
                         ></v-text-field>
                     </v-flex>
-                    <v-flex xs12 sm6 md3>
                         <span class="subheading font-weight grey--text">Genere</span>
+                    <v-flex xs12 sm6 md3>
                         <v-radio-group row
                                        v-model="sex"
                                        :error-messages="sexErrors"

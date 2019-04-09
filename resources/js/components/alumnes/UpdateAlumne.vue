@@ -20,6 +20,7 @@
                         :alumne="alumne"
                         :uri="uri"
                         :users="users"
+                        :activitats="activitats"
                         @close="dialog=false"
                         @updated="updated"
                     ></update-form-alumne>
@@ -64,7 +65,11 @@
             uri:{
                 type: String,
                 required: true
-            }
+            },
+            activitats:{
+                type:Array,
+                required: true
+            },
         },
         methods:{
             updated(alumne){
@@ -73,7 +78,8 @@
         },
         created() {
             this.user = window.laravel_user
-        }
+        },
+
     }
 
 </script>
