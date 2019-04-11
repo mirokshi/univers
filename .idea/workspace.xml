@@ -469,12 +469,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHP Script.AlumnesActivitats.php" />
-      <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.AlumnesActivitatsTest.can_add_activitats_to_alumnes" />
       <item itemvalue="PHPUnit.AlumnesActivitats.can_add_activitats_to_alumnes" />
       <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_create_alumne" />
       <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_show_a_alumne" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHP Script.AlumnesActivitats.php" />
     </list>
     <recent_temporary>
       <list>

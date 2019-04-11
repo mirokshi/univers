@@ -1,7 +1,7 @@
 <template>
     <v-form>
         <v-container>
-            <div class="headline font-weight-light grey--text">DADES DEL ALUMNE</div>
+            <div class="headline font-weight-light grey--text">DADES DEL AAALUMNE</div>
             <v-layout row wrap>
                 <v-flex xs12 sm6 >
                     <v-text-field
