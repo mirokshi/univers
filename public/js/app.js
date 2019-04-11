@@ -45225,7 +45225,7 @@ var render = function() {
         "v-container",
         [
           _c("div", { staticClass: "headline font-weight-light grey--text" }, [
-            _vm._v("DADES DEL AAALUMNE")
+            _vm._v("DADESDADESDADESDADESDADES")
           ]),
           _vm._v(" "),
           _c(
