@@ -51,6 +51,7 @@
                 window.axios.post(this.uri + '/' + this.resource.id).then(() => {
                     this.$snackbar.showMessage("El alumne s'ha donat d'alta")
                     this.loading = false
+                    this.$emit('change')
                 }).catch(error => {
                     this.loading = false
                     this.$snackbar.showError(error)
@@ -61,6 +62,7 @@
                 window.axios.delete(this.uri + '/' + this.resource.id).then(() => {
                     this.$snackbar.showMessage("El alumne s'ha donat de baixa")
                     this.loading = false
+                    this.$emit('change')
                 }).catch(error => {
                     this.loading = false
                     this.$snackbar.showError(error)
