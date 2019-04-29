@@ -317,8 +317,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="720" />
     <option name="y" value="27" />
-    <option name="width" value="1440" />
+    <option name="width" value="1430" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -441,12 +442,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_index_alumnes" />
-      <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_index_alumnes (1)" />
-      <item itemvalue="PHPUnit.RegisterControllerTest.can_resgister_a_user" />
-      <item itemvalue="PHPUnit.AlumnesControllerTest.guest_user_cannot_index_alumnes" />
       <item itemvalue="PHPUnit.AlumnesControllerTest (1)" />
+      <item itemvalue="PHPUnit.AlumnesControllerTest.guest_user_cannot_index_alumnes" />
+      <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_index_alumnes (1)" />
+      <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_index_alumnes" />
+      <item itemvalue="PHPUnit.RegisterControllerTest.can_resgister_a_user" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
     </list>
     <recent_temporary>
       <list>
