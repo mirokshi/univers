@@ -159,7 +159,7 @@ if (!function_exists("create_example_alumnes")) {
 
     function create_example_alumnes()
     {
-        $user = User::find(1);
+        $user = factory(User::class)->create();
        Alumne::create([
             "name" => "Jose",
             "surname" => "Lopez",
@@ -199,7 +199,7 @@ if (!function_exists("create_example_simple_alumne")) {
 
     function create_example_simple_alumne()
     {
-        $user = User::find(2);
+        $user = factory(User::class)->create();
         Alumne::create([
             "name" => "Juan",
             "surname" => "Gutierrez Sanchez",

@@ -16,7 +16,7 @@ use Tests\TestCase;
 
 class RegisterControllerTest extends TestCase
 {
-    use refreshdatabase;
+//    use refreshdatabase;/**/
 
     /**
      * @test
@@ -38,7 +38,7 @@ class RegisterControllerTest extends TestCase
         ]);
         //3
         $response->assertStatus(302);
-        $response->assertRedirect('/');
+        $response->assertRedirect('/home');
         $this->assertNotNull(Auth::user());
         //comprovar que se ha creado
         $this->assertEquals($user['email'], Auth::user()->email);

@@ -2139,7 +2139,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 // import '../../../../resources/img/userTypes/students.jpg'
 // import '../../../../resources/img/userTypes/entitats.jpg'
 // import '../../../../resources/img/userTypes/activities.jpg'
@@ -4334,7 +4333,7 @@ __webpack_require__.r(__webpack_exports__);
       sex: this.alumne.sex,
       phone: this.alumne.phone,
       school: this.alumne.school,
-      schoolCourse: this.alumne.schoolCourse,
+      schoolCourse: this.alumne.school_course,
       loading: false,
       datactivitats: this.alumne.activitats,
       itemSchool: ['Bitem', 'Centre Educatiu', 'Centre Educatiu Girona', 'CFA', 'Cinta Curto', 'Consolació', 'Daniel Mangrané', 'Dertosa', 'Despuig', 'El Temple', 'Ferreries', 'IES Ebre', 'IES Montsia', 'La Mercè', 'La Mercè/St Jordi', 'Marcel-lí Domingo', 'Montsià', 'no escolarizat', 'PTT', 'Remolins', 'Sagrada Familia', 'Sant Jordi', 'St. Llatzer', 'Temple', 'Teresianes', 'UEC', 'URV', 'Verge de la Cinta', 'Altres'],
@@ -4916,6 +4915,8 @@ __webpack_require__.r(__webpack_exports__);
         _this.$snackbar.showMessage("El alumne s'ha donat d'alta");
 
         _this.loading = false;
+
+        _this.$emit('change');
       }).catch(function (error) {
         _this.loading = false;
 
@@ -4930,6 +4931,8 @@ __webpack_require__.r(__webpack_exports__);
         _this2.$snackbar.showMessage("El alumne s'ha donat de baixa");
 
         _this2.loading = false;
+
+        _this2.$emit('change');
       }).catch(function (error) {
         _this2.loading = false;
 
@@ -42459,13 +42462,7 @@ var render = function() {
               _c(
                 "h1",
                 { staticClass: "display-3 grey--text text--darken-2 mt-3" },
-                [_vm._v("👋 Benvingut!")]
-              ),
-              _vm._v(" "),
-              _c(
-                "h3",
-                { staticClass: "headline grey--text text--darken-1 mt-5" },
-                [_vm._v("Escolliu :")]
+                [_vm._v("👋 Escolliu :")]
               ),
               _vm._v(" "),
               _c(
@@ -45225,7 +45222,7 @@ var render = function() {
         "v-container",
         [
           _c("div", { staticClass: "headline font-weight-light grey--text" }, [
-            _vm._v("DADESDADESDADESDADESDADES")
+            _vm._v("DADES DEL ALUMNE")
           ]),
           _vm._v(" "),
           _c(
@@ -45445,7 +45442,7 @@ var render = function() {
           _c("v-divider"),
           _vm._v(" "),
           _c("div", { staticClass: "headline font-weight-light grey--text" }, [
-            _vm._v("ACTIVITAT")
+            _vm._v("ACTIVITAT(s)")
           ]),
           _vm._v(" "),
           _c(
