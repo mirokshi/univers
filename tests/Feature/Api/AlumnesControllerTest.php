@@ -193,7 +193,7 @@ public function alumnes_manager_can_delete_alumne()
         $this->assertEquals('22/10/2000',$result->birthdate);
         $this->assertEquals('19',$result->age);
         $this->assertEquals('IES EBRE',$result->school);
-        $this->assertEquals('2018-2019',$result->course);
+        $this->assertEquals('2019-2020',$result->course);
         $this->assertEquals('CFGS',$result->school_course);
         $this->assertEquals('home',$result->sex);
         $this->assertEquals('616531219',$result->phone);
@@ -256,7 +256,6 @@ public function alumnes_manager_can_delete_alumne()
      */
     public function superadmin_can_index_alumnes()
     {
-        $this->withoutExceptionHandling();
         $this->loginAsSuperAdmin('api');
 
         create_example_alumnes();

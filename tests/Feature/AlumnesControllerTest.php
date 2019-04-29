@@ -57,7 +57,7 @@ class AlumnesControllerTest extends TestCase
 
 
         $response->assertViewHas('alumnes',function ($alumnes){
-           return count($alumnes) === 3 &&
+           return count($alumnes) === 4 &&
            $alumnes[0]['name'] === 'Juan';
         });
 

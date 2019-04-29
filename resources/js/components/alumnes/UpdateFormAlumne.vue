@@ -1,7 +1,7 @@
 <template>
     <v-form>
         <v-container>
-            <div class="headline font-weight-light grey--text">DADESDADESDADESDADESDADES</div>
+            <div class="headline font-weight-light grey--text">DADES DEL ALUMNE</div>
             <v-layout row wrap>
                 <v-flex xs12 sm6 >
                     <v-text-field
@@ -86,7 +86,7 @@
                 </v-flex>
             </v-layout>
             <v-divider></v-divider>
-            <div class="headline font-weight-light grey--text">ACTIVITAT</div>
+            <div class="headline font-weight-light grey--text">ACTIVITAT(s)</div>
             <v-layout>
                 <v-flex>
                     <alumnes-activitats v-model="datactivitats" :alumne="alumne" :alumne-activitats="alumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>
@@ -142,7 +142,7 @@
                 sex:this.alumne.sex,
                 phone:this.alumne.phone,
                 school:this.alumne.school,
-                schoolCourse:this.alumne.schoolCourse,
+                schoolCourse:this.alumne.school_course,
                 loading : false,
                 datactivitats:this.alumne.activitats,
                 itemSchool:
