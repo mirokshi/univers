@@ -7,12 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="671ac4b2-eb58-42de-b0c3-f9190173bdb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/univers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/univers.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/AlumnesControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/AlumnesControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/AlumnesControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/AlumnesControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/alumnes/DestroyAlumne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/DestroyAlumne.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/alumnes/UpdateFormAlumne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/UpdateFormAlumne.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/RegisterControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/RegisterControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +31,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <executablePath>composer</executablePath>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -39,17 +49,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="univers" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="univers" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="univers" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="univers: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
     </expand>
     <select />
   </component>
@@ -59,31 +58,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers.php">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
-              <folding>
-                <element signature="e#7#25#0#PHP" expanded="true" />
-                <element signature="e#23388#23680#0#PHP" />
-                <element signature="e#23681#23961#0#PHP" />
-                <element signature="e#23962#24457#0#PHP" />
-                <element signature="e#24458#24884#0#PHP" />
-                <element signature="e#24512#24882#0#PHP" />
-                <element signature="e#24885#25160#0#PHP" />
-              </folding>
+            <state relative-caret-position="233">
+              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/login.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/Feature/RegisterControllerTest.php">
+        <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-              <folding>
-                <element signature="e#117#167#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="24">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.lock">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="967" column="39" selection-start-line="967" selection-start-column="39" selection-end-line="967" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -99,8 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hel</find>
-      <find>help</find>
       <find>database.s</find>
       <find>database.sq</find>
       <find>data</find>
@@ -129,6 +137,8 @@
       <find>dirt</find>
       <find>refre</find>
       <find>change</find>
+      <find>luca</find>
+      <find>php</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -146,9 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/resources/js/components/auth/RegisterForm.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/auth/LoginForm.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
@@ -157,7 +164,6 @@
         <option value="$PROJECT_DIR$/app/Activitat.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ActivitatsController.php" />
         <option value="$PROJECT_DIR$/resources/js/components/activitats/ListActivitat.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/alumnes/DestroyAlumne.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/AlumnesActivitats.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue" />
@@ -165,7 +171,6 @@
         <option value="$PROJECT_DIR$/resources/js/components/ui/BirhtDateInputComponent.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/ui/DataPicker.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/ui/Navigation.vue" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/welcome.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/AlumnesController.php" />
@@ -180,7 +185,6 @@
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/.env.example" />
         <option value="$PROJECT_DIR$/.env.prod" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_18_102718_activitats.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_07_101641_alumne.php" />
         <option value="$PROJECT_DIR$/resources/js/components/ui/dateBirthday.vue" />
@@ -191,12 +195,18 @@
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue" />
         <option value="$PROJECT_DIR$/app/Alumne.php" />
         <option value="$PROJECT_DIR$/resources/js/components/helper/Toggle.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/alumnes/UpdateFormAlumne.vue" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/AlumnesControllerTest.php" />
         <option value="$PROJECT_DIR$/tests/Feature/Api/AlumnesControllerTest.php" />
         <option value="$PROJECT_DIR$/app/helpers.php" />
         <option value="$PROJECT_DIR$/tests/Feature/RegisterControllerTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/AlumnesControllerTest.php" />
+        <option value="$PROJECT_DIR$/resources/js/app.js" />
+        <option value="$PROJECT_DIR$/resources/js/components/alumnes/UpdateFormAlumne.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/alumnes/DestroyAlumne.vue" />
+        <option value="$PROJECT_DIR$/composer.lock" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/login.blade.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -213,7 +223,6 @@
     <include_path>
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/vendor/nexmo/client" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
@@ -238,16 +247,11 @@
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/vendor/php-http/guzzle6-adapter" />
       <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/php-http/promise" />
-      <path value="$PROJECT_DIR$/vendor/php-http/httplug" />
       <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server" />
       <path value="$PROJECT_DIR$/vendor/laravel/framework" />
-      <path value="$PROJECT_DIR$/vendor/laravel/nexmo-notification-channel" />
-      <path value="$PROJECT_DIR$/vendor/laravel/slack-notification-channel" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
@@ -313,13 +317,16 @@
       <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
       <path value="$PROJECT_DIR$/vendor/lab404/laravel-impersonate" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="800" />
-    <option name="y" value="25" />
-    <option name="width" value="800" />
-    <option name="height" value="810" />
+    <option name="y" value="27" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -340,13 +347,20 @@
             <path>
               <item name="univers" type="b2602c69:ProjectViewProjectNode" />
               <item name="univers" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="univers" type="b2602c69:ProjectViewProjectNode" />
               <item name="univers" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="univers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="univers" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -404,13 +418,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.RegisterControllerTest.can_resgister_a_user">
-    <configuration name="AlumnesControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\AlumnesControllerTest" configuration_file="$PROJECT_DIR$/vendor/autoload.php" directory="$PROJECT_DIR$" file="$PROJECT_DIR$/tests/Feature/Api/AlumnesControllerTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.AlumnesControllerTest (1)">
+    <configuration name="AlumnesControllerTest (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\AlumnesControllerTest" configuration_file="$PROJECT_DIR$/vendor/autoload.php" directory="$PROJECT_DIR$" file="$PROJECT_DIR$/tests/Feature/AlumnesControllerTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="AlumnesControllerTest.alumnes_user_can_index_alumnes" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\AlumnesControllerTest" configuration_file="$PROJECT_DIR$/vendor/autoload.php" directory="$PROJECT_DIR$" file="$PROJECT_DIR$/tests/Feature/AlumnesControllerTest.php" method="alumnes_user_can_index_alumnes" scope="Method" />
+    <configuration name="AlumnesControllerTest.guest_user_cannot_index_alumnes" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\AlumnesControllerTest" configuration_file="$PROJECT_DIR$/vendor/autoload.php" directory="$PROJECT_DIR$" file="$PROJECT_DIR$/tests/Feature/AlumnesControllerTest.php" method="guest_user_cannot_index_alumnes" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="AlumnesControllerTest.superadmin_can_index_alumnes (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -435,19 +449,19 @@
     </configuration>
     <list>
       <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.AlumnesControllerTest" />
       <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_index_alumnes" />
       <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_index_alumnes (1)" />
-      <item itemvalue="PHPUnit.AlumnesControllerTest.alumnes_user_can_index_alumnes" />
       <item itemvalue="PHPUnit.RegisterControllerTest.can_resgister_a_user" />
+      <item itemvalue="PHPUnit.AlumnesControllerTest.guest_user_cannot_index_alumnes" />
+      <item itemvalue="PHPUnit.AlumnesControllerTest (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.RegisterControllerTest.can_resgister_a_user" />
-        <item itemvalue="PHPUnit.AlumnesControllerTest" />
+        <item itemvalue="PHPUnit.AlumnesControllerTest (1)" />
+        <item itemvalue="PHPUnit.AlumnesControllerTest.guest_user_cannot_index_alumnes" />
         <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_index_alumnes" />
-        <item itemvalue="PHPUnit.AlumnesControllerTest.alumnes_user_can_index_alumnes" />
         <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_index_alumnes (1)" />
+        <item itemvalue="PHPUnit.RegisterControllerTest.can_resgister_a_user" />
       </list>
     </recent_temporary>
   </component>
@@ -523,28 +537,11 @@
       <workItem from="1556090235788" duration="637000" />
       <workItem from="1556266192541" duration="4714000" />
       <workItem from="1556522328749" duration="2586000" />
+      <workItem from="1556525968283" duration="2978000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AlumnesControllerTest_superadmin_can_index_alumnes_(1) - 2019.04.29 at 09h 52m 44s.xml">
-      <configuration name="AlumnesControllerTest.superadmin_can_index_alumnes (1)" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AlumnesControllerTest_alumnes_user_can_index_alumnes - 2019.04.29 at 09h 52m 51s.xml">
-      <configuration name="AlumnesControllerTest.alumnes_user_can_index_alumnes" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AlumnesControllerTest_superadmin_can_index_alumnes_(1) - 2019.04.29 at 09h 53m 06s.xml">
-      <configuration name="AlumnesControllerTest.superadmin_can_index_alumnes (1)" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AlumnesControllerTest_superadmin_can_index_alumnes_(1) - 2019.04.29 at 09h 54m 10s.xml">
-      <configuration name="AlumnesControllerTest.superadmin_can_index_alumnes (1)" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AlumnesControllerTest_alumnes_user_can_index_alumnes - 2019.04.29 at 09h 54m 56s.xml">
-      <configuration name="AlumnesControllerTest.alumnes_user_can_index_alumnes" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AlumnesControllerTest_superadmin_can_index_alumnes - 2019.04.29 at 09h 56m 24s.xml">
-      <configuration name="AlumnesControllerTest.superadmin_can_index_alumnes" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="AlumnesControllerTest - 2019.04.29 at 09h 57m 52s.xml">
       <configuration name="AlumnesControllerTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -557,21 +554,39 @@
     <history-entry file="RegisterControllerTest_can_resgister_a_user - 2019.04.29 at 10h 00m 31s.xml">
       <configuration name="RegisterControllerTest.can_resgister_a_user" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="RegisterControllerTest_can_resgister_a_user - 2019.04.29 at 10h 20m 41s.xml">
+      <configuration name="RegisterControllerTest.can_resgister_a_user" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="RegisterControllerTest_can_resgister_a_user - 2019.04.29 at 10h 22m 01s.xml">
+      <configuration name="RegisterControllerTest.can_resgister_a_user" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="AlumnesControllerTest_superadmin_can_index_alumnes_(1) - 2019.04.29 at 10h 26m 53s.xml">
+      <configuration name="AlumnesControllerTest.superadmin_can_index_alumnes (1)" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="AlumnesControllerTest_superadmin_can_index_alumnes - 2019.04.29 at 10h 27m 28s.xml">
+      <configuration name="AlumnesControllerTest.superadmin_can_index_alumnes" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="AlumnesControllerTest_guest_user_cannot_index_alumnes - 2019.04.29 at 10h 28m 00s.xml">
+      <configuration name="AlumnesControllerTest.guest_user_cannot_index_alumnes" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="AlumnesControllerTest_(1) - 2019.04.29 at 10h 28m 28s.xml">
+      <configuration name="AlumnesControllerTest (1)" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266963000" />
+    <option name="totallyTimeSpent" value="269941000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1600" height="810" extended-state="6" />
+    <frame x="0" y="27" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49507388" visible="true" weight="0.183125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49507388" visible="true" weight="0.18263888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.5049261" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32881773" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40710384" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40640393" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3989071" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -585,7 +600,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.2475" />
+      <window_info anchor="right" id="Database" order="3" weight="0.24722221" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,53 +612,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/js/components/ui/Navigation.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1904">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="2628" selection-start-line="23" selection-start-column="2628" selection-end-line="23" selection-end-column="2628" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="2628" selection-start-line="21" selection-start-column="2628" selection-end-line="21" selection-end-column="2628" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#33#71#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/helper/Filters.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -682,16 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-342" />
@@ -711,31 +669,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ShowAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ShowFormAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2907">
-          <caret line="153" column="9" selection-start-line="153" selection-start-column="9" selection-end-line="156" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -815,55 +752,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/UpdateFormAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1805">
-          <caret line="95" column="73" selection-start-line="95" selection-start-column="73" selection-end-line="95" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="47" column="50" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2375">
-          <caret line="128" column="8" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="8" />
-          <folding>
-            <element signature="e#6427#7548#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/AlumnesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1102">
           <caret line="66" column="58" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/UpdateAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -910,13 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/AlumnesControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/RegisterAltControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-207">
@@ -924,17 +809,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/Api/AlumnesControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="195" column="38" selection-start-line="195" selection-start-column="38" selection-end-line="195" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
+        <state relative-caret-position="3720">
+          <caret line="161" column="30" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
           <folding>
             <element signature="e#7#25#0#PHP" expanded="true" />
             <element signature="e#23388#23680#0#PHP" />
@@ -949,11 +827,133 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/RegisterControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        <state relative-caret-position="-146">
+          <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
           <folding>
             <element signature="e#117#167#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/Api/AlumnesControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="260" column="16" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/AlumnesControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="152" column="21" lean-forward="true" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#526#574#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/UpdateAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1088">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/UpdateFormAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-718">
+          <caret line="233" column="31" selection-start-line="233" selection-start-column="31" selection-end-line="233" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ShowFormAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-526">
+          <caret line="120" column="12" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ShowAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="142" column="38" lean-forward="true" selection-start-line="142" selection-start-column="38" selection-end-line="142" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/DestroyAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1510">
+          <caret line="128" column="8" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="8" />
+          <folding>
+            <element signature="e#6427#7548#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-704">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="967" column="39" selection-start-line="967" selection-start-column="39" selection-end-line="967" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>

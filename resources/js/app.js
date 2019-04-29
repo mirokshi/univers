@@ -47,7 +47,109 @@ window.Vue.use(permissions);
 window.Vue.use(snackbar);
 window.Vue.use(confirm);
 
+window.axios.interceptors.response.use(response => response, (error) => {
+  if (window.disableInterceptor) return Promise.reject(error);
+  if (error && error.response) {
+    // Refresh CSRF TOKEN
+    // dAMpDXBRrjVJ2TKewouYHgOeozZmW72EiAt5K1jY
+    console.log('PROVA ###############');
+    if (error.response.status === 419) {
+      console.log('419 error intercepted!!!!!');
+      return window.helpers.getCsrfToken().then((token) => {
+        console.log('TOKEN OBTAINED:');
+        console.log(token);
+        window.helpers.updateCsrfToken(token);
+        console.log('csrf token updated!');
+        error.config.headers['X-CSRF-TOKEN'] = token;
+        console.log('resend request!!!');
+        return window.axios.request(error.config);
+      }).catch((e) => {
+        console.log("NO s'ha pogut obtenir el CSRFTOKEN");
+        console.log(e);
+      });
+    }
+    console.log('1');
+    if (error.response.status === 401) {
+      window.Vue.prototype.$snackbar.showError("No heu entrat al sistema o ha caducat la sessió. Renviant-vos a l'entrada del sistema");
+      const loginUrl = location.pathname ? `/login?back=${location.pathname}` : '/login';
+      console.log('Waiting to redirect to:');
+      console.log(loginUrl);
+      setTimeout(() => { window.location = loginUrl; }, 3000);
+      // Break the promise chain -> https://github.com/axios/axios/issues/715
+      return new Promise(() => {});
+    }
+    if (error.response.status === 403) {
+      window.Vue.prototype.$snackbar.showSnackBar(
+        'Error 403!',
+        'error',
+        'No teniu permisos per realitzar aquesta acció.',
+        'center',
+      );
+    }
+    console.log('2');
+    if (error.response.status === 422) {
+      console.log('%%%%%%%%%%%%%%%%% ERROR DE VALIDACIó %%%%%%%%%%%%%%%');
+      console.log(error.response);
+      console.log(error.response.data);
+      console.log(error.response.data.message);
+      console.log(error.response.data.errors);
+      window.Vue.prototype.$snackbar.showSnackBar(
+        error.response.data.message,
+        'error',
+        window.helpers.printObject(error.response.data.errors),
+        'center',
+      );
+    }
+    console.log('3');
+    if (error.response.status === 404) {
+      console.log('%%%%%%%%%%%%%%%%% NOT FOUND ERROR %%%%%%%%%%%%%%%');
+      console.log(error.response);
+      console.log(error.response.data);
+      console.log(error.response.data.message);
+      console.log(error.response.data.errors);
+      window.Vue.prototype.$snackbar.showSnackBar(
+        'Error 404!',
+        'error',
+        "No s'ha pogut trobar al servidor el recurs que demaneu.",
+        'center',
+      );
+    }
+    if (error.response.status === 405) {
+      console.log('%%%%%%%%%%%%%%%%% METHOD NOT ALLOWED FOUND ERROR %%%%%%%%%%%%%%%');
+      console.log(error.response);
+      console.log(error.response.data);
+      console.log(error.response.data.message);
+      console.log(error.response.data.errors);
+      window.Vue.prototype.$snackbar.showSnackBar(
+        'Error 405!',
+        'error',
+        'Tipus de petició HTTP incorrecte.',
+        'center',
+      );
+    }
+    if (error.response.status === 500) {
+      console.log('%%%%%%%%%%%%%%%%% SERVER ERROR %%%%%%%%%%%%%%%');
+      console.log(error.response);
+      console.log(error.response.data);
+      console.log(error.response.data.message);
+      console.log(error.response.data.errors);
+      window.Vue.prototype.$snackbar.showSnackBar(
+        'Error 500!',
+        'error',
+        'Error inesperat al servidor',
+        'center',
+      );
+    }
+    return Promise.reject(error);
+  }
+  if (error && error.request) {
+    window.Vue.prototype.$snackbar.showError("Error de xarxa! No s'ha obtingut cap resposta a la vostra petició. Consulteu l'estat de la xarxa.");
+    window.Vue.prototype.$snackbar.showSnackBar('Error de xarxa!', 'error', "No s'ha obtingut cap resposta a la vostra petició. Consulteu l'estat de la xarxa.");
+    return Promise.reject(error);
+  }
+});
 
+// Components
 window.Vue.component('navigation', Navigation);
 window.Vue.component('login-form', LoginForm);
 window.Vue.component('register-form', RegisterForm);

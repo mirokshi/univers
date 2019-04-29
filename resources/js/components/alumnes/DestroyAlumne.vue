@@ -41,8 +41,7 @@
                         this.$emit('removed',alumne)
                         this.removing = false
                         console.log('OK');
-                    }).catch(error =>{
-                        this.$snackbar.showError(error.message)
+                    }).catch((error) =>{
                         this.removing=false
                         console.log(error);
                     })

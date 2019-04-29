@@ -16,14 +16,13 @@ use Tests\TestCase;
 
 class RegisterControllerTest extends TestCase
 {
-//    use refreshdatabase;/**/
+    use refreshdatabase;
 
     /**
      * @test
      */
     public function can_resgister_a_user()
     {
-
 
         //1
         initialize_roles();
