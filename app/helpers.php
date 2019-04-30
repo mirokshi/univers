@@ -163,7 +163,7 @@ if (!function_exists("create_example_alumnes")) {
        Alumne::create([
             "name" => "Jose",
             "surname" => "Lopez",
-            "birthdate" =>'12',
+            "birthdate" =>'22/10/2000',
             "school" => "IES EBRE",
             "school_course" => "CFGS",
             "sex" => "altre",
@@ -173,7 +173,7 @@ if (!function_exists("create_example_alumnes")) {
         Alumne::create([
             "name" => "Marc",
             "surname" => "Mestre",
-            "birthdate" =>'12',
+            "birthdate" =>'22/10/2000',
             "age" => 12,
             "school" => "IES EBRE",
             "school_course" => "CFGS",
@@ -184,7 +184,7 @@ if (!function_exists("create_example_alumnes")) {
         Alumne::create([
             "name" => "Martha",
             "surname" => "Ramirez",
-            "birthdate" => '12',
+            "birthdate" => '22/10/2000',
             "age" => 12,
             "school" => "IES EBRE",
             "school_course" => "CFGS",
@@ -203,7 +203,7 @@ if (!function_exists("create_example_simple_alumne")) {
         Alumne::create([
             "name" => "Juan",
             "surname" => "Gutierrez Sanchez",
-            "birthdate" =>'12',
+            "birthdate" =>'22/10/2000',
             "age" => 12,
             "school" => "IES EBRE",
             "course" =>date("Y")."-".(date("Y")+1),
@@ -215,7 +215,7 @@ if (!function_exists("create_example_simple_alumne")) {
         Alumne::create([
             "name" => "Carla",
             "surname" => "Garcia Gomez",
-            "birthdate" => '12',
+            "birthdate" => '22/10/2000',
             "age" => 12,
             "school" => "IES EBRE",
             "course" =>date("Y")."-".(date("Y")+1),
@@ -227,7 +227,7 @@ if (!function_exists("create_example_simple_alumne")) {
         Alumne::create([
             "name" => "Joan",
             "surname" => "Blabla",
-            "birthdate" => '12',
+            "birthdate" => '22/10/2000',
             "age" => 12,
             "school" => "IES EBRE",
             "course" =>date("Y")."-".(date("Y")+1),
@@ -239,7 +239,7 @@ if (!function_exists("create_example_simple_alumne")) {
         Alumne::create([
             "name" => "Joan",
             "surname" => "Nada",
-            "birthdate" =>'12',
+            "birthdate" =>'22/10/2000',
             "age" => 12,
             "school" => "IES EBRE",
             "course" =>"2017-2018",
@@ -369,7 +369,7 @@ if (!function_exists("migrate_entitats")){
         ]);
         factory(User::class)->create([
             "name" => "Grup Esplai Blanquerna",
-            "email" => "blanquerna@univer.cat"
+            "email" => "blanquerna@univers.cat"
         ]);
         factory(User::class)->create([
             "name" => "Atzavara-arrels",

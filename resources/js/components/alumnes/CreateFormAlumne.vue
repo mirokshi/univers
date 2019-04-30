@@ -29,6 +29,7 @@
                     </v-flex>
                       <v-flex xs12 sm6 md3>
                           <birthday></birthday>
+                          <!--TODO BIRTHDAY-->
                       </v-flex>
                     <v-flex xs12 sm6 md3>
                         <v-text-field
@@ -151,6 +152,7 @@
                 school:this.alumne.school,
                 schoolCourse:this.alumne.schoolCourse,
                 datactivitats:this.alumne.activitats,
+                change:this.alumne.change,
                 loading:false,
                 itemSchool:
                     [
@@ -259,7 +261,8 @@
                     'sex':this.sex,
                     'phone':this.phone,
                     'user_id': (this.user!==null)? this.user.id :null,
-                    'activitats':this.datactivitats
+                    'activitats':this.datactivitats,
+                    'change': this.change = true
                 }
                 window.axios.post(this.uri,alumne).then((response) => {
                     this.$snackbar.showMessage('Alumne creat correctament')

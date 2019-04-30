@@ -24,8 +24,12 @@
         </template>
         <v-date-picker
             color="green lighten-1"
+            ref="picker"
             v-model="date"
-            no-title @input="menu = false"
+            no-title
+            @input="menu = false"
+            :max="new Date().toISOString().substr(0, 10)"
+            min="1950-01-01"
         ></v-date-picker>
     </v-menu>
 </template>
@@ -47,6 +51,9 @@
         watch: {
             date (val) {
                 this.dateFormatted = this.formatDate(this.date)
+            },
+            menu (val) {
+                val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
             }
         },
 

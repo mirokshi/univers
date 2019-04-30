@@ -40,7 +40,10 @@
                         <td>{{alumne.id}}</td>
                         <td>{{alumne.name}}</td>
                         <td>{{alumne.surname}}</td>
-                        <td>{{alumne.sex}}</td>
+                        <!--TODO SEX- add icons (font awesome)-->
+                        <td v-if="alumne.sex === 'home'" ><i class="fas fa-male fa-2x"></i></td>
+                        <td v-if="alumne.sex === 'dona'"><i class="fas fa-female fa-2x"></i></td>
+                        <td v-if="alumne.sex === 'altre'"><i class="fas fa-neuter fa-2x"></i></td>
                         <td>{{alumne.birthdate}}</td>
                         <td>{{alumne.age}}</td>
                         <td>{{alumne.school}}</td>
@@ -63,7 +66,6 @@
         </v-card>
     </span>
 </template>
-
 <script>
     import ShowAlumne from "./ShowAlumne";
     import DestroyAlumne from "./DestroyAlumne";

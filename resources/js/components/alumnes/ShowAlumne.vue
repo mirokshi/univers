@@ -1,6 +1,6 @@
 <template>
     <span>
-        <v-dialog v-model="dialog"  @keydown.esc.stop.prevent="dialog=false">
+        <v-dialog v-model="dialog"  @keydown.esc.stop.prevent="dialog=false" fullscreen hide-overlay transition="dialog-bottom-transition">
             <v-toolbar color="red darken-3" class="white--text">
             <v-toolbar-title class="white--text">Alumne detallat</v-toolbar-title>
             <v-spacer></v-spacer>
