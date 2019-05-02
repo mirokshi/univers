@@ -9,12 +9,20 @@
         </v-toolbar>
         <v-card>
             <v-card-title>
-            <!--<filters></filters>-->
+                <v-layout row wrap>
+                    <v-flex>
+                        <v-text-field
+                            appedn-icon="search"
+                            label="Buscar"
+                            v-model="search"
+                        ></v-text-field>
+                    </v-flex>
+                </v-layout>
             </v-card-title>
             <v-data-table
                 v-model="selected"
                 :headers="headers"
-                :items="dataAlumnes"
+                :items="filteredDesserts"
                 item-key="id"
                 select-all
                 :search="search"
@@ -24,12 +32,47 @@
                 rows-per-page-text="Alumnes per página"
                 :rows-per-page-items="[5,10,25,50,100,200,{'text':'Tots','value':-1}]"
                 :pagination.sync="pagination"
-                class="hidden-md-and-down"
+                class="hidden-md-and-down elevation-1"
 
             >
                 <v-progress-linear slot="progress" color="blue" indeterminate></v-progress-linear>
+                <template slot="headers" slot-scope="props">
+                    <tr>
+                        <th>
+                            <v-checkbox
+                                :input-value="props.all"
+                                :indeterminate="props.indeterminate"
+                                primary
+                                hide-details
+                                @click.native="toggleAll"
+                            ></v-checkbox>
+                        </th>
+                        <th
+                            v-for="header in props.headers"
+                            :key="header.text"
+                            :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '']"
+                            @click="changeSort(header.value)"
+                        >
+                            <v-icon small>arrow_upward</v-icon>
+                            {{ header.text }}
+                        </th>
+                    </tr>
+                    <tr class="grey lighten-3">
+                        <th>
+                            <v-icon>filter_list</v-icon>
+                        </th>
+                        <th
+                            v-for="header in props.headers"
+                            :key="header.text"
+                        >
+                            <div v-if="filters.hasOwnProperty(header.value)">
+                                <v-select flat hide-details small multiple clearable :items="columnValueList(header.value)" v-model="filters[header.value]"></v-select>
+                            </div>
+                        </th>
+                    </tr>
+                </template>
                 <template slot="items" slot-scope="{item: alumne}">
-                    <tr :class="{'red': alumne.change === false}">
+                    <tr :class="{'red': alumne.change === false}" :active="alumne.selected" @click="alumne.selected = !alumne.selected">
                         <td>
                             <v-checkbox
                                 :input-value="alumne.selected"
@@ -55,9 +98,28 @@
                         <td><span :title="alumne.created_at_formatted">{{alumne.created_at_human}}</span></td>
                         <td>
                             <show-alumne :users="users" :alumne="alumne" :activitats="activitats"></show-alumne>
-                            <destroy-alumne :alumne="alumne" @removed="removeAlumne" :uri="uri"></destroy-alumne>
-                            <update-alumne :users="users" :alumne="alumne" @updated="updateAlumne" :uri="uri" :activitats="activitats"></update-alumne>
-                             <toggle :value="alumne.change" uri="/api/v1/change_alumne" active-text="Alta" unactive-text="Baja" :resource="alumne" @change="refresh(false)"></toggle>
+                            <destroy-alumne
+                                :alumne="alumne"
+                                @removed="removeAlumne"
+                                :uri="uri"
+                            ></destroy-alumne>
+                            <update-alumne
+                                :users="users"
+                                :alumne="alumne"
+                                @updated="updateAlumne"
+                                :uri="uri"
+                                :activitats="activitats"
+                            ></update-alumne>
+                             <toggle
+                                 :value="alumne.change"
+                                 uri="/api/v1/change_alumne"
+                                 active-text="Alta"
+                                 unactive-text="Baja"
+                                 :resource="alumne"
+                                 snackbar-message-true="El alumne se ha donat de alta"
+                                 snackbar-message-false="El alumne se ha donat de baixa"
+                                 @change="refresh(false)"
+                             ></toggle>
                         </td>
                     </tr>
                 </template>
@@ -72,7 +134,6 @@
     import AlumnesActivitats from "../AlumnesActivitats";
     import Toggle from "../helper/Toggle";
     import DataIterator from "../helper/DataIterator";
-    import Filters from "../helper/Filters";
     import UpdateAlumne from "./UpdateAlumne";
 
     export default {
@@ -84,7 +145,6 @@
             'update-alumne':UpdateAlumne,
             'alumnes-activitats':AlumnesActivitats,
             'data-iterator':DataIterator,
-            'filters':Filters
         },
         data(){
             return {
@@ -94,7 +154,9 @@
                 dataAlumnes: this.alumnes,
                 dataUsers: this.users,
                 selected:[],
-                pagination:{},
+                pagination:{
+                    sortBy: 'id'
+                },
                 headers :[
                     {text:'ID', value: 'id'},
                     {text:'NOM', value: 'name'},
@@ -109,6 +171,16 @@
                     {text:'CREAT', value:'created_at_timestamp'},
                     {text:'ACCIONS',sorteable:false, value:'full_search'},
                 ],
+                filters: {
+                    name: [],
+                    surname: [],
+                    sex: [],
+                    birthdate: [],
+                    age:[],
+                    school:[],
+                    course:[],
+                    school_course:[],
+                },
             }
         },
         props:{
@@ -154,11 +226,25 @@
             },
             updateAlumne(alumne){
                 this.refresh()
+            },
+            toggleAll () {
+                if (this.selected.length) this.selected = []
+                else this.selected = this.alumnes.slice()
+            },
+            columnValueList(val) {
+                return this.alumnes.map(d => d[val])
             }
         },
         computed:{
             total(){
                 return this.dataAlumnes.length
+            },
+            filteredDesserts() {
+                return this.alumnes.filter(d => {
+                    return Object.keys(this.filters).every(f => {
+                        return this.filters[f].length < 1 || this.filters[f].includes(d[f])
+                    })
+                })
             }
         }
     }
