@@ -1,6 +1,6 @@
 <template>
     <span>
-        <list-user :users="users"  :uri="uri"></list-user>
+        <list-user :users="dataUsers"  :uri="uri"></list-user>
     </span>
 </template>
 
@@ -20,7 +20,7 @@
         },
         props:{
             users:{
-                type:Object,
+                type:Array,
                 required:true
             },
             uri:{

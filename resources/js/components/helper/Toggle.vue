@@ -24,6 +24,14 @@
                 type: String,
                 default: 'Unactive',
             },
+            snackbarMessageTrue:{
+                type:String,
+                default: 'Cambi passat a verdader'
+            },
+            snackbarMessageFalse:{
+                type:String,
+                default: 'Cambi passat a false'
+            },
             uri: {
                 type: String,
                 required: true
@@ -49,7 +57,7 @@
             changeAlumne () {
                 this.loading = true
                 window.axios.post(this.uri + '/' + this.resource.id).then(() => {
-                    this.$snackbar.showMessage("El alumne s'ha donat d'alta")
+                    this.$snackbar.showMessage(this.snackbarMessageTrue)
                     this.loading = false
                     this.$emit('change')
                 }).catch(error => {
@@ -60,7 +68,7 @@
             unchangedAlumne () {
                 this.loading = true
                 window.axios.delete(this.uri + '/' + this.resource.id).then(() => {
-                    this.$snackbar.showMessage("El alumne s'ha donat de baixa")
+                    this.$snackbar.showMessage(this.snackbarMessageFalse)
                     this.loading = false
                     this.$emit('change')
                 }).catch(error => {

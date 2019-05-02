@@ -32,6 +32,7 @@ class UsersController extends Controller
         $user = new User();
         $user->name  = $request->name;
         $user->email = $request->email;
+        $user->admin = $request->admin ? true : false;
         $user->save();
         return $user->map();
     }
@@ -47,6 +48,8 @@ class UsersController extends Controller
     public function update(UserUpdate $request, User $users)
     {
         $users->name  = $request->name;
+        $users->email = $request->email;
+        $users->admin = $request->admin ? true : false;
         $users->save();
         return $users->map();
     }
