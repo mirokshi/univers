@@ -1,7 +1,7 @@
 <template>
     <span>
         <v-toolbar color="red accent-2">
-      <v-toolbar-title class="white--text">Alumnes {{total}}</v-toolbar-title>
+      <v-toolbar-title class="white--text">Usuaris {{total}}</v-toolbar-title>
       <v-spacer></v-spacer>
         <v-btn icon dark class="white--text" @click="refresh" :loading="loading" :disabled="loading">
             <v-icon>refresh</v-icon>
@@ -95,7 +95,7 @@
                         <td>
                             <alumnes-activitats :alumne="alumne" :alumne-activitats="alumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>
                         </td>
-                        <td><span :title="alumne.created_at_formatted">{{alumne.created_at_human}}</span></td>
+                        <!--<td><span :title="alumne.created_at_formatted">{{alumne.created_at_human}}</span></td>-->
                         <td>
                             <show-alumne :users="users" :alumne="alumne" :activitats="activitats"></show-alumne>
                             <destroy-alumne
@@ -168,7 +168,7 @@
                     {text:'CURS', value:'course'},
                     {text:'NIVELL', value: 'school_course'},
                     {text:'ACTIVITAS', value:'activitats'},
-                    {text:'CREAT', value:'created_at_timestamp'},
+                    // {text:'CREAT', value:'created_at_timestamp'},
                     {text:'ACCIONS',sorteable:false, value:'full_search'},
                 ],
                 filters: {
@@ -180,6 +180,7 @@
                     school:[],
                     course:[],
                     school_course:[],
+                    activitats:[]
                 },
             }
         },

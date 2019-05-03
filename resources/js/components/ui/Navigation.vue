@@ -86,13 +86,12 @@
                         text: 'Univers',
                         model: false,
                         children: [
-                            { icon: 'child_care', text: 'Alumnes', url: '/alumnes' },
+                            { icon: 'child_care', text: 'Usuaris', url: '/alumnes' },
                             { icon: 'domain', text: 'Entitats', url: '/entitats' },
                             { icon: 'event_note', text: 'Activitats', url: '/activitats' },
                         ]
                     },
                     { icon: 'help', text: 'Contact', url: '/contact' },
-                    { icon: 'public', text: 'About', url: '/about' },
                     { icon: 'assessment', text: 'Sparklines', url: '/sparklines' }
                 ]
             }

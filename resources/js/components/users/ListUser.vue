@@ -86,7 +86,7 @@
                 search:'',
                 loading: false,
                 dataUsers:this.users,
-                selected:'',
+                selected:[],
                 headers:[
                     {text:'ID',value: 'id'},
                     {text:'NOM',value: 'name'},
