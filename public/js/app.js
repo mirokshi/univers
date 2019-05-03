@@ -44837,7 +44837,7 @@ var render = function() {
                 loading: _vm.loading,
                 "no-data-text": "No hi ha res per mostrar aquí :(",
                 "rows-per-page-text": "Alumnes per página",
-                "rows-per-page-items": { text: "Tots", value: -1 },
+                "rows-per-page-items": [{ text: "Tots", value: -1 }],
                 pagination: _vm.pagination
               },
               on: {
