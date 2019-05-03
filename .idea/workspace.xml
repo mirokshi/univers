@@ -10,9 +10,7 @@
   <component name="ChangeListManager">
     <list default="true" id="671ac4b2-eb58-42de-b0c3-f9190173bdb0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ui/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ui/Navigation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/users/ListUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/users/ListUser.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +46,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/AlumnesActivitats.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1224">
+              <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/users/ListUser.vue">
           <provider selected="true" editor-type-id="text-editor">
@@ -75,7 +91,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
@@ -189,10 +205,10 @@
         <option value="$PROJECT_DIR$/resources/js/components/helper/Toggle.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/users/Users.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/users/DestroyUser.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/users/ListUser.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/Home.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/ui/Navigation.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" />
       </list>
     </option>
   </component>
@@ -451,12 +467,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.AlumnesControllerTest (1)" />
       <item itemvalue="PHPUnit.AlumnesControllerTest.guest_user_cannot_index_alumnes" />
       <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_index_alumnes (1)" />
       <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_index_alumnes" />
       <item itemvalue="PHPUnit.RegisterControllerTest.can_resgister_a_user" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
     </list>
     <recent_temporary>
       <list>
@@ -545,7 +561,7 @@
       <workItem from="1556554055278" duration="253000" />
       <workItem from="1556607456440" duration="6867000" />
       <workItem from="1556781818129" duration="6599000" />
-      <workItem from="1556866718177" duration="1570000" />
+      <workItem from="1556866718177" duration="2363000" />
     </task>
     <servers />
   </component>
@@ -582,7 +598,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286825000" />
+    <option name="totallyTimeSpent" value="287618000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1440" height="873" extended-state="6" />
@@ -664,13 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/AlumnesActivitats.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-607">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -933,13 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="139" column="8" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/users/ListUser.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2064">
@@ -965,6 +967,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/AlumnesActivitats.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
         </state>
       </provider>
     </entry>
