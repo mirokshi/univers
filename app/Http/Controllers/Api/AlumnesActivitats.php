@@ -15,11 +15,12 @@ class AlumnesActivitats extends Controller{
 
     public function store(AlumnesActivitatsStore $request, Alumne $alumne)
     {
-        $activitat = Activitat::findOrFail($request->activitat['id']);
-        $alumne->addActivitat($activitat);
-        return $activitat->map();
+        $oldAlumne =  $alumne->mapSimple();
+        $alumne->syncActivitats($request->all());
+        $alumne->save();
+        return $alumne->map();
     }
-    
+
     public function update(AlumnesActivitatsUpdate $request, Alumne $alumne)
     {
         $mappedActivitats = collect($request->activitats)->map(function ($activitat){
@@ -39,9 +40,9 @@ class AlumnesActivitats extends Controller{
 
     public function destroy(AlumnesActivitatsDestroy $request, Alumne $alumne, Activitat $activitat)
     {
-        $alumne->mapSimple();
-//        $alumne->activitats()->detach($activitat['id']);
-        $alumne->removeActivitat($activitat);
+        $oldalumne = $alumne->mapSimple();
+        $alumne->activitats()->detach($activitat['id']);
+        $alumne->save();
         return $alumne->map();
     }
 

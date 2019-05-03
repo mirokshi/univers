@@ -12,7 +12,7 @@
             </v-toolbar>
             <v-card>
                 <v-card-text>
-                    <create-form-alumne :users="users" :uri="uri" :activitats="activitats"  @close="dialog = false" @created="created"></create-form-alumne>
+                    <create-form-alumne :users="users" :uri="uri" :activitats="activitats"  @close="dialog = false" @saved="created"></create-form-alumne>
                 </v-card-text>
             </v-card>
         </v-dialog>
@@ -59,7 +59,16 @@
         },
         methods:{
             created(alumne){
-                this.$emit('created',alumne)
+                console.log(alumne);
+                window.axios.post(this.uri,alumne).then((response) => {
+                    this.$snackbar.showMessage("Se ha creado correctamente el usuario")
+                    this.$emit('created', response.data)
+                }).catch((errors) =>{
+                    this.$snackbar.showError(error.message)
+                }).finally(() => {
+                    this.dialog = false
+                })
+
             }
         }
     }

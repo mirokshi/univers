@@ -37,6 +37,25 @@ class Alumne extends Model
         return $this;
     }
 
+    public function syncActivitats($activitats)
+    {
+        $activitatsids=[];
+        if (sizeof($activitats)>0){
+            foreach ($activitats as $activitat){
+                if (is_array($activitat)) array_push($activitatsids,$activitat['id'],false);
+                else {
+                    $activitat = Activitat::create([
+                       'name' => $activitat
+                    ]);
+                }
+                $activitat->save();
+                array_push($activitatsids,$activitat->id,false);
+            }
+        }
+        $this->activitats()->sync($activitatsids);
+        return $this->map();
+    }
+
     public function activitats()
     {
         return $this->belongsToMany(Activitat::class);
