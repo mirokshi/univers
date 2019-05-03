@@ -94,7 +94,13 @@
                 <div class="headline font-weight-light grey--text">ACTIVITAT</div>
                 <v-layout>
                     <v-flex>
-                        <alumnes-activitats v-model="datactivitats" :alumne="alumne" :alumne-activitats="alumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>
+                        <alumnes-activitats-chip
+                            @updated="verifyActivitats"
+                            v-model="datactivitats"
+                            :selected-activitats="datactivitats"
+                            :alumne="alumne"
+                            :activitats="activitats"
+                            @change="refresh(false)"></alumnes-activitats-chip>
                     </v-flex>
                 </v-layout>
                 <v-divider></v-divider>
@@ -122,8 +128,8 @@
 <script>
     import { validationMixin } from 'vuelidate'
     import { required , minLength,maxLength} from 'vuelidate/lib/validators'
-    import AlumnesActivitats from "../AlumnesActivitats";
     import DateBirthday from "../ui/DateBirthday";
+    import AlumnesActivitatsChip from "../AlumnesActivitatsChip";
 
 
     export default {
@@ -138,7 +144,7 @@
         },
         name: "CreateFormAlumne",
         components:{
-          'alumnes-activitats':AlumnesActivitats,
+          'alumnes-activitats-chip':AlumnesActivitatsChip,
             'birthday': DateBirthday
         },
         data(){
@@ -223,7 +229,8 @@
             },
             uri:{
                 type:String,
-                required: true
+                required: true,
+                default: '/api/v1/alumnes'
             },
             activitats:{
                 type:Array,
@@ -249,48 +256,38 @@
                     this.datactivitats = '',
                     this.user = ''
             },
-             add () {
-                this.loading = true
-                const alumne = {
-                    'name': this.name,
-                    'surname': this.surname,
-                    'birthdate':this.birthdate,
-                    'age': this.age,
-                    'school': this.school,
-                    'school_course':this.schoolCourse,
-                    'sex':this.sex,
-                    'phone':this.phone,
-                    'user_id': (this.user!==null)? this.user.id :null,
-                    'activitats':this.datactivitats,
-                    'change': this.change = true
-                }
-                window.axios.post(this.uri,alumne).then((response) => {
-                    this.$snackbar.showMessage('Alumne creat correctament')
-                    this.reset()
-                    this.$emit('created',response.data)
-                    this.loading=false
-                    this.$emit('close')
-                    this.verifyActivitat()
-                }).catch((error) => {
-                    console.log(error);
-                    console.log(error.data);
-                    this.loading=false
+             async add () {
+                 this.loading = true
+                 const alumne = {
+                     'name': this.name,
+                     'surname': this.surname,
+                     'birthdate': this.birthdate,
+                     'age': this.age,
+                     'school': this.school,
+                     'school_course': this.schoolCourse,
+                     'sex': this.sex,
+                     'phone': this.phone,
+                     'user_id': (this.user !== null) ? this.user.id : null,
+                     'activitats': this.datactivitats,
+                     'change': this.change = true
+                 }
+                 await this.verifyActivitats()
+                 this.$emit('saved', alumne)
+             },
+               verifyActivitats(){
+                this.datactivitats.forEach((activitat) =>{
+                    if (!activitat.name) {
+                        window.axios.post('/api/v1/activitats', {
+                            name: activitat
+                        }).then((response) => {
+                            this.datactivitats[this.datactivitats.indexOf(activitat)] = response.data.id
+                        }).catch((error) => {
+                            this.$snackbar.showError(error.message)
+                        })
+                    }else{
+                        this.datactivitats[this.datactivitats.indexOf(activitat)] =  activitat.id
+                    }
                 })
-            },
-            verifyActivitat(){
-              this.datactivitats.forEach((activitat) =>{
-                  if ((!activitat.name)) {
-                      window.axios.post('/api/v1/activitats',{
-                          name: activitat
-                      }).then((response) => {
-                          this.datactivitats[this.datactivitats.indexOf(activitat)] = response.data.id
-                      }).catch((error) =>{
-                          this.$snackbar.showError(error.message)
-                      })
-                  }else {
-                      this.datactivitats[this.datactivitats.indexOf(activitat)] = activitat.id
-                  }
-              })
             },
             created(){
                 this.selectLoggedUser()

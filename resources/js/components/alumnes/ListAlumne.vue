@@ -131,10 +131,10 @@
 <script>
     import ShowAlumne from "./ShowAlumne";
     import DestroyAlumne from "./DestroyAlumne";
-    import AlumnesActivitats from "../AlumnesActivitats";
     import Toggle from "../helper/Toggle";
     import DataIterator from "../helper/DataIterator";
     import UpdateAlumne from "./UpdateAlumne";
+    import AlumnesActivitatsChip from "../AlumnesActivitatsChip";
 
     export default {
         name:'ListAlumne',
@@ -143,7 +143,7 @@
             'show-alumne' :ShowAlumne,
             'destroy-alumne':DestroyAlumne,
             'update-alumne':UpdateAlumne,
-            'alumnes-activitats':AlumnesActivitats,
+            'alumnes-activitats':AlumnesActivitatsChip,
             'data-iterator':DataIterator,
         },
         data(){
