@@ -26,7 +26,7 @@
                                 :loading="loading"
                                 :disabled="loading"
                                 href="alumnes"
-                            >Alumnes</v-btn>
+                            >Usuaris</v-btn>
                         </material-card>
                     </v-flex>
                     <v-flex xs12

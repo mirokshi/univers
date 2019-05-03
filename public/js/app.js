@@ -3837,10 +3837,8 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         text: 'ACTIVITAS',
         value: 'activitats'
-      }, {
-        text: 'CREAT',
-        value: 'created_at_timestamp'
-      }, {
+      }, // {text:'CREAT', value:'created_at_timestamp'},
+      {
         text: 'ACCIONS',
         sorteable: false,
         value: 'full_search'
@@ -3853,7 +3851,8 @@ __webpack_require__.r(__webpack_exports__);
         age: [],
         school: [],
         course: [],
-        school_course: []
+        school_course: [],
+        activitats: []
       }
     };
   },
@@ -5325,7 +5324,7 @@ __webpack_require__.r(__webpack_exports__);
         model: false,
         children: [{
           icon: 'child_care',
-          text: 'Alumnes',
+          text: 'Usuaris',
           url: '/alumnes'
         }, {
           icon: 'domain',
@@ -5340,10 +5339,6 @@ __webpack_require__.r(__webpack_exports__);
         icon: 'help',
         text: 'Contact',
         url: '/contact'
-      }, {
-        icon: 'public',
-        text: 'About',
-        url: '/about'
       }, {
         icon: 'assessment',
         text: 'Sparklines',
@@ -5587,7 +5582,7 @@ __webpack_require__.r(__webpack_exports__);
       search: '',
       loading: false,
       dataUsers: this.users,
-      selected: '',
+      selected: [],
       headers: [{
         text: 'ID',
         value: 'id'
@@ -42885,7 +42880,7 @@ var render = function() {
                                 href: "alumnes"
                               }
                             },
-                            [_vm._v("Alumnes")]
+                            [_vm._v("Usuaris")]
                           )
                         ],
                         1
@@ -44771,7 +44766,7 @@ var render = function() {
         { attrs: { color: "red accent-2" } },
         [
           _c("v-toolbar-title", { staticClass: "white--text" }, [
-            _vm._v("Alumnes " + _vm._s(_vm.total))
+            _vm._v("Usuaris " + _vm._s(_vm.total))
           ]),
           _vm._v(" "),
           _c("v-spacer"),
@@ -45051,14 +45046,6 @@ var render = function() {
                             ],
                             1
                           ),
-                          _vm._v(" "),
-                          _c("td", [
-                            _c(
-                              "span",
-                              { attrs: { title: alumne.created_at_formatted } },
-                              [_vm._v(_vm._s(alumne.created_at_human))]
-                            )
-                          ]),
                           _vm._v(" "),
                           _c(
                             "td",
