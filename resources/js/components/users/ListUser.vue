@@ -34,7 +34,7 @@
                 class="hidden-md-and-down"
             >
                 <v-progress-linear slot="progress" color="blue" indeterminate></v-progress-linear>
-                <template slot="items" slot-scope="{item: user}">
+                <template slot="items" slot-scope="{item:user}">
                     <tr>
                         <td>{{user.id}}</td>
                         <td>{{user.name}}</td>
@@ -99,7 +99,6 @@
                 ],
                 pagination:{
                     rowsPerPage:25,
-                    sortBy:'id'
                 }
             }
         },

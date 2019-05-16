@@ -1,6 +1,6 @@
 <template>
     <span>
-        <list-user :users="dataUsers"  :uri="uri"></list-user>
+        <list-user :users="users"  :uri="uri"></list-user>
     </span>
 </template>
 

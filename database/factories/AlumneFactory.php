@@ -25,7 +25,7 @@ $factory->define(App\Alumne::class, function (Faker $faker) {
         'school'=>$faker->word,
         'course'=> date('Y').'-'.(date('Y')+1),
         'school_course'=>$faker->word,
-        'sex' => $faker->word,
+        'sex' => $faker->randomElement(['Dona','Home', 'Altre']),
         'phone'=>$faker->randomDigitNotNull,
         'change'=>$faker->boolean
 

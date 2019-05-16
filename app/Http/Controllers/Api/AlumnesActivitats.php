@@ -24,12 +24,13 @@ class AlumnesActivitats extends Controller{
     public function update(AlumnesActivitatsUpdate $request, Alumne $alumne)
     {
         $mappedActivitats = collect($request->activitats)->map(function ($activitat){
-            if (is_int($activitat)) return $activitat;
-           else {
+            if (is_int($activitat)) {
+                return $activitat;
+            } else {
                return Activitat::create([
                    'name' => $activitat,
                    'date_start' => Carbon::now(),
-                   'date_final' => '',
+                   'date_final' => Carbon::tomorrow(),
                    'course' => date('Y').'-'.(date('Y')+1)
                ])->id;
            }
@@ -40,9 +41,8 @@ class AlumnesActivitats extends Controller{
 
     public function destroy(AlumnesActivitatsDestroy $request, Alumne $alumne, Activitat $activitat)
     {
-        $oldalumne = $alumne->mapSimple();
-        $alumne->activitats()->detach($activitat['id']);
-        $alumne->save();
+        $alumne->mapSimple();
+        $alumne->removeActivitat($activitat);
         return $alumne->map();
     }
 

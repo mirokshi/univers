@@ -10,7 +10,7 @@ class UserDestroy extends FormRequest
 
     public function authorize()
     {
-        return true;
+        Auth::user()->can('entitats.destroy');
     }
 
     public function rules()

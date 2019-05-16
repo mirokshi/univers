@@ -66,6 +66,8 @@ if (!function_exists("initialize_roles")) {
             "Alumnes",
             "ActivitatsManager",
             "Activitats",
+            "EntitatsManager",
+            "Entitats"
         ];
         foreach ($roles as $role) {
             create_role($role);
@@ -84,27 +86,45 @@ if (!function_exists("initialize_roles")) {
             "activitats.update",
             "activitats.destroy"
         ];
-        $userAlumnePermissions = [
+        $entitatsManagerPermissions =  [
+          "entitats.index",
+          "entitats.show" ,
+          "entitats.store"  ,
+          "entitats.update"  ,
+          "entitats.destroy"
+        ];
+
+        $alumnePermissions = [
             "user.alumnes.index",
             "user.alumnes.show",
             "user.alumnes.store",
             "user.alumnes.update",
             "user.alumnes.destroy"
         ];
-        $userActivitatsPermissions = [
+        $activitatsPermissions = [
             "user.activitats.index",
             "user.activitats.show",
             "user.activitats.store",
             "user.activitats.update",
             "user.activitats.destroy"
         ];
+        $entitatsPermissions = [
+          "user.entitats.index",
+          "user.entitats.index" ,
+          "user.entitats.index" ,
+          "user.entitats.index"  ,
+          "user.entitats.index"  ,
+        ];
 
 
         $permissions = array_merge(
             $alumneManagerPermissions,
-            $userAlumnePermissions,
+            $alumnePermissions,
             $activitatsManagerPermissions,
-            $userActivitatsPermissions
+            $activitatsPermissions,
+            $entitatsManagerPermissions,
+            $entitatsPermissions
+
         );
 
         foreach ($permissions as $permission) {
@@ -112,9 +132,11 @@ if (!function_exists("initialize_roles")) {
         }
         $rolePermissions = [
             "AlumnesManager" => $alumneManagerPermissions,
-            "Alumnes" => $userAlumnePermissions,
+            "Alumnes" => $alumnePermissions,
             "ActivitatsManager" => $activitatsManagerPermissions,
-            "Activitats" => $userActivitatsPermissions
+            "Activitats" => $activitatsPermissions,
+            "EntitatsManager" => $entitatsManagerPermissions,
+            "Entitats" => $entitatsPermissions
         ];
         foreach ($rolePermissions as $role => $rolePermission) {
             $role = Role::findByName($role);
@@ -133,6 +155,9 @@ if (!function_exists("initialize_gates")){
         });
         Gate::define("activitats.manage",function ($user){
             return $user->isSuperAdmin() || $user->hasRole("ActivitatsManager");
+        })  ;
+        Gate::define("entitats.manage",function ($user){
+            return $user->isSuperAdmin() || $user->hasRole("EnitatsManager");
         })  ;
     }
 }
@@ -164,9 +189,10 @@ if (!function_exists("create_example_alumnes")) {
             "name" => "Jose",
             "surname" => "Lopez",
             "birthdate" =>'22/10/2000',
+           "age" => 12,
             "school" => "IES EBRE",
             "school_course" => "CFGS",
-            "sex" => "altre",
+            "sex" => "Altre",
             "phone" => "777888999",
             "user_id" => $user->id
         ]);
@@ -177,7 +203,7 @@ if (!function_exists("create_example_alumnes")) {
             "age" => 12,
             "school" => "IES EBRE",
             "school_course" => "CFGS",
-            "sex" => "home",
+            "sex" => "Home",
             "phone" => "616531219",
             "user_id" => $user->id
         ]);
@@ -188,18 +214,12 @@ if (!function_exists("create_example_alumnes")) {
             "age" => 12,
             "school" => "IES EBRE",
             "school_course" => "CFGS",
-            "sex" => "dona",
+            "sex" => "Dona",
             "phone" => "656445152",
             "user_id" => $user->id
         ]);
 
-    }
-}
-if (!function_exists("create_example_simple_alumne")) {
-
-    function create_example_simple_alumne()
-    {
-        $user = factory(User::class)->create();
+        $user2 = factory(User::class)->create();
         Alumne::create([
             "name" => "Juan",
             "surname" => "Gutierrez Sanchez",
@@ -208,9 +228,9 @@ if (!function_exists("create_example_simple_alumne")) {
             "school" => "IES EBRE",
             "course" =>date("Y")."-".(date("Y")+1),
             "school_course" => "CFGS",
-            "sex" => "home",
+            "sex" => "Home",
             "phone" => "616531219",
-            "user_id" => $user->id
+            "user_id" => $user2->id
         ]);
         Alumne::create([
             "name" => "Carla",
@@ -220,39 +240,38 @@ if (!function_exists("create_example_simple_alumne")) {
             "school" => "IES EBRE",
             "course" =>date("Y")."-".(date("Y")+1),
             "school_course" => "CFGS",
-            "sex" => "dona",
+            "sex" => "Dona",
             "phone" => "987654321",
-            "user_id" => $user->id
+            "user_id" => $user2->id
         ]);
         Alumne::create([
             "name" => "Joan",
-            "surname" => "Blabla",
+            "surname" => "Roque",
             "birthdate" => '22/10/2000',
             "age" => 12,
             "school" => "IES EBRE",
             "course" =>date("Y")."-".(date("Y")+1),
             "school_course" => "CFGS",
-            "sex" => "home",
+            "sex" => "Home",
             "phone" => "123456789",
-            "user_id" => $user->id
+            "user_id" => $user2->id
         ]);
         Alumne::create([
-            "name" => "Joan",
-            "surname" => "Nada",
+            "name" => "Juan",
+            "surname" => "Lopez",
             "birthdate" =>'22/10/2000',
             "age" => 12,
             "school" => "IES EBRE",
             "course" =>"2017-2018",
             "school_course" => "CFGS",
-            "sex" => "home",
+            "sex" => "Home",
             "phone" => "123456789",
-            "user_id" => $user->id
+            "user_id" => $user2->id
         ]);
 
-
     }
-
 }
+
 if (!function_exists("create_example_simple_activitat")) {
 
     function create_example_simple_activitat()
@@ -310,6 +329,13 @@ if (!function_exists("create_example_alumnes_with_actvitats")){
         $alumne = Alumne::create([
            "name"=> "Paco",
            "surname" => "Diaz",
+            "birthdate" =>'22/10/2000',
+            "age" => 12,
+            "school" => "IES EBRE",
+            "course" =>"2017-2018",
+            "school_course" => "CFGS",
+            "sex" => "Home",
+            "phone" => "123456789",
            "user_id" => $user->id
         ]);
 
@@ -329,13 +355,6 @@ if (!function_exists("create_example_alumnes_with_actvitats")){
 
     }
 }
-//if (!function_exists("calculateYears")) {
-//    function calculateYears($fecha)
-//    {
-//        list($Y,$m,$d) = explode("/",$fecha);
-//        return( date("md") < $m.$d ? date("Y")-$Y-1 : date("Y")-$Y );
-//    }
-//}
 
 if (!function_exists("migrate_entitats")){
     function migrate_entitats(){
@@ -354,139 +373,237 @@ if (!function_exists("migrate_entitats")){
         $lorena->admin = true;
         $lorena->save();
 
-        factory(User::class)->create([
+        $ajuntament =factory(User::class)->create([
             "name" => "Ajuntament de Tortosa",
             "email" => "ajuntament_tortosa@univers.cat"
         ]);
+        $ajuntament->assignRole('Alumnes');
+        $ajuntament->assignRole('Activitats');
 
-        factory(User::class)->create([
+        $generalitat =factory(User::class)->create([
             "name" => "Generalitat de Catalunya",
             "email" => "generalitat@univers.cat"
         ]);
-        factory(User::class)->create([
+        $generalitat->assignRole('Alumnes');
+        $generalitat->assignRole('Activitats');
+
+        $asici =factory(User::class)->create([
             "name" => "ACISI",
             "email" => "acisi@univers.cat"
         ]);
-        factory(User::class)->create([
+        $asici->assignRole('Alumnes');
+        $asici->assignRole('Activitats');
+
+        $blanquerna = factory(User::class)->create([
             "name" => "Grup Esplai Blanquerna",
             "email" => "blanquerna@univers.cat"
         ]);
-        factory(User::class)->create([
+        $blanquerna->assignRole('Alumnes');
+        $blanquerna->assignRole('Activitats');
+
+        $atzavara =factory(User::class)->create([
             "name" => "Atzavara-arrels",
             "email" => "atzavara@univers.cat"
         ]);
-        factory(User::class)->create([
+        $atzavara->assignRole('Alumnes');
+        $atzavara->assignRole('Activitats');
+
+
+        $caritas = factory(User::class)->create([
             "name" => "Càritas Interparroquial Tortosa",
             "email" => "caritas@univers.cat"
         ]);
-        factory(User::class)->create([
+        $caritas->assignRole('Alumnes');
+        $caritas->assignRole('Activitats');
+
+        $crueRoja  = factory(User::class)->create([
             "name" => "Creu Roja Tortosa",
             "email" => "creu_roja@univers.cat"
         ]);
-        factory(User::class)->create([
+        $crueRoja->assignRole('Alumnes');
+        $crueRoja->assignRole('Activitats');
+
+        $patronat = factory(User::class)->create([
             "name" => "Espai Patronat de Tortosa",
             "email" => "patronat@univers.cat"
         ]);
-        factory(User::class)->create([
+        $patronat->assignRole('Alumnes');
+        $patronat->assignRole('Activitats');
+
+        $gentis = factory(User::class)->create([
             "name" => "Fundació Gentis",
             "email" => "gentis@univers.cat"
         ]);
-        factory(User::class)->create([
+        $gentis->assignRole('Alumnes');
+        $gentis->assignRole('Activitats');
+
+        $entitatssocials = factory(User::class)->create([
             "name" => "Federació d’Entitats Socials de les Terres de l’Ebre",
             "email" => "enitats_socials@univers.cat"
         ]);
-        factory(User::class)->create([
+        $entitatssocials->assignRole('Alumnes');
+        $entitatssocials->assignRole('Activitats');
+
+        $amics =factory(User::class)->create([
             "name" => "Associació d’Amigues i Amics de la UNESCO de Tortosa",
             "email" => "amics@univers.cat"
         ]);
-        factory(User::class)->create([
+        $amics->assignRole('Alumnes');
+        $amics->assignRole('Activitats');
+
+        $bancAliments =factory(User::class)->create([
             "name" => "Banc d’aliments",
             "email" => "banc_aliments@univers.cat"
         ]);
-        factory(User::class)->create([
+        $bancAliments->assignRole('Alumnes');
+        $bancAliments->assignRole('Activitats');
+
+        $artxicofradia =factory(User::class)->create([
             "name" => "Artxicofradia Mare de Déu de la Cinta",
             "email" => "artxicofradia@univers.cat"
         ]);
-        factory(User::class)->create([
+        $artxicofradia->assignRole('Alumnes');
+        $artxicofradia->assignRole('Activitats');
+
+        $proteccionCivil =factory(User::class)->create([
             "name" => "Protecció civil",
             "email" => "proteccio_civil@univers.cat"
         ]);
-        factory(User::class)->create([
+        $proteccionCivil->assignRole('Alumnes');
+        $proteccionCivil->assignRole('Activitats');
+
+        $fath = factory(User::class)->create([
             "name" => "Comunitat al Fath",
             "email" => "comunitat_fath@univers.cat"
         ]);
-        factory(User::class)->create([
+        $fath->assignRole('Alumnes');
+        $fath->assignRole('Activitats');
+
+        $concepcio =factory(User::class)->create([
             "name" => "Fundació Puríssima Concepció",
             "email" => "fundacion_purisima@univers.cat"
         ]);
-        factory(User::class)->create([
+        $concepcio->assignRole('Alumnes');
+        $concepcio->assignRole('Activitats');
+
+        $iesebre =factory(User::class)->create([
             "name" => "IES de l’Ebre",
             "email" => "iesebre@univers.cat"
         ]);
-        factory(User::class)->create([
+        $iesebre->assignRole('Alumnes');
+        $iesebre->assignRole('Activitats');
+
+        $urv =factory(User::class)->create([
             "name" => "Universitat Rovira i Virgili",
             "email" => "urv@univers.cat"
         ]);
-        factory(User::class)->create([
+        $urv->assignRole('Alumnes');
+        $urv->assignRole('Activitats');
+
+        $uoc = factory(User::class)->create([
             "name" => "Universitat Oberta de Catalunya",
             "email" => "uoc@univers.cat"
         ]);
-        factory(User::class)->create([
+        $uoc->assignRole('Alumnes');
+        $uoc->assignRole('Activitats');
+
+        $oficinaJove =factory(User::class)->create([
             "name" => "Oficina Jove del Baix Ebre",
             "email" => "oficina_Jove@univers.cat"
         ]);
-        factory(User::class)->create([
+        $oficinaJove->assignRole('Alumnes');
+        $oficinaJove->assignRole('Activitats');
+
+        $fcb = factory(User::class)->create([
             "name" => "Fundació Futbol Club Barcelona",
             "email" => "fcb@univers.cat"
         ]);
-        factory(User::class)->create([
+        $fcb->assignRole('Alumnes');
+        $fcb->assignRole('Activitats');
+
+        $gambusi =factory(User::class)->create([
             "name" => "Gambusí",
             "email" => "gambusí@univers.cat"
         ]);
-        factory(User::class)->create([
+        $gambusi->assignRole('Alumnes');
+        $gambusi->assignRole('Activitats');
+
+        $fbr = factory(User::class)->create([
             "name" => "Club Fútbol Bítem-Remolins",
             "email" => "futbol_bitem-remolins@univers.cat"
         ]);
-        factory(User::class)->create([
+        $fbr->assignRole('Alumnes');
+        $fbr->assignRole('Activitats');
+
+        $cbc =factory(User::class)->create([
             "name" => "Club Bàsquet Cantaires",
             "email" => "basquet_cantaires@univers.cat"
         ]);
-        factory(User::class)->create([
+        $cbc->assignRole('Alumnes');
+        $cbc->assignRole('Activitats');
+
+        $esplai =factory(User::class)->create([
             "name" => "Escola de l’Esplai Tortosa",
             "email" => "esplai@univers.cat"
         ]);
-        factory(User::class)->create([
+        $esplai->assignRole('Alumnes');
+        $esplai->assignRole('Activitats');
+
+        $xarxa =factory(User::class)->create([
             "name" => "Xarxa per la convivència a Tortosa",
             "email" => "xarxa_convivencia@univers.cat"
         ]);
-        factory(User::class)->create([
+        $xarxa->assignRole('Alumnes');
+        $xarxa->assignRole('Activitats');
+
+        $ampes =factory(User::class)->create([
             "name" => "AMPES",
             "email" => "ampes@univers.cat"
         ]);
-        factory(User::class)->create([
+        $ampes->assignRole('Alumnes');
+        $ampes->assignRole('Activitats');
+
+        $fapac =factory(User::class)->create([
             "name" => "FAPAC Terres de l’Ebre",
             "email" => "fapac@univers.cat"
         ]);
-        factory(User::class)->create([
+        $fapac->assignRole('Alumnes');
+        $fapac->assignRole('Activitats');
+
+        $pediatria = factory(User::class)->create([
             "name" => "Equips de pediatria de les àrees bàsiques de salut de Tortosa",
             "email" => "equips_pediatria@univers.cat"
         ]);
-        factory(User::class)->create([
+        $pediatria->assignRole('Alumnes');
+        $pediatria->assignRole('Activitats');
+
+        $voluntarisCaixa =factory(User::class)->create([
             "name" => "Voluntaris de “la Caixa”",
             "email" => "laCaixa@univers.cat"
         ]);
-        factory(User::class)->create([
+        $voluntarisCaixa->assignRole('Alumnes');
+        $voluntarisCaixa->assignRole('Activitats');
+
+        $bancSang =factory(User::class)->create([
             "name" => "Banc de Sang i Teixits",
             "email" => "banc_sang@univers.cat"
         ]);
-        factory(User::class)->create([
+        $bancSang->assignRole('Alumnes');
+        $bancSang->assignRole('Activitats');
+
+        $altres = factory(User::class)->create([
             "name" => "Altres Entitats",
             "email" => "altres@univers.cat"
         ]);
-        factory(User::class)->create([
+        $altres->assignRole('Alumnes');
+        $altres->assignRole('Activitats');
+
+        $voluntaris =factory(User::class)->create([
             "name" => "Voluntaries",
             "email" => "voluntari@univers.cat"
         ]);
+        $voluntaris->assignRole('Alumnes');
+        $voluntaris->assignRole('Activitats');
     }
 }
 

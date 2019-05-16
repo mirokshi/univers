@@ -28,7 +28,7 @@
                         ></v-text-field>
                     </v-flex>
                       <v-flex xs12 sm6 md3>
-                          <birthday></birthday>
+                          <birthday v-model="birthdate"></birthday>
                           <!--TODO BIRTHDAY-->
                       </v-flex>
                     <v-flex xs12 sm6 md3>
@@ -50,17 +50,17 @@
                             <v-radio
                                 label="Home"
                                 color="blue"
-                                value="home"
+                                value="Home"
                             ></v-radio>
                             <v-radio
                                 label="Dona"
                                 color="pink"
-                                value="dona"
+                                value="Dona"
                             ></v-radio>
                             <v-radio
                                 label="Altre"
                                 color="green"
-                                value="altre"
+                                value="Altre"
                             ></v-radio>
                         </v-radio-group>
                     </v-flex>
@@ -131,14 +131,12 @@
     import DateBirthday from "../ui/DateBirthday";
     import AlumnesActivitatsChip from "../AlumnesActivitatsChip";
 
-
     export default {
         mixins:[validationMixin],
         validations:{
             name:{required},
             surname:{required},
             sex:{required},
-            birthdate:{required},
             school:{required},
             schoolCourse:{required}
         },
@@ -149,7 +147,7 @@
         },
         data(){
             return  {
-                birthdate: false,
+                birthdate: this.alumne.birthdate,
                 id:this.alumne.id,
                 name:this.alumne.name,
                 surname:this.alumne.surname,
@@ -246,7 +244,7 @@
                 }
             },
             reset: function () {
-                this.name = '',
+                    this.name = '',
                     this.surname = '',
                     this.birthdate = '',
                     this.school = '',
@@ -277,11 +275,13 @@
                verifyActivitats(){
                 this.datactivitats.forEach((activitat) =>{
                     if (!activitat.name) {
-                        window.axios.post('/api/v1/activitats', {
+                        window.axios.post('/api/v1/activitats/', {
                             name: activitat
                         }).then((response) => {
                             this.datactivitats[this.datactivitats.indexOf(activitat)] = response.data.id
+                            this.reset()
                         }).catch((error) => {
+                            this.reset()
                             this.$snackbar.showError(error.message)
                         })
                     }else{

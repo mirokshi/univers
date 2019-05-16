@@ -10,13 +10,13 @@ class UserStore extends FormRequest
 
     public function authorize()
     {
-        return true;
+        return  Auth::user()->can('entitats.store');;
     }
 
     public function rules()
     {
         return [
-//          'name'=> 'required'
+          'name'=> 'required'
         ];
     }
 }

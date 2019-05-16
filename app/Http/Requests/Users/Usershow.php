@@ -10,7 +10,7 @@ class Usershow extends FormRequest
 
     public function authorize()
     {
-        return true;
+        Auth::user()->can('entitats.show');
     }
 
     public function rules()

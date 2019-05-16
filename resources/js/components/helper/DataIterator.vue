@@ -1,5 +1,5 @@
 <template>
-    <span>
+    <v-container fluid grid-list-md>
         <v-data-iterator
             class="hidden-lg-and-up"
             :items="dataAlumnes"
@@ -11,6 +11,7 @@
             :loading="loading"
             :pagination.sync="pagination"
             content-tag="v-layout"
+            :expand="expand"
             row
             wrap
         >
@@ -18,20 +19,51 @@
                 slot="item"
                 slot-scope="{item:alumne}">
             <v-flex
-
                 xs12
                 sm6
                 md4
                 lg3
                 class="pb-2"
             >
-                <v-card>
-                    <v-card-title><h4>{{alumne.name}}</h4></v-card-title>
+                <v-card color="red lighten-4">
+                    <v-card-title>
+                        <h4>{{alumne.name}} {{alumne.surname}}</h4>
+                        <v-spacer></v-spacer>
+                        <v-switch  class="pl-3 mt-0" v-model="alumne.expanded"></v-switch>
+                    </v-card-title>
+                    <v-divider></v-divider>
+                    <v-list dense v-if="alumne.expanded">
+                        <v-list-tile>
+                            <v-list-tile-content>Sexe :</v-list-tile-content>
+                            <v-list-tile-content v-if="alumne.sex === 'Home'"><i class="fas fa-male fa-2x"></i></v-list-tile-content>
+                            <v-list-tile-content v-if="alumne.sex === 'Dona'"><i class="fas fa-female fa-2x"></i></v-list-tile-content>
+                            <v-list-tile-content v-if="alumne.sex === 'Altre'"><i class="fas fa-neuter fa-2x"></i></v-list-tile-content>
+                        </v-list-tile>
+                        <v-list-tile>
+                            <v-list-tile-content>Edat :</v-list-tile-content>
+                            <v-list-tile-content>{{alumne.age}}</v-list-tile-content>
+                        </v-list-tile>
+                        <v-list-tile>
+                            <v-list-tile-content>Any escolar :</v-list-tile-content>
+                            <v-list-tile-content>{{alumne.course}}</v-list-tile-content>
+                        </v-list-tile>
+                        <v-list-tile>
+                            <v-list-tile-content>Escola :</v-list-tile-content>
+                            <v-list-tile-content>{{alumne.school}}</v-list-tile-content>
+                        </v-list-tile>
+                        <v-list-tile>
+                            <v-list-tile-content>Curs :</v-list-tile-content>
+                            <v-list-tile-content>{{alumne.school_course}}</v-list-tile-content>
+                        </v-list-tile>
+                        <v-list-tile>
+                            <alumnes-activitats :alumne="alumne" :alumne-activitats="alumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>
+                        </v-list-tile>
+                    </v-list>
                 </v-card>
             </v-flex>
             </template>
         </v-data-iterator>
-    </span>
+    </v-container>
 </template>
 <script>
     import DestroyAlumne from "../alumnes/DestroyAlumne";
@@ -45,6 +77,7 @@
         },
         data () {
             return {
+                expand: true,
                 loading: false,
                 search: '',
                 dialog: false,

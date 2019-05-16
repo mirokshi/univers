@@ -154,6 +154,14 @@ public function alumnes_manager_can_delete_alumne()
         $this->loginAsSuperAdmin('api');
         $response = $this->json('POST','/api/v1/alumnes/',[
             'name' => 'ExAlTe',
+            "surname" => "Diaz",
+            "birthdate" =>'22/10/2000',
+            "age" => 12,
+            "school" => "IES EBRE",
+            "course" =>"2017-2018",
+            "school_course" => "CFGS",
+            "sex" => "Home",
+            "phone" => "123456789",
         ]);
 
         $result = json_decode($response->getContent());
@@ -179,7 +187,7 @@ public function alumnes_manager_can_delete_alumne()
             'school' =>'IES EBRE',
             'course' => '2018-2019',
             'school_course'=>'CFGS',
-            'sex'=>'home',
+            'sex'=>'Home',
             'phone'=>'616531219',
             'user_id' => $user->id
         ]);
@@ -195,7 +203,7 @@ public function alumnes_manager_can_delete_alumne()
         $this->assertEquals('IES EBRE',$result->school);
         $this->assertEquals('2019-2020',$result->course);
         $this->assertEquals('CFGS',$result->school_course);
-        $this->assertEquals('home',$result->sex);
+        $this->assertEquals('Home',$result->sex);
         $this->assertEquals('616531219',$result->phone);
         $this->assertEquals($user->id,$result->user_id);
 
@@ -211,7 +219,15 @@ public function alumnes_manager_can_delete_alumne()
         $this->loginAsAlumnesManager('api');
 
         $response = $this->json('POST','/api/v1/alumnes/',[
-            'name' => 'Julio'
+            'name' => 'Julio',
+            'surname' =>'Gutierrez Sanchez',
+            'birthdate' =>'22/10/2000',
+            'age' =>'19',
+            'school' =>'IES EBRE',
+            'course' => '2018-2019',
+            'school_course'=>'CFGS',
+            'sex'=>'Home',
+            'phone'=>'616531219',
         ]);
 
         $result = json_decode($response->getContent());
@@ -265,7 +281,7 @@ public function alumnes_manager_can_delete_alumne()
 
         $result = json_decode($response->getContent());
 
-        $this->assertCount(3,$result);
+        $this->assertCount(7,$result);
 
         $this->assertEquals('Jose', $result[0]->name);
         $this->assertEquals('Lopez', $result[0]->surname);
@@ -293,7 +309,7 @@ public function alumnes_manager_can_delete_alumne()
 
         $result = json_decode($response->getContent());
 
-        $this->assertCount(3,$result);
+        $this->assertCount(7,$result);
 
         $this->assertEquals('Jose', $result[0]->name);
         $this->assertEquals('Lopez', $result[0]->surname);
@@ -318,11 +334,27 @@ public function alumnes_manager_can_delete_alumne()
         $this->login('api');
 
         $oldAlumne = factory(Alumne::class)->create([
-            'name' => 'Manuel'
+            'name' => 'Manuel',
+             'surname' =>'Gutierrez Sanchez',
+            'birthdate' =>'22/10/2000',
+            'age' =>'19',
+            'school' =>'IES EBRE',
+            'course' => '2018-2019',
+            'school_course'=>'CFGS',
+            'sex'=>'Home',
+            'phone'=>'616531219',
         ]);
 
         $response = $this->json('PUT','/api/v1/alumnes/' . $oldAlumne->id, [
-            'name' => 'Martin'
+            'name' => 'Martin',
+            'surname' =>'Gutierrez Sanchez',
+            'birthdate' =>'22/10/2000',
+            'age' =>'19',
+            'school' =>'IES EBRE',
+            'course' => '2018-2019',
+            'school_course'=>'CFGS',
+            'sex'=>'Home',
+            'phone'=>'616531219',
         ]);
 
         json_decode($response->getContent());
@@ -338,12 +370,28 @@ public function alumnes_manager_can_delete_alumne()
         $this->loginAsSuperAdmin('api');
 
         $oldAlumne = factory(Alumne::class)->create([
-            'name' => 'Mario'
+            'name' => 'Mario',
+            'surname' =>'Gutierrez Sanchez',
+            'birthdate' =>'22/10/2000',
+            'age' =>'19',
+            'school' =>'IES EBRE',
+            'course' => '2018-2019',
+            'school_course'=>'CFGS',
+            'sex'=>'Home',
+            'phone'=>'616531219',
         ]);
 
         // 2
         $response = $this->json('PUT','/api/v1/alumnes/' . $oldAlumne->id, [
-            'name' => 'Cesar'
+            'name' => 'Cesar',
+            'surname' =>'Gutierrez Sanchez',
+            'birthdate' =>'22/10/2000',
+            'age' =>'19',
+            'school' =>'IES EBRE',
+            'course' => '2018-2019',
+            'school_course'=>'CFGS',
+            'sex'=>'Home',
+            'phone'=>'616531219',
         ]);
 
         $result = json_decode($response->getContent());
@@ -363,12 +411,28 @@ public function alumnes_manager_can_delete_alumne()
         $this->loginAsAlumnesManager('api');
 
         $oldAlumne = factory(Alumne::class)->create([
-            'name' => 'Carmen'
+            'name' => 'Carmen',
+            'surname' =>'Gutierrez Sanchez',
+            'birthdate' =>'22/10/2000',
+            'age' =>'19',
+            'school' =>'IES EBRE',
+            'course' => '2018-2019',
+            'school_course'=>'CFGS',
+            'sex'=>'Home',
+            'phone'=>'616531219',
         ]);
 
         // 2
         $response = $this->json('PUT','/api/v1/alumnes/' . $oldAlumne->id, [
-            'name' => 'Josefa'
+            'name' => 'Josefa',
+            'surname' =>'Gutierrez Sanchez',
+            'birthdate' =>'22/10/2000',
+            'age' =>'19',
+            'school' =>'IES EBRE',
+            'course' => '2018-2019',
+            'school_course'=>'CFGS',
+            'sex'=>'Home',
+            'phone'=>'616531219',
         ]);
 
         $result = json_decode($response->getContent());

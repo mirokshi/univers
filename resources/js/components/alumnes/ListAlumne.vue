@@ -1,7 +1,8 @@
 <template>
     <span>
+        <v-flex xs12 justify-center>
         <v-toolbar color="red accent-2">
-      <v-toolbar-title class="white--text">Usuaris {{total}}</v-toolbar-title>
+      <v-toolbar-title class="white--text">Usuaris Total:{{total}}</v-toolbar-title>
       <v-spacer></v-spacer>
         <v-btn icon dark class="white--text" @click="refresh" :loading="loading" :disabled="loading">
             <v-icon>refresh</v-icon>
@@ -84,18 +85,20 @@
                         <td>{{alumne.name}}</td>
                         <td>{{alumne.surname}}</td>
                         <!--TODO SEX- add icons (font awesome)-->
-                        <td v-if="alumne.sex === 'home'" ><i class="fas fa-male fa-2x"></i></td>
-                        <td v-if="alumne.sex === 'dona'"><i class="fas fa-female fa-2x"></i></td>
-                        <td v-if="alumne.sex === 'altre'"><i class="fas fa-neuter fa-2x"></i></td>
+                        <td v-if="alumne.sex === 'Home'" ><i class="fas fa-male fa-2x"></i></td>
+                        <td v-if="alumne.sex === 'Dona'"><i class="fas fa-female fa-2x"></i></td>
+                        <td v-if="alumne.sex === 'Altre'"><i class="fas fa-neuter fa-2x"></i></td>
                         <td>{{alumne.birthdate}}</td>
                         <td>{{alumne.age}}</td>
                         <td>{{alumne.school}}</td>
                         <td>{{alumne.course}}</td>
                         <td>{{alumne.school_course}}</td>
                         <td>
-                            <alumnes-activitats :alumne="alumne" :alumne-activitats="alumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>
+                            <!--<alumnes-activitats :alumne="alumne" :alumne-activitats="alumne.activitats" :activitats="activitats" @change="refresh(false)"></alumnes-activitats>-->
+                                <li v-for="activitat in alumne.activitats">
+                                    {{activitat.name}}
+                                </li>
                         </td>
-                        <!--<td><span :title="alumne.created_at_formatted">{{alumne.created_at_human}}</span></td>-->
                         <td>
                             <show-alumne :users="users" :alumne="alumne" :activitats="activitats"></show-alumne>
                             <destroy-alumne
@@ -124,8 +127,9 @@
                     </tr>
                 </template>
             </v-data-table>
-            <!--<data-iterator :users="users" :uri="uri" :activitats="activitats" :alumnes="alumnes"></data-iterator>-->
+            <data-iterator :users="users" :uri="uri" :activitats="activitats" :alumnes="alumnes"></data-iterator>
         </v-card>
+        </v-flex>
     </span>
 </template>
 <script>
@@ -153,6 +157,7 @@
                 loading: false,
                 dataAlumnes: this.alumnes,
                 dataUsers: this.users,
+                nameActivitats:this.alumnes.activitats,
                 selected:[],
                 pagination:{
                     sortBy: 'id'
@@ -168,7 +173,6 @@
                     {text:'CURS', value:'course'},
                     {text:'NIVELL', value: 'school_course'},
                     {text:'ACTIVITAS', value:'activitats'},
-                    // {text:'CREAT', value:'created_at_timestamp'},
                     {text:'ACCIONS',sorteable:false, value:'full_search'},
                 ],
                 filters: {
@@ -180,7 +184,7 @@
                     school:[],
                     course:[],
                     school_course:[],
-                    activitats:[]
+                    activitats: []
                 },
             }
         },
@@ -233,7 +237,9 @@
                 else this.selected = this.alumnes.slice()
             },
             columnValueList(val) {
+
                 return this.alumnes.map(d => d[val])
+
             }
         },
         computed:{
