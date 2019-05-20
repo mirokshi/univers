@@ -151,6 +151,8 @@ public function alumnes_manager_can_delete_alumne()
      */
     public function superadmin_can_create_alumne()
     {
+        $this->withoutExceptionHandling();
+
         $this->loginAsSuperAdmin('api');
         $response = $this->json('POST','/api/v1/alumnes/',[
             'name' => 'ExAlTe',
@@ -371,7 +373,7 @@ public function alumnes_manager_can_delete_alumne()
 
         $oldAlumne = factory(Alumne::class)->create([
             'name' => 'Mario',
-            'surname' =>'Gutierrez Sanchez',
+            'surname' =>'Sanchez',
             'birthdate' =>'22/10/2000',
             'age' =>'19',
             'school' =>'IES EBRE',
@@ -412,7 +414,7 @@ public function alumnes_manager_can_delete_alumne()
 
         $oldAlumne = factory(Alumne::class)->create([
             'name' => 'Carmen',
-            'surname' =>'Gutierrez Sanchez',
+            'surname' =>'Gutierrez',
             'birthdate' =>'22/10/2000',
             'age' =>'19',
             'school' =>'IES EBRE',

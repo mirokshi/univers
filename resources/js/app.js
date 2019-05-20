@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
+import VueTimeago from 'vue-timeago'
+import TreeView from 'vue-json-tree-view'
+import DateFnsLocalCa from 'date-fns/locale/ca'
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import './bootstrap';
 import AppComponent from './components/App.vue';
@@ -36,23 +39,41 @@ import Users from './components/users/Users.vue';
 import ListUser from './components/users/ListUser.vue';
 import ShowUser from './components/users/ShowUser.vue';
 
+import helpers from './utils/helpers';
+import SnackBarComponent from './components/ui/SnackBarComponent.vue'
 
 // instalacion vuetify
 window.Vue = Vue;
 window.Vuetify = Vuetify;
 window.Vue.use(Vuetify);
 
-
+window.eventBus = new Vue();
 window.Vue.use(permissions);
 window.Vue.use(snackbar);
 window.Vue.use(confirm);
+window.Vue.use(TreeView);
+window.Vue.use(VueTimeago, {
+  locale: 'ca', // Default locale
+  locales: {
+    ca: DateFnsLocalCa,
+  },
+});
 
-window.axios.interceptors.response.use(response => response, (error) => {
-  if (window.disableInterceptor) return Promise.reject(error);
+window.helpers = helpers;
+window.disableInterceptor = false;
+
+ window.axios.interceptors.response.use(response => response, (error) => {
+  console.log('ERROR INTERCEPTED!!!!!!!!!!!!!!');
+  console.log(error);
+  if (window.disableInterceptor) {
+    console.log('INTERCEPTOR DISABLED!');
+    return Promise.reject(error);
+  }
+  console.log('INTERCEPTOR ENABLED!');
   if (error && error.response) {
     // Refresh CSRF TOKEN
     // dAMpDXBRrjVJ2TKewouYHgOeozZmW72EiAt5K1jY
-    console.log('PROVA ###############');
+    console.log('############3 ERROR RESPONSE EXISTS ###############');
     if (error.response.status === 419) {
       console.log('419 error intercepted!!!!!');
       return window.helpers.getCsrfToken().then((token) => {
@@ -70,11 +91,13 @@ window.axios.interceptors.response.use(response => response, (error) => {
     }
     console.log('1');
     if (error.response.status === 401) {
-      window.Vue.prototype.$snackbar.showError("No heu entrat al sistema o ha caducat la sessió. Renviant-vos a l'entrada del sistema");
-      const loginUrl = location.pathname ? `/login?back=${location.pathname}` : '/login';
-      console.log('Waiting to redirect to:');
-      console.log(loginUrl);
-      setTimeout(() => { window.location = loginUrl; }, 3000);
+      if (location.pathname !== '/login') {
+        window.Vue.prototype.$snackbar.showError("No heu entrat al sistema o ha caducat la sessió. Renviant-vos a l'entrada del sistema");
+        const loginUrl = location.pathname ? `/login?back=${location.pathname}` : '/login';
+        console.log('Waiting to redirect to:');
+        console.log(loginUrl);
+        setTimeout(() => { window.location = loginUrl; }, 3000);
+      }
       // Break the promise chain -> https://github.com/axios/axios/issues/715
       return new Promise(() => {});
     }
@@ -93,10 +116,14 @@ window.axios.interceptors.response.use(response => response, (error) => {
       console.log(error.response.data);
       console.log(error.response.data.message);
       console.log(error.response.data.errors);
+      let data = '';
+      if (error.response.data.errors) {
+        data = window.helpers.printObject(error.response.data.errors);
+      }
       window.Vue.prototype.$snackbar.showSnackBar(
         error.response.data.message,
         'error',
-        window.helpers.printObject(error.response.data.errors),
+        data,
         'center',
       );
     }
@@ -143,6 +170,7 @@ window.axios.interceptors.response.use(response => response, (error) => {
     return Promise.reject(error);
   }
   if (error && error.request) {
+    console.log('ERROR EXISTS BUT NO RESPONSE!');
     window.Vue.prototype.$snackbar.showError("Error de xarxa! No s'ha obtingut cap resposta a la vostra petició. Consulteu l'estat de la xarxa.");
     window.Vue.prototype.$snackbar.showSnackBar('Error de xarxa!', 'error', "No s'ha obtingut cap resposta a la vostra petició. Consulteu l'estat de la xarxa.");
     return Promise.reject(error);
@@ -178,6 +206,8 @@ window.Vue.component('users', Users);
 window.Vue.component('list-user', ListUser);
 window.Vue.component('show-user', ShowUser);
 
+
+window.Vue.component('snackbar', SnackBarComponent)
 
 // eslint-disable-next-line no-unused-vars
 const app = new Vue(AppComponent);
