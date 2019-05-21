@@ -116,7 +116,7 @@
 <script>
     import { validationMixin } from 'vuelidate'
     import { required , minLength,maxLength} from 'vuelidate/lib/validators'
-    import AlumnesActivitats from "../AlumnesActivitats";
+    import AlumnesActivitats from "./AlumnesActivitats";
     import DateBirthday from "../ui/DateBirthday";
     export default {
         mixins:[validationMixin],

@@ -66,8 +66,8 @@
     </v-container>
 </template>
 <script>
-    import DestroyAlumne from "../alumnes/DestroyAlumne";
-    import AlumnesActivitats from "../AlumnesActivitats";
+    import DestroyAlumne from "./DestroyAlumne";
+    import AlumnesActivitats from "./AlumnesActivitats";
 
     export default {
         name: 'DataIterator',

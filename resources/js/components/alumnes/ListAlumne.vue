@@ -136,9 +136,9 @@
     import ShowAlumne from "./ShowAlumne";
     import DestroyAlumne from "./DestroyAlumne";
     import Toggle from "../helper/Toggle";
-    import DataIterator from "../helper/DataIterator";
+    import DataIterator from "./DataIterator";
     import UpdateAlumne from "./UpdateAlumne";
-    import AlumnesActivitatsChip from "../AlumnesActivitatsChip";
+    import AlumnesActivitatsChip from "./AlumnesActivitatsChip";
 
     export default {
         name:'ListAlumne',

@@ -129,7 +129,7 @@
     import { validationMixin } from 'vuelidate'
     import { required , minLength,maxLength} from 'vuelidate/lib/validators'
     import DateBirthday from "../ui/DateBirthday";
-    import AlumnesActivitatsChip from "../AlumnesActivitatsChip";
+    import AlumnesActivitatsChip from "./AlumnesActivitatsChip";
 
     export default {
         mixins:[validationMixin],

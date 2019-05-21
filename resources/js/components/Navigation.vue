@@ -3,8 +3,9 @@
         v-model="dataDrawer"
         fixed
         app
+
         clipped
-        class="red lighten-3"
+        class="primary lighten-5"
     >
         <v-list dense>
             <template v-for="item in items">
@@ -87,7 +88,7 @@
                         model: false,
                         children: [
                             { icon: 'child_care', text: 'Usuaris', url: '/alumnes' },
-                            { icon: 'domain', text: 'Entitats', url: '/entitats' },
+                            { icon: 'domain', text: 'Entitats', url: '/entitats', },
                             { icon: 'event_note', text: 'Activitats', url: '/activitats' },
                         ]
                     },

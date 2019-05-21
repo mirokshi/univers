@@ -8,7 +8,9 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import './bootstrap';
 import ca from './i18n/ca';
 import AppComponent from './components/App.vue';
-import Navigation from './components/ui/Navigation.vue';
+import Navigation from './components/Navigation.vue';
+import NavigationRight from './components/NavigationRight.vue'
+import Toolbar from './components/Toolbar.vue'
 import Sparklines from './components/Sparklines.vue';
 import Home from './components/Home.vue';
 import LoginForm from './components/auth/LoginForm.vue';
@@ -44,10 +46,10 @@ import ShowUser from './components/users/ShowUser.vue';
 import SnackBarComponent from './components/ui/SnackBarComponent.vue';
 import helpers from './utils/helpers';
 
+
 // ABANS
 import 'typeface-montserrat/index.css';
 import 'typeface-roboto/index.css';
-import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -186,6 +188,8 @@ window.axios.interceptors.response.use(response => response, (error) => {
 
 // Components
 window.Vue.component('navigation', Navigation);
+window.Vue.component('navigation-right', NavigationRight)
+window.Vue.component('toolbar', Toolbar)
 window.Vue.component('login-form', LoginForm);
 window.Vue.component('register-form', RegisterForm);
 
@@ -224,40 +228,40 @@ window.Vue.use(window.Vuetify, {
   },
   theme: {
     primary: {
-      base: '#2680C2',
-      lighten1: '#4098D7',
-      lighten2: '#62B0E8',
-      lighten3: '#84C5F4',
-      lighten4: '#B6E0FE',
-      lighten5: '#DCEEFB',
-      darken1: '#186FAF',
-      darken2: '#0F609B',
-      darken3: '#0A558C',
-      darken4: '#003E6B',
+      base: '#911111',
+      lighten1: '#D64545',
+      lighten2: '#E66A6A',
+      lighten3: '#F29B9B',
+      lighten4: '#FACDCD',
+      lighten5: '#FFEEEE',
+      darken1: '#BA2525',
+      darken2: '#A61B1B',
+      darken3: '#780A0A',
+      darken4: '#610404',
     },
     secondary: {
-      base: '#2CB1BC',
-      lighten1: '#38BEC9',
-      lighten2: '#54D1DB',
-      lighten3: '#87EAF2',
-      lighten4: '#BEF8FD',
-      lighten5: '#E0FCFF',
-      darken1: '#14919B',
-      darken2: '#0E7C86',
-      darken3: '#0A6C74',
-      darken4: '#044E54',
-    },
-    accent: {
-      base: '#F0B429',
+      base: '#CB6E17',
       lighten1: '#F7C948',
       lighten2: '#FADB5F',
       lighten3: '#FCE588',
       lighten4: '#FFF3C4',
       lighten5: '#FFFBEA',
-      darken1: '#DE911D',
-      darken2: '#CB6E17',
+      darken1: '#F0B429',
+      darken2: '#DE911D',
       darken3: '#B44D12',
       darken4: '#8D2B0B',
+    },
+    accent: {
+      base: '#507712',
+      lighten1: '#94C843',
+      lighten2: '#ABDB5E',
+      lighten3: '#C7EA8F',
+      lighten4: '#E2F7C2',
+      lighten5: '#F2FDE0',
+      darken1: '#7BB026',
+      darken2: '#63921A',
+      darken3: '#42600C',
+      darken4: '#2B4005',
     },
     error: {
       base: '#BA2525',
