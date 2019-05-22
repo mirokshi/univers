@@ -18,8 +18,9 @@ class AlumneStore extends FormRequest
 
 
         return [
-            'name' => 'required|unique_with:alumnes,surname',
-            'surname' => 'required',
+            'name' => 'required'
+            //'name' => 'required|unique_with:alumnes,surname',
+            //'surname' => 'required',
             //'name' => 'unique:alumnes,name'.$this->get('id').',id,surname'.$this->get('surname')
         ];
     }

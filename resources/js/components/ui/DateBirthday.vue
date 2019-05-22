@@ -50,17 +50,19 @@
         watch: {
             date (val) {
                 this.dateFormatted = this.formatDate(this.date)
+                this.$emit('input', this.date)
             },
             menu (val) {
                 val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
             }
         },
-
+        props:['value'],
         methods: {
             formatDate (date) {
                 if (!date) return null
-                const [year, month, day] = date.split('-')
-                return `${day}/${month}/${year}`
+                const dateSplitted = date.split('-')
+                console.log(date.split('-'))
+                return `${dateSplitted[2]}/${dateSplitted[1]}/${dateSplitted[0]}`
             },
             parseDate (date) {
                 if (!date) return null

@@ -103,7 +103,7 @@
                             <!--&lt;!&ndash;@change="refresh(false)"></alumnes-activitats-chip>&ndash;&gt;-->
                     <!--</v-flex>-->
                 <!--</v-layout>-->
-                <v-divider></v-divider>
+                <!--<v-divider></v-divider>-->
                 <div class="headline font-weight-light grey--text">ENTITAT</div>
                 <v-layout>
                     <v-flex>
@@ -276,7 +276,9 @@
                      this.loading = false
                      this.$emit('close')
                  }).catch(()=>{
+                     this.reset()
                      this.loading = false
+                     this.$emit('close')
                  })
              },
                verifyActivitats(){
