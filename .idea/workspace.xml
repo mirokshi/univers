@@ -10,20 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="671ac4b2-eb58-42de-b0c3-f9190173bdb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/univers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/univers.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/userTypes/prueba.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Alumne.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Alumne.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Alumnes/AlumneStore.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Alumnes/AlumneStore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_07_101641_create_alumne_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_07_101641_create_alumne_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/AlumnesActivitats.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/AlumnesActivitats.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/AlumnesActivitatsChip.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/AlumnesActivitatsChip.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/alumnes/UpdateFormAlumne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/UpdateFormAlumne.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/helper/DataIterator.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/alumnes/DataIterator.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ui/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Navigation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +49,25 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="univers" type="feb32156:DbDataSourceImpl" />
+        <item name="SQLite - database.sqlite" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SQLite - database.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SQLite - database.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SQLite - database.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="alumnes: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -58,7 +76,86 @@
     <favorites_list name="univers" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-550">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1054">
+              <caret line="143" column="8" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
+              <folding>
+                <element signature="e#6530#6568#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3960">
+              <caret line="278" column="41" selection-start-line="278" selection-start-column="41" selection-end-line="278" selection-end-column="41" />
+              <folding>
+                <element signature="e#10565#11261#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Alumnes/AlumneStore.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_07_101641_create_alumne_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/Api/AlumnesControllerTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="138" column="20" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Alumne.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -117,13 +214,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/contact.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/components/AlumnesActivitatsChip.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/ui/DateBirthday.vue" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_07_101641_create_alumne_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/database/factories/AlumneFactory.php" />
         <option value="$PROJECT_DIR$/tests/Feature/AlumnesControllerTest.php" />
@@ -134,7 +227,6 @@
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/ShowFormAlumne.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/alumnes/UpdateFormAlumne.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/helper/Toggle.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/users/Users.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/users/ListUser.vue" />
@@ -145,9 +237,7 @@
         <option value="$PROJECT_DIR$/app/Http/Requests/Users/UserDestroy.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Users/UserUpdate.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Alumnes/AlumneStore.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Alumnes/AlumneUpdate.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/Api/AlumnesControllerTest.php" />
         <option value="$PROJECT_DIR$/resources/js/utils/sleep.js" />
         <option value="$PROJECT_DIR$/resources/js/store/mutation-types.js" />
         <option value="$PROJECT_DIR$/resources/js/store/action-types.js" />
@@ -168,6 +258,13 @@
         <option value="$PROJECT_DIR$/resources/js/components/Toolbar.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/Home.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/Navigation.vue" />
+        <option value="$PROJECT_DIR$/app/Alumne.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/Api/AlumnesControllerTest.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Alumnes/AlumneStore.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_07_101641_create_alumne_table.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue" />
       </list>
     </option>
   </component>
@@ -285,12 +382,13 @@
       <path value="$PROJECT_DIR$/vendor/predis/predis" />
       <path value="$PROJECT_DIR$/vendor/cakephp/chronos" />
       <path value="$PROJECT_DIR$/vendor/laravel/horizon" />
+      <path value="$PROJECT_DIR$/vendor/felixkiss/uniquewith-validator" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="720" />
     <option name="y" value="27" />
-    <option name="width" value="710" />
+    <option name="width" value="720" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -301,7 +399,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -312,29 +409,49 @@
             <path>
               <item name="univers" type="b2602c69:ProjectViewProjectNode" />
               <item name="univers" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="univers" type="b2602c69:ProjectViewProjectNode" />
               <item name="univers" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="univers" type="b2602c69:ProjectViewProjectNode" />
               <item name="univers" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="univers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="univers" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Alumnes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="univers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="univers" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="univers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="univers" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="sqlite&#10;mysql" />
+    <property name="DatabaseDriversLRU" value="sqlite&#10;mysql&#10;sqlite.xerial" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -384,13 +501,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.AlumnesControllerTest.superadmin_can_edit_alumne">
+  <component name="RunManager" selected="PHPUnit.AlumnesControllerTest.cannot_create_alumnes_without_name">
     <configuration name="AlumnesActivitatsTest.can_add_activitats_to_alumnes" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\Api\AlumnesActivitatsTest" configuration_file="$PROJECT_DIR$/vendor/autoload.php" directory="$PROJECT_DIR$" file="$PROJECT_DIR$/tests/Feature/Api/AlumnesActivitatsTest.php" method="can_add_activitats_to_alumnes" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="AlumnesControllerTest.alumnes_user_can_index_alumnes" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\AlumnesControllerTest" configuration_file="$PROJECT_DIR$/vendor/autoload.php" directory="$PROJECT_DIR$" file="$PROJECT_DIR$/tests/Feature/AlumnesControllerTest.php" method="alumnes_user_can_index_alumnes" scope="Method" />
+    <configuration name="AlumnesControllerTest.cannot_create_alumnes_without_name" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\AlumnesControllerTest" configuration_file="$PROJECT_DIR$/vendor/autoload.php" directory="$PROJECT_DIR$" file="$PROJECT_DIR$/tests/Feature/Api/AlumnesControllerTest.php" method="cannot_create_alumnes_without_name" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -415,19 +532,19 @@
     </configuration>
     <list>
       <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.AlumnesControllerTest.alumnes_user_can_index_alumnes" />
       <item itemvalue="PHPUnit.AlumnesActivitatsTest.can_add_activitats_to_alumnes" />
       <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_create_fullalumne" />
       <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_create_alumne" />
       <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_edit_alumne" />
+      <item itemvalue="PHPUnit.AlumnesControllerTest.cannot_create_alumnes_without_name" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_edit_alumne" />
+        <item itemvalue="PHPUnit.AlumnesControllerTest.cannot_create_alumnes_without_name" />
         <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_create_alumne" />
+        <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_edit_alumne" />
         <item itemvalue="PHPUnit.AlumnesControllerTest.superadmin_can_create_fullalumne" />
         <item itemvalue="PHPUnit.AlumnesActivitatsTest.can_add_activitats_to_alumnes" />
-        <item itemvalue="PHPUnit.AlumnesControllerTest.alumnes_user_can_index_alumnes" />
       </list>
     </recent_temporary>
   </component>
@@ -518,48 +635,50 @@
       <workItem from="1558336192434" duration="4291000" />
       <workItem from="1558340881374" duration="3802000" />
       <workItem from="1558427223348" duration="7005000" />
+      <workItem from="1558509447327" duration="3806000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AlumnesControllerTest_superadmin_can_create_fullalumne - 2019.05.16 at 10h 25m 41s.xml">
-      <configuration name="AlumnesControllerTest.superadmin_can_create_fullalumne" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AlumnesControllerTest_superadmin_can_create_fullalumne - 2019.05.16 at 10h 26m 14s.xml">
-      <configuration name="AlumnesControllerTest.superadmin_can_create_fullalumne" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AlumnesControllerTest_superadmin_can_create_alumne - 2019.05.20 at 09h 18m 43s.xml">
-      <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AlumnesControllerTest_superadmin_can_create_alumne - 2019.05.20 at 09h 18m 54s.xml">
-      <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AlumnesControllerTest_superadmin_can_create_alumne - 2019.05.20 at 09h 19m 47s.xml">
-      <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AlumnesControllerTest_superadmin_can_create_alumne - 2019.05.20 at 09h 20m 09s.xml">
-      <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AlumnesControllerTest_superadmin_can_create_alumne - 2019.05.20 at 09h 22m 17s.xml">
-      <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AlumnesControllerTest_superadmin_can_edit_alumne - 2019.05.20 at 09h 23m 41s.xml">
-      <configuration name="AlumnesControllerTest.superadmin_can_edit_alumne" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="AlumnesControllerTest_superadmin_can_edit_alumne - 2019.05.20 at 09h 23m 51s.xml">
       <configuration name="AlumnesControllerTest.superadmin_can_edit_alumne" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
     <history-entry file="AlumnesControllerTest_superadmin_can_edit_alumne - 2019.05.20 at 09h 24m 04s.xml">
       <configuration name="AlumnesControllerTest.superadmin_can_edit_alumne" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="AlumnesControllerTest_superadmin_can_create_alumne - 2019.05.22 at 09h 46m 36s.xml">
+      <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="AlumnesControllerTest_superadmin_can_create_alumne - 2019.05.22 at 09h 51m 42s.xml">
+      <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="AlumnesControllerTest_superadmin_can_create_alumne - 2019.05.22 at 09h 52m 16s.xml">
+      <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="AlumnesControllerTest_superadmin_can_create_alumne - 2019.05.22 at 09h 52m 50s.xml">
+      <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="AlumnesControllerTest_superadmin_can_create_alumne - 2019.05.22 at 09h 53m 05s.xml">
+      <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="AlumnesControllerTest_superadmin_can_create_alumne - 2019.05.22 at 09h 53m 21s.xml">
+      <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="AlumnesControllerTest_superadmin_can_create_alumne - 2019.05.22 at 09h 53m 42s.xml">
+      <configuration name="AlumnesControllerTest.superadmin_can_create_alumne" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="AlumnesControllerTest_cannot_create_alumnes_without_name - 2019.05.22 at 09h 54m 01s.xml">
+      <configuration name="AlumnesControllerTest.cannot_create_alumnes_without_name" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321527000" />
+    <option name="totallyTimeSpent" value="325333000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1440" height="873" extended-state="6" />
+    <frame x="720" y="27" width="720" height="873" extended-state="4" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49507388" visible="true" weight="0.21805556" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49507388" weight="0.21805556" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.5049261" side_tool="true" weight="0.25" />
@@ -592,60 +711,8 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Alumnes/AlumneUpdate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Alumnes/AlumneStore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="19" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_07_101641_create_alumne_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="35" />
-          <folding>
-            <element signature="e#7#25#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/utils/sleep.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/ui/snackbar/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/plugins/ssnackbar/index.js" />
-    <entry file="file://$PROJECT_DIR$/resources/js/plugins/ssnackbar/Snackbar.vue" />
-    <entry file="file://$PROJECT_DIR$/resources/js/eventBus.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.eslintrc.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/Api/AlumnesControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9864">
-          <caret line="416" column="34" selection-start-line="416" selection-start-column="34" selection-end-line="416" selection-end-column="34" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/i18n/ca.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -755,9 +822,6 @@
         <state relative-caret-position="-2024" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -797,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="271" column="23" lean-forward="true" selection-start-line="271" selection-start-column="23" selection-end-line="271" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-360" />
@@ -812,13 +869,6 @@
     <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/DataIterator.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2232" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/helper/Filters.vue">
@@ -918,6 +968,88 @@
     <entry file="file://$PROJECT_DIR$/resources/js/components/Sparklines.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-320" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2f2ca0bd-4c15-479e-8a82-8882ca42d1b3/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Alumne.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/Api/AlumnesControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="138" column="20" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="163" column="10" selection-start-line="163" selection-start-column="10" selection-end-line="163" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Alumnes/AlumneStore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_07_101641_create_alumne_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateFormAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3960">
+          <caret line="278" column="41" selection-start-line="278" selection-start-column="41" selection-end-line="278" selection-end-column="41" />
+          <folding>
+            <element signature="e#10565#11261#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/CreateAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/ListAlumne.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1054">
+          <caret line="143" column="8" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
+          <folding>
+            <element signature="e#6530#6568#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/alumnes/Alumnes.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-550">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
       </provider>
     </entry>
   </component>

@@ -91,18 +91,18 @@
                     </v-flex>
                 </v-layout>
                 <v-divider></v-divider>
-                <div class="headline font-weight-light grey--text">ACTIVITAT</div>
-                <v-layout>
-                    <v-flex>
-                        <alumnes-activitats-chip
-                            @updated="verifyActivitats"
-                            v-model="datactivitats"
-                            :selected-activitats="datactivitats"
-                            :alumne="alumne"
-                            :activitats="activitats"
-                            @change="refresh(false)"></alumnes-activitats-chip>
-                    </v-flex>
-                </v-layout>
+                <!--<div class="headline font-weight-light grey&#45;&#45;text">ACTIVITAT</div>-->
+                <!--<v-layout>-->
+                    <!--<v-flex>-->
+                        <!--&lt;!&ndash;<alumnes-activitats-chip&ndash;&gt;-->
+                            <!--&lt;!&ndash;@updated="verifyActivitats"&ndash;&gt;-->
+                            <!--&lt;!&ndash;v-model="datactivitats"&ndash;&gt;-->
+                            <!--&lt;!&ndash;:selected-activitats="datactivitats"&ndash;&gt;-->
+                            <!--&lt;!&ndash;:alumne="alumne"&ndash;&gt;-->
+                            <!--&lt;!&ndash;:activitats="activitats"&ndash;&gt;-->
+                            <!--&lt;!&ndash;@change="refresh(false)"></alumnes-activitats-chip>&ndash;&gt;-->
+                    <!--</v-flex>-->
+                <!--</v-layout>-->
                 <v-divider></v-divider>
                 <div class="headline font-weight-light grey--text">ENTITAT</div>
                 <v-layout>
@@ -254,7 +254,7 @@
                     this.datactivitats = '',
                     this.user = ''
             },
-             async add () {
+             add () {
                  this.loading = true
                  const alumne = {
                      'name': this.name,
@@ -269,8 +269,15 @@
                      'activitats': this.datactivitats,
                      'change': this.change = true
                  }
-                 await this.verifyActivitats()
-                 this.$emit('saved', alumne)
+                 window.axios.post(this.uri,alumne).then((response) => {
+                     this.$snackbar.showMessage('Alumne creat correctament')
+                     this.reset()
+                     this.$emit('created',response.data)
+                     this.loading = false
+                     this.$emit('close')
+                 }).catch(()=>{
+                     this.loading = false
+                 })
              },
                verifyActivitats(){
                 this.datactivitats.forEach((activitat) =>{

@@ -9,6 +9,8 @@ class Alumne extends Model
 {
     use FormattedDates;
 
+    protected $table ="alumnes";
+
     protected $guarded = [];
 
     protected $hidden = [

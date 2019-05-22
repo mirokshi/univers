@@ -15,9 +15,12 @@ class AlumneStore extends FormRequest
 
     public function rules()
     {
+
+
         return [
-            'name' => 'required|unique:alumnes,name',
-            'surname' => 'required|unique:alumnes,surname'
+            'name' => 'required|unique_with:alumnes,surname',
+            'surname' => 'required',
+            //'name' => 'unique:alumnes,name'.$this->get('id').',id,surname'.$this->get('surname')
         ];
     }
 }
