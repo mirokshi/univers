@@ -18,7 +18,7 @@ class UsersController extends Controller
 {
     public function index(UserIndex $request)
     {
-        return map_collection(User::orderBy('created_at','desc')->get());
+        return map_collection(User::all())->get();
     }
 
     public function show(UserShow $request, User $users)
@@ -41,7 +41,6 @@ class UsersController extends Controller
     public function destroy(UserDestroy $request, User $users)
     {
         $users->delete();
-        return $users;
     }
 
     //MODIFICAR

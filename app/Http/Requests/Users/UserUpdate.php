@@ -10,13 +10,13 @@ class UserUpdate extends FormRequest
 
     public function authorize()
     {
-        return true;
+        Auth::user()->can('entitats.update');
     }
 
     public function rules()
     {
         return [
-//          'name'=> 'required'
+          'name'=> 'required'
         ];
     }
 }

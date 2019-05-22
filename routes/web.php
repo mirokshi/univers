@@ -53,6 +53,12 @@ Route::get('/prueva', function () {
 
 });
 
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+
 Route::post('login_alt', 'Auth\LoginAltController@login');
 Route::post('register_alt','Auth\RegisterAltController@register');
 

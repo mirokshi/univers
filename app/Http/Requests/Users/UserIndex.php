@@ -10,7 +10,7 @@ class UserIndex extends FormRequest
 
     public function authorize()
     {
-        return true;
+        Auth::user()->can('entitats.index');
     }
 
     public function rules()

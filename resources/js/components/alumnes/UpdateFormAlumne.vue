@@ -48,17 +48,17 @@
                         <v-radio
                             label="Home"
                             color="blue"
-                            value="home"
+                            value="Home"
                         ></v-radio>
                         <v-radio
                             label="Dona"
                             color="pink"
-                            value="dona"
+                            value="Dona"
                         ></v-radio>
                         <v-radio
                             label="Altre"
                             color="green"
-                            value="altre"
+                            value="Altre"
                         ></v-radio>
                     </v-radio-group>
                 </v-flex>
@@ -116,7 +116,7 @@
 <script>
     import { validationMixin } from 'vuelidate'
     import { required , minLength,maxLength} from 'vuelidate/lib/validators'
-    import AlumnesActivitats from "../AlumnesActivitats";
+    import AlumnesActivitats from "./AlumnesActivitats";
     import DateBirthday from "../ui/DateBirthday";
     export default {
         mixins:[validationMixin],

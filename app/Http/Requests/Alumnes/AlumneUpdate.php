@@ -16,7 +16,8 @@ class AlumneUpdate extends FormRequest
     public function rules()
     {
         return [
-          'name'=> 'required'
+            'name' => 'required|unique:alumnes,name',
+            'surname' => 'required|unique:alumnes,surname'
         ];
     }
 }

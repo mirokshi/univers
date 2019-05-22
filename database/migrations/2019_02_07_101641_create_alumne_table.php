@@ -18,15 +18,15 @@ class CreateAlumneTable extends Migration
         Schema::create('alumnes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('surname')->nullable();
+            $table->string('surname');
             $table->string('birthdate')->nullable();
-            $table->integer('age')->nullable();
-            $table->string('school')->nullable();
-            $table->string('course')->nullable()->default(date('Y').'-'.(date('Y')+1));
-            $table->string('school_course')->nullable();
-            $table->string('sex')->nullable();
+            $table->integer('age');
+            $table->string('school');
+            $table->string('course')->default(date('Y').'-'.(date('Y')+1));
+            $table->string('school_course');
+            $table->enum('sex',['Dona','Home', 'Altre']);
             $table->integer('phone')->nullable();
-            $table->boolean('change')->nullable()->default(true);
+            $table->boolean('change')->default(true);
             $table->unsignedInteger('user_id') ->nullable();
             $table->timestamps();
         });

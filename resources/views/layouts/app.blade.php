@@ -31,34 +31,27 @@
     background: -webkit-linear-gradient(to top, #fb4760 0%, #ea0025 100%)
     fixed">
 <div id="app" v-cloak>
+    <noscript>
+        <strong>We're sorry but frontend doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
     <v-app id="inspire">
         <snackbar></snackbar>
         <navigation v-model="drawer"></navigation>
-        <v-toolbar
-            color="red accent-4"
-            dark
-            app
-            clipped-left
-            clipped-right
-            fixed
-        >
-            <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-            <v-toolbar-title>Application</v-toolbar-title>
-            <v-spacer></v-spacer>
-
-            <v-form action="/logout" method="POST">
-                @csrf
-                <v-btn class="red" type="submit">LOGOUT</v-btn>
-            </v-form>
-        </v-toolbar>
+        <navigation-right
+            csrf-token="{{ csrf_token()}}"
+            v-model="drawerRight"></navigation-right>
+        <toolbar
+            @toggle-right="drawerRight=!drawerRight"
+            @toggle-left="drawer=!drawer"
+        ></toolbar>
         <v-content style="background: #cc95a1">
             @yield('content')
         </v-content>
         <v-footer color="red accent-4" app>
-            <span class="white--text">&copy; 2019 </span>
+            <span class="white--text">&copy; {{date('Y')}} </span>
         </v-footer>
     </v-app>
 </div>
-<script src="{{mix('/js/app.js')}}"></script>
 </body>
+<script src="{{mix('/js/app.js')}}"></script>
 </html>

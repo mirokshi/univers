@@ -41,7 +41,6 @@
             dateFormatted: vm.formatDate(new Date().toISOString().substr(0, 10)),
             menu: false,
         }),
-
         computed: {
             computedDateFormatted () {
                 return this.formatDate(this.date)
@@ -68,6 +67,17 @@
 
                 const [month, day, year] = date.split('/')
                 return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
+            },
+            calcYear(date){
+                if (!date) return null
+                const[year,month,day] = date.split('-')
+                const dt = new Date()
+                const age=dt.getFullYear() - `${year}`
+                if (age<0) return Math.abs(age)
+                return age
+
+
+
             }
         }
     }

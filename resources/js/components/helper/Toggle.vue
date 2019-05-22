@@ -58,8 +58,8 @@
                 this.loading = true
                 window.axios.post(this.uri + '/' + this.resource.id).then(() => {
                     this.$snackbar.showMessage(this.snackbarMessageTrue)
-                    this.loading = false
                     this.$emit('change')
+                    this.loading = false
                 }).catch(error => {
                     this.loading = false
                     this.$snackbar.showError(error)
@@ -69,8 +69,8 @@
                 this.loading = true
                 window.axios.delete(this.uri + '/' + this.resource.id).then(() => {
                     this.$snackbar.showMessage(this.snackbarMessageFalse)
-                    this.loading = false
                     this.$emit('change')
+                    this.loading = false
                 }).catch(error => {
                     this.loading = false
                     this.$snackbar.showError(error)

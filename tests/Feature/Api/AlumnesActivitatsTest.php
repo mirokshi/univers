@@ -25,11 +25,20 @@ class AlumnesActivitatsTest extends TestCase
     public function can_add_activitats_to_alumnes()
     {
         $this->withoutExceptionHandling();
+
         $this->loginAsAlumnesManager('api');
 
         //1
         $alumne = Alumne::create([
-           'name'  => 'Juan'
+           'name'  => 'Juan',
+            'surname' =>'Gutierrez Sanchez',
+            'birthdate' =>'22/10/2000',
+            'age' =>'19',
+            'school' =>'IES EBRE',
+            'course' => '2018-2019',
+            'school_course'=>'CFGS',
+            'sex'=>'Home',
+            'phone'=>'616531219',
         ]);
         $activitat =  Activitat::create([
            'name' => 'Karate'

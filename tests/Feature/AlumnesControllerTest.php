@@ -49,7 +49,7 @@ class AlumnesControllerTest extends TestCase
    */
     public function superadmin_can_index_alumnes()
     {
-        create_example_simple_alumne();
+        create_example_alumnes();
         $this->loginAsSuperAdmin();
         $response = $this->get('alumnes');
         $response->assertSuccessful();
@@ -57,8 +57,8 @@ class AlumnesControllerTest extends TestCase
 
 
         $response->assertViewHas('alumnes',function ($alumnes){
-           return count($alumnes) === 4 &&
-           $alumnes[0]['name'] === 'Juan';
+           return count($alumnes) === 7 &&
+           $alumnes[0]['name'] === 'Jose';
         });
 
     }
@@ -69,11 +69,19 @@ class AlumnesControllerTest extends TestCase
      */
     public function alumnes_user_can_index_alumnes()
     {
-        create_example_simple_alumne();
+        create_example_alumnes();
 
         $user = $this->loginAsAlumnesUser();
         Alumne::create([
             'name' => 'Eje Alu',
+            'surname' =>'Gutierrez Sanchez',
+            'birthdate' =>'22/10/2000',
+            'age' =>'19',
+            'school' =>'IES EBRE',
+            'course' => '2018-2019',
+            'school_course'=>'CFGS',
+            'sex'=>'Home',
+            'phone'=>'616531219',
             'user_id' => $user->id
         ]);
 

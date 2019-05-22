@@ -70,7 +70,7 @@
                 dialog: false,
                 newActivitat:'',
                 loading: false,
-                dataselectedActivitats: this.selectedActivitats,
+                // dataselectedActivitats: this.selectedActivitats,
                 data:'',
                 dataAlumne:this.alumne,
             }
@@ -103,7 +103,7 @@
         },
         methods: {
             add(){
-                this.$emit('updated',this.dataselectedActivitats)
+                this.$emit('updated',this.selectedActivitats)
                 this.dialog = false
             },
             removeActivitat(activitat){
