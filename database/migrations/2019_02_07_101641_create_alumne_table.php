@@ -20,8 +20,8 @@ class CreateAlumneTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->unique(['name','surname']);
-            $table->string('birthdate')->nullable();
-            $table->integer('age')->nullable();
+            $table->string('birthdate');
+            $table->integer('age');
             $table->string('school');
             $table->string('course')->default(date('Y').'-'.(date('Y')+1));
             $table->string('school_course');

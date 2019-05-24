@@ -53,31 +53,6 @@
                             >Entitats</v-btn>
                         </material-card>
                     </v-flex>
-                    <v-flex xs12
-                            sm12
-                            md4
-                    >
-                        <material-card class="v-card-profile ma-1 elevation-5" :style="'border-radius: 0.5em; border-bottom-style: solid; border-bottom-width: 0.4em;  border-bottom-color: ' + this.$vuetify.theme.grey.base ">
-                            <v-avatar
-                                slot="offset"
-                                class="mx-auto d-block"
-                                size="130"
-
-                            >
-                                <img
-                                    src="/img/userTypes/profile.jpg"
-                                >
-                            </v-avatar>
-                            <v-btn
-                                large
-                                color="accent"
-                                round
-                                :loading="loading"
-                                :disabled="loading"
-                                href="entitats"
-                            >Perfil</v-btn>
-                        </material-card>
-                    </v-flex>
                     <v-flex
                         xs12
                         sm12

@@ -18,7 +18,6 @@ class DatabaseSeeder extends Seeder
         migrate_entitats();
         migrate_activitats();
         create_example_alumnes();
-        create_example_simple_activitat();
         create_example_alumnes_with_actvitats();
 
     }

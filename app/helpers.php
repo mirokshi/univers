@@ -184,8 +184,13 @@ if (!function_exists("create_example_alumnes")) {
 
     function create_example_alumnes()
     {
-        $user = factory(User::class)->create();
-       Alumne::create([
+        $randomNumber = mt_rand(0,56);
+        $randomNumber2 = mt_rand(0,37);
+        $user = User::find($randomNumber2);
+        $activitat1 = Activitat::find($randomNumber);
+
+
+       $alumne1 =Alumne::create([
             "name" => "Jose",
             "surname" => "Lopez",
             "birthdate" =>'22/10/2000',
@@ -196,7 +201,9 @@ if (!function_exists("create_example_alumnes")) {
             "phone" => "777888999",
             "user_id" => $user->id
         ]);
-        Alumne::create([
+        $alumne1->addActivitat($activitat1);
+
+        $alumne2 = Alumne::create([
             "name" => "Marc",
             "surname" => "Mestre",
             "birthdate" =>'22/10/2000',
@@ -207,6 +214,8 @@ if (!function_exists("create_example_alumnes")) {
             "phone" => "616531219",
             "user_id" => $user->id
         ]);
+        $alumne2->addActivitat($activitat1);
+
         Alumne::create([
             "name" => "Martha",
             "surname" => "Ramirez",

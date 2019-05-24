@@ -27,7 +27,12 @@
                     ></v-text-field>
                 </v-flex>
                 <v-flex xs12 sm6 md3>
-                    <birthday></birthday>
+                    <birthday v-model="birthdate"
+                              :error-messages="birthdateErrors"
+                              @input="$v.birthdate.$touch()"
+                              @blur="$v.birthdate.$touch()">
+
+                    </birthday>
                 </v-flex>
                 <v-flex xs12 sm6 md3>
                     <v-text-field
@@ -101,6 +106,7 @@
             <v-layout>
                 <v-flex>
                     <!--<h4>{{user.name}}</h4>-->
+                    <v-autocomplete v-model="user_id" label="Usari o Entitat" :items="dataUsers" item-text="name" item-value="id" chips readonly></v-autocomplete>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -128,7 +134,7 @@
             name:{required},
             surname:{required},
             sex:{required},
-            bithdate:{required},
+            birthdate:{required},
             school:{required},
             school_course:{required}
         },
@@ -144,11 +150,15 @@
                 surname:this.alumne.surname,
                 sex:this.alumne.sex,
                 birthdate: this.alumne.birthdate,
+                age:this.alumne.age,
                 phone:this.alumne.phone,
                 school:this.alumne.school,
                 school_course:this.alumne.school_course,
+                change:this.alumne.change,
+                user_id:this.alumne.user_id,
                 loading : false,
                 datactivitats:this.alumne.activitats,
+                dataUsers:this.users,
                 itemSchool:
                     [
                         'Bitem',
@@ -227,11 +237,14 @@
                 const newAlumne = {
                     name: this.name,
                     surname:this.surname,
+                    birthdate:this.birthdate,
+                    age:this.calcYear(this.birthdate),
                     sex:this.sex,
                     phone:this.phone,
                     school:this.school,
                     school_course: this.school_course,
-                    // activitats :this.activitats
+                    user_id:this.user_id,
+                    change:this.change
 
                 }
                 window.axios.put(this.uri + this.alumne.id, newAlumne).then((response) => {
@@ -239,10 +252,21 @@
                     this.$emit('close')
                     this.loading = false
                 }).catch(() => {
-                    console.log(this.alumne.school_course);
                     this.$emit('close')
                     this.loading = false
                 })
+            },
+            calcYear(date) {
+                if (!date) return null;
+                const yearBirthdate = date.split("/")
+                const dt=new Date()
+                const age = yearBirthdate[2]-dt.getFullYear()
+                if (age<0){
+                    return Math.abs(age)
+                } else {
+                    return age
+                }
+
             }
         },
         computed:{

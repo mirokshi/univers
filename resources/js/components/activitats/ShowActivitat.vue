@@ -15,7 +15,7 @@
                 </v-card-text>
             </v-card>
         </v-dialog>
-        <v-btn icon color="primary" flat title="Mostar l'activitat"
+        <v-btn icon color="secondary" flat title="Mostar l'activitat"
                 @click="dialog=true">
             <v-icon>visibility</v-icon>
         </v-btn>
@@ -36,18 +36,18 @@
             }
         },
         props:{
-            alumnes:{
-                type:Object,
-                required:true
+            activitat: {
+                type: Object,
+                required: true
             },
             users: {
                 type: Array,
                 required: true
             },
-            activitat: {
-                type: Array,
-                required: true
-            }
+            alumnes:{
+                type:Array,
+                required:false
+            },
         }
     }
 </script>

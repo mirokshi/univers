@@ -31,7 +31,8 @@ class ActivitatsController extends Controller
         $activitats->category = $request->category;
         $activitats->date_start  = $request->date_start;
         $activitats->date_final  = $request->date_final;
-        $activitats->course  = $request->course;
+        $activitats->course  = $request->course=date('Y').'-'.(date('Y')+1);
+        $activitats->user_id = $request->user_id;
         $activitats->save();
         return $activitats->map();
     }
@@ -50,7 +51,8 @@ class ActivitatsController extends Controller
         $activitats->category = $request->category;
         $activitats->date_start  = $request->date_start;
         $activitats->date_final  = $request->date_final;
-        $activitats->course  = $request->course;
+        $activitats->course  = $request->course =date('Y').'-'.(date('Y')+1);
+        $activitats->user_id = $request->user_id;
         $activitats->save();
         return $activitats->map();
     }

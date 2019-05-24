@@ -10,6 +10,9 @@ function Install(Vue, options) {
     showError(error) {
       EventBus.$emit('showSnackbarError', error);
     },
+    showSnackbar(type, message) {
+      EventBus.$emit('showSnackbarPersonalized', type, message);
+    },
   };
 }
 

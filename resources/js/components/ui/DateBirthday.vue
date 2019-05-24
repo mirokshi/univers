@@ -50,7 +50,7 @@
         watch: {
             date (val) {
                 this.dateFormatted = this.formatDate(this.date)
-                this.$emit('input', this.date)
+                this.$emit('input', this.dateFormatted)
             },
             menu (val) {
                 val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
@@ -61,7 +61,6 @@
             formatDate (date) {
                 if (!date) return null
                 const dateSplitted = date.split('-')
-                console.log(date.split('-'))
                 return `${dateSplitted[2]}/${dateSplitted[1]}/${dateSplitted[0]}`
             },
             parseDate (date) {
@@ -77,9 +76,6 @@
                 const age=dt.getFullYear() - `${year}`
                 if (age<0) return Math.abs(age)
                 return age
-
-
-
             }
         }
     }

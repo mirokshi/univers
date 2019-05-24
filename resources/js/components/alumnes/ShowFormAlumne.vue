@@ -108,7 +108,7 @@
                 <div class="headline font-weight-light grey--text">ENTITAT</div>
                 <v-layout>
                     <v-flex>
-                        <h3>{{user.name}}</h3>
+                        <v-autocomplete v-model="user_id" label="Usari o Entitat" :items="dataUsers" item-text="name" item-value="id" chips readonly></v-autocomplete>
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -131,6 +131,8 @@
                 course:this.alumne.course,
                 school_course:this.alumne.school_course,
                 phone:this.alumne.phone,
+                dataUsers:this.users,
+                user_id:this.alumne.user_id
 
             }
         },

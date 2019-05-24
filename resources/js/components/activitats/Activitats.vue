@@ -24,7 +24,7 @@
         props:{
             alumnes: {
                 type: Array,
-                required: true
+                required: false
             },
             activitats:{
                 type:Array,
