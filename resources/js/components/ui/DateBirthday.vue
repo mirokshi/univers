@@ -14,7 +14,7 @@
         <template v-slot:activator="{ on }">
             <v-text-field
                 v-model="dateFormatted"
-                label="Data naiximent"
+                label="Data naiximent*"
                 hint="DD/MM/AAAA format"
                 persistent-hint
                 prepend-icon="event"

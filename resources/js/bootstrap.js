@@ -46,6 +46,13 @@ if (user) {
 } else {
   console.error('CAUTION: user not found in HTML meta');
 }
+
+const activitat = document.head.querySelector('meta[name="activitat"]');
+if (activitat) {
+  window.activitat = JSON.parse(activitat.content);
+} else {
+  console.error('CAUTION: activitats not found in HTML meta');
+}
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

@@ -8,9 +8,9 @@
                         <v-text-field
                             autofocus
                             v-model="name"
-                            label="Nom"
+                            label="Nom*"
                             hint="Nom del alumne"
-                            placeholder="Nom del alumne "
+                            placeholder="Nom del alumne"
                             :error-messages="nameErrors"
                             @input="$v.name.$touch()"
                             @blur="$v.name.$touch()"
@@ -20,8 +20,9 @@
                         <v-text-field
                             autofocus
                             v-model="surname"
-                            label="Cognoms"
+                            label="Cognoms*"
                             hint="Cognoms del alumne"
+                            placeholder="Cognoms del alumne"
                             :error-messages="surnameErrors"
                             @input="$v.surname.$touch()"
                             @blur="$v.surname.$touch()"
@@ -42,7 +43,7 @@
                             hint="Telefon de contacte (opcional)"
                         ></v-text-field>
                     </v-flex>
-                        <span class="subheading font-weight grey--text">Genere</span>
+                        <span class="subheading font-weight grey--text">Genere*</span>
                     <v-flex xs12 sm6 md3>
                         <v-radio-group row
                                        v-model="sex"
@@ -78,7 +79,8 @@
                             :error-messages="schoolErrors"
                             @input="$v.school.$touch()"
                             @blur="$v.school.$touch()"
-                            label="Selecciona la escola"
+                            label="Selecciona la escola*"
+                            placeholder="Centre educatiu"
                         ></v-combobox>
                     </v-flex>
 
@@ -86,7 +88,8 @@
                         <v-combobox
                             v-model="school_course"
                             :items="itemSchoolCourse"
-                            label="Selcciona el nivell"
+                            label="Selcciona el nivell*"
+                            placeholder="Nivell educatiu"
                             :error-messages="schoolCourseErrors"
                             @input="$v.school_course.$touch()"
                             @blur="$v.school_course.$touch()"
@@ -115,6 +118,7 @@
                     </v-flex>
                 </v-layout>
             </v-container>
+            <span class="subheading font-weight-bold blue--text">Els camps amb (*) són obligatoris</span>
             <div class="text-xs-center">
                 <v-btn color="grey" @click="$emit('close')">
                     <v-icon class="mr-1">exit_to_app</v-icon>
@@ -131,7 +135,7 @@
 
 <script>
     import { validationMixin } from 'vuelidate'
-    import { required , minLength,maxLength} from 'vuelidate/lib/validators'
+    import { required} from 'vuelidate/lib/validators'
     import DateBirthday from "../ui/DateBirthday";
     import AlumnesActivitatsChip from "./AlumnesActivitatsChip";
 

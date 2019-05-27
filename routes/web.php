@@ -15,6 +15,7 @@ use App\Http\Controllers\ActivitatsController;
 use App\Http\Controllers\AlumnesController;
 use App\Http\Controllers\Auth\LoginAltController;
 use App\Http\Controllers\Auth\RegisterAltController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
 
 Auth::routes();
@@ -32,9 +33,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/entitats', '\\'.UsersController::class.'@index');
 
 
-    Route::get('/home', function () {
-        return view('home');
-    });
+    Route::get('/home','\\'.HomeController::class.'@index');
 
 Route::get('/sparklines', function () {
         return view('sparklines');

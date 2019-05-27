@@ -3,16 +3,19 @@
 use App\Activitat;
 use App\Alumne;
 use App\User;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Gate;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
-
-
 if (!function_exists("logged_user")){
     function logged_user(){
         return json_encode(optional(Auth::user())->map());
+    }
+}
+
+if (!function_exists("selected_activity")){
+    function selected_activity(){
+        return json_encode(optional(Activitat::class->map()));
     }
 }
 

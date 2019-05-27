@@ -5,6 +5,7 @@
                     md8
             >
                 <h1 class="display-3 grey--text text--darken-2 mt-3">&#128075; Escolliu :</h1>
+                <select-activitat :activitats="activitats"></select-activitat>
                 <v-layout align-center justify-center row wrap class="mt-5">
                     <v-flex sm12
                             md4
@@ -89,16 +90,24 @@
     // import '../../../../resources/img/userTypes/activities.jpg'
 
     import MaterialCard from "./ui/MaterialCard";
+    import SelectActivitat from "./SelectActivitat";
 
     export default {
         name: 'Home',
         components:{
-          'material-card':MaterialCard
+          'material-card':MaterialCard,
+            'select-activitat':SelectActivitat
         },
         data () {
             return {
                 loading: false,
                 user : window.laravel_user
+            }
+        },
+        props:{
+            activitats:{
+                type:Array,
+                required: true
             }
         }
     }
