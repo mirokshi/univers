@@ -111,7 +111,7 @@ window.axios.interceptors.response.use(response => response, (error) => {
       console.log(error.response.data.errors);
       window.Vue.prototype.$snackbar.showSnackbar(
         'Error 422',
-        'Los datos datos no eran válidos',
+        'Los datos no eran válidos',
       );
     }
     console.log('3');

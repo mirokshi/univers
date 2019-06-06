@@ -1993,30 +1993,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ui_MaterialCard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ui/MaterialCard */ "./resources/js/components/ui/MaterialCard.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _SelectActivitat__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SelectActivitat */ "./resources/js/components/SelectActivitat.vue");
 //
 //
 //
@@ -2107,16 +2084,24 @@ __webpack_require__.r(__webpack_exports__);
 // import '../../../../resources/img/userTypes/entitats.jpg'
 // import '../../../../resources/img/userTypes/activities.jpg'
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
   components: {
-    'material-card': _ui_MaterialCard__WEBPACK_IMPORTED_MODULE_0__["default"]
+    'material-card': _ui_MaterialCard__WEBPACK_IMPORTED_MODULE_0__["default"],
+    'select-activitat': _SelectActivitat__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
       loading: false,
       user: window.laravel_user
     };
+  },
+  props: {
+    activitats: {
+      type: Array,
+      required: true
+    }
   }
 });
 
@@ -2402,6 +2387,96 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SelectActivitat.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/SelectActivitat.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuelidate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate */ "./node_modules/vuelidate/lib/index.js");
+/* harmony import */ var vuelidate__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [vuelidate__WEBPACK_IMPORTED_MODULE_0__["validationMixin"]],
+  validations: {
+    radioActivitat: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    }
+  },
+  name: "SelectActivitat",
+  data: function data() {
+    return {
+      radioActivitat: '',
+      dialog: false,
+      dataActivitat: this.activitats
+    };
+  },
+  props: {
+    activitats: {
+      type: Array,
+      required: true
+    }
+  },
+  computed: {
+    radioActivitatErrors: function radioActivitatErrors() {
+      var errors = [];
+
+      if (!this.$v.radioActivitat.$dirty) {
+        return errors;
+      } else {
+        !this.$v.radioActivitat.required && errors.push('Es obligatori marca una opció');
+      }
+
+      return errors;
+    }
+  },
+  methods: {
+    selectActivat: function selectActivat() {
+      console.log(this.radioActivitat);
+      this.dialog = false;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Sparklines.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Sparklines.vue?vue&type=script&lang=js& ***!
@@ -2589,7 +2664,7 @@ __webpack_require__.r(__webpack_exports__);
   props: {
     alumnes: {
       type: Array,
-      required: true
+      required: false
     },
     activitats: {
       type: Array,
@@ -2788,6 +2863,21 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2801,10 +2891,14 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
   data: function data() {
     return {
       date: new Date().toISOString().substr(0, 10),
-      dateFormatted: this.formatDate(new Date().toISOString().substr(0, 10)),
+      dateFormatted_start: this.formatDate(new Date().toISOString().substr(0, 10)),
+      dateFormatted_final: this.formatDate(new Date().toISOString().substr(0, 10)),
       date_start: false,
       date_final: false,
       name: '',
+      category: '',
+      user_id: '',
+      dataUsers: this.users,
       loading: false
     };
   },
@@ -2828,6 +2922,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     },
     reset: function reset() {
       this.name = '';
+      this.category = '';
+      this.date_start = '';
+      this.date_final = '';
+      this.user_id = '';
     },
     add: function add() {
       var _this = this;
@@ -2835,8 +2933,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       this.loading = true;
       var activitat = {
         'name': this.name,
+        'category': this.category,
         'date_start': this.date_start,
-        'date_final': this.date_final
+        'date_final': this.date_final,
+        'user_id': this.user_id
       };
       window.axios.post(this.uri, activitat).then(function (response) {
         _this.$snackbar.showMessage('Activitat creat correctament');
@@ -2848,13 +2948,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         _this.loading = false;
 
         _this.$emit('close');
-      })["catch"](function (error) {
-        console.log(error);
-        console.log(error.data);
-
-        _this.$snackbar.showError(error.data);
+      })["catch"](function () {
+        _this.reset();
 
         _this.loading = false;
+
+        _this.$emit('close');
       });
     },
     created: function created() {
@@ -3078,10 +3177,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3143,7 +3238,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     alumnes: {
       type: Array,
-      required: true
+      required: false
     }
   },
   watch: {
@@ -3226,7 +3321,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   props: {
-    alumnes: {
+    activitat: {
       type: Object,
       required: true
     },
@@ -3234,9 +3329,9 @@ __webpack_require__.r(__webpack_exports__);
       type: Array,
       required: true
     },
-    activitat: {
+    alumnes: {
       type: Array,
-      required: true
+      required: false
     }
   }
 });
@@ -3299,30 +3394,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ShowFormActivitat",
   data: function data() {
     return {
       dataActivitat: this.activitat,
       name: this.activitat.name,
+      category: this.activitat.category,
+      user_id: this.activitat.user_id,
+      dataUsers: this.users,
       date_start: this.activitat.date_start,
       date_final: this.activitat.date_final
     };
   },
   props: {
-    alumnes: {
+    activitat: {
       type: Object,
       required: true
     },
+    alumnes: {
+      type: Array,
+      required: false
+    },
     users: {
-      type: Array,
-      required: true
-    },
-    activitat: {
-      type: Array,
-      required: true
-    },
-    activitatAlumnes: {
       type: Array,
       required: true
     }
@@ -3866,6 +3975,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3882,10 +3999,13 @@ __webpack_require__.r(__webpack_exports__);
     sex: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
     },
+    birthdate: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    },
     school: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
     },
-    schoolCourse: {
+    school_course: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
     }
   },
@@ -3896,30 +4016,26 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      birthdate: this.alumne.birthdate,
-      id: this.alumne.id,
-      name: this.alumne.name,
-      surname: this.alumne.surname,
-      sex: this.alumne.sex,
-      phone: this.alumne.phone,
-      school: this.alumne.school,
-      schoolCourse: this.alumne.schoolCourse,
-      datactivitats: this.alumne.activitats,
-      change: this.alumne.change,
+      id: '',
+      name: '',
+      surname: '',
+      birthdate: '',
+      age: '',
+      sex: '',
+      phone: '',
+      school: '',
+      school_course: '',
+      alumne_activitat: [],
+      user_id: '',
+      dataActivitats: this.activitats,
+      dataUsers: this.users,
+      change: true,
       loading: false,
       itemSchool: ['Bitem', 'Centre Educatiu', 'Centre Educatiu Girona', 'CFA', 'Cinta Curto', 'Consolació', 'Daniel Mangrané', 'Dertosa', 'Despuig', 'El Temple', 'Ferreries', 'IES Ebre', 'IES Montsia', 'La Mercè', 'La Mercè/St Jordi', 'Marcel-lí Domingo', 'Montsià', 'no escolarizat', 'PTT', 'Remolins', 'Sagrada Familia', 'Sant Jordi', 'St. Llatzer', 'Temple', 'Teresianes', 'UEC', 'URV', 'Verge de la Cinta', 'Altres'],
       itemSchoolCourse: ['P3', 'P4', 'P5', '1r', '2n', '3r', '5è', '6è', '1r ESO', '2n ESO', '1r BATX', '2n BATX', 'CFGM', 'CFGMS', 'CEE', 'CFA', 'Universitat', 'Altres']
     };
   },
   props: {
-    alumne: {
-      type: Object,
-      "default": function _default() {
-        return {
-          activitats: []
-        };
-      }
-    },
     users: {
       type: Array,
       required: true
@@ -3943,7 +4059,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     reset: function reset() {
-      this.name = '', this.surname = '', this.birthdate = '', this.school = '', this.schoolCourse = '', this.phone = '', this.sex = '', this.datactivitats = '', this.user = '';
+      this.name = '', this.surname = '', this.birthdate = '', this.age = '', this.school = '', this.school_course = '', this.phone = '', this.sex = '', this.alumne_activitat = '', this.user_id = '';
     },
     add: function add() {
       var _this = this;
@@ -3953,14 +4069,14 @@ __webpack_require__.r(__webpack_exports__);
         'name': this.name,
         'surname': this.surname,
         'birthdate': this.birthdate,
-        'age': this.age,
+        'age': this.calcYear(this.birthdate),
         'school': this.school,
-        'school_course': this.schoolCourse,
+        'school_course': this.school_course,
         'sex': this.sex,
         'phone': this.phone,
-        'user_id': this.user !== null ? this.user.id : null,
-        'activitats': this.datactivitats,
-        'change': this.change = true
+        'user_id': this.user_id,
+        'activitats': this.alumne_activitat,
+        'change': this.change
       };
       window.axios.post(this.uri, alumne).then(function (response) {
         _this.$snackbar.showMessage('Alumne creat correctament');
@@ -3973,32 +4089,33 @@ __webpack_require__.r(__webpack_exports__);
 
         _this.$emit('close');
       })["catch"](function () {
+        _this.reset();
+
         _this.loading = false;
-      });
-    },
-    verifyActivitats: function verifyActivitats() {
-      var _this2 = this;
 
-      this.datactivitats.forEach(function (activitat) {
-        if (!activitat.name) {
-          window.axios.post('/api/v1/activitats/', {
-            name: activitat
-          }).then(function (response) {
-            _this2.datactivitats[_this2.datactivitats.indexOf(activitat)] = response.data.id;
-
-            _this2.reset();
-          })["catch"](function (error) {
-            _this2.reset();
-
-            _this2.$snackbar.showError(error.message);
-          });
-        } else {
-          _this2.datactivitats[_this2.datactivitats.indexOf(activitat)] = activitat.id;
-        }
+        _this.$emit('close');
       });
     },
     created: function created() {
       this.selectLoggedUser();
+    },
+    calcYear: function calcYear(date) {
+      if (!date) return null;
+      var yearBirthdate = date.split("/");
+      var dt = new Date();
+      var age = yearBirthdate[2] - dt.getFullYear();
+
+      if (age < 0) {
+        return Math.abs(age);
+      } else {
+        return age;
+      }
+    }
+  },
+  watch: {
+    age: function age(val) {
+      this.age = this.calcYear(this.birthdate);
+      console.log(this.age);
     }
   },
   computed: {
@@ -4060,10 +4177,10 @@ __webpack_require__.r(__webpack_exports__);
     schoolCourseErrors: function schoolCourseErrors() {
       var errors = [];
 
-      if (!this.$v.schoolCourse.$dirty) {
+      if (!this.$v.school_course.$dirty) {
         return errors;
       } else {
-        !this.$v.schoolCourse.required && errors.push('És obligatori el nivell educatiu');
+        !this.$v.school_course.required && errors.push('És obligatori el nivell educatiu');
       }
 
       return errors;
@@ -4815,7 +4932,9 @@ __webpack_require__.r(__webpack_exports__);
       school: this.alumne.school,
       course: this.alumne.course,
       school_course: this.alumne.school_course,
-      phone: this.alumne.phone
+      phone: this.alumne.phone,
+      dataUsers: this.users,
+      user_id: this.alumne.user_id
     };
   },
   props: {
@@ -4926,6 +5045,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     updated: function updated(alumne) {
+      console.log(alumne);
       this.$emit('updated', alumne);
     }
   },
@@ -5066,6 +5186,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -5082,13 +5212,13 @@ __webpack_require__.r(__webpack_exports__);
     sex: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
     },
-    bithdate: {
+    birthdate: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
     },
     school: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
     },
-    schoolCourse: {
+    school_course: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
     }
   },
@@ -5099,28 +5229,28 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      birthdate: false,
       id: this.alumne.id,
       name: this.alumne.name,
       surname: this.alumne.surname,
       sex: this.alumne.sex,
+      birthdate: this.alumne.birthdate,
+      age: this.alumne.age,
       phone: this.alumne.phone,
       school: this.alumne.school,
-      schoolCourse: this.alumne.school_course,
+      school_course: this.alumne.school_course,
+      change: this.alumne.change,
+      user_id: this.alumne.user_id,
       loading: false,
       datactivitats: this.alumne.activitats,
+      dataUsers: this.users,
       itemSchool: ['Bitem', 'Centre Educatiu', 'Centre Educatiu Girona', 'CFA', 'Cinta Curto', 'Consolació', 'Daniel Mangrané', 'Dertosa', 'Despuig', 'El Temple', 'Ferreries', 'IES Ebre', 'IES Montsia', 'La Mercè', 'La Mercè/St Jordi', 'Marcel-lí Domingo', 'Montsià', 'no escolarizat', 'PTT', 'Remolins', 'Sagrada Familia', 'Sant Jordi', 'St. Llatzer', 'Temple', 'Teresianes', 'UEC', 'URV', 'Verge de la Cinta', 'Altres'],
-      itemSchoolCourse: ['P3', 'P4', 'P5', '1r', '2n', '3r', '5è', '6è', '1r ESO', '2n ESO', '1r BATX', '2n BATX', 'CFGM', 'CFGMS', 'CEE', 'CFA', 'Universitat', 'Altres']
+      itemSchool_course: ['P3', 'P4', 'P5', '1r', '2n', '3r', '5è', '6è', '1r ESO', '2n ESO', '1r BATX', '2n BATX', 'CFGM', 'CFGMS', 'CEE', 'CFA', 'Universitat', 'Altres']
     };
   },
   props: {
     alumne: {
       type: Object,
-      "default": function _default() {
-        return {
-          activitats: []
-        };
-      }
+      required: true
     },
     users: {
       type: Array,
@@ -5141,7 +5271,16 @@ __webpack_require__.r(__webpack_exports__);
 
       this.loading = true;
       var newAlumne = {
-        name: this.name
+        name: this.name,
+        surname: this.surname,
+        birthdate: this.birthdate,
+        age: this.calcYear(this.birthdate),
+        sex: this.sex,
+        phone: this.phone,
+        school: this.school,
+        school_course: this.school_course,
+        user_id: this.user_id,
+        change: this.change
       };
       window.axios.put(this.uri + this.alumne.id, newAlumne).then(function (response) {
         _this.$emit('updated', response.data);
@@ -5149,9 +5288,23 @@ __webpack_require__.r(__webpack_exports__);
         _this.$emit('close');
 
         _this.loading = false;
-      })["catch"](function (error) {
+      })["catch"](function () {
+        _this.$emit('close');
+
         _this.loading = false;
       });
+    },
+    calcYear: function calcYear(date) {
+      if (!date) return null;
+      var yearBirthdate = date.split("/");
+      var dt = new Date();
+      var age = yearBirthdate[2] - dt.getFullYear();
+
+      if (age < 0) {
+        return Math.abs(age);
+      } else {
+        return age;
+      }
     }
   },
   computed: {
@@ -5210,13 +5363,13 @@ __webpack_require__.r(__webpack_exports__);
 
       return errors;
     },
-    schoolCourseErrors: function schoolCourseErrors() {
+    school_courseErrors: function school_courseErrors() {
       var errors = [];
 
-      if (!this.$v.schoolCourse.$dirty) {
+      if (!this.$v.school_course.$dirty) {
         return errors;
       } else {
-        !this.$v.schoolCourse.required && errors.push('És obligatori el nivell educatiu');
+        !this.$v.school_course.required && errors.push('És obligatori el nivell educatiu');
       }
 
       return errors;
@@ -5646,6 +5799,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
   watch: {
     date: function date(val) {
       this.dateFormatted = this.formatDate(this.date);
+      this.$emit('input', this.dateFormatted);
     },
     menu: function menu(val) {
       var _this = this;
@@ -5655,37 +5809,32 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       });
     }
   },
+  props: ['value'],
   methods: {
     formatDate: function formatDate(date) {
       if (!date) return null;
-
-      var _date$split = date.split('-'),
-          _date$split2 = _slicedToArray(_date$split, 3),
-          year = _date$split2[0],
-          month = _date$split2[1],
-          day = _date$split2[2];
-
-      return "".concat(day, "/").concat(month, "/").concat(year);
+      var dateSplitted = date.split('-');
+      return "".concat(dateSplitted[2], "/").concat(dateSplitted[1], "/").concat(dateSplitted[0]);
     },
     parseDate: function parseDate(date) {
       if (!date) return null;
 
-      var _date$split3 = date.split('/'),
-          _date$split4 = _slicedToArray(_date$split3, 3),
-          month = _date$split4[0],
-          day = _date$split4[1],
-          year = _date$split4[2];
+      var _date$split = date.split('/'),
+          _date$split2 = _slicedToArray(_date$split, 3),
+          month = _date$split2[0],
+          day = _date$split2[1],
+          year = _date$split2[2];
 
       return "".concat(year, "-").concat(month.padStart(2, '0'), "-").concat(day.padStart(2, '0'));
     },
     calcYear: function calcYear(date) {
       if (!date) return null;
 
-      var _date$split5 = date.split('-'),
-          _date$split6 = _slicedToArray(_date$split5, 3),
-          year = _date$split6[0],
-          month = _date$split6[1],
-          day = _date$split6[2];
+      var _date$split3 = date.split('-'),
+          _date$split4 = _slicedToArray(_date$split3, 3),
+          year = _date$split4[0],
+          month = _date$split4[1],
+          day = _date$split4[2];
 
       var dt = new Date();
       var age = dt.getFullYear() - "".concat(year);
@@ -6245,27 +6394,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      type: 'text',
       message: 'Prova',
-      timeout: 3000,
+      timeout: 4000,
       color: 'success',
       show: false
     };
   },
   methods: {
     showMessage: function showMessage(message) {
+      this.type = 'Notificació';
       this.message = message;
       this.color = 'success';
       this.show = true;
     },
     showError: function showError(error) {
+      this.type = 'Error';
       this.message = error;
       this.color = 'error';
       this.show = true;
       console.log(error.response);
+    },
+    showSnackbar: function showSnackbar(type, message) {
+      this.type = type;
+      this.message = message;
+      this.color = 'error';
+      this.show = true;
     }
   },
   mounted: function mounted() {
@@ -6276,6 +6435,9 @@ __webpack_require__.r(__webpack_exports__);
     });
     _eventBus__WEBPACK_IMPORTED_MODULE_0__["default"].$on('showSnackbarMessage', function (message) {
       _this.showMessage(message);
+    });
+    _eventBus__WEBPACK_IMPORTED_MODULE_0__["default"].$on('showSnackbarPersonalized', function (type, message) {
+      _this.showSnackbar(type, message);
     });
   }
 });
@@ -45465,6 +45627,8 @@ var render = function() {
                 [_vm._v("👋 Escolliu :")]
               ),
               _vm._v(" "),
+              _c("select-activitat", { attrs: { activitats: _vm.activitats } }),
+              _vm._v(" "),
               _c(
                 "v-layout",
                 {
@@ -45565,54 +45729,6 @@ var render = function() {
                               }
                             },
                             [_vm._v("Entitats")]
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-flex",
-                    { attrs: { xs12: "", sm12: "", md4: "" } },
-                    [
-                      _c(
-                        "material-card",
-                        {
-                          staticClass: "v-card-profile ma-1 elevation-5",
-                          style:
-                            "border-radius: 0.5em; border-bottom-style: solid; border-bottom-width: 0.4em;  border-bottom-color: " +
-                            this.$vuetify.theme.grey.base
-                        },
-                        [
-                          _c(
-                            "v-avatar",
-                            {
-                              staticClass: "mx-auto d-block",
-                              attrs: { slot: "offset", size: "130" },
-                              slot: "offset"
-                            },
-                            [
-                              _c("img", {
-                                attrs: { src: "/img/userTypes/profile.jpg" }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-btn",
-                            {
-                              attrs: {
-                                large: "",
-                                color: "accent",
-                                round: "",
-                                loading: _vm.loading,
-                                disabled: _vm.loading,
-                                href: "entitats"
-                              }
-                            },
-                            [_vm._v("Perfil")]
                           )
                         ],
                         1
@@ -46064,6 +46180,145 @@ var render = function() {
             "v-btn",
             { attrs: { type: "submit" } },
             [_vm._v("Cerrar sesion "), _c("v-icon", [_vm._v("exit_to_app")])],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SelectActivitat.vue?vue&type=template&id=edc412b4&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/SelectActivitat.vue?vue&type=template&id=edc412b4&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "span",
+    [
+      _c(
+        "v-dialog",
+        {
+          attrs: { scrollable: "", persistent: "", "max-width": "400px" },
+          scopedSlots: _vm._u([
+            {
+              key: "activator",
+              fn: function(ref) {
+                var on = ref.on
+                return [
+                  _c("v-btn", _vm._g({ attrs: { color: "primary" } }, on), [
+                    _vm._v("Open Dialog")
+                  ])
+                ]
+              }
+            }
+          ]),
+          model: {
+            value: _vm.dialog,
+            callback: function($$v) {
+              _vm.dialog = $$v
+            },
+            expression: "dialog"
+          }
+        },
+        [
+          _vm._v(" "),
+          _c(
+            "v-card",
+            [
+              _c(
+                "v-card-title",
+                { staticClass: "headline font-weight-light" },
+                [_vm._v("Seleccioneu una activitat")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
+                { staticStyle: { height: "300px" } },
+                [
+                  _c(
+                    "v-radio-group",
+                    {
+                      attrs: {
+                        column: "",
+                        "error-messages": _vm.radioActivitatErrors
+                      },
+                      on: {
+                        input: function($event) {
+                          return _vm.$v.radioActivitat.$touch()
+                        },
+                        blur: function($event) {
+                          return _vm.$v.radioActivitat.$touch()
+                        }
+                      },
+                      model: {
+                        value: _vm.radioActivitat,
+                        callback: function($$v) {
+                          _vm.radioActivitat = $$v
+                        },
+                        expression: "radioActivitat"
+                      }
+                    },
+                    _vm._l(_vm.dataActivitat, function(activitat) {
+                      return _c(
+                        "span",
+                        [
+                          _c("v-radio", {
+                            attrs: {
+                              label: activitat.name,
+                              value: activitat.name
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    }),
+                    0
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("v-divider"),
+              _vm._v(" "),
+              _c(
+                "v-card-actions",
+                { staticClass: "justify-center" },
+                [
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: {
+                        color: "blue darken-1",
+                        flat: "",
+                        disabled: _vm.$v.$invalid
+                      },
+                      on: { click: _vm.selectActivat }
+                    },
+                    [_vm._v("Acceptar")]
+                  )
+                ],
+                1
+              )
+            ],
             1
           )
         ],
@@ -46566,7 +46821,7 @@ var render = function() {
                 [
                   _c(
                     "v-flex",
-                    { attrs: { xs12: "", sm6: "" } },
+                    { attrs: { xs12: "", sm6: "", md3: "" } },
                     [
                       _c("v-text-field", {
                         attrs: {
@@ -46590,6 +46845,29 @@ var render = function() {
                             _vm.name = $$v
                           },
                           expression: "name"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", sm6: "", md3: "" } },
+                    [
+                      _c("v-text-field", {
+                        attrs: {
+                          autofocus: "",
+                          label: "Categoria",
+                          hint: "Nom de la categoria",
+                          placeholder: "Nom de la categoria"
+                        },
+                        model: {
+                          value: _vm.category,
+                          callback: function($$v) {
+                            _vm.category = $$v
+                          },
+                          expression: "category"
                         }
                       })
                     ],
@@ -46632,16 +46910,18 @@ var render = function() {
                             },
                             on: {
                               blur: function($event) {
-                                _vm.date = _vm.parseDate(_vm.dateFormatted)
+                                _vm.date = _vm.parseDate(
+                                  _vm.dateFormatted_start
+                                )
                               }
                             },
                             slot: "activator",
                             model: {
-                              value: _vm.dateFormatted,
+                              value: _vm.dateFormatted_start,
                               callback: function($$v) {
-                                _vm.dateFormatted = $$v
+                                _vm.dateFormatted_start = $$v
                               },
-                              expression: "dateFormatted"
+                              expression: "dateFormatted_start"
                             }
                           }),
                           _vm._v(" "),
@@ -46703,16 +46983,18 @@ var render = function() {
                             },
                             on: {
                               blur: function($event) {
-                                _vm.date = _vm.parseDate(_vm.dateFormatted)
+                                _vm.date = _vm.parseDate(
+                                  _vm.dateFormatted_final
+                                )
                               }
                             },
                             slot: "activator",
                             model: {
-                              value: _vm.dateFormatted,
+                              value: _vm.dateFormatted_final,
                               callback: function($$v) {
-                                _vm.dateFormatted = $$v
+                                _vm.dateFormatted_final = $$v
                               },
-                              expression: "dateFormatted"
+                              expression: "dateFormatted_final"
                             }
                           }),
                           _vm._v(" "),
@@ -46734,6 +47016,41 @@ var render = function() {
                         ],
                         1
                       )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "headline font-weight-light grey--text" },
+                [_vm._v("ENTITAT")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-layout",
+                [
+                  _c(
+                    "v-flex",
+                    [
+                      _c("v-autocomplete", {
+                        attrs: {
+                          label: "Usari o Entitat",
+                          items: _vm.dataUsers,
+                          "item-text": "name",
+                          "item-value": "id",
+                          chips: ""
+                        },
+                        model: {
+                          value: _vm.user_id,
+                          callback: function($$v) {
+                            _vm.user_id = $$v
+                          },
+                          expression: "user_id"
+                        }
+                      })
                     ],
                     1
                   )
@@ -46870,13 +47187,6 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("v-spacer"),
-          _vm._v(" "),
-          _c(
-            "v-btn",
-            { staticClass: "white--text", attrs: { icon: "", dark: "" } },
-            [_c("v-icon", [_vm._v("settings")])],
-            1
-          ),
           _vm._v(" "),
           _c(
             "v-btn",
@@ -47144,7 +47454,7 @@ var render = function() {
         {
           attrs: {
             icon: "",
-            color: "primary",
+            color: "secondary",
             flat: "",
             title: "Mostar l'activitat"
           },
@@ -47204,7 +47514,7 @@ var render = function() {
                 [
                   _c(
                     "v-flex",
-                    { attrs: { xs12: "", sm6: "" } },
+                    { attrs: { xs12: "", sm6: "", md3: "" } },
                     [
                       _c("v-text-field", {
                         attrs: {
@@ -47219,6 +47529,29 @@ var render = function() {
                             _vm.name = $$v
                           },
                           expression: "name"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", sm6: "", md3: "" } },
+                    [
+                      _c("v-text-field", {
+                        attrs: {
+                          label: "Categoria",
+                          hint: "nom de la categoria",
+                          placeholder: "A quina categoria pertany?",
+                          readonly: ""
+                        },
+                        model: {
+                          value: _vm.category,
+                          callback: function($$v) {
+                            _vm.category = $$v
+                          },
+                          expression: "category"
                         }
                       })
                     ],
@@ -47279,6 +47612,42 @@ var render = function() {
                       0
                     )
                   ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "headline font-weight-light grey--text" },
+                [_vm._v("ENTITAT")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-layout",
+                [
+                  _c(
+                    "v-flex",
+                    [
+                      _c("v-autocomplete", {
+                        attrs: {
+                          label: "Usari o Entitat",
+                          items: _vm.dataUsers,
+                          "item-text": "name",
+                          "item-value": "id",
+                          chips: "",
+                          readonly: ""
+                        },
+                        model: {
+                          value: _vm.user_id,
+                          callback: function($$v) {
+                            _vm.user_id = $$v
+                          },
+                          expression: "user_id"
+                        }
+                      })
+                    ],
+                    1
+                  )
                 ],
                 1
               )
@@ -47779,9 +48148,9 @@ var render = function() {
                       _c("v-text-field", {
                         attrs: {
                           autofocus: "",
-                          label: "Nom",
+                          label: "Nom*",
                           hint: "Nom del alumne",
-                          placeholder: "Nom del alumne ",
+                          placeholder: "Nom del alumne",
                           "error-messages": _vm.nameErrors
                         },
                         on: {
@@ -47811,8 +48180,9 @@ var render = function() {
                       _c("v-text-field", {
                         attrs: {
                           autofocus: "",
-                          label: "Cognoms",
+                          label: "Cognoms*",
                           hint: "Cognoms del alumne",
+                          placeholder: "Cognoms del alumne",
                           "error-messages": _vm.surnameErrors
                         },
                         on: {
@@ -47840,6 +48210,15 @@ var render = function() {
                     { attrs: { xs12: "", sm6: "", md3: "" } },
                     [
                       _c("birthday", {
+                        attrs: { "error-messages": _vm.birthdateErrors },
+                        on: {
+                          input: function($event) {
+                            return _vm.$v.birthdate.$touch()
+                          },
+                          blur: function($event) {
+                            return _vm.$v.birthdate.$touch()
+                          }
+                        },
                         model: {
                           value: _vm.birthdate,
                           callback: function($$v) {
@@ -47877,7 +48256,7 @@ var render = function() {
                   _c(
                     "span",
                     { staticClass: "subheading font-weight grey--text" },
-                    [_vm._v("Genere")]
+                    [_vm._v("Genere*")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -47957,7 +48336,8 @@ var render = function() {
                         attrs: {
                           items: _vm.itemSchool,
                           "error-messages": _vm.schoolErrors,
-                          label: "Selecciona la escola"
+                          label: "Selecciona la escola*",
+                          placeholder: "Centre educatiu"
                         },
                         on: {
                           input: function($event) {
@@ -47985,23 +48365,24 @@ var render = function() {
                       _c("v-combobox", {
                         attrs: {
                           items: _vm.itemSchoolCourse,
-                          label: "Selcciona el nivell",
+                          label: "Selcciona el nivell*",
+                          placeholder: "Nivell educatiu",
                           "error-messages": _vm.schoolCourseErrors
                         },
                         on: {
                           input: function($event) {
-                            return _vm.$v.schoolCourse.$touch()
+                            return _vm.$v.school_course.$touch()
                           },
                           blur: function($event) {
-                            return _vm.$v.schoolCourse.$touch()
+                            return _vm.$v.school_course.$touch()
                           }
                         },
                         model: {
-                          value: _vm.schoolCourse,
+                          value: _vm.school_course,
                           callback: function($$v) {
-                            _vm.schoolCourse = $$v
+                            _vm.school_course = $$v
                           },
-                          expression: "schoolCourse"
+                          expression: "school_course"
                         }
                       })
                     ],
@@ -48013,6 +48394,42 @@ var render = function() {
               _vm._v(" "),
               _c("v-divider"),
               _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "headline font-weight-light grey--text" },
+                [_vm._v("ACTIVITAT")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-layout",
+                [
+                  _c(
+                    "v-flex",
+                    [
+                      _c("v-autocomplete", {
+                        attrs: {
+                          label: "Activitats",
+                          items: _vm.dataActivitats,
+                          "item-text": "name",
+                          "item-value": "id",
+                          multiple: "",
+                          chips: ""
+                        },
+                        model: {
+                          value: _vm.alumne_activitat,
+                          callback: function($$v) {
+                            _vm.alumne_activitat = $$v
+                          },
+                          expression: "alumne_activitat"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
               _c("v-divider"),
               _vm._v(" "),
               _c(
@@ -48023,11 +48440,39 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "v-layout",
-                [_c("v-flex", [_c("h4", [_vm._v(_vm._s(_vm.user.name))])])],
+                [
+                  _c(
+                    "v-flex",
+                    [
+                      _c("v-autocomplete", {
+                        attrs: {
+                          label: "Usari o Entitat",
+                          items: _vm.dataUsers,
+                          "item-text": "name",
+                          "item-value": "id"
+                        },
+                        model: {
+                          value: _vm.user_id,
+                          callback: function($$v) {
+                            _vm.user_id = $$v
+                          },
+                          expression: "user_id"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
                 1
               )
             ],
             1
+          ),
+          _vm._v(" "),
+          _c(
+            "span",
+            { staticClass: "subheading font-weight-bold blue--text" },
+            [_vm._v("Els camps amb (*) són obligatoris")]
           ),
           _vm._v(" "),
           _c(
@@ -48878,7 +49323,7 @@ var render = function() {
         {
           attrs: {
             icon: "",
-            color: "primary",
+            color: "secondary",
             flat: "",
             title: "Mostrar el alumne"
           },
@@ -49199,7 +49644,31 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "v-layout",
-                [_c("v-flex", [_c("h3", [_vm._v(_vm._s(_vm.user.name))])])],
+                [
+                  _c(
+                    "v-flex",
+                    [
+                      _c("v-autocomplete", {
+                        attrs: {
+                          label: "Usari o Entitat",
+                          items: _vm.dataUsers,
+                          "item-text": "name",
+                          "item-value": "id",
+                          chips: "",
+                          readonly: ""
+                        },
+                        model: {
+                          value: _vm.user_id,
+                          callback: function($$v) {
+                            _vm.user_id = $$v
+                          },
+                          expression: "user_id"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
                 1
               )
             ],
@@ -49463,7 +49932,26 @@ var render = function() {
               _c(
                 "v-flex",
                 { attrs: { xs12: "", sm6: "", md3: "" } },
-                [_c("birthday")],
+                [
+                  _c("birthday", {
+                    attrs: { "error-messages": _vm.birthdateErrors },
+                    on: {
+                      input: function($event) {
+                        return _vm.$v.birthdate.$touch()
+                      },
+                      blur: function($event) {
+                        return _vm.$v.birthdate.$touch()
+                      }
+                    },
+                    model: {
+                      value: _vm.birthdate,
+                      callback: function($$v) {
+                        _vm.birthdate = $$v
+                      },
+                      expression: "birthdate"
+                    }
+                  })
+                ],
                 1
               ),
               _vm._v(" "),
@@ -49589,15 +50077,24 @@ var render = function() {
                 [
                   _c("v-combobox", {
                     attrs: {
-                      items: _vm.itemSchoolCourse,
+                      items: _vm.itemSchool_course,
+                      "error-messages": _vm.school_courseErrors,
                       label: "Selcciona el nivell"
                     },
-                    model: {
-                      value: _vm.schoolCourse,
-                      callback: function($$v) {
-                        _vm.schoolCourse = $$v
+                    on: {
+                      input: function($event) {
+                        return _vm.$v.school_course.$touch()
                       },
-                      expression: "schoolCourse"
+                      blur: function($event) {
+                        return _vm.$v.school_course.$touch()
+                      }
+                    },
+                    model: {
+                      value: _vm.school_course,
+                      callback: function($$v) {
+                        _vm.school_course = $$v
+                      },
+                      expression: "school_course"
                     }
                   })
                 ],
@@ -49651,7 +50148,35 @@ var render = function() {
             _vm._v("ENTITAT")
           ]),
           _vm._v(" "),
-          _c("v-layout", [_c("v-flex")], 1)
+          _c(
+            "v-layout",
+            [
+              _c(
+                "v-flex",
+                [
+                  _c("v-autocomplete", {
+                    attrs: {
+                      label: "Usari o Entitat",
+                      items: _vm.dataUsers,
+                      "item-text": "name",
+                      "item-value": "id",
+                      chips: "",
+                      readonly: ""
+                    },
+                    model: {
+                      value: _vm.user_id,
+                      callback: function($$v) {
+                        _vm.user_id = $$v
+                      },
+                      expression: "user_id"
+                    }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          )
         ],
         1
       ),
@@ -50127,7 +50652,7 @@ var render = function() {
                 _vm._g(
                   {
                     attrs: {
-                      label: "Data naiximent",
+                      label: "Data naiximent*",
                       hint: "DD/MM/AAAA format",
                       "persistent-hint": "",
                       "prepend-icon": "event"
@@ -50680,7 +51205,13 @@ var render = function() {
   return _c(
     "v-snackbar",
     {
-      attrs: { timeout: _vm.timeout, color: _vm.color, top: "" },
+      attrs: {
+        timeout: _vm.timeout,
+        color: _vm.color,
+        top: "",
+        right: "",
+        vertical: ""
+      },
       model: {
         value: _vm.show,
         callback: function($$v) {
@@ -50690,6 +51221,7 @@ var render = function() {
       }
     },
     [
+      _c("h1", [_vm._v(_vm._s(_vm.type))]),
       _vm._v("\n    " + _vm._s(_vm.message) + "\n    "),
       _c(
         "v-btn",
@@ -90698,7 +91230,7 @@ window.axios.interceptors.response.use(function (response) {
     }
 
     if (error.response.status === 403) {
-      window.Vue.prototype.$snackbar.showSnackBar('Error 403!', 'error', 'No teniu permisos per realitzar aquesta acció.', 'center');
+      window.Vue.prototype.$snackbar.showSnackbar('Error 403!', 'No teniu permisos per realitzar aquesta acció.');
     }
 
     console.log('2');
@@ -90709,7 +91241,7 @@ window.axios.interceptors.response.use(function (response) {
       console.log(error.response.data);
       console.log(error.response.data.message);
       console.log(error.response.data.errors);
-      window.Vue.prototype.$snackbar.showSnackBar(error.response.data.message, 'error', window.helpers.printObject(error.response.data.errors), 'center');
+      window.Vue.prototype.$snackbar.showSnackbar('Error 422', 'Los datos no eran válidos');
     }
 
     console.log('3');
@@ -90720,8 +91252,10 @@ window.axios.interceptors.response.use(function (response) {
       console.log(error.response.data);
       console.log(error.response.data.message);
       console.log(error.response.data.errors);
-      window.Vue.prototype.$snackbar.showSnackBar('Error 404!', 'error', "No s'ha pogut trobar al servidor el recurs que demaneu.", 'center');
+      window.Vue.prototype.$snackbar.showSnackbar('Error 404!', "No s'ha pogut trobar al servidor el recurs que demaneu.");
     }
+
+    console.log('4');
 
     if (error.response.status === 405) {
       console.log('%%%%%%%%%%%%%%%%% METHOD NOT ALLOWED FOUND ERROR %%%%%%%%%%%%%%%');
@@ -90729,8 +91263,10 @@ window.axios.interceptors.response.use(function (response) {
       console.log(error.response.data);
       console.log(error.response.data.message);
       console.log(error.response.data.errors);
-      window.Vue.prototype.$snackbar.showSnackBar('Error 405!', 'error', 'Tipus de petició HTTP incorrecte.', 'center');
+      window.Vue.prototype.$snackbar.showSnackbar('Error 405!', 'Tipus de petició HTTP incorrecte.');
     }
+
+    console.log('5');
 
     if (error.response.status === 500) {
       console.log('%%%%%%%%%%%%%%%%% SERVER ERROR %%%%%%%%%%%%%%%');
@@ -90738,7 +91274,7 @@ window.axios.interceptors.response.use(function (response) {
       console.log(error.response.data);
       console.log(error.response.data.message);
       console.log(error.response.data.errors);
-      window.Vue.prototype.$snackbar.showSnackBar('Error 500!', 'error', 'Error inesperat al servidor', 'center');
+      window.Vue.prototype.$snackbar.showSnackbar('Error 500!', 'Error inesperat al servidor');
     }
 
     return Promise.reject(error);
@@ -90746,7 +91282,7 @@ window.axios.interceptors.response.use(function (response) {
 
   if (error && error.request) {
     window.Vue.prototype.$snackbar.showError("Error de xarxa! No s'ha obtingut cap resposta a la vostra petició. Consulteu l'estat de la xarxa.");
-    window.Vue.prototype.$snackbar.showSnackBar('Error de xarxa!', 'error', "No s'ha obtingut cap resposta a la vostra petició. Consulteu l'estat de la xarxa.");
+    window.Vue.prototype.$snackbar.showSnackbar('Error de xarxa!', "No s'ha obtingut cap resposta a la vostra petició. Consulteu l'estat de la xarxa.");
     return Promise.reject(error);
   }
 }); // Components
@@ -90917,6 +91453,14 @@ if (user) {
   window.laravel_user = JSON.parse(user.content);
 } else {
   console.error('CAUTION: user not found in HTML meta');
+}
+
+var activitat = document.head.querySelector('meta[name="activitat"]');
+
+if (activitat) {
+  window.activitat = JSON.parse(activitat.content);
+} else {
+  console.error('CAUTION: activitats not found in HTML meta');
 }
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
@@ -91186,6 +91730,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavigationRight_vue_vue_type_template_id_557ce666___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavigationRight_vue_vue_type_template_id_557ce666___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/SelectActivitat.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/SelectActivitat.vue ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _SelectActivitat_vue_vue_type_template_id_edc412b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SelectActivitat.vue?vue&type=template&id=edc412b4&scoped=true& */ "./resources/js/components/SelectActivitat.vue?vue&type=template&id=edc412b4&scoped=true&");
+/* harmony import */ var _SelectActivitat_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SelectActivitat.vue?vue&type=script&lang=js& */ "./resources/js/components/SelectActivitat.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SelectActivitat_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SelectActivitat_vue_vue_type_template_id_edc412b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SelectActivitat_vue_vue_type_template_id_edc412b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "edc412b4",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/SelectActivitat.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/SelectActivitat.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/SelectActivitat.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectActivitat_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./SelectActivitat.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SelectActivitat.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectActivitat_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/SelectActivitat.vue?vue&type=template&id=edc412b4&scoped=true&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/components/SelectActivitat.vue?vue&type=template&id=edc412b4&scoped=true& ***!
+  \************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectActivitat_vue_vue_type_template_id_edc412b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./SelectActivitat.vue?vue&type=template&id=edc412b4&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SelectActivitat.vue?vue&type=template&id=edc412b4&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectActivitat_vue_vue_type_template_id_edc412b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectActivitat_vue_vue_type_template_id_edc412b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -93765,6 +94378,9 @@ function Install(Vue, options) {
     },
     showError: function showError(error) {
       _eventBus__WEBPACK_IMPORTED_MODULE_1__["default"].$emit('showSnackbarError', error);
+    },
+    showSnackbar: function showSnackbar(type, message) {
+      _eventBus__WEBPACK_IMPORTED_MODULE_1__["default"].$emit('showSnackbarPersonalized', type, message);
     }
   };
 }
