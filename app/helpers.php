@@ -13,12 +13,6 @@ if (!function_exists("logged_user")){
     }
 }
 
-if (!function_exists("selected_activity")){
-    function selected_activity(){
-        return json_encode(optional(Activitat::class->map()));
-    }
-}
-
 if (!function_exists("map_collection")){
     function  map_collection($collection){
         return $collection -> map(function ($item){
