@@ -4,12 +4,21 @@
             <v-container>
                 <div class="headline font-weight-light grey--text">DADES ACTIVITAT</div>
                 <v-layout row wrap>
-                    <v-flex xs12 sm6>
+                    <v-flex xs12 sm6 md3>
                         <v-text-field
                             v-model="name"
                             label="Nom"
                             hint="Nom de la activitat"
                             placeholder="Nom de la activitat"
+                            readonly
+                        ></v-text-field>
+                    </v-flex>
+                    <v-flex xs12 sm6 md3>
+                        <v-text-field
+                            v-model="category"
+                            label="Categoria"
+                            hint="nom de la categoria"
+                            placeholder="A quina categoria pertany?"
                             readonly
                         ></v-text-field>
                     </v-flex>
@@ -40,6 +49,12 @@
                         </ul>
                     </v-flex>
                 </v-layout>
+                 <div class="headline font-weight-light grey--text">ENTITAT</div>
+                <v-layout>
+                    <v-flex>
+                        <v-autocomplete v-model="user_id" label="Usari o Entitat" :items="dataUsers" item-text="name" item-value="id" chips readonly></v-autocomplete>
+                    </v-flex>
+                </v-layout>
             </v-container>
         </v-form>
     </span>
@@ -52,24 +67,23 @@
             return{
                 dataActivitat:this.activitat,
                 name:this.activitat.name,
+                category:this.activitat.category,
+                user_id:this.activitat.user_id,
+                dataUsers:this.users,
                 date_start:this.activitat.date_start,
                 date_final:this.activitat.date_final
             }
         },
         props:{
-            alumnes:{
+            activitat: {
                 type: Object,
                 required: true
             },
+            alumnes:{
+                type: Array,
+                required: false
+            },
             users: {
-                type: Array,
-                required: true
-            },
-            activitat: {
-                type: Array,
-                required: true
-            },
-            activitatAlumnes: {
                 type: Array,
                 required: true
             }

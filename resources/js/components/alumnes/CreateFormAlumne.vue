@@ -8,9 +8,9 @@
                         <v-text-field
                             autofocus
                             v-model="name"
-                            label="Nom"
+                            label="Nom*"
                             hint="Nom del alumne"
-                            placeholder="Nom del alumne "
+                            placeholder="Nom del alumne"
                             :error-messages="nameErrors"
                             @input="$v.name.$touch()"
                             @blur="$v.name.$touch()"
@@ -20,16 +20,20 @@
                         <v-text-field
                             autofocus
                             v-model="surname"
-                            label="Cognoms"
+                            label="Cognoms*"
                             hint="Cognoms del alumne"
+                            placeholder="Cognoms del alumne"
                             :error-messages="surnameErrors"
                             @input="$v.surname.$touch()"
                             @blur="$v.surname.$touch()"
                         ></v-text-field>
                     </v-flex>
                       <v-flex xs12 sm6 md3>
-                          <birthday v-model="birthdate"></birthday>
-                          <!--TODO BIRTHDAY-->
+                          <birthday v-model="birthdate"
+                                    :error-messages="birthdateErrors"
+                                    @input="$v.birthdate.$touch()"
+                                    @blur="$v.birthdate.$touch()"
+                          ></birthday>
                       </v-flex>
                     <v-flex xs12 sm6 md3>
                         <v-text-field
@@ -39,7 +43,7 @@
                             hint="Telefon de contacte (opcional)"
                         ></v-text-field>
                     </v-flex>
-                        <span class="subheading font-weight grey--text">Genere</span>
+                        <span class="subheading font-weight grey--text">Genere*</span>
                     <v-flex xs12 sm6 md3>
                         <v-radio-group row
                                        v-model="sex"
@@ -75,42 +79,46 @@
                             :error-messages="schoolErrors"
                             @input="$v.school.$touch()"
                             @blur="$v.school.$touch()"
-                            label="Selecciona la escola"
+                            label="Selecciona la escola*"
+                            placeholder="Centre educatiu"
                         ></v-combobox>
                     </v-flex>
 
                     <v-flex>
                         <v-combobox
-                            v-model="schoolCourse"
+                            v-model="school_course"
                             :items="itemSchoolCourse"
-                            label="Selcciona el nivell"
+                            label="Selcciona el nivell*"
+                            placeholder="Nivell educatiu"
                             :error-messages="schoolCourseErrors"
-                            @input="$v.schoolCourse.$touch()"
-                            @blur="$v.schoolCourse.$touch()"
+                            @input="$v.school_course.$touch()"
+                            @blur="$v.school_course.$touch()"
                         ></v-combobox>
                     </v-flex>
                 </v-layout>
                 <v-divider></v-divider>
-                <!--<div class="headline font-weight-light grey&#45;&#45;text">ACTIVITAT</div>-->
-                <!--<v-layout>-->
-                    <!--<v-flex>-->
-                        <!--&lt;!&ndash;<alumnes-activitats-chip&ndash;&gt;-->
-                            <!--&lt;!&ndash;@updated="verifyActivitats"&ndash;&gt;-->
-                            <!--&lt;!&ndash;v-model="datactivitats"&ndash;&gt;-->
-                            <!--&lt;!&ndash;:selected-activitats="datactivitats"&ndash;&gt;-->
-                            <!--&lt;!&ndash;:alumne="alumne"&ndash;&gt;-->
-                            <!--&lt;!&ndash;:activitats="activitats"&ndash;&gt;-->
-                            <!--&lt;!&ndash;@change="refresh(false)"></alumnes-activitats-chip>&ndash;&gt;-->
-                    <!--</v-flex>-->
-                <!--</v-layout>-->
+                <div class="headline font-weight-light grey--text">ACTIVITAT</div>
+                <v-layout>
+                    <v-flex>
+                        <!--<alumnes-activitats-chip-->
+                            <!--@updated="verifyActivitats"-->
+                            <!--v-model="datactivitats"-->
+                            <!--:selected-activitats="datactivitats"-->
+                            <!--:alumne="alumne"-->
+                            <!--:activitats="activitats"-->
+                            <!--@change="refresh(false)"></alumnes-activitats-chip>-->
+                        <v-autocomplete v-model="alumne_activitat" label="Activitats" :items="dataActivitats" item-text="name" item-value="id" multiple chips></v-autocomplete>
+                    </v-flex>
+                </v-layout>
                 <v-divider></v-divider>
                 <div class="headline font-weight-light grey--text">ENTITAT</div>
                 <v-layout>
                     <v-flex>
-                        <h4>{{user.name}}</h4>
+                        <v-autocomplete v-model="user_id" label="Usari o Entitat" :items="dataUsers" item-text="name" item-value="id"></v-autocomplete>
                     </v-flex>
                 </v-layout>
             </v-container>
+            <span class="subheading font-weight-bold blue--text">Els camps amb (*) són obligatoris</span>
             <div class="text-xs-center">
                 <v-btn color="grey" @click="$emit('close')">
                     <v-icon class="mr-1">exit_to_app</v-icon>
@@ -127,7 +135,7 @@
 
 <script>
     import { validationMixin } from 'vuelidate'
-    import { required , minLength,maxLength} from 'vuelidate/lib/validators'
+    import { required} from 'vuelidate/lib/validators'
     import DateBirthday from "../ui/DateBirthday";
     import AlumnesActivitatsChip from "./AlumnesActivitatsChip";
 
@@ -137,8 +145,9 @@
             name:{required},
             surname:{required},
             sex:{required},
+            birthdate:{required},
             school:{required},
-            schoolCourse:{required}
+            school_course:{required}
         },
         name: "CreateFormAlumne",
         components:{
@@ -147,16 +156,20 @@
         },
         data(){
             return  {
-                birthdate: this.alumne.birthdate,
-                id:this.alumne.id,
-                name:this.alumne.name,
-                surname:this.alumne.surname,
-                sex:this.alumne.sex,
-                phone:this.alumne.phone,
-                school:this.alumne.school,
-                schoolCourse:this.alumne.schoolCourse,
-                datactivitats:this.alumne.activitats,
-                change:this.alumne.change,
+                id:'',
+                name:'',
+                surname:'',
+                birthdate: '',
+                age: '',
+                sex:'',
+                phone:'',
+                school:'',
+                school_course:'',
+                alumne_activitat:[],
+                user_id: '',
+                dataActivitats: this.activitats,
+                dataUsers:this.users,
+                change:true,
                 loading:false,
                 itemSchool:
                     [
@@ -213,14 +226,6 @@
             }
         },
         props:{
-            alumne:{
-                type:Object,
-                default: function () {
-                    return {
-                        activitats: []
-                    }
-                }
-            },
             users: {
                 type: Array,
                 required: true
@@ -244,15 +249,16 @@
                 }
             },
             reset: function () {
-                    this.name = '',
+                this.name = '',
                     this.surname = '',
                     this.birthdate = '',
+                    this.age='',
                     this.school = '',
-                    this.schoolCourse = '',
+                    this.school_course = '',
                     this.phone = '',
                     this.sex = '',
-                    this.datactivitats = '',
-                    this.user = ''
+                    this.alumne_activitat = '',
+                    this.user_id = ''
             },
              add () {
                  this.loading = true
@@ -260,45 +266,49 @@
                      'name': this.name,
                      'surname': this.surname,
                      'birthdate': this.birthdate,
-                     'age': this.age,
+                     'age': this.calcYear(this.birthdate),
                      'school': this.school,
-                     'school_course': this.schoolCourse,
+                     'school_course': this.school_course,
                      'sex': this.sex,
                      'phone': this.phone,
-                     'user_id': (this.user !== null) ? this.user.id : null,
-                     'activitats': this.datactivitats,
-                     'change': this.change = true
+                     'user_id': this.user_id,
+                     'activitats': this.alumne_activitat,
+                     'change': this.change
                  }
                  window.axios.post(this.uri,alumne).then((response) => {
+
                      this.$snackbar.showMessage('Alumne creat correctament')
                      this.reset()
                      this.$emit('created',response.data)
                      this.loading = false
                      this.$emit('close')
                  }).catch(()=>{
+                     this.reset()
                      this.loading = false
+                     this.$emit('close')
                  })
              },
-               verifyActivitats(){
-                this.datactivitats.forEach((activitat) =>{
-                    if (!activitat.name) {
-                        window.axios.post('/api/v1/activitats/', {
-                            name: activitat
-                        }).then((response) => {
-                            this.datactivitats[this.datactivitats.indexOf(activitat)] = response.data.id
-                            this.reset()
-                        }).catch((error) => {
-                            this.reset()
-                            this.$snackbar.showError(error.message)
-                        })
-                    }else{
-                        this.datactivitats[this.datactivitats.indexOf(activitat)] =  activitat.id
-                    }
-                })
-            },
             created(){
                 this.selectLoggedUser()
             },
+            calcYear(date) {
+                if (!date) return null;
+                const yearBirthdate = date.split("/")
+                const dt=new Date()
+                const age = yearBirthdate[2]-dt.getFullYear()
+                if (age<0){
+                    return Math.abs(age)
+                } else {
+                    return age
+                }
+
+            }
+        },
+        watch:{
+            age(val){
+                this.age=this.calcYear(this.birthdate)
+                console.log(this.age);
+            }
         },
         computed:{
             nameErrors(){
@@ -338,9 +348,9 @@
             },
             schoolCourseErrors(){
                 const errors = []
-                if(!this.$v.schoolCourse.$dirty){
+                if(!this.$v.school_course.$dirty){
                     return errors
-                }else{ !this.$v.schoolCourse.required && errors.push('És obligatori el nivell educatiu')}
+                }else{ !this.$v.school_course.required && errors.push('És obligatori el nivell educatiu')}
                 return errors
             }
         },

@@ -9,8 +9,8 @@ import './bootstrap';
 import ca from './i18n/ca';
 import AppComponent from './components/App.vue';
 import Navigation from './components/Navigation.vue';
-import NavigationRight from './components/NavigationRight.vue'
-import Toolbar from './components/Toolbar.vue'
+import NavigationRight from './components/NavigationRight.vue';
+import Toolbar from './components/Toolbar.vue';
 import Sparklines from './components/Sparklines.vue';
 import Home from './components/Home.vue';
 import LoginForm from './components/auth/LoginForm.vue';
@@ -42,10 +42,6 @@ import Users from './components/users/Users.vue';
 import ListUser from './components/users/ListUser.vue';
 import ShowUser from './components/users/ShowUser.vue';
 
-/** OTHERS * */
-import SnackBarComponent from './components/ui/SnackBarComponent.vue';
-import helpers from './utils/helpers';
-
 
 // ABANS
 import 'typeface-montserrat/index.css';
@@ -56,11 +52,11 @@ import 'font-awesome/css/font-awesome.min.css';
 
 // instalacion vuetify
 window.Vue = Vue;
-window.eventBus = new Vue();
-window.Vue.use(snackbar);
-window.Vue.use(permissions);
-window.Vue.use(confirm);
+window.Vuetify = Vuetify;
 window.Vue.use(TreeView);
+window.Vue.use(permissions);
+window.Vue.use(snackbar);
+window.Vue.use(confirm);
 window.Vue.use(VueTimeago, {
   locale: 'ca', // Default locale
   locales: {
@@ -68,21 +64,13 @@ window.Vue.use(VueTimeago, {
   },
 });
 
-window.helpers = helpers;
-window.disableInterceptor = false;
 
 window.axios.interceptors.response.use(response => response, (error) => {
-  console.log('ERROR INTERCEPTED!!!!!!!!!!!!!!');
-  console.log(error);
-  if (window.disableInterceptor) {
-    console.log('INTERCEPTOR DISABLED!');
-    return Promise.reject(error);
-  }
-  console.log('INTERCEPTOR ENABLED!');
+  if (window.disableInterceptor) return Promise.reject(error);
   if (error && error.response) {
     // Refresh CSRF TOKEN
     // dAMpDXBRrjVJ2TKewouYHgOeozZmW72EiAt5K1jY
-    console.log('############3 ERROR RESPONSE EXISTS ###############');
+    console.log('PROVA ###############');
     if (error.response.status === 419) {
       console.log('419 error intercepted!!!!!');
       return window.helpers.getCsrfToken().then((token) => {
@@ -100,22 +88,18 @@ window.axios.interceptors.response.use(response => response, (error) => {
     }
     console.log('1');
     if (error.response.status === 401) {
-      if (location.pathname !== '/login') {
-        window.Vue.prototype.$snackbar.showError("No heu entrat al sistema o ha caducat la sessió. Renviant-vos a l'entrada del sistema");
-        const loginUrl = location.pathname ? `/login?back=${location.pathname}` : '/login';
-        console.log('Waiting to redirect to:');
-        console.log(loginUrl);
-        setTimeout(() => { window.location = loginUrl; }, 3000);
-      }
+      window.Vue.prototype.$snackbar.showError("No heu entrat al sistema o ha caducat la sessió. Renviant-vos a l'entrada del sistema");
+      const loginUrl = location.pathname ? `/login?back=${location.pathname}` : '/login';
+      console.log('Waiting to redirect to:');
+      console.log(loginUrl);
+      setTimeout(() => { window.location = loginUrl; }, 3000);
       // Break the promise chain -> https://github.com/axios/axios/issues/715
       return new Promise(() => {});
     }
     if (error.response.status === 403) {
-      window.Vue.prototype.$snackbar.showSnackBar(
+      window.Vue.prototype.$snackbar.showSnackbar(
         'Error 403!',
-        'error',
         'No teniu permisos per realitzar aquesta acció.',
-        'center',
       );
     }
     console.log('2');
@@ -125,15 +109,9 @@ window.axios.interceptors.response.use(response => response, (error) => {
       console.log(error.response.data);
       console.log(error.response.data.message);
       console.log(error.response.data.errors);
-      let data = '';
-      if (error.response.data.errors) {
-        data = window.helpers.printObject(error.response.data.errors);
-      }
-      window.Vue.prototype.$snackbar.showSnackBar(
-        error.response.data.message,
-        'error',
-        data,
-        'center',
+      window.Vue.prototype.$snackbar.showSnackbar(
+        'Error 422',
+        'Los datos no eran válidos',
       );
     }
     console.log('3');
@@ -143,53 +121,49 @@ window.axios.interceptors.response.use(response => response, (error) => {
       console.log(error.response.data);
       console.log(error.response.data.message);
       console.log(error.response.data.errors);
-      window.Vue.prototype.$snackbar.showSnackBar(
+      window.Vue.prototype.$snackbar.showSnackbar(
         'Error 404!',
-        'error',
         "No s'ha pogut trobar al servidor el recurs que demaneu.",
-        'center',
       );
     }
+    console.log('4');
     if (error.response.status === 405) {
       console.log('%%%%%%%%%%%%%%%%% METHOD NOT ALLOWED FOUND ERROR %%%%%%%%%%%%%%%');
       console.log(error.response);
       console.log(error.response.data);
       console.log(error.response.data.message);
       console.log(error.response.data.errors);
-      window.Vue.prototype.$snackbar.showSnackBar(
+      window.Vue.prototype.$snackbar.showSnackbar(
         'Error 405!',
-        'error',
         'Tipus de petició HTTP incorrecte.',
-        'center',
       );
     }
+    console.log('5');
     if (error.response.status === 500) {
       console.log('%%%%%%%%%%%%%%%%% SERVER ERROR %%%%%%%%%%%%%%%');
       console.log(error.response);
       console.log(error.response.data);
       console.log(error.response.data.message);
       console.log(error.response.data.errors);
-      window.Vue.prototype.$snackbar.showSnackBar(
+      window.Vue.prototype.$snackbar.showSnackbar(
         'Error 500!',
-        'error',
         'Error inesperat al servidor',
-        'center',
       );
     }
     return Promise.reject(error);
   }
   if (error && error.request) {
-    console.log('ERROR EXISTS BUT NO RESPONSE!');
     window.Vue.prototype.$snackbar.showError("Error de xarxa! No s'ha obtingut cap resposta a la vostra petició. Consulteu l'estat de la xarxa.");
-    window.Vue.prototype.$snackbar.showSnackBar('Error de xarxa!', 'error', "No s'ha obtingut cap resposta a la vostra petició. Consulteu l'estat de la xarxa.");
+    window.Vue.prototype.$snackbar.showSnackbar('Error de xarxa!', "No s'ha obtingut cap resposta a la vostra petició. Consulteu l'estat de la xarxa.");
     return Promise.reject(error);
   }
 });
 
+
 // Components
 window.Vue.component('navigation', Navigation);
-window.Vue.component('navigation-right', NavigationRight)
-window.Vue.component('toolbar', Toolbar)
+window.Vue.component('navigation-right', NavigationRight);
+window.Vue.component('toolbar', Toolbar);
 window.Vue.component('login-form', LoginForm);
 window.Vue.component('register-form', RegisterForm);
 
@@ -218,9 +192,6 @@ window.Vue.component('list-user', ListUser);
 window.Vue.component('show-user', ShowUser);
 
 
-window.Vue.component('snackbar', SnackBarComponent);
-
-window.Vuetify = Vuetify;
 window.Vue.use(window.Vuetify, {
   lang: {
     locales: { ca },
@@ -305,4 +276,4 @@ window.Vue.use(window.Vuetify, {
 });
 
 // eslint-disable-next-line no-unused-vars
-const app = new  window.Vue(AppComponent);
+const app = new window.Vue(AppComponent);

@@ -27,7 +27,12 @@
                     ></v-text-field>
                 </v-flex>
                 <v-flex xs12 sm6 md3>
-                    <birthday></birthday>
+                    <birthday v-model="birthdate"
+                              :error-messages="birthdateErrors"
+                              @input="$v.birthdate.$touch()"
+                              @blur="$v.birthdate.$touch()">
+
+                    </birthday>
                 </v-flex>
                 <v-flex xs12 sm6 md3>
                     <v-text-field
@@ -79,9 +84,13 @@
 
                 <v-flex>
                     <v-combobox
-                        v-model="schoolCourse"
-                        :items="itemSchoolCourse"
+                        v-model="school_course"
+                        :items="itemSchool_course"
+                        :error-messages="school_courseErrors"
+                        @input="$v.school_course.$touch()"
+                        @blur="$v.school_course.$touch()"
                         label="Selcciona el nivell"
+
                     ></v-combobox>
                 </v-flex>
             </v-layout>
@@ -97,6 +106,7 @@
             <v-layout>
                 <v-flex>
                     <!--<h4>{{user.name}}</h4>-->
+                    <v-autocomplete v-model="user_id" label="Usari o Entitat" :items="dataUsers" item-text="name" item-value="id" chips readonly></v-autocomplete>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -115,7 +125,7 @@
 
 <script>
     import { validationMixin } from 'vuelidate'
-    import { required , minLength,maxLength} from 'vuelidate/lib/validators'
+    import { required } from 'vuelidate/lib/validators'
     import AlumnesActivitats from "./AlumnesActivitats";
     import DateBirthday from "../ui/DateBirthday";
     export default {
@@ -124,9 +134,9 @@
             name:{required},
             surname:{required},
             sex:{required},
-            bithdate:{required},
+            birthdate:{required},
             school:{required},
-            schoolCourse:{required}
+            school_course:{required}
         },
         name: "UpdateFormAlumne",
         components:{
@@ -135,16 +145,20 @@
         },
         data () {
             return {
-                birthdate: false,
                 id:this.alumne.id,
                 name:this.alumne.name,
                 surname:this.alumne.surname,
                 sex:this.alumne.sex,
+                birthdate: this.alumne.birthdate,
+                age:this.alumne.age,
                 phone:this.alumne.phone,
                 school:this.alumne.school,
-                schoolCourse:this.alumne.school_course,
+                school_course:this.alumne.school_course,
+                change:this.alumne.change,
+                user_id:this.alumne.user_id,
                 loading : false,
                 datactivitats:this.alumne.activitats,
+                dataUsers:this.users,
                 itemSchool:
                     [
                         'Bitem',
@@ -177,7 +191,7 @@
                         'Verge de la Cinta',
                         'Altres'
                     ],
-                itemSchoolCourse:[
+                itemSchool_course:[
                     'P3',
                     'P4',
                     'P5',
@@ -202,11 +216,7 @@
         props:{
             alumne:{
                 type: Object,
-                default: function () {
-                    return {
-                        activitats: []
-                    }
-                }
+                required:true
             },
             users:{
                 type: Array,
@@ -225,15 +235,38 @@
             update(){
                 this.loading = true
                 const newAlumne = {
-                    name: this.name
+                    name: this.name,
+                    surname:this.surname,
+                    birthdate:this.birthdate,
+                    age:this.calcYear(this.birthdate),
+                    sex:this.sex,
+                    phone:this.phone,
+                    school:this.school,
+                    school_course: this.school_course,
+                    user_id:this.user_id,
+                    change:this.change
+
                 }
                 window.axios.put(this.uri + this.alumne.id, newAlumne).then((response) => {
                     this.$emit('updated', response.data)
                     this.$emit('close')
                     this.loading = false
-                }).catch((error) => {
+                }).catch(() => {
+                    this.$emit('close')
                     this.loading = false
                 })
+            },
+            calcYear(date) {
+                if (!date) return null;
+                const yearBirthdate = date.split("/")
+                const dt=new Date()
+                const age = yearBirthdate[2]-dt.getFullYear()
+                if (age<0){
+                    return Math.abs(age)
+                } else {
+                    return age
+                }
+
             }
         },
         computed:{
@@ -272,11 +305,11 @@
                 }else{ !this.$v.school.required && errors.push('És obligatori la escola')}
                 return errors
             },
-            schoolCourseErrors(){
+            school_courseErrors(){
                 const errors = []
-                if(!this.$v.schoolCourse.$dirty){
+                if(!this.$v.school_course.$dirty){
                     return errors
-                }else{ !this.$v.schoolCourse.required && errors.push('És obligatori el nivell educatiu')}
+                }else{ !this.$v.school_course.required && errors.push('És obligatori el nivell educatiu')}
                 return errors
             }
         }

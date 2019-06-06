@@ -73,6 +73,7 @@
         },
         methods:{
             updated(alumne){
+                console.log(alumne);
                 this.$emit('updated', alumne)
             }
         },

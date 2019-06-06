@@ -14,7 +14,7 @@
         <template v-slot:activator="{ on }">
             <v-text-field
                 v-model="dateFormatted"
-                label="Data naiximent"
+                label="Data naiximent*"
                 hint="DD/MM/AAAA format"
                 persistent-hint
                 prepend-icon="event"
@@ -50,17 +50,18 @@
         watch: {
             date (val) {
                 this.dateFormatted = this.formatDate(this.date)
+                this.$emit('input', this.dateFormatted)
             },
             menu (val) {
                 val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
             }
         },
-
+        props:['value'],
         methods: {
             formatDate (date) {
                 if (!date) return null
-                const [year, month, day] = date.split('-')
-                return `${day}/${month}/${year}`
+                const dateSplitted = date.split('-')
+                return `${dateSplitted[2]}/${dateSplitted[1]}/${dateSplitted[0]}`
             },
             parseDate (date) {
                 if (!date) return null
@@ -75,9 +76,6 @@
                 const age=dt.getFullYear() - `${year}`
                 if (age<0) return Math.abs(age)
                 return age
-
-
-
             }
         }
     }

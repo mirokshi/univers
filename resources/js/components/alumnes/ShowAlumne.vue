@@ -16,7 +16,7 @@
             </v-card>
         </v-dialog>
 
-        <v-btn icon color="primary" flat title="Mostrar el alumne"
+        <v-btn icon color="secondary" flat title="Mostrar el alumne"
                @click="dialog=true">
             <v-icon>visibility</v-icon>
         </v-btn>

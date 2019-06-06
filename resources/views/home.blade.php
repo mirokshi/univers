@@ -11,7 +11,7 @@
         text-xs-center
     >
         <v-layout wrap row>
-                <home></home>
+                <home  :activitats="{{$activitats}}"></home>
         </v-layout>
     </v-container>
 @endsection

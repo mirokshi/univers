@@ -55,7 +55,9 @@ class Activitat extends Model
           'id'=>$this->id,
           'name'=>$this->name,
           'date_start'=>$this->date_start,
-            'date_final'=>$this->date_final
+            'date_final'=>$this->date_final,
+            'category' => $this->category,
+            'user_id'=>(int)$this->user_id
 
         ];
     }
