@@ -1,6 +1,6 @@
 <template>
     <v-form action="/register" method="post">
-        <v-toolbar dark color="red darken-1">
+        <v-toolbar color="red darken-1">
             <v-toolbar-title>Registre</v-toolbar-title>
             <v-spacer></v-spacer>
         </v-toolbar>

@@ -3,7 +3,7 @@
         <v-toolbar color="red accent-2">
       <v-toolbar-title class="white--text">Activitats {{total}}</v-toolbar-title>
       <v-spacer></v-spacer>
-        <v-btn icon dark class="white--text" @click="refresh" :loading="loading" :disabled="loading">
+        <v-btn icon class="white--text" @click="refresh" :loading="loading" :disabled="loading">
             <v-icon>refresh</v-icon>
         </v-btn>
         </v-toolbar>
